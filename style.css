@@ -8,6 +8,11 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url(mapa-removebg-preview\ \(1\)\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 100vh;
+    width: 100vw;
 }
 
 section {
@@ -54,6 +59,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
 }
 
 .form-group {
@@ -61,6 +67,7 @@ form {
     flex-direction: column;
     justify-content: center;
     color: white;
+    margin-top: 20px;
 }
 
 .form-group input {
@@ -69,5 +76,26 @@ form {
     border-radius: 20px;
     border: none;
     box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.form-group label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.form-group button {
+    width: 190px;
+    height: 40px;
+    background-color: #ED1D25;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+
+@media (max-width: 999px) {
+    .form-group input { 
+        width: 400px;
+        height: 40px;
+    }
 }
 

@@ -1,26 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 
 h1{
     color: #ED1D25;
     font-family: 'Goldman', sans-serif;
+    text-align: center;
+    margin-top: 12vh;
 }
 .botoes{
     display: flex;
     flex-direction: column;
-    width: 50%;
-
+    width: 80%;
+    margin: auto;
+    height: 50vh;
+    margin-top: 17vh;
 }
 #ocorrencia{
     background-color: #ED1D25;
     border: none;
     border-radius: 5px;
     color: white;
+    height: 12vh;
 }
 #historico{
-    width: 50%;
+    width: 70%;
     margin: auto;
     background-color: #02005C;
     color: white;
     border: none;
     border-radius: 5px;
+    height: 12vh;
+}
+button{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 }

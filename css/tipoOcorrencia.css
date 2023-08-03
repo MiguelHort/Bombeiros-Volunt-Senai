@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+h1{
+    color: #ED1D25;
+    font-family: 'Goldman', sans-serif;
+    text-align: center;
+    margin-top: 12vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.linha{
+    display: flex;
+}

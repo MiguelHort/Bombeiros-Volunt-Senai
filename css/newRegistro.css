@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+
+h1{
+    color: #ED1D25;
+    font-family: 'Goldman', sans-serif;
+}
+.botoes{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+#ocorrencia{
+    background-color: #ED1D25;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+#historico{
+    width: 50%;
+    margin: auto;
+    background-color: #02005C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

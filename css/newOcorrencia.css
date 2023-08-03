@@ -1,26 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family= Goldman :wght@400;700 & display=swap');
 
-h1{
-    color: #ED1D25;
-    font-family: 'Goldman', sans-serif;
-}
-.botoes{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-
-}
-#ocorrencia{
-    background-color: #ED1D25;
-    border: none;
-    border-radius: 5px;
-    color: white;
-}
-#historico{
-    width: 50%;
-    margin: auto;
-    background-color: #02005C;
-    color: white;
-    border: none;
-    border-radius: 5px;
+#novaocorrencia{
+    /* color: #ED1D25;
+text-align: center;
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: normal; */
+font-family: 'Goldman', cursive;
 }

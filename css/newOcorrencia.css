@@ -1,11 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family= Goldman :wght@400;700 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
 
 #novaocorrencia{
-    /* color: #ED1D25;
+    color: #ED1D25;
 text-align: center;
-font-size: 64px;
+font-size: 37px;
 font-style: normal;
 font-weight: 400;
-line-height: normal; */
+line-height: normal;
 font-family: 'Goldman', cursive;
+margin-top: -4% ;
 }
+
+/* logo dos cara */
+
+img{
+width: 62px;
+height: 62px;
+margin-left: 3% ;
+margin-top: 6%;
+}
+

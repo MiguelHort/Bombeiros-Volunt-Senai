@@ -3,24 +3,34 @@
 h1{
     color: #ED1D25;
     font-family: 'Goldman', sans-serif;
+    text-align: center;
+    margin-top: 15vh;
+    font-size: 28px;
 }
 .botoes{
     display: flex;
     flex-direction: column;
-    width: 50%;
-
+    margin: auto;
+    margin-top: 15vh;
+    width: 80%;
+    
 }
 #ocorrencia{
     background-color: #ED1D25;
     border: none;
     border-radius: 5px;
     color: white;
+    height: 10vh;
+    font-size: 20px;
 }
 #historico{
-    width: 50%;
+    width: 70%;
     margin: auto;
     background-color: #02005C;
     color: white;
     border: none;
     border-radius: 5px;
+    height: 7vh;
+    margin-top: 8vh;
+    font-size: 20px;
 }

@@ -4,60 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ocorrência</title>
-    <link rel="stylesheet" href="ocorrencia.css">
+    <link rel="stylesheet" href="/css/ocorrencia.css">
+    <script src="../scripts/ocorrencia.js"></script>
 </head>
 <body>
     <img src="/logo_medicina 1.png" alt="">
     <div id="titulo">
         <p id="novaocorrencia">NOVA OCORRÊNCIA</p>
-        <!-- <p>Data:</p> -->
-        <style>
-            body {
-              font-family: Arial, sans-serif;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              height: 100vh;
-              margin: 0;
-            }
-            .date-input {
-              display: flex;
-            }
-            .date-input input {
-              width: 50px;
-              text-align: center;
-              font-size: 16px;
-              padding: 5px;
-              border: none;
-              margin-right: 5px;
-            }
-            .date-input input:last-child {
-              margin-right: 0;
-            }
-          </style>
-          </head>
-          <body>
-            <div class="date-input">
-              <input type="text" id="day" maxlength="2" placeholder="DD">
-              <span>/</span>
-              <input type="text" id="month" maxlength="2" placeholder="MM">
-              <span>/</span>
-              <input type="text" id="year" maxlength="4" placeholder="YYYY">
-            </div>
-            <script>
-              const dayInput = document.getElementById('day');
-              const monthInput = document.getElementById('month');
-              const yearInput = document.getElementById('year');
-              
-              dayInput.addEventListener('input', formatInput);
-              monthInput.addEventListener('input', formatInput);
+        </head>
+        <body>
+      
+        
+      
+         <div class="date-input">
+            
+            <img class="icones" src="../img/data.svg" alt=""> 
+            <p class="topicosiniciais">Data:</p>
+            <input type="text" id="day" maxlength="2" placeholder="Dia">
+            <span>/</span>
+            <input type="text" id="month" maxlength="2" placeholder="Mês">
+            <span>/</span>
+            <input type="text" id="year" maxlength="4" placeholder="Ano">
+          </div>
           
-              function formatInput() {
-                if (dayInput.value.length === 2 && monthInput.value.length === 2) {
-                  yearInput.focus();
-                }
-              }
-            </script>
-    </div>
+    </div> 
+
+
+<!-- botão para ver mais -->
+<div class="container">
+  <div class="button" onclick="toggleExpand()">
+      <img id="arrow" src="../img/flecha 7.svg">
+  </div>
+  <div class="text expand" id="expandText">
+      <div class="date-input">
+          <input type="text" id="day" maxlength="2" placeholder="Dia">
+          <span>/</span>
+          <input type="text" id="month" maxlength="2" placeholder="Mês">
+          <span>/</span>
+          <input type="text" id="year" maxlength="4" placeholder="Ano">
+      </div>
+  </div>
+</div>
+
+
+    
 </body>
 </html>

@@ -11,18 +11,15 @@
 
 <body>
   <img src="/logo_medicina 1.png" alt="">
-  <div id="titulo">
+  <div>
     <p id="novaocorrencia">NOVA OCORRÊNCIA</p>
-    </head>
-
     <body>
-
-
-
       <div class="date-input">
 
         <img class="icones" src="../img/data.svg" alt="">
+
         <p class="topicosiniciais">Data:</p>
+        
         <input type="text" id="day" maxlength="2" placeholder="Dia">
         <span>/</span>
         <input type="text" id="month" maxlength="2" placeholder="Mês">
@@ -31,18 +28,33 @@
       </div>
 
   </div>
-
+  <div class="sexo">
+    <p class="topicosiniciais">sexo:</p>
+    <input type="radio" name="sexo" id="">
+    <label for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>
+    <input type="radio" name="sexo" id="">
+    <label for="sexo"><img src="/img/feminino.svg" alt=""> Feminino</label>
+  </div>
 
   <!-- botão para ver mais -->
   <div class="container">
     <div class="button" onclick="toggleExpand()">
+      <p>ANAMNESE DE EMERGÊNCIA</p>
       <img id="arrow" src="../img/flecha 7.svg">
     </div>
     <div class="text expand" id="expandText">
       <p>Uno mille</p>
     </div>
   </div>
-
+  <div class="container">
+    <div class="button" onclick="toggleExpand()">
+      <p>ANAMNESE DE EMERGÊNCIA</p>
+      <img id="arrow1" src="../img/flecha 7.svg">
+    </div>
+    <div class="text expand" id="expandText1">
+      <p>Uno mille</p>
+    </div>
+  </div>
 
 
 </body>

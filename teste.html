@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data com Barras - Exemplo</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .date-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .date-input input {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    margin-right: 5px;
+    outline: none;
+  }
+  .date-input span {
+    font-size: 16px;
+    margin: 0 5px;
+  }
+  .edit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="date-input">
+    <input type="text" id="day" maxlength="2" placeholder="DD">
+    <span>/</span>
+    <input type="text" id="month" maxlength="2" placeholder="MM">
+    <span>/</span>
+    <input type="text" id="year" maxlength="4" placeholder="YYYY">
+  </div>
+  <button class="edit-button" onclick="editDate()">Editar Data</button>
+  <script>
+    const dayInput = document.getElementById('day');
+    const monthInput = document.getElementById('month');
+    const yearInput = document.getElementById('year');
+
+    // Preencher os campos com a data atual
+    const currentDate = new Date();
+    dayInput.value = String(currentDate.getDate()).padStart(2, '0');
+    monthInput.value = String(currentDate.getMonth() + 1).padStart(2, '0');
+    yearInput.value = currentDate.getFullYear();
+
+    function editDate() {
+      dayInput.removeAttribute('readonly');
+      monthInput.removeAttribute('readonly');
+      yearInput.removeAttribute('readonly');
+      dayInput.focus();
+    }
+
+    dayInput.addEventListener('input', formatInput);
+    monthInput.addEventListener('input', formatInput);
+
+    function formatInput() {
+      if (dayInput.value.length === 2 && monthInput.value.length === 2) {
+        yearInput.focus();
+      }
+    }
+  </script>
+</body>
+</html>

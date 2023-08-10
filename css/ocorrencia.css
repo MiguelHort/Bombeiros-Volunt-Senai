@@ -1,0 +1,17 @@
+img {
+    width: 62px;
+    height: 62px;
+    position: relative;
+    left: 100px;
+    top: 40px;
+}
+
+#novaocorrencia {
+    color: #ED1D25;
+    text-align: center;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: 'Goldman', cursive;
+}

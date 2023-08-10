@@ -7,6 +7,57 @@
     <link rel="stylesheet" href="ocorrencia.css">
 </head>
 <body>
-    
+    <img src="/logo_medicina 1.png" alt="">
+    <div id="titulo">
+        <p id="novaocorrencia">NOVA OCORRÊNCIA</p>
+        <!-- <p>Data:</p> -->
+        <style>
+            body {
+              font-family: Arial, sans-serif;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              margin: 0;
+            }
+            .date-input {
+              display: flex;
+            }
+            .date-input input {
+              width: 50px;
+              text-align: center;
+              font-size: 16px;
+              padding: 5px;
+              border: none;
+              margin-right: 5px;
+            }
+            .date-input input:last-child {
+              margin-right: 0;
+            }
+          </style>
+          </head>
+          <body>
+            <div class="date-input">
+              <input type="text" id="day" maxlength="2" placeholder="DD">
+              <span>/</span>
+              <input type="text" id="month" maxlength="2" placeholder="MM">
+              <span>/</span>
+              <input type="text" id="year" maxlength="4" placeholder="YYYY">
+            </div>
+            <script>
+              const dayInput = document.getElementById('day');
+              const monthInput = document.getElementById('month');
+              const yearInput = document.getElementById('year');
+              
+              dayInput.addEventListener('input', formatInput);
+              monthInput.addEventListener('input', formatInput);
+          
+              function formatInput() {
+                if (dayInput.value.length === 2 && monthInput.value.length === 2) {
+                  yearInput.focus();
+                }
+              }
+            </script>
+    </div>
 </body>
 </html>

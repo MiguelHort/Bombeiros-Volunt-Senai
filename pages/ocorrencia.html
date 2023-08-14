@@ -10,16 +10,17 @@
 </head>
 
 <body>
-  <img src="/logo_medicina 1.png" alt="">
+  <img src="/logo_medicina 1.png" alt="imagememfalta" id="imagemlogo">
   <div>
     <p id="novaocorrencia">NOVA OCORRÊNCIA</p>
+
     <body>
       <div class="date-input">
 
         <img class="icones" src="../img/data.svg" alt="">
 
         <p class="topicosiniciais">Data:</p>
-        
+
         <input type="text" id="day" maxlength="2" placeholder="Dia">
         <span>/</span>
         <input type="text" id="month" maxlength="2" placeholder="Mês">
@@ -49,26 +50,37 @@
 
 
 
-<!-- hort -->
+  <!-- hort -->
 
 
-  <!-- botão para ver mais -->
+  <!-- Expandir -->
   <div class="container">
     <div class="button" onclick="toggleExpand()">
-      <p>ANAMNESE DE EMERGÊNCIA</p>
+      <p>INFORMAÇÕES ACOMPANHANTE</p>
       <img id="arrow" src="../img/flecha 7.svg">
     </div>
     <div class="text expand" id="expandText">
-      <p>Uno mille</p>
+      <label for="name">Nome:</label>
+      <input type="text" class="name">
+      <div class="relacao">
+      <!-- Cada input representa uma categoria -->
+      <label>
+        <input type="radio" name="category" class="category-label" value="amigo">
+        Amigo
+      </label>
+      <label>
+        <input type="radio" name="category" class="category-label" value="namorado">
+        Namorado
+      </label>
+      <label>
+        <input type="radio" name="category" class="category-label" value="pai">
+        Pai
+      </label>
+      <label>
+        <input type="radio" name="category" class="category-label" value="mae">
+        Mãe
+      </label>
     </div>
-  </div>
-  <div class="container">
-    <div class="button" onclick="toggleExpand()">
-      <p>ANAMNESE DE EMERGÊNCIA</p>
-      <img id="arrow1" src="../img/flecha 7.svg">
-    </div>
-    <div class="text expand" id="expandText1">
-      <p>Uno mille</p>
     </div>
   </div>
 

@@ -13,6 +13,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Nova */
+#novaocorrencia {
   color: #ED1D25;
   text-align: center;
   font-size: 50px;
@@ -97,9 +101,10 @@ display: flex;
 /* Expandir */
 
 .container {
-  width: 300px;
+  width: 700px;
   margin: 50px auto;
-  background-color: rgb(255, 173, 173);
+  padding: 10px;
+  background-color: rgb(228, 228, 228);
   border-radius: 10px;
   margin-top: 1%;
 }
@@ -114,6 +119,15 @@ display: flex;
   transition: all 0.3s ease;
 }
 
+.button p {
+  color: black;
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .button img {
   width: 20px;
   height: 20px;
@@ -124,7 +138,6 @@ display: flex;
 .text {
   display: none;
   padding: 10px;
-
 }
 
 .expand.show {
@@ -133,4 +146,76 @@ display: flex;
 
 .rotate {
   transform: rotate(90deg);
+}
+
+.observacoes{
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceTeam{
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.serviceTeam input{
+ border: none;
+ border-bottom: solid black 2px;
+}
+
+.teamNames{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.squadCamp input{
+  width: 88%;
+}
+
+.gapCamp{
+  margin-top: 5%;
+}
+
+.identifications{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.espacolinha{
+  display: flex;
+  justify-content: space-between;
+}
+
+.text input {
+  background: none;
+  border: none;
+  border-bottom: solid black 2px;
+}
+
+.text label {
+  font-size: 20px;
+}
+
+.relacao {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+/* Estilos para os botões de input */
+.category-label {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }

@@ -73,23 +73,34 @@
   <!-- hort -->
 
 
-  <!-- botão para ver mais -->
+  <!-- Expandir -->
   <div class="container">
     <div class="button" onclick="toggleExpand()">
-      <p>ANAMNESE DE EMERGÊNCIA</p>
+      <p>INFORMAÇÕES ACOMPANHANTE</p>
       <img id="arrow" src="../img/flecha 7.svg">
     </div>
     <div class="text expand" id="expandText">
-      <p>Uno mille</p>
+      <label for="name">Nome:</label>
+      <input type="text" class="name">
+      <div class="relacao">
+      <!-- Cada input representa uma categoria -->
+      <label>
+        <input type="radio" name="category" class="category-label" value="amigo">
+        Amigo
+      </label>
+      <label>
+        <input type="radio" name="category" class="category-label" value="namorado">
+        Namorado
+      </label>
+      <label>
+        <input type="radio" name="category" class="category-label" value="pai">
+        Pai
+      </label>
+      <label>
+        <input type="radio" name="category" class="category-label" value="mae">
+        Mãe
+      </label>
     </div>
-  </div>
-  <div class="container">
-    <div class="button" onclick="toggleExpand()">
-      <p>ANAMNESE DE EMERGÊNCIA</p>
-      <img id="arrow1" src="../img/flecha 7.svg">
-    </div>
-    <div class="text expand" id="expandText1">
-      <p>Uno mille</p>
     </div>
   </div>
 
@@ -104,6 +115,72 @@
 
 
   <!-- heitor -->
+  <div class="observacoes">
+    <label for="observacoes">OBSERVAÇÕES IMPORTANTES</label>
+    <textarea name="observacoes" id="" cols="30" rows="10"></textarea>
+  </div>
+
+  <div class="serviceTeam">
+    <h4>EQUIPE DE ATENDIMENTO</h4>
+
+    <div class="squadCamp gapCamp">
+      <label for="m">M:</label>
+      <input type="text" name="m" id="" style="margin-left: 2%;">
+    </div>
+
+    <div class="squadCamp gapCamp">
+      <label for="s1">S1:</label>
+      <input type="text" name="s1" id="">
+    </div>
+
+    <div class="squadCamp gapCamp">
+      <label for="s2">S2:</label>
+      <input type="text" name="s2" id="">
+    </div>
+
+    <div class="squadCamp gapCamp">
+      <label for="s3">S3:</label>
+      <input type="text" name="s3" id="">
+    </div>
+
+    <div class="teamNames gapCamp">
+      <label for="demandante">DEMANDANTE:</label>
+      <input type="text" name="demandante" id="">
+    </div>
+
+    <div class="teamNames gapCamp">
+      <label for="team">EQUIPE:</label>
+      <input type="text" name="team" id="">
+    </div>
+  </div>
+
+  <div class="identifications">
+    <div class="espacolinha">
+      <label for="usb">Nº USB</label>
+      <input type="text" name="usb" id="">
+      <label for="ir">CÓD. IR</label>
+      <input type="checkbox" name="ir" id="">
+    </div>
+
+    <div class="espacolinha">
+      <label for="ocorr">Nº OCORR</label>
+      <input type="text" name="ocorr" id="">
+      <label for="ps">CÓD. PS</label>
+      <input type="checkbox" name="ps" id="">
+    </div>
+
+    <label for="desp">DESP.:</label>
+    <input type="text" name="desp">
+
+    <div>
+      <label for="h.ch">H.CH</label>
+      <input type="text" name="h.ch">
+      <label for="sia/sus">CÓD. SIA/SUS</label>
+      <input type="text" name="sia/sus">
+    </div>
+
+  </div>
+
 </body>
 
 </html>

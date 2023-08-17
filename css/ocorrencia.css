@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;500;700&display=swap');
 
 #hugopai{
   margin-left: 5%;
@@ -170,19 +170,32 @@ display: flex;
 .observacoes{
   display: flex;
   flex-direction: column;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
 }
 
 .serviceTeam{
   display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: 70vw;
   text-align: center;
   margin-top: 2%;
+  margin: auto;
+  font-family: 'Inter', sans-serif;
 }
 
+.serviceTeam h4{
+  font-size: 28px;
+
+}
+.serviceTeam label{
+  font-size: 22px;
+}
 .serviceTeam input{
  border: none;
- border-bottom: solid black 2px;
+ border-bottom: solid black 1px;
 }
 
 .teamNames{
@@ -205,8 +218,16 @@ display: flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 71%;
+  margin: auto;
+  margin-top: 5%;
+  font-size: 22px;
 }
 
+.identifications input{
+  border: none;
+  border-bottom: solid black 1px;
+}
 .espacolinha{
   display: flex;
   justify-content: space-between;
@@ -215,7 +236,7 @@ display: flex;
 .text input {
   background: none;
   border: none;
-  border-bottom: solid black 2px;
+  border-bottom: solid black 1px;
 }
 
 .text label {
@@ -237,4 +258,16 @@ display: flex;
   cursor: pointer;
   border: none;
   outline: none;
+}
+.desp{
+  display: flex;
+  justify-content: space-between;
+}
+.h-s{
+  display: flex;
+  justify-content: space-between;
+}
+
+.h-s input{
+  width: 20%;
 }

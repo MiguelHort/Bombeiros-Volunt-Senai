@@ -91,6 +91,7 @@ form {
     border: none;
     border-radius: 20px;
     color: white;
+    cursor: pointer;
 }
 
 @media (max-width: 999px) {

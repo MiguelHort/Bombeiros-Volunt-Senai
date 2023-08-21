@@ -195,6 +195,7 @@ display: flex;
   text-align: center;
   margin-top: 2%;
   margin: auto;
+
   font-family: 'Inter', sans-serif;
   font-weight: bold;
 }
@@ -204,9 +205,12 @@ display: flex;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: -8%;
+  margin-top: 0;
 }
 .serviceTeam h4 img{
-  margin-right: 2%;
+  margin-right: -7%;
+  margin-left: -7%;
 }
 .serviceTeam label{
   font-size: 22px;
@@ -226,6 +230,7 @@ display: flex;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 1%;
 }
 .teamNames label img{
   margin-right: 1%;

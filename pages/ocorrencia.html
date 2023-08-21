@@ -12,70 +12,70 @@
 <body>
   <div id="hugopai">
 
-  <div id="imagem_e_titulo">
+    <div id="imagem_e_titulo">
 
-    <img id="logomedico" src="/logo_medicina 1.png" alt="">
+      <img id="logomedico" src="/logo_medicina 1.png" alt="">
 
-    <p id="novaocorrencia">NOVA <br> OCORRÊNCIA</p>
-
-  </div>
-
-  <div class="date-input">
-
-    <img class="icones" src="../img/calendario.svg" alt="">
-
-    <p class="topicosiniciais">Data:</p>
-
-  <div id="datainput">
-
-    <input type="number" id="day" maxlength="2" placeholder="Dia">
-    <span>/</span>
-    <input type="number" id="month" maxlength="2" placeholder="Mês">
-    <span>/</span>
-    <input type="number" id="year" maxlength="4" placeholder="Ano">
-   
-  </div>
-  
-</div>
-
-  <div class="nome-input">
-
-
-
-    <div id="topico_input">
-      <img class="iconepessoa" src="../img/pessoa.svg" alt="">
-      <label for="inputs" class="topicosiniciais">Nome:</label>
-      <input id="inputs" type="text">
+      <p id="novaocorrencia">NOVA <br> OCORRÊNCIA</p>
 
     </div>
-  </div>
 
-  <div class="RG-input">
+    <div class="date-input">
 
-    
+      <img class="icones" src="../img/calendario.svg" alt="">
 
-    <div id="topico_input">
-      <img class="iconepessoa" src="../img/identidade.svg" alt="">
-      <label for="inputs" class="topicosiniciais">CPF:</label>
-      <input id="inputcpf" type="text">
+      <p class="topicosiniciais">Data:</p>
+
+      <div id="datainput">
+
+        <input type="number" id="day" maxlength="2" placeholder="Dia">
+        <span>/</span>
+        <input type="number" id="month" maxlength="2" placeholder="Mês">
+        <span>/</span>
+        <input type="number" id="year" maxlength="4" placeholder="Ano">
+
+      </div>
 
     </div>
+
+    <div class="nome-input">
+
+
+
+      <div id="topico_input">
+        <img class="iconepessoa" src="../img/pessoa.svg" alt="">
+        <label for="inputs" class="topicosiniciais">Nome:</label>
+        <input id="inputs" type="text">
+
+      </div>
+    </div>
+
+    <div class="RG-input">
+
+
+
+      <div id="topico_input">
+        <img class="iconepessoa" src="../img/identidade.svg" alt="">
+        <label for="inputs" class="topicosiniciais">CPF:</label>
+        <input id="inputcpf" type="text">
+
+      </div>
+    </div>
+
+
+
+    <div class="sexo">
+      <p id="topico-sexo">Sexo:</p>
+
+
+
+      <input type="radio" name="sexo" id="bolinhas">
+      <label id="generos" for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>
+      <input type="radio" name="sexo" id="bolinhas">
+      <label id="generofeminino" for="sexo"><img src="/img/feminino.svg" alt=""> Feminino</label>
+    </div>
+
   </div>
-
-
-
-  <div class="sexo">
-    <p id="topico-sexo">Sexo:</p>
-
-
-
-    <input type="radio" name="sexo" id="bolinhas">
-    <label id="generos" for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>
-    <input type="radio" name="sexo" id="bolinhas">
-    <label id="generofeminino" for="sexo"><img src="/img/feminino.svg" alt=""> Feminino</label>
-  </div>
-
-</div>
 
 
 
@@ -204,12 +204,15 @@
 
     </div>
     <div class="h-s espacolinha">
-      <label for="h.ch">H.CH.:</label>
-      <input type="text" name="h.ch">
-      <label for="sia/sus">CÓD. SIA/SUS.:</label>
-      <input type="text" name="sia/sus">
+      <div style="display:flex; align-items: baseline;">
+        <label for="h.ch">H.CH.:</label>
+        <input type="text" name="h.ch">
+      </div>
+      <div style="display:flex; align-items: baseline;">
+        <label for="sia/sus">SIA/SUS.:</label>
+        <input type="text" name="sia/sus">
+      </div>
     </div>
-
   </div>
 
 </body>

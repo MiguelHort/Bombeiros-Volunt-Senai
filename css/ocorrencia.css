@@ -175,6 +175,11 @@ display: flex;
   font-weight: 700;
   font-family: 'Inter', sans-serif;
 }
+.observacoes textarea{
+  width: 70%;
+  margin: auto;
+  margin-top: 2%;
+}
 
 .serviceTeam{
   display: flex;

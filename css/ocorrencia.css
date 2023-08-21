@@ -7,6 +7,7 @@
 #logomedico{
   width: 150px;
   height: 150px;
+  margin-left: 40%;
 }
 /* Nova */
 #novaocorrencia {
@@ -45,13 +46,13 @@ display: flex;
 
 /* icones */
 .icones {
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
 }
 .iconepessoa{
   width: 60px;
   height: 60px;
-  margin-left: -2% ;
+  /* margin-left: -2% ; */
 }
 
 #inputs{
@@ -65,7 +66,7 @@ display: flex;
 .date-input {
   display: flex;
   align-items: center;
-  gap: 10px;  
+
 }
 
 .nome-input {

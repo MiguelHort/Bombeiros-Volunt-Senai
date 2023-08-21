@@ -175,6 +175,12 @@ display: flex;
   font-size: 30px;
   font-weight: 700;
   font-family: 'Inter', sans-serif;
+  font-weight: bold;
+}
+.observacoes label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .observacoes textarea{
   width: 70%;
@@ -190,11 +196,17 @@ display: flex;
   margin-top: 2%;
   margin: auto;
   font-family: 'Inter', sans-serif;
+  font-weight: bold;
 }
 
 .serviceTeam h4{
   font-size: 28px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.serviceTeam h4 img{
+  margin-right: 2%;
 }
 .serviceTeam label{
   font-size: 22px;
@@ -210,7 +222,14 @@ display: flex;
   width: 100%;
   text-align: center;
 }
-
+.teamNames label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.teamNames label img{
+  margin-right: 1%;
+}
 .squadCamp input{
   width: 88%;
 }
@@ -229,6 +248,7 @@ display: flex;
   margin-top: 5%;
   font-size: 22px;
   font-family: 'inter', sans-serif;
+  font-weight: bold;
 }
 
 #dem-equi{

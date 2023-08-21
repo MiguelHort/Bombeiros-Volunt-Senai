@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+input {
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+
+
+
+
+
+      <h1>Localização Atual</h1>
+      <input type="text" id="localInput">
+      <button id="changeLocationBtn">Alterar Local</button>
+    
+      <script src="script.js"></script>
+
+    
+
+
+
+
+
+
+
+
+  <script>
+   // Função para preencher o input com o endereço da localização atual
+function getCurrentAddress() {
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      const apiKey = "SUA_CHAVE_DE_API_AQUI"; // Substitua pela sua chave de API do Google Geocoding
+      const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          const address = data.results[0].formatted_address;
+          const locationInput = document.getElementById("localInput");
+          locationInput.value = address;
+        })
+        .catch(error => console.log("Error fetching address:", error));
+    });
+  } else {
+    console.log("Geolocation is not available in this browser.");
+  }
+}
+
+// Restante do código para o botão de alterar local, igual ao exemplo anterior
+
+// Preencher o endereço atual ao carregar a página
+getCurrentAddress();
+
+
+  </script>
+</body>
+</html>

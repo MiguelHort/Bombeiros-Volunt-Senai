@@ -58,7 +58,13 @@ display: flex;
 #inputs{
   border: none;
   border-bottom: solid black 2px;
-  width: 275px;
+  width: 500px;
+}
+
+#inputcpf{
+  border: none;
+  border-bottom: solid black 2px;
+  width: 545px;
 }
 
 /* data */
@@ -78,6 +84,7 @@ display: flex;
 .RG-input{
   display: flex;
   align-items: center;
+  margin-top: 5%;
  
 }
 .date-input input {
@@ -110,7 +117,10 @@ display: flex;
   font-size: 30px;
   margin-top: -15%;
 }
-
+#generofeminino{
+  font-size: 30px;
+  margin-top: -15%;
+}
 #bolinhas{
   width: 25px;
   height: 25px;

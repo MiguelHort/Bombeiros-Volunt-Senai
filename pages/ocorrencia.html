@@ -94,10 +94,41 @@
   <!-- Expandir -->
   <div class="container">
     <div class="button" onclick="toggleExpand()">
-      <p>INFORMAÇÕES ACOMPANHANTE</p>
+      <p>ANAMNESE DE EMERGÊNCIA</p>
       <img id="arrow" src="../img/flecha 7.svg">
     </div>
     <div class="text expand" id="expandText">
+      <label for="name">Nome:</label>
+      <input type="text" class="name">
+      <div class="relacao">
+        <!-- Cada input representa uma categoria -->
+        <label>
+          <input type="radio" name="category" class="category-label" value="amigo">
+          Amigo
+        </label>
+        <label>
+          <input type="radio" name="category" class="category-label" value="namorado">
+          Namorado
+        </label>
+        <label>
+          <input type="radio" name="category" class="category-label" value="pai">
+          Pai
+        </label>
+        <label>
+          <input type="radio" name="category" class="category-label" value="mae">
+          Mãe
+        </label>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="button" onclick="toggleExpand1()">
+      <p>ANAMNESE GESTACIONAL</p>
+      <img id="arrow1" src="../img/flecha 7.svg">
+    </div>
+    <div class="text expand" id="expandText1">
       <label for="name">Nome:</label>
       <input type="text" class="name">
       <div class="relacao">

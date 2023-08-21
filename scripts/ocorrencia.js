@@ -21,4 +21,11 @@ function toggleExpand() {
   expandText.classList.toggle("show");
   arrow.classList.toggle("rotate");}
 
+function toggleExpand1() {
+  var expandText = document.getElementById("expandText1");
+  var arrow = document.getElementById("arrow1");
+
+  expandText.classList.toggle("show");
+  arrow.classList.toggle("rotate");}
+
   

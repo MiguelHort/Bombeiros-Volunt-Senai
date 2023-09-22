@@ -69,11 +69,11 @@
 
 
 
-    <input type="radio" name="sexo" id="bolinhas">
-    <label id="generos" for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>
-    <input type="radio" name="sexo" id="bolinhafeminina">
-    <label id="generofeminino" for="sexo"><img src="/img/feminino.svg" alt=""> Feminino</label>
-  </div>
+      <input type="radio" name="sexo" id="bolinhas">
+      <label id="generos" for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>
+      <input type="radio" name="sexo" id="bolinhafeminina">
+      <label id="generofeminino" for="sexo"><img src="/img/feminino.svg" alt=""> Feminino</label>
+    </div>
 
   </div>
 
@@ -97,10 +97,70 @@
       <p>ANAMNESE DE EMERGÊNCIA</p>
       <img id="arrow" src="../img/flecha 7.svg">
     </div>
-   
+
     <div class="text expand" id="expandText">
       <h2>O que aconteceu (sinais e sintomas)</h2>
       <textarea name="" id="" cols="70" rows="5"></textarea>
+      <div class="">
+        <h2>Aconteceu outras vezes?</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+      </div>
+      <div>
+        <h2>A quanto tempo aconteceu?</h2>
+        <label for="hora"><img src="/img/hora.png" alt=""></label>
+        <input type="time" name="hora" id="">
+      </div>
+      <div>
+        <h2>Possui algum problema de saúde?</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+      </div>
+      <div>
+        <h2>Quais?</h2>
+        <textarea name="" id="" cols="70" rows="5"></textarea>
+      </div>
+      <div>
+        <h2>Faz uso de medicação?</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+      </div>
+      <div>
+        <h2>Horário da última medicação?</h2>
+        <label for="hora"><img src="/img/hora.png" alt=""></label>
+        <input type="time" name="hora" id="">
+      </div>
+      <div>
+        <h2>Quais?</h2>
+        <textarea name="" id="" cols="70" rows="5"></textarea>
+      </div>
+      <div>
+        <h2>Alérgico a alguma coisa?</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+        <h2>Especifique:</h2>
+        <textarea name="" id="" cols="70" rows="4"></textarea>
+      </div>
+      <div>
+        <h2>Ingeriu alimento ou líquido ≥ 6 horas</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+      </div>
+      <div>
+        <h2>Que horas?</h2>
+        <label for="hora"><img src="/img/hora.png" alt=""></label>
+        <input type="time" name="hora" id="">
+      </div>
     </div>
   </div>
 
@@ -111,32 +171,114 @@
       <img id="arrow1" src="../img/flecha 7.svg">
     </div>
     <div class="text expand" id="expandText1">
-      <label for="name">Nome:</label>
-      <input type="text" class="name">
-      <div class="relacao">
-        <!-- Cada input representa uma categoria -->
-        <label>
-          <input type="radio" name="category" class="category-label" value="amigo">
-          Amigo
-        </label>
-        <label>
-          <input type="radio" name="category" class="category-label" value="namorado">
-          Namorado
-        </label>
-        <label>
-          <input type="radio" name="category" class="category-label" value="pai">
-          Pai
-        </label>
-        <label>
-          <input type="radio" name="category" class="category-label" value="mae">
-          Mãe
-        </label>
+      <div>
+        <h2>Pré-natal</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+      </div>
+
+      <div>
+        <h2>Período da gestação</h2>
+        <input type="text" name="" id="">
+      </div>
+      <div>
+        <h2>Nome do médico:</h2>
+        <input type="text" name="" id="">
+      </div>
+      <div>
+        <h2>Possíveis complicações</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+      </div>
+      <div>
+        <h2>Primeiro filho?</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+        <h2>Quantos?</h2>
+        <input type="number" name="" id="">
+      </div>
+      <div>
+        <h2>Contrações</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+        <h2>Que horas iniciaram as contrações?</h2>
+        <input type="time" name="" id="">
+        <h2>Tempo das contrações:</h2>
+        <label for="intervalo">Intervalo:</label>
+        <input type="text" name="intervalo">
+        <label for="duracao">Duração</label>
+        <input type="text">
+      </div>
+      <div>
+        <h2>Pressão no quadril ou vontade de evacuar?</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+      </div>
+      <div>
+        <h2>Já houve ruptura na bolsa?</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+      </div>
+      <div>
+        <h2>Foi feita inspeção visual?</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+      </div>
+      <div>
+        <h2>Parto realizado?</h2>
+        <input type="radio" name="simNao">
+        <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+        <input type="radio" name="simNao">
+        <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+      </div>
+      <div>
+        <h2>Sexo do bebê</h2>
+        <input type="radio" name="sexo" id="bolinhas">
+        <label id="generos" for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>
+        <input type="radio" name="sexo" id="bolinhafeminina">
+        <label id="generofeminino" for="sexo"><img src="/img/feminino.svg" alt=""> Feminino</label>
       </div>
     </div>
   </div>
 
 
-
+  <div class="container">
+    <div class="button" onclick="toggleExpand2()">
+      <p>TIPO DE OCORRÊNCIA<br>(PRÉ-HOSPITALAR)</p>
+      <img id="arrow2" src="../img/flecha 7.svg">
+    </div>
+    <div class="text expand" id="expandText2">
+      <div>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+      <div>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+    </div>
+    <div>
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+    </div>
+  </div>
 
 
 

@@ -337,3 +337,29 @@ display: flex;
 input[type=checkbox]{
  width: 30%;
 }
+
+.tipoLinha1{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.tipoLinha2{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.tipoLinha3{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.tipoLinha4{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.tipoLinha5{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}

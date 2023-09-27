@@ -80,8 +80,11 @@ display: flex;
 
 .date-input {
   display: flex;
-  align-items: center;
 
+}
+
+#datainput{
+  margin-left: 2%;
 }
 
 .nome-input {

@@ -21,7 +21,7 @@
 
     </div>
 
-    <div class="date-input">
+    <div class="date-input" style="margin-top: 6%;">
 
       <img class="icones" src="../img/calendario.svg" alt="">
 
@@ -38,10 +38,10 @@
       </div>
 
     </div>
-
+    <h1 style="text-align: center; margin-top: 4%; margin-bottom: 4%;">INFORMAÇÕES DO PACIENTE</h1>
     <div class="nome-input">
 
-
+      
 
       <div id="topico_input">
         <img class="iconepessoa" src="../img/pessoa.svg" alt="">
@@ -70,10 +70,10 @@
 
 
 
-      <input type="radio" name="sexo" id="bolinhas">
-      <label id="generos" for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>
+      <input type="radio" name="sexo" id="bolinhas" >
+      <label id="generos" for="sexo"><img src="/img/masculino.svg" alt="" width="25%"> Masculino</label>
       <input type="radio" name="sexo" id="bolinhafeminina">
-      <label id="generofeminino" for="sexo"><img src="/img/feminino.svg" alt=""> Feminino</label>
+      <label id="generofeminino" for="sexo"><img src="/img/feminino.svg" alt="" width="25%"> Feminino</label>
     </div>
 
   </div>
@@ -93,14 +93,19 @@
 
 
   <!-- Expandir -->
-  <div class="container">
-    <div class="button" onclick="toggleExpand()">
-      <p>ANAMNESE DE EMERGÊNCIA</p>
-      <img id="arrow" src="../img/flecha 7.svg">
-    </div>
+  
+ 
 
-    <div class="text expand" id="expandText">
-      <h2>O que aconteceu (sinais e sintomas)</h2>
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+         <p>ANAMNESE DE EMERGÊNCIA</p>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          <h2>O que aconteceu (sinais e sintomas)</h2>
       <textarea name="" id="" cols="70" rows="5"></textarea>
       <div class="">
         <h2>Aconteceu outras vezes?</h2>
@@ -162,188 +167,6 @@
         <label class="SimNao" for="hora"><img src="/img/hora.png" alt=""></label>
         <input type="time" name="hora" id="">
       </div>
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="button" onclick="toggleExpand1()">
-      <p>ANAMNESE GESTACIONAL</p>
-      <img id="arrow1" src="../img/flecha 7.svg">
-    </div>
-    <div class="text expand" id="expandText1">
-      <div>
-        <h2>Pré-natal</h2>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
-      </div>
-
-      <div>
-        <h2>Período da gestação</h2>
-        <input type="text" name="" id="">
-      </div>
-      <div>
-        <h2>Nome do médico:</h2>
-        <input type="text" name="" id="">
-      </div>
-      <div>
-        <h2>Possíveis complicações</h2>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
-      </div>
-      <div>
-        <h2>Primeiro filho?</h2>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
-        <h2>Quantos?</h2>
-        <input type="number" name="" id="">
-      </div>
-      <div>
-        <h2>Contrações</h2>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
-        <h2>Que horas iniciaram as contrações?</h2>
-        <input type="time" name="" id="">
-        <h2>Tempo das contrações:</h2>
-        <label class="SimNao" for="intervalo">Intervalo:</label>
-        <input type="text" name="intervalo">
-        <label class="SimNao" for="duracao">Duração</label>
-        <input  type="text">
-      </div>
-      <div>
-        <h2>Pressão no quadril ou vontade de evacuar?</h2>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
-      </div>
-      <div>
-        <h2>Já houve ruptura na bolsa?</h2>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
-      </div>
-      <div>
-        <h2>Foi feita inspeção visual?</h2>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
-      </div>
-      <div>
-        <h2>Parto realizado?</h2>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-        <input type="radio" name="simNao">
-        <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
-      </div>
-      <div>
-        <h2>Sexo do bebê</h2>
-        <input type="radio" name="sexo" id="bolinhas">
-        <label class="SimNao" id="generos" for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>
-        <input type="radio" name="sexo" id="bolinhafeminina">
-        <label class="SimNao" id="generofeminino" for="sexo"><img src="/img/feminino.svg" alt=""> Feminino</label>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="button" onclick="toggleExpand2()">
-      <p>TIPO DE OCORRÊNCIA (PRÉ-HOSPITALAR)</p>
-      <img id="arrow2" src="../img/flecha 7.svg">
-    </div>
-    <div class="text expand" id="expandText2">
-      <div class="tipoLinha1">
-        <div><img src="/img/domiciliar.png" alt="">
-          <p>Doméstico</p>
-        </div>
-        <div><img src="/img/animal.png" alt="">
-          <p>Causado por animais</p>
-        </div>
-        <div><img src="/img/afogamento.png" alt="">
-          <p>Afogamento</p>
-        </div>
-      </div>
-      <div class="tipoLinha2">
-        <div>
-          <img src="/img/enchente.png" alt="">
-          <p>Enchente</p>
-        </div>
-        <div>
-          <img src="/img/desmoronamento.png" alt="">
-          <p>Desmoronamento</p>
-        </div>
-        <div>
-          <img src="/img/ventos.png" alt="">
-          <p>Ventos fortes</p>
-        </div>
-      </div>
-      <div class="tipoLinha3">
-        <div>
-          <img src="/img/incendio.png" alt="">
-          <p>incêndio</p>
-        </div>
-        <div>
-          <img src="/img/intoxicacao.png" alt="" >
-          <p>Intoxicação</p>
-        </div>
-        <div>
-          <img src="/img/carro.png" alt="">
-          <p>Acidente de carro</p>
-        </div>
-      </div>
-      <div class="tipoLinha4">
-        <div>
-          <img src="/img/choque.png" alt="">
-          <p>Eletrocução</p>
-        </div>
-        <div>
-          <img src="/img/agressao.png" alt="">
-          <p>Agressão</p>
-        </div>
-        <div>
-          <img src="/img/queda.png" alt="">
-          <p>Queda</p>
-        </div>
-      </div>
-      <div class="tipoLinha5">
-        <div>
-          <img src="/img/bicicleta.png" alt="">
-          <p>Acidente de bicicleta</p>
-        </div>
-        <div>
-          <img src="/img/suicidio.png" alt="">
-          <p>Suicídio</p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-    </div>
-  </div>
-
-  <div class="accordion" id="accordionPanelsStayOpenExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-         <p>ANAMNESE DE EMERGÊNCIA</p>
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-        <div class="accordion-body">
-          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
         </div>
       </div>
     </div>
@@ -362,7 +185,87 @@
       </h2>
       <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
         <div class="accordion-body">
-          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          <div>
+            <h2>Pré-natal</h2>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+          </div>
+    
+          <div>
+            <h2>Período da gestação</h2>
+            <input type="text" name="" id="">
+          </div>
+          <div>
+            <h2>Nome do médico:</h2>
+            <input type="text" name="" id="">
+          </div>
+          <div>
+            <h2>Possíveis complicações</h2>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+          </div>
+          <div>
+            <h2>Primeiro filho?</h2>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+            <h2>Quantos?</h2>
+            <input type="number" name="" id="">
+          </div>
+          <div>
+            <h2>Contrações</h2>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+            <h2>Que horas iniciaram as contrações?</h2>
+            <input type="time" name="" id="">
+            <h2>Tempo das contrações:</h2>
+            <label class="SimNao" for="intervalo">Intervalo:</label>
+            <input type="text" name="intervalo">
+            <label class="SimNao" for="duracao">Duração</label>
+            <input  type="text">
+          </div>
+          <div>
+            <h2>Pressão no quadril ou vontade de evacuar?</h2>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+          </div>
+          <div>
+            <h2>Já houve ruptura na bolsa?</h2>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+          </div>
+          <div>
+            <h2>Foi feita inspeção visual?</h2>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+          </div>
+          <div>
+            <h2>Parto realizado?</h2>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+            <input type="radio" name="simNao">
+            <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+          </div>
+          <div>
+            <h2>Sexo do bebê</h2>
+            <input type="radio" name="sexo" id="bolinhas">
+            <label class="SimNao" id="generos" for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>
+            <input type="radio" name="sexo" id="bolinhafeminina">
+            <label class="SimNao" id="generofeminino" for="sexo"><img src="/img/feminino.svg" alt=""> Feminino</label>
+          </div>
         </div>
       </div>
     </div>
@@ -381,7 +284,75 @@
       </h2>
       <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
         <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          <div class="tipoLinha1">
+            <div><img src="/img/domiciliar.png" alt="">
+              <p>Doméstico</p>
+            </div>
+            <div><img src="/img/animal.png" alt="">
+              <p>Causado por animais</p>
+            </div>
+            <div><img src="/img/afogamento.png" alt="">
+              <p>Afogamento</p>
+            </div>
+          </div>
+          <div class="tipoLinha2">
+            <div>
+              <img src="/img/enchente.png" alt="">
+              <p>Enchente</p>
+            </div>
+            <div>
+              <img src="/img/desmoronamento.png" alt="">
+              <p>Desmoronamento</p>
+            </div>
+            <div>
+              <img src="/img/ventos.png" alt="">
+              <p>Ventos fortes</p>
+            </div>
+          </div>
+          <div class="tipoLinha3">
+            <div>
+              <img src="/img/incendio.png" alt="">
+              <p>incêndio</p>
+            </div>
+            <div>
+              <img src="/img/intoxicacao.png" alt="" >
+              <p>Intoxicação</p>
+            </div>
+            <div>
+              <img src="/img/carro.png" alt="">
+              <p>Acidente de carro</p>
+            </div>
+          </div>
+          <div class="tipoLinha4">
+            <div>
+              <img src="/img/choque.png" alt="">
+              <p>Eletrocução</p>
+            </div>
+            <div>
+              <img src="/img/agressao.png" alt="">
+              <p>Agressão</p>
+            </div>
+            <div>
+              <img src="/img/queda.png" alt="">
+              <p>Queda</p>
+            </div>
+          </div>
+          <div class="tipoLinha5">
+            <div>
+              <img src="/img/bicicleta.png" alt="">
+              <p>Acidente de bicicleta</p>
+            </div>
+            <div>
+              <img src="/img/suicidio.png" alt="">
+              <p>Suicídio</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+        </div>
         </div>
       </div>
     </div>

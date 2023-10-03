@@ -23,7 +23,7 @@ section {
     align-items: center;
 }
 
-#inicio img {
+#logo{
     width: 230px;
 }
 
@@ -69,6 +69,7 @@ form {
     justify-content: center;
     color: white;
     margin-top: 20px;
+    
 }
 
 .form-group input {
@@ -84,6 +85,26 @@ form {
     font-weight: 700;
 }
 
+.password{
+    position: relative;
+}
+.confirmPassword{
+    position: relative;
+}
+
+
+#mostrarSenhaButton, #mostrarSenhaButton2{
+    width: 50px;
+    height: 30px;
+    background-color:white;
+    position: absolute;
+    top: 20px;
+    left: 18.5vw;
+    box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+
+
 .form-group button {
     width: 190px;
     height: 40px;
@@ -94,10 +115,15 @@ form {
     cursor: pointer;
 }
 
+
 @media (max-width: 999px) {
     .form-group input { 
         width: 400px;
         height: 40px;
+    }
+    #mostrarSenhaButton, #mostrarSenhaButton2{
+        left: 44vw;
+        top: 21px;
     }
 }
 

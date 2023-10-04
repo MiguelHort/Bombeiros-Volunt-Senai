@@ -57,8 +57,9 @@ display: flex;
 .sexo{
 
   display: flex;
-  margin-top: 22%;
-
+  margin-top: 5%;
+  gap: 30px;
+  margin-left: 15%;
 } 
 
 /* icones */
@@ -135,24 +136,14 @@ display: flex;
 #generos{
  
   font-size: 30px;
-  margin-top: -15%;
 }
 
-.masculinofeminino{
-
-}
 #bolinhas{
   width: 25px;
   height: 25px;
  
 }
 
-#bolinhafeminina{
-  width: 25px;
-  height: 25px;
-  margin-left: 15%;
-
-}
 /* Expandir */
 
 .container {

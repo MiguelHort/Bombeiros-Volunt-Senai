@@ -189,7 +189,11 @@ margin-left: 1%;
 }
 
 
+.caixa_de_texto_anamnese{
+  width: 480px;
+  border: 1px solid black;
 
+}
 .container {
   width: 700px;
   margin: 50px auto;

@@ -173,6 +173,23 @@ margin-left: 1%;
   font-style: normal;
   font-weight: 700;
 }
+
+.botaoderelação{
+  border-radius: 15px;
+  background-color: #ccc; /* Cor de fundo padrão */
+  cursor: pointer;
+  color: white;
+  width: 30%;
+  
+}
+
+
+.botaoderelação.selecionado {
+  background-color: #02005C; /* Cor de fundo quando selecionado */
+}
+
+
+
 .container {
   width: 700px;
   margin: 50px auto;
@@ -402,6 +419,7 @@ input[type=checkbox]{
 .accordion{
   max-width: 70vw;
   margin: auto;
+  margin-top: 5%;
 }
 
 .accordion-button {

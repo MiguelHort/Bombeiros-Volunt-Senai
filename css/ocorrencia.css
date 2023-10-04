@@ -48,8 +48,14 @@ body{
   margin-left: 2%;
 }
 
-#topico_input{
+#topico_nome{
 display: flex;
+margin-top: 3%;
+}
+
+#topico_cpf{
+display: flex;
+margin-left: 1%;
 
 }
 
@@ -68,9 +74,11 @@ display: flex;
   height: 55px;
 }
 .iconepessoa{
-  width: 60px;
-  height: 60px;
-  /* margin-left: -2% ; */
+  width: 17%;
+}
+
+.iconepessoa{
+    width: 10%;
 }
 
 #inputs{
@@ -198,7 +206,6 @@ display: flex;
 .observacoes{
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
@@ -376,7 +383,6 @@ input[type=checkbox]{
 .accordion{
   max-width: 70vw;
   margin: auto;
-  margin-top: 10%;
 }
 
 .accordion-button {

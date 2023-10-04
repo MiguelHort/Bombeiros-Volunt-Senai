@@ -57,8 +57,9 @@ display: flex;
 .sexo{
 
   display: flex;
-  margin-top: 22%;
-
+  margin-top: 5%;
+  gap: 30px;
+  margin-left: 15%;
 } 
 
 /* icones */
@@ -129,30 +130,21 @@ display: flex;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-top: 5%;
 
 }
 
 #generos{
  
   font-size: 30px;
-  margin-top: -15%;
 }
 
-.masculinofeminino{
-
-}
 #bolinhas{
   width: 25px;
   height: 25px;
  
 }
 
-#bolinhafeminina{
-  width: 25px;
-  height: 25px;
-  margin-left: 15%;
-
-}
 /* Expandir */
 
 .container {
@@ -206,6 +198,7 @@ display: flex;
 .observacoes{
   display: flex;
   flex-direction: column;
+  margin-top: 10%;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
@@ -383,6 +376,7 @@ input[type=checkbox]{
 .accordion{
   max-width: 70vw;
   margin: auto;
+  margin-top: 10%;
 }
 
 .accordion-button {

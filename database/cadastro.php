@@ -3,7 +3,7 @@ session_start();
 include("conexao.php");
 
 // Recebe os valores
-$user_equipe = mysqli_real_escape_string($conexao, trim($_POST['name']));
+$user_equipe = mysqli_real_escape_string($conexao, trim($_POST['equipe']));
 $user_password = mysqli_real_escape_string($conexao, trim(md5($_POST['password'])));
 
 // Valida o email

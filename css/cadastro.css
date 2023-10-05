@@ -80,6 +80,10 @@ form {
     box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
+.form-group input:hover {
+    
+}
+
 .form-group label {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
@@ -115,6 +119,10 @@ form {
     cursor: pointer;
 }
 
+.form-group button:hover{
+    scale: 1.05;
+    transition: all 0.5s;
+}
 
 @media (max-width: 999px) {
     .form-group input { 

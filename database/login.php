@@ -14,12 +14,11 @@ if ($count == 1) {
     // As credenciais são válidas, o usuário está autenticado
     $_SESSION['usuario_id'] = $row['id']; // Salvar o ID do usuário na sessão, se necessário
     $_SESSION['usuario_equipe'] = $row['equipe']; // Salvar o nome do usuário na sessão, se necessário
-
-    header('Location: ../index.html'); // Redirecionar para a página do painel do usuário
+    header('Location: ocorrencia.html'); // Redirecionar para a página do painel do usuário
     exit;
 } else {
     $_SESSION['login_invalido'] = true; // Credenciais inválidas
-    header('Location: offlogin.html'); // Redirecionar de volta para a página de login
+    header('Location: index.html'); // Redirecionar de volta para a página de login
     exit;
 }
 

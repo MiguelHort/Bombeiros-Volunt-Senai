@@ -427,7 +427,7 @@ input[type=checkbox]{
   justify-content: space-around;
   text-align: center;
 }
-.accordion{
+.accordion-item{
   max-width: 70vw;
   margin: auto;
   margin-top: 5%;
@@ -447,4 +447,19 @@ input[type=checkbox]{
   border-radius: 50;
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
+}
+
+.aboCol1{
+  display: flex;
+  align-items: center;
+}
+.aboCol1 img{
+  width: 85%;
+}
+.aberturaOcular{
+  display: flex;
+}
+
+.content-aboCol{
+  display: flex;
 }

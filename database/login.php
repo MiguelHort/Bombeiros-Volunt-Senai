@@ -13,7 +13,7 @@ $count = mysqli_num_rows($result);
 if ($count == 1) {
     // As credenciais são válidas, o usuário está autenticado
     $_SESSION['usuario_id'] = $row['id']; // Salvar o ID do usuário na sessão, se necessário
-    $_SESSION['usuario_nome'] = $row['name']; // Salvar o nome do usuário na sessão, se necessário
+    $_SESSION['usuario_equipe'] = $row['equipe']; // Salvar o nome do usuário na sessão, se necessário
     header('Location: ocorrencia.html'); // Redirecionar para a página do painel do usuário
     exit;
 } else {

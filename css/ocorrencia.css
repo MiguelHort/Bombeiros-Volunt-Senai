@@ -459,7 +459,18 @@ input[type=checkbox]{
 .aberturaOcular{
   display: flex;
 }
-
 .content-aboCol{
   display: flex;
+  padding: 0px 10px  ;
+}
+.idadeGlasgow{
+  text-align: center;
+  font-weight: bold;
+}
+.box-glasgow{
+  padding: 15px 0;
+}
+
+.verbalImg{
+  width: 80%;
 }

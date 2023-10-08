@@ -470,7 +470,16 @@ input[type=checkbox]{
 .box-glasgow{
   padding: 15px 0;
 }
-
 .verbalImg{
   width: 80%;
+}
+
+.svTopico{
+  display: flex;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.svTopico input{
+  width: 12%;
+  margin: 0 8px;
 }

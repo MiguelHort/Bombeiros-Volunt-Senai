@@ -427,7 +427,7 @@ input[type=checkbox]{
   justify-content: space-around;
   text-align: center;
 }
-.accordion{
+.accordion-item{
   max-width: 70vw;
   margin: auto;
   margin-top: 5%;
@@ -449,4 +449,74 @@ input[type=checkbox]{
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
 
+}
+
+.aboCol1{
+  display: flex;
+  align-items: center;
+}
+.aboCol1 img{
+  width: 85%;
+}
+.aberturaOcular{
+  display: flex;
+}
+.content-aboCol{
+  display: flex;
+  padding: 0px 10px  ;
+}
+.idadeGlasgow{
+  text-align: center;
+  font-weight: bold;
+}
+.box-glasgow{
+  padding: 15px 0;
+}
+.verbalImg{
+  width: 80%;
+}
+
+.svTopico{
+  display: flex;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.svTopico input{
+  width: 12%;
+  margin: 0 8px;
+}
+
+.aboCol1{
+  display: flex;
+  align-items: center;
+}
+.aboCol1 img{
+  width: 85%;
+}
+.aberturaOcular{
+  display: flex;
+}
+.content-aboCol{
+  display: flex;
+  padding: 0px 10px  ;
+}
+.idadeGlasgow{
+  text-align: center;
+  font-weight: bold;
+}
+.box-glasgow{
+  padding: 15px 0;
+}
+.verbalImg{
+  width: 80%;
+}
+
+.svTopico{
+  display: flex;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.svTopico input{
+  width: 12%;
+  margin: 0 8px;
 }

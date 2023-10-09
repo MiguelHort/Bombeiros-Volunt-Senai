@@ -41,9 +41,9 @@
       </div>
 
     </div>
-   
+
     <h1 style="text-align: center; margin-top: 4%; ;">INFORMAÇÕES DO PACIENTE</h1>
-   
+
     <div class="nome-input">
 
       <div id="topico_nome">
@@ -71,16 +71,18 @@
     <div class="sexo">
 
       <div id="masculino">
-      <input type="radio" name="sexo" id="bolinhas" >
-      <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/masculino.svg" alt="" width="16%"> Masculino</label>
+        <input type="radio" name="sexo" id="bolinhas">
+        <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/masculino.svg" alt="" width="16%">
+          Masculino</label>
+      </div>
+
+      <div id="feminino">
+        <input type="radio" name="sexo" id="bolinhas">
+        <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/feminino.svg" alt="" width="16%">
+          Feminino</label>
+      </div>
+
     </div>
-  
-    <div id="feminino">
-      <input type="radio" name="sexo" id="bolinhas">
-      <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/feminino.svg" alt="" width="16%"> Feminino</label>
-    </div>
-    
-  </div>
 
   </div>
 
@@ -118,28 +120,28 @@
 
           <div id="topico_nome">
             <label for="inputs" class="topico_nome_acompanhante">Nome:</label>
-            <input id="inputs" type="text"> 
+            <input id="inputs" type="text">
           </div>
 
-            <br>
+          <br>
 
-            <p id="relacaopaciente">Relação com o paciente</p>
-          
-            <div id="botoesrelacao1">
+          <p id="relacaopaciente">Relação com o paciente</p>
+
+          <div id="botoesrelacao1">
 
             <button class="botaoderelação" onclick="mudarCor(this)">Pai</button>
             <button class="botaoderelação" onclick="mudarCor(this)">Mãe</button>
-            <button class="botaoderelação" onclick="mudarCor(this)">Irmão</button> 
+            <button class="botaoderelação" onclick="mudarCor(this)">Irmão</button>
 
           </div>
 
-            <br>
+          <br>
 
-            <button class="botaoderelação" onclick="mudarCor(this)">Cônjuge</button>
-            <button class="botaoderelação" onclick="mudarCor(this)">Amigo</button>
-            <button class="botaoderelação" onclick="mudarCor(this)">Outro</button>
-       
-          </div>
+          <button class="botaoderelação" onclick="mudarCor(this)">Cônjuge</button>
+          <button class="botaoderelação" onclick="mudarCor(this)">Amigo</button>
+          <button class="botaoderelação" onclick="mudarCor(this)">Outro</button>
+
+        </div>
       </div>
     </div>
 
@@ -264,11 +266,11 @@
             <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
             <input type="radio" name="simNao" id="bolinhas">
             <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
-           
+
             <h2>Quantos?</h2>
             <input class="caixa_de_texto_gestacional" type="number" name="" id="">
           </div>
-        
+
           <div>
             <h2>Contrações</h2>
             <input type="radio" name="simNao" id="bolinhas">
@@ -292,7 +294,7 @@
 
             <br>
 
-         
+
 
             <label class="SimNao" for="duracao">Duração</label>
             <input class="caixa_de_texto_gestacional" type="text">
@@ -445,8 +447,181 @@
         </button>
       </h2>
       <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse">
+        <div class="accordion-body ">
+          <div class="aberturaOcular">
+            <div class="aboCol1">
+              <img src="../img/ocular.png" alt="">
+
+            </div>
+            <div class="box-glasgow">
+              <h3 class="idadeGlasgow">>5 anos</h3>
+              <div class="content-aboCol">
+                <div>
+                  <p>Espontânea</p>
+                  <p>Comando Verbal</p>
+                  <p>Estímulo Doloroso</p>
+                  <p>Nenhuma</p>
+                </div>
+                <div>
+                  <p>4</p>
+                  <p>3</p>
+                  <p>2</p>
+                  <p>1</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="box-glasgow">
+              <h3 class="idadeGlasgow">≤5 anos</h3>
+              <div class="content-aboCol">
+                <div>
+                  <p>Espontânea</p>
+                  <p>Comando Verbal</p>
+                  <p>Estímulo Doloroso</p>
+                  <p>Nenhuma</p>
+                </div>
+                <div>
+                  <p>4</p>
+                  <p>3</p>
+                  <p>2</p>
+                  <p>1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="aberturaOcular">
+            <div class="aboCol1">
+              <img class="verbalImg" src="../img/verbal.png" alt="">
+
+            </div>
+            <div class="box-glasgow">
+              <h3 class="idadeGlasgow">>5 anos</h3>
+              <div class="content-aboCol">
+                <div>
+                  <p>Espontânea</p>
+                  <p>Comando Verbal</p>
+                  <p>Estímulo Doloroso</p>
+                  <p>Nenhuma</p>
+                </div>
+                <div>
+                  <p>4</p>
+                  <p>3</p>
+                  <p>2</p>
+                  <p>1</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="box-glasgow">
+              <h3 class="idadeGlasgow">≤5 anos</h3>
+              <div class="content-aboCol">
+                <div>
+                  <p>Espontânea</p>
+                  <p>Comando Verbal</p>
+                  <p>Estímulo Doloroso</p>
+                  <p>Nenhuma</p>
+                </div>
+                <div>
+                  <p>4</p>
+                  <p>3</p>
+                  <p>2</p>
+                  <p>1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="aberturaOcular">
+            <div class="aboCol1">
+              <img class="verbalImg" src="../img/motora.png" alt="">
+
+            </div>
+            <div class="box-glasgow">
+              <h3 class="idadeGlasgow">>5 anos</h3>
+              <div class="content-aboCol">
+                <div>
+                  <p>Espontânea</p>
+                  <p>Comando Verbal</p>
+                  <p>Estímulo Doloroso</p>
+                  <p>Nenhuma</p>
+                </div>
+                <div>
+                  <p>4</p>
+                  <p>3</p>
+                  <p>2</p>
+                  <p>1</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="box-glasgow">
+              <h3 class="idadeGlasgow">≤5 anos</h3>
+              <div class="content-aboCol">
+                <div>
+                  <p>Espontânea</p>
+                  <p>Comando Verbal</p>
+                  <p>Estímulo Doloroso</p>
+                  <p>Nenhuma</p>
+                </div>
+                <div>
+                  <p>4</p>
+                  <p>3</p>
+                  <p>2</p>
+                  <p>1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+          <p class="titulomenususpenso">SINAIS VITAIS</p>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
         <div class="accordion-body">
-          gffhsgh
+          <div class="pressao svTopico">
+            <h2>Pressão arterial: </h2>
+            <input type="number" name="" id="">
+            x
+            <input type="number" name="" id="">
+            <h2> mmHg</h2>
+          </div>
+          <div class="pulso svTopico">
+            <h2>Pulso:</h2>
+            <input type="number" name="" id="">
+            <h2>B.C.P.M.</h2>
+          </div>
+          <div class="respiracao svTopico">
+            <h2>Respiração:</h2>
+            <input type="number" name="" id="">
+            <h2>M.R.M.</h2>
+          </div>
+          <div class="saturacao svTopico">
+            <h2>Saturação: </h2>
+            <input type="number" name="" id="">
+            <h2>%</h2>
+          </div>
+          <div class="hgt svTopico">
+            <h2>HGT:</h2>
+            <input type="number" name="" id="">
+          </div>
+          <div class="temperatura svTopico">
+            <h2>Temperatura:</h2>
+            <input type="number" name="" id="">
+            <h2>°C</h2>
+          </div>
 
         </div>
       </div>
@@ -463,8 +638,26 @@
         </h2>
         <div id="panelsStayOpen-collapsesix" class="accordion-collapse collapse">
           <div class="accordion-body">
-            gffhsgh
-  
+            <div>
+              <input type="checkbox" name="psiquiatrico" id="">
+              <label for="psiquiatrico">Psiquiátrico</label>
+            </div>
+            <div class="respiratorio">
+              <div class="respMain">
+                <input type="checkbox" name="respiratorio" id="">
+                <label for="psiquiatrico">Respiratório +</label>
+              </div>
+              <div class="respAux">
+                <div>
+                  <input type="checkbox" name="DPOC" id="">
+                  <label for="DPOC">DPOC</label>
+                </div>
+                <div>
+                  <input type="checkbox" name="inalacao" id="">
+                  <label for="inalacao">Inalação Fumaça</label>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -481,7 +674,7 @@
           <div id="panelsStayOpen-collapseseven" class="accordion-collapse collapse">
             <div class="accordion-body">
               gffhsgh
-    
+
             </div>
           </div>
         </div>
@@ -498,7 +691,7 @@
             <div id="panelsStayOpen-collapseeight" class="accordion-collapse collapse">
               <div class="accordion-body">
                 gffhsgh
-      
+
               </div>
             </div>
           </div>
@@ -515,7 +708,7 @@
               <div id="panelsStayOpen-collapsenine" class="accordion-collapse collapse">
                 <div class="accordion-body">
                   gffhsgh
-        
+
                 </div>
               </div>
             </div>
@@ -532,7 +725,7 @@
                 <div id="panelsStayOpen-collapseten" class="accordion-collapse collapse">
                   <div class="accordion-body">
                     gffhsgh
-          
+
                   </div>
                 </div>
               </div>
@@ -549,26 +742,43 @@
                   <div id="panelsStayOpen-collapseeleven" class="accordion-collapse collapse">
                     <div class="accordion-body">
                       gffhsgh
-            
+
                     </div>
                   </div>
                 </div>
 
-              
+
+
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapsetwelve" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapsetwelve">
+                        <p class="titulomenususpenso">PROCEDIMENTOS EFETUADOS</p>
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapsetwelve" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        gffhsgh
+
+                      </div>
+                    </div>
+                  </div>
 
                   <div class="accordion" id="accordionPanelsStayOpenExample">
                     <div class="accordion-item">
                       <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                          data-bs-target="#panelsStayOpen-collapsetwelve" aria-expanded="false"
-                          aria-controls="panelsStayOpen-collapsetwelve">
-                          <p class="titulomenususpenso">PROCEDIMENTOS EFETUADOS</p>
+                          data-bs-target="#panelsStayOpen-collapsethirteen" aria-expanded="false"
+                          aria-controls="panelsStayOpen-collapsethirteen">
+                          <p class="titulomenususpenso">MATERIAIS UTILIZADOS DESCARTÁVEIS</p>
                         </button>
                       </h2>
-                      <div id="panelsStayOpen-collapsetwelve" class="accordion-collapse collapse">
+                      <div id="panelsStayOpen-collapsethirteen" class="accordion-collapse collapse">
                         <div class="accordion-body">
                           gffhsgh
-                
+
                         </div>
                       </div>
                     </div>
@@ -577,15 +787,15 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapsethirteen" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapsethirteen">
-                            <p class="titulomenususpenso">MATERIAIS UTILIZADOS DESCARTÁVEIS</p>
+                            data-bs-target="#panelsStayOpen-collapsefourteen" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapsefourteen">
+                            <p class="titulomenususpenso">MATERIAIS UTILIZADOS DEIXADOS NO HOSPITAL</p>
                           </button>
                         </h2>
-                        <div id="panelsStayOpen-collapsethirteen" class="accordion-collapse collapse">
+                        <div id="panelsStayOpen-collapsefourteen" class="accordion-collapse collapse">
                           <div class="accordion-body">
                             gffhsgh
-                  
+
                           </div>
                         </div>
                       </div>
@@ -594,15 +804,15 @@
                         <div class="accordion-item">
                           <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#panelsStayOpen-collapsefourteen" aria-expanded="false"
-                              aria-controls="panelsStayOpen-collapsefourteen">
-                              <p class="titulomenususpenso">MATERIAIS UTILIZADOS DEIXADOS NO HOSPITAL</p>
+                              data-bs-target="#panelsStayOpen-collapsefifteen" aria-expanded="false"
+                              aria-controls="panelsStayOpen-collapsefifteen">
+                              <p class="titulomenususpenso">AVALIAÇÃO DA CINEMÁTICA</p>
                             </button>
                           </h2>
-                          <div id="panelsStayOpen-collapsefourteen" class="accordion-collapse collapse">
+                          <div id="panelsStayOpen-collapsefifteen" class="accordion-collapse collapse">
                             <div class="accordion-body">
                               gffhsgh
-                    
+
                             </div>
                           </div>
                         </div>
@@ -611,35 +821,18 @@
                           <div class="accordion-item">
                             <h2 class="accordion-header">
                               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapsefifteen" aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapsefifteen">
-                                <p class="titulomenususpenso">AVALIAÇÃO DA CINEMÁTICA</p>
+                                data-bs-target="#panelsStayOpen-collapsesixteen" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapsesixteen">
+                                <p class="titulomenususpenso">OBJETOS RECOLHIDOS</p>
                               </button>
                             </h2>
-                            <div id="panelsStayOpen-collapsefifteen" class="accordion-collapse collapse">
+                            <div id="panelsStayOpen-collapsesixteen" class="accordion-collapse collapse">
                               <div class="accordion-body">
                                 gffhsgh
-                      
+
                               </div>
                             </div>
                           </div>
-
-                          <div class="accordion" id="accordionPanelsStayOpenExample">
-                            <div class="accordion-item">
-                              <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                  data-bs-target="#panelsStayOpen-collapsesixteen" aria-expanded="false"
-                                  aria-controls="panelsStayOpen-collapsesixteen">
-                                  <p class="titulomenususpenso">OBJETOS RECOLHIDOS</p>
-                                </button>
-                              </h2>
-                              <div id="panelsStayOpen-collapsesixteen" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                  gffhsgh
-                        
-                                </div>
-                              </div>
-                            </div>
 
 
                           
@@ -651,84 +844,84 @@
     <textarea class="caixa_de_texto_gestacional" name="observacoes" id="" cols="30" rows="10"></textarea>
   </div>
 
-  <div class="serviceTeam">
-    <h4><img src="../img/equipe.svg" alt="">EQUIPE DE ATENDIMENTO</h4>
+                            <div class="serviceTeam">
+                              <h4><img src="../img/equipe.svg" alt="">EQUIPE DE ATENDIMENTO</h4>
 
-    <div class="squadCamp gapCamp">
-      <label for="m">M:</label>
-      <input type="text" name="m" id="">
-    </div>
+                              <div class="squadCamp gapCamp">
+                                <label for="m">M:</label>
+                                <input type="text" name="m" id="">
+                              </div>
 
-    <div class="squadCamp gapCamp">
-      <label for="s1">S1:</label>
-      <input type="text" name="s1" id="">
-    </div>
+                              <div class="squadCamp gapCamp">
+                                <label for="s1">S1:</label>
+                                <input type="text" name="s1" id="">
+                              </div>
 
-    <div class="squadCamp gapCamp">
-      <label for="s2">S2:</label>
-      <input type="text" name="s2" id="">
-    </div>
+                              <div class="squadCamp gapCamp">
+                                <label for="s2">S2:</label>
+                                <input type="text" name="s2" id="">
+                              </div>
 
-    <div class="squadCamp gapCamp">
-      <label for="s3">S3:</label>
-      <input type="text" name="s3" id="">
-    </div>
+                              <div class="squadCamp gapCamp">
+                                <label for="s3">S3:</label>
+                                <input type="text" name="s3" id="">
+                              </div>
 
-    <div class="teamNames gapCamp">
-      <label for="demandante"><img src="../img/demandante.svg" alt=""> DEMANDANTE:</label>
-      <input type="text" name="demandante" id="dem-equi">
-    </div>
+                              <div class="teamNames gapCamp">
+                                <label for="demandante"><img src="../img/demandante.svg" alt=""> DEMANDANTE:</label>
+                                <input type="text" name="demandante" id="dem-equi">
+                              </div>
 
-    <div class="teamNames gapCamp">
-      <label for="team"><img src="../img/bombeiro.svg" alt=""> EQUIPE:</label>
-      <input type="text" name="team" id="dem-equi">
-    </div>
-  </div>
+                              <div class="teamNames gapCamp">
+                                <label for="team"><img src="../img/bombeiro.svg" alt=""> EQUIPE:</label>
+                                <input type="text" name="team" id="dem-equi">
+                              </div>
+                            </div>
 
-  <div class="identifications">
-    <div class="espacolinha">
-      <div>
-        <label for="usb">Nº USB:</label>
-        <input type="text" name="usb" id="">
-      </div>
-      <div class="check">
-        <label for="ir">CÓD. IR:</label>
-        <input type="checkbox" name="ir" id="">
-      </div>
-    </div>
+                            <div class="identifications">
+                              <div class="espacolinha">
+                                <div>
+                                  <label for="usb">Nº USB:</label>
+                                  <input type="text" name="usb" id="">
+                                </div>
+                                <div class="check">
+                                  <label for="ir">CÓD. IR:</label>
+                                  <input type="checkbox" name="ir" id="">
+                                </div>
+                              </div>
 
-    <div class="espacolinha">
-      <div><label for="ocorr">Nº OCORR.:</label>
-        <input type="text" name="ocorr" id="">
-      </div>
-      <div class="check"> <label for="ps">CÓD. PS:</label>
-        <input type="checkbox" name="ps" id="">
-      </div>
-    </div>
+                              <div class="espacolinha">
+                                <div><label for="ocorr">Nº OCORR.:</label>
+                                  <input type="text" name="ocorr" id="">
+                                </div>
+                                <div class="check"> <label for="ps">CÓD. PS:</label>
+                                  <input type="checkbox" name="ps" id="">
+                                </div>
+                              </div>
 
-    <div class="desp espacolinha">
-      <div> <label for="desp">DESP.:</label>
-        <input type="text" name="desp">
-      </div>
-      <div><label for="kmfinal">KM FINAL:</label>
-        <input type="text" name="kmfinal">
-      </div>
+                              <div class="desp espacolinha">
+                                <div> <label for="desp">DESP.:</label>
+                                  <input type="text" name="desp">
+                                </div>
+                                <div><label for="kmfinal">KM FINAL:</label>
+                                  <input type="text" name="kmfinal">
+                                </div>
 
-    </div>
-    <div class="h-s espacolinha">
-      <div style="display:flex; align-items: baseline;">
-        <label for="h.ch">H.CH.:</label>
-        <input type="text" name="h.ch">
-      </div>
-      <div style="display:flex; align-items: baseline;">
-        <label for="sia/sus">SIA/SUS.:</label>
-        <input type="text" name="sia/sus">
-      </div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+                              </div>
+                              <div class="h-s espacolinha">
+                                <div style="display:flex; align-items: baseline;">
+                                  <label for="h.ch">H.CH.:</label>
+                                  <input type="text" name="h.ch">
+                                </div>
+                                <div style="display:flex; align-items: baseline;">
+                                  <label for="sia/sus">SIA/SUS.:</label>
+                                  <input type="text" name="sia/sus">
+                                </div>
+                              </div>
+                            </div>
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                              integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                              crossorigin="anonymous"></script>
 </body>
 
 </html>

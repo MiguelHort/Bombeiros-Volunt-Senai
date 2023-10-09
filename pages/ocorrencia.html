@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/ocorrencia.css">
-  <script src="../scripts/ocorrencia.js"></script>
+ 
 </head>
 
 
@@ -248,10 +248,16 @@
             <h2>Período da gestação</h2>
             <input class="caixa_de_texto_gestacional" type="text" name="" id="">
           </div>
+
+          <br>
+
           <div>
             <h2>Nome do médico:</h2>
             <input class="caixa_de_texto_gestacional" type="text" name="" id="">
           </div>
+
+          <br>
+
           <div>
             <h2>Possíveis complicações</h2>
             <input type="radio" name="simNao" id="bolinhas">
@@ -270,6 +276,8 @@
             <h2>Quantos?</h2>
             <input class="caixa_de_texto_gestacional" type="number" name="" id="">
           </div>
+ 
+          <br>
 
           <div>
             <h2>Contrações</h2>
@@ -279,8 +287,9 @@
             <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
 
             <h2>Que horas iniciaram as contrações?</h2>
-            <input type="time" name="" id="">
+            <input class="horario" type="time" name="" id="">
 
+            <br>
             <br>
 
             <h2>Tempo das contrações:</h2>
@@ -311,6 +320,8 @@
             <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
           </div>
 
+          <br>
+
           <div>
             <h2>Já houve ruptura na bolsa?</h2>
             <input type="radio" name="simNao" id="bolinhas">
@@ -318,6 +329,8 @@
             <input type="radio" name="simNao" id="bolinhas">
             <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
           </div>
+
+          <br>
 
           <div>
             <h2>Foi feita inspeção visual?</h2>
@@ -327,6 +340,8 @@
             <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
           </div>
 
+          <br>
+
           <div>
             <h2>Parto realizado?</h2>
             <input type="radio" name="simNao" id="bolinhas">
@@ -334,6 +349,8 @@
             <input type="radio" name="simNao" id="bolinhas">
             <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
           </div>
+
+          <br>
 
           <div>
             <h2>Sexo do bebê</h2>
@@ -446,6 +463,9 @@
           <p class="titulomenususpenso">AVALIAÇÃO DO PACIENTE (GLASGOW)</p>
         </button>
       </h2>
+
+<!-- abertura ocular -->
+      
       <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse">
         <div class="accordion-body ">
           <div class="aberturaOcular">
@@ -457,17 +477,38 @@
               <h3 class="idadeGlasgow">>5 anos</h3>
               <div class="content-aboCol">
                 <div>
+                  <div class="topico1">
                   <p>Espontânea</p>
+                </div>
                   <p>Comando Verbal</p>
                   <p>Estímulo Doloroso</p>
                   <p>Nenhuma</p>
                 </div>
-                <div>
-                  <p>4</p>
-                  <p>3</p>
-                  <p>2</p>
-                  <p>1</p>
-                </div>
+                <div id="numeros">
+
+                  <div class="topico1">
+                  <span class="numero" data-valor="4">4</span>
+                  </div>
+
+                  <br>
+
+                  <br>
+
+                  <span class="numero" data-valor="3">3</span>
+                  
+                  <br>
+
+                  <br>
+
+                  <span class="numero" data-valor="2">2</span>
+
+                  <br>
+
+                  <br>
+
+                  <span class="numero" data-valor="1">1</span>
+
+              </div>
               </div>
             </div>
 
@@ -480,17 +521,32 @@
                   <p>Estímulo Doloroso</p>
                   <p>Nenhuma</p>
                 </div>
-                <div>
-                  <p>4</p>
-                  <p>3</p>
-                  <p>2</p>
-                  <p>1</p>
-                </div>
+                <div id="numeros">
+                <span class="numero" data-valor="4">4</span>
+
+                  <br>
+
+                  <br>
+
+                  <span class="numero" data-valor="3">3</span>
+                  
+                  <br>
+
+                  <br>
+
+                  <span class="numero" data-valor="2">2</span>
+
+                  <br>
+
+                  <br>
+
+                  <span class="numero" data-valor="1">1</span>
+              </div>
               </div>
             </div>
           </div>
 
-
+<!-- resposta verbal -->
 
           <div class="aberturaOcular">
             <div class="aboCol1">
@@ -498,20 +554,31 @@
 
             </div>
             <div class="box-glasgow">
-              <h3 class="idadeGlasgow">>5 anos</h3>
+              <h3 class="idadeGlasgow">>5 anos</h3>        
               <div class="content-aboCol">
                 <div>
-                  <p>Espontânea</p>
-                  <p>Comando Verbal</p>
-                  <p>Estímulo Doloroso</p>
+                  <p>Orientado</p>
+                  <p>Confuso</p>
+                  <p>Palavras inapropriadas</p>
+                  <p>Palavras incompreensíveis</p>
                   <p>Nenhuma</p>
                 </div>
-                <div>
-                  <p>4</p>
-                  <p>3</p>
-                  <p>2</p>
-                  <p>1</p>
-                </div>
+                <div id="numeros">
+
+                  <span class="numero" data-valor="5">5</span>
+                  <br>
+                  <br>
+                  <span class="numero" data-valor="4">4</span>
+                  <br>
+                  <br>
+                  <span class="numero" data-valor="3">3</span>
+                  <br>
+                  <br>
+                  <span class="numero" data-valor="2">2</span>
+                  <br>
+                  <br>
+                  <span class="numero" data-valor="1">1</span>
+              </div>
               </div>
             </div>
 
@@ -519,23 +586,35 @@
               <h3 class="idadeGlasgow">≤5 anos</h3>
               <div class="content-aboCol">
                 <div>
-                  <p>Espontânea</p>
-                  <p>Comando Verbal</p>
-                  <p>Estímulo Doloroso</p>
-                  <p>Nenhuma</p>
+                  <p>Palavras e frases apropriadas</p>
+                  <p>Palavras inapropriadas</p>
+                  <p>Choro persistente ou gritos</p>
+                  <p>Sons incompreensíveis</p>
+                  <p>Nenhuma resposta verbal</p>
                 </div>
-                <div>
-                  <p>4</p>
-                  <p>3</p>
-                  <p>2</p>
-                  <p>1</p>
-                </div>
+                <div id="numeros">
+
+                  <span class="numero" data-valor="5">5</span>
+                  <br>
+
+                  <span class="numero" data-valor="4">4</span>
+                  <br>
+                 
+                  <span class="numero" data-valor="3">3</span>
+                
+                  <br>
+                  <span class="numero" data-valor="2">2</span>
+                  
+                  <br>
+                  <span class="numero" data-valor="1">1</span>
+              </div>
               </div>
             </div>
           </div>
 
 
 
+<!-- resposta motora -->
 
           <div class="aberturaOcular">
             <div class="aboCol1">
@@ -546,16 +625,31 @@
               <h3 class="idadeGlasgow">>5 anos</h3>
               <div class="content-aboCol">
                 <div>
-                  <p>Espontânea</p>
-                  <p>Comando Verbal</p>
-                  <p>Estímulo Doloroso</p>
+                  <p>Obedece comandos</p>
+                  <p>Localiza dor</p>
+                  <p>Movimento de retirada</p>
+                  <p>Flexão anormal</p>
                   <p>Nenhuma</p>
                 </div>
                 <div>
-                  <p>4</p>
-                  <p>3</p>
-                  <p>2</p>
-                  <p>1</p>
+                  <div id="numeros">
+                    <span class="numero" data-valor="6">6</span>
+                    <br>
+
+                    <span class="numero" data-valor="5">5</span>
+                    <br>
+
+                    <span class="numero" data-valor="4">4</span>
+                    <br>
+                   
+                    <span class="numero" data-valor="3">3</span>
+                  
+                    <br>
+                    <span class="numero" data-valor="2">2</span>
+                    
+                    <br>
+                    <span class="numero" data-valor="1">1</span>
+                </div>
                 </div>
               </div>
             </div>
@@ -564,21 +658,43 @@
               <h3 class="idadeGlasgow">≤5 anos</h3>
               <div class="content-aboCol">
                 <div>
-                  <p>Espontânea</p>
-                  <p>Comando Verbal</p>
-                  <p>Estímulo Doloroso</p>
-                  <p>Nenhuma</p>
+                  <p>Obedece prontamente</p>
+                  <p>Localiza dor ou estimulo tátil</p>
+                  <p>Retirada do segmento estimulado</p>
+                  <p>Flexão anormal (Decortição)</p>
+                  <p>Extensão anormal (Decerebração)</p>
+                  <p>Ausência(Paralisia flácida, hipotônia)</p>
                 </div>
                 <div>
-                  <p>4</p>
-                  <p>3</p>
-                  <p>2</p>
-                  <p>1</p>
+                  <div id="numeros">
+                    <span class="numero" data-valor="6">6</span>
+                    <br>
+
+                    <span class="numero" data-valor="5">5</span>
+                    <br>
+
+                    <span class="numero" data-valor="4">4</span>
+                    <br>
+                   
+                    <span class="numero" data-valor="3">3</span>
+                  
+                    <br>
+                    <span class="numero" data-valor="2">2</span>
+                    
+                    <br>
+                    <span class="numero" data-valor="1">1</span>
+                </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div> 
+          <h1>Soma de Números</h1>
+                          <p>Clique nos números para adicioná-los à soma:</p>
+                          
+                        
+                          <p>Total: <span id="total">0</span></p> 
+                           
       </div>
     </div>
 
@@ -918,10 +1034,12 @@
                                   <input type="text" name="sia/sus">
                                 </div>
                               </div>
-                            </div>
+                            </div>       
+
                             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
                               integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-                              crossorigin="anonymous"></script>
-</body>
+                              crossorigin="anonymous" ></script>
+                              <script src="../scripts/ocorrencia.js"></script>
+                            </body>
 
 </html>

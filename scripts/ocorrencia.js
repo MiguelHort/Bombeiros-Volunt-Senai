@@ -26,7 +26,10 @@ function mudarCor(botao) {
 }
 
 
+
+
 // Expandir
+
 
 function toggleExpand() {
   var expandText = document.getElementById("expandText");
@@ -49,4 +52,28 @@ function toggleExpand1() {
     expandText.classList.toggle("show");
     arrow.classList.toggle("rotate");}
 
-  
+
+
+
+
+  // soma dos números selecionados
+
+  const numeros = document.querySelectorAll('.numero');
+  const totalElement = document.getElementById('total');
+  let total = 0;
+
+  numeros.forEach(numero => {
+      numero.addEventListener('click', () => {
+          const valor = parseInt(numero.getAttribute('data-valor'));
+          if (numero.classList.contains('selecionado')) {
+              // Desmarcar número
+              numero.classList.remove('selecionado');
+              total -= valor;
+          } else {
+              // Marcar número
+              numero.classList.add('selecionado');
+              total += valor;
+          }
+          totalElement.textContent = total;
+      });
+  });

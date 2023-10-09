@@ -201,6 +201,15 @@ margin-left: 1%;
   border: 1px solid black;
 
 }
+
+.horario{
+
+border: 1px solid black;
+margin-left: 30%;
+margin-top: 2%;
+
+}
+
 .container {
   width: 700px;
   margin: 50px auto;
@@ -519,4 +528,14 @@ input[type=checkbox]{
 .svTopico input{
   width: 12%;
   margin: 0 8px;
+}
+
+.topico1{
+
+display: flex;
+
+}
+
+#numeros{
+  margin-top: 15%;
 }

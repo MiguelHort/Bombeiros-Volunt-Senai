@@ -431,6 +431,7 @@ input[type=checkbox]{
   max-width: 70vw;
   margin: auto;
   margin-top: 5%;
+ 
 }
 
 .accordion-button {
@@ -447,4 +448,5 @@ input[type=checkbox]{
   border-radius: 50;
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
+
 }

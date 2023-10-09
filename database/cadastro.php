@@ -1,34 +1,36 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
 include("conexao.php");
 
 // Recebe os valores
 $user_equipe = mysqli_real_escape_string($conexao, trim($_POST['equipe']));
-$user_password = mysqli_real_escape_string($conexao, trim(md5($_POST['password'])));
+$user_password = mysqli_real_escape_string($conexao, trim($_POST['password']));
 
-// Valida o email
-$sql = "select count(*) as total from equipe_atendimento where equipe = '$user_equipe'";
+// Verifica se o usuário já existe no banco de dados
+$sql = "SELECT COUNT(*) as total FROM equipe_atendimento WHERE equipe = '$user_equipe'";
 $result = mysqli_query($conexao, $sql);
 $row = mysqli_fetch_assoc($result);
 
-// Valida o usuario como já existente
-if($row['total'] == 1) {
-	$_SESSION['usuario_existe'] = true;
-	header('Location: ../database/cadastro.html');
-	exit;
+// Se o usuário já existe, exibe uma mensagem de erro
+if ($row['total'] > 0) {
+    $_SESSION['cadastro_erro'] = "Usuário já existe. Por favor, escolha um nome de equipe diferente.";
+    header('Location: ../index.html');
+    exit;
 }
 
-// Insere os valores no banco
-$sql = "INSERT INTO equipe_atendimento (equipe,senha) VALUES ('$user_equipe','$user_password')";
+// Se o usuário não existe, insere os valores no banco de dados
+$sql = "INSERT INTO equipe_atendimento (equipe, senha) VALUES ('$user_equipe', '$user_password')";
 
-// Executa se for verdadeiro
-if($conexao->query($sql) === TRUE) {
-	$_SESSION['status_cadastro'] = true;
-	$conexao->close();
-
-	header('Location: ../index.html');
+if ($conexao->query($sql) === TRUE) {
+    $_SESSION['cadastro_sucesso'] = "Cadastro realizado com sucesso. Agora você pode fazer login.";
+    $conexao->close();
+    header('Location: ../index.html');
+    exit;
+} else {
+    $_SESSION['cadastro_erro'] = "Erro ao cadastrar equipe. Por favor, tente novamente mais tarde.";
+    header('Location: ../index.html');
+    exit;
 }
-
-
-exit;
 ?>

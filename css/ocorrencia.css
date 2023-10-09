@@ -483,3 +483,10 @@ input[type=checkbox]{
   width: 12%;
   margin: 0 8px;
 }
+
+.respMain{
+  display: flex;
+}
+.psiqui{
+  display: flex;
+}

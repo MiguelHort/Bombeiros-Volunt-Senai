@@ -539,3 +539,6 @@ display: flex;
 #numeros{
   margin-top: 15%;
 }
+.avaliaCine input{
+  width: 100%;
+}

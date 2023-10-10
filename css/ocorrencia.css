@@ -527,3 +527,6 @@ input[type=checkbox]{
 .psiqui{
   display: flex;
 }
+.avaliaCine input{
+  width: 100%;
+}

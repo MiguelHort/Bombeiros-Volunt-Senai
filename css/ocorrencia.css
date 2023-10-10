@@ -201,6 +201,15 @@ margin-left: 1%;
   border: 1px solid black;
 
 }
+
+.horario{
+
+border: 1px solid black;
+margin-left: 30%;
+margin-top: 2%;
+
+}
+
 .container {
   width: 700px;
   margin: 50px auto;
@@ -521,11 +530,14 @@ input[type=checkbox]{
   margin: 0 8px;
 }
 
-.respMain{
-  display: flex;
+.topico1{
+
+display: flex;
+
 }
-.psiqui{
-  display: flex;
+
+#numeros{
+  margin-top: 15%;
 }
 .avaliaCine input{
   width: 100%;

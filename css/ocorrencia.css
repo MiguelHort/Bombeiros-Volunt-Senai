@@ -17,6 +17,7 @@ body{
   width: 150px;
   height: 150px;
   margin-left: 40%;
+  margin-top: 5%;
 }
 /* Nova */
 #novaocorrencia {
@@ -516,8 +517,10 @@ input[type=checkbox]{
 .box-glasgow{
   padding: 15px 0;
 }
-.verbalImg{
-  width: 80%;
+.imagemglasgow{
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 10%;
 }
 
 .svTopico{
@@ -533,6 +536,25 @@ input[type=checkbox]{
 .topico1{
 
 display: flex;
+gap: 80px;
+
+}
+.topico2{
+
+display: flex;
+gap: 100%;
+
+}
+.topico3{
+
+display: flex;
+gap: 80px;
+
+}
+.topico4{
+
+display: flex;
+gap: 10%;
 
 }
 

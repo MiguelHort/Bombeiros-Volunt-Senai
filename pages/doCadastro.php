@@ -54,6 +54,12 @@
         </form>    
     </section>
 
+    <a id="irlogin" href="/index.html">
+        
+        <p > Já tem uma conta? <u>Faça login aqui</u>  </p>
+    
+    </a>
+
 </body> 
 <script src="../scripts/cadastro.js"></script>
 </html>

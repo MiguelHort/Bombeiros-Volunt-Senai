@@ -1,5 +1,6 @@
 
 document.getElementById("cadastrarButton").addEventListener("click", function (event) {
+    
     // Obtém os valores dos campos de senha e confirmação de senha
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirmPassword").value;

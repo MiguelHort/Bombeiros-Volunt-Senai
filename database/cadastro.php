@@ -7,6 +7,14 @@ include("conexao.php");
 // Recebe os valores
 $user_equipe = mysqli_real_escape_string($conexao, trim($_POST['equipe']));
 $user_password = mysqli_real_escape_string($conexao, trim($_POST['password']));
+$confirm_password = mysqli_real_escape_string($conexao, trim(($_POST['confirmPassword'])));
+
+
+if ($user_password !== $confirm_password) {
+    $_SESSION['senha_erro'] = "As senhas não coincidem. Por favor, verifique.";
+    header('Location: ../pages/doCadastro.php');
+    exit;
+}
 
 // Verifica se o usuário já existe no banco de dados
 $sql = "SELECT COUNT(*) as total FROM equipe_atendimento WHERE equipe = '$user_equipe'";

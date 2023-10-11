@@ -542,3 +542,22 @@ display: flex;
 .avaliaCine input{
   width: 100%;
 }
+
+#titulosTopic{
+  display: flex;
+  justify-content: space-between;
+}
+.materiaisHosp input[type=number]{
+  width: 10%;
+}
+.checMat{
+  display: flex;
+  justify-content: space-between;
+}
+.checkMatInterno{
+  display: flex;
+  justify-content: space-around;
+}
+.materiaisHosp input[type=checkbox]{
+  
+}

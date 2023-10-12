@@ -569,17 +569,55 @@ gap: 10%;
   display: flex;
   justify-content: space-between;
 }
+.qtd{
+  width: 30%;
+  display: flex;
+  flex-direction: row-reverse;
+}
 .materiaisHosp input[type=number]{
-  width: 10%;
+  width: 50%;
+}
+.materiaisHosp input[type=text]{
+  width: 100%;
 }
 .checMat{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+}
+
+.qtd{
+  border: 1px solid black;
 }
 .checkMatInterno{
   display: flex;
-  justify-content: space-around;
-}
-.materiaisHosp input[type=checkbox]{
+  width: 40%;
+  height: 100%;
+  border-right: 1px solid black;
   
+}
+.checkMatInterno p{
+  margin: auto;
+  text-align: center;
+}
+.checkMatInterno input{
+  width: 4vw;
+  height: 4vw;
+  margin: auto 0 auto 0;
+}
+.extensop input{
+  width: 5vw;
+  margin-left: 0;
+}
+.colMeio{
+  width: 20%;
+}
+.colMeio select{
+  width: 100%;
+}
+.teste2{
+ height: 100%;
+ width: 6%;
+  border-right: 1px solid black;
 }

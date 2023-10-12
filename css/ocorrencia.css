@@ -567,12 +567,16 @@ gap: 10%;
 
 #titulosTopic{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .qtd{
   width: 30%;
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: center;
+  
+}
+.materiaisHosp input, select{
+  border: 1px solid black;
 }
 .materiaisHosp input[type=number]{
   width: 50%;
@@ -587,15 +591,12 @@ gap: 10%;
   height: 6vh;
 }
 
-.qtd{
-  border: 1px solid black;
-}
+
 .checkMatInterno{
   display: flex;
   width: 40%;
   height: 100%;
   border-right: 1px solid black;
-  
 }
 .checkMatInterno p{
   margin: auto;
@@ -618,6 +619,6 @@ gap: 10%;
 }
 .teste2{
  height: 100%;
- width: 6%;
+ 
   border-right: 1px solid black;
 }

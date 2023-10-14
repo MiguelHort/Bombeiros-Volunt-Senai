@@ -627,3 +627,24 @@ gap: 10%;
   margin: auto;
   text-align: center;
 }
+.linhaProced{
+  display: flex;
+  text-align: center;
+  margin-top: 5%;
+}
+.linhaProced p{
+  display: flex;
+  margin: auto 0 auto 8%
+}
+.linhaProced input[type=checkbox]{
+  width: 10vw;
+}
+.linhaProced p input{
+  width: 20%;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.longoProced input[type=checkbox]{
+  width: 5vw;
+  height: 5vw;
+}

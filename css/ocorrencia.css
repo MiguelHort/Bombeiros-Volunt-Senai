@@ -629,15 +629,17 @@ gap: 10%;
 }
 .linhaProced{
   display: flex;
+  justify-content: space-between;
   text-align: center;
   margin-top: 5%;
+  width: 85%;
 }
 .linhaProced p{
   display: flex;
-  margin: auto 0 auto 8%
+  margin: auto 
 }
 .linhaProced input[type=checkbox]{
-  width: 10vw;
+  width: 5vh;
 }
 .linhaProced p input{
   width: 20%;
@@ -645,6 +647,13 @@ gap: 10%;
   border-bottom: 1px solid black;
 }
 .longoProced input[type=checkbox]{
-  width: 5vw;
-  height: 5vw;
+ height: 2.75vh;
+ margin-left: 1vw;
+}
+.longoProced p{
+  display: flex;
+  justify-content: center;
+}
+#procedColar input[type=checkbox]{
+  margin-left: 0.60vw;
 }

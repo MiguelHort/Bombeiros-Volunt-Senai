@@ -622,3 +622,8 @@ gap: 10%;
  
   border-right: 1px solid black;
 }
+#inputMat{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}

@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/cadastro.css">
-        <script>
-        <?php 
+    <script>
+      <?php 
         session_start();
         ?>
         <?php if(isset($_SESSION['cadastro_existe'])) { ?>
             alert("Equipe já cadastrada");
-             
         <?php
             unset($_SESSION['cadastro_existe']);
         ?>
@@ -61,6 +60,12 @@
             </div>
         </form>    
     </section>
+
+    <a id="irlogin" href="/index.html">
+        
+        <p > Já tem uma conta? <u>Faça login aqui</u>  </p>
+    
+    </a>
 
 </body> 
 <script src="../scripts/cadastro.js"></script>

@@ -7,7 +7,7 @@ include("conexao.php");
 // Recebe os valores
 $user_equipe = mysqli_real_escape_string($conexao, trim($_POST['equipe']));
 $user_password = mysqli_real_escape_string($conexao, trim($_POST['password']));
-$confirm_password = mysqli_real_escape_string($conexao, trim(($_POST['confirmPassword'])));
+$confirm_password = mysqli_real_escape_string($conexao, trim($_POST['confirmPassword']));
 
 
 if ($user_password !== $confirm_password) {
@@ -23,8 +23,8 @@ $row = mysqli_fetch_assoc($result);
 
 // Se o usuário já existe, exibe uma mensagem de erro
 if ($row['total'] > 0) {
-    $_SESSION['cadastro_erro'] = "Usuário já existe. Por favor, escolha um nome de equipe diferente.";
-    header('Location: ../index.html');
+    $_SESSION['cadastro_existe'] = "Usuário já existe. Por favor, escolha um nome de equipe diferente.";
+    header('Location: ../pages/doCadastro.php');
     exit;
 }
 

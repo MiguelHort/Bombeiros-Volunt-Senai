@@ -412,31 +412,42 @@ input[type=checkbox]{
  width: 30%;
 }
 
-.tipoLinha1{
+/* Imagens de tipo de ocorencia */
+
+.radio-image {
   display: flex;
-  justify-content: space-around;
-  text-align: center;
+  flex-direction: column;
+  width: 100%;
 }
-.tipoLinha2{
+
+.radio-image label>input {
+  visibility: hidden;
+}
+
+.radio-image label>input+img {
+  cursor: pointer;
+  border: 4px solid #EEE;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.radio-image label>input:checked+img {
+  border: 4px solid #3F51B5;
+}
+
+.radio-image label {
   display: flex;
-  justify-content: space-around;
-  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
-.tipoLinha3{
+
+.linha01 {
   display: flex;
-  justify-content: space-around;
-  text-align: center;
 }
-.tipoLinha4{
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-}
-.tipoLinha5{
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-}
+
+
 .accordion-item{
   max-width: 70vw;
   margin: auto;
@@ -697,4 +708,27 @@ gap: 10%;
 }
 #procedColar input[type=checkbox]{
   margin-left: 0.60vw;
+}
+
+.opcoesAdcionaisChecks{
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+.opcoesAdicionaisDiv{
+  display: flex;
+  width: 60%;
+  margin-top: 2%;
+}
+.opcoesAdcionaisChecks2{
+  display: flex;
+  justify-content: space-around;
+  width:80%;
+  margin: auto;
+}
+.adicionaisChecks2Linha1 {
+  width: 30%;
+}
+.adicionaisChecks2Linha2{
+  width: 30%;
 }

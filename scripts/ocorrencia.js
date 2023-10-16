@@ -77,3 +77,49 @@ function toggleExpand1() {
           totalElement.textContent = total;
       });
   });
+
+
+    var checkbox = document.querySelector('#opcoesProced input[type="checkbox"]');
+    var opcoesAdicionais = document.getElementById('opcoesAdicionais');
+
+    // Adiciona um ouvinte de evento para o checkbox
+    checkbox.addEventListener('change', function() {
+        // Verifica se o checkbox está marcado
+        if (checkbox.checked) {
+            // Se estiver marcado, mostra as opções adicionais
+            opcoesAdicionais.style.display = 'block';
+        } else {
+            // Se não estiver marcado, oculta as opções adicionais
+            opcoesAdicionais.style.display = 'none';
+        }
+    });
+
+    var checkbox2 = document.querySelector('#opcoesProced2 input[type="checkbox"]');
+    var opcoesAdicionais2 = document.querySelector('.adicionaisChecks2Linha1');
+
+    // Adiciona um ouvinte de evento para o checkbox
+    checkbox2.addEventListener('change', function() {
+        // Verifica se o checkbox está marcado
+        if (checkbox2.checked) {
+            // Se estiver marcado, mostra as opções adicionais
+            opcoesAdicionais2.style.visibility = 'visible';
+        } else {
+            // Se não estiver marcado, oculta as opções adicionais
+            opcoesAdicionais2.style.visibility = 'hidden';
+        }
+    });
+
+    var checkbox3 = document.querySelector('#opcoesProced3 input[type="checkbox"]');
+    var opcoesAdicionais3 = document.querySelector('.adicionaisChecks2Linha2');
+
+    // Adiciona um ouvinte de evento para o checkbox
+    checkbox3.addEventListener('change', function() {
+        // Verifica se o checkbox está marcado
+        if (checkbox3.checked) {
+            // Se estiver marcado, mostra as opções adicionais
+            opcoesAdicionais3.style.visibility = 'visible';
+        } else {
+            // Se não estiver marcado, oculta as opções adicionais
+            opcoesAdicionais3.style.visibility = 'hidden';
+        }
+    });

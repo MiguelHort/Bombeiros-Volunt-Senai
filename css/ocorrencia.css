@@ -668,3 +668,26 @@ gap: 10%;
 #procedColar input[type=checkbox]{
   margin-left: 0.60vw;
 }
+
+.opcoesAdcionaisChecks{
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+.opcoesAdicionaisDiv{
+  display: flex;
+  width: 60%;
+  margin-top: 2%;
+}
+.opcoesAdcionaisChecks2{
+  display: flex;
+  justify-content: space-around;
+  width:80%;
+  margin: auto;
+}
+.adicionaisChecks2Linha1 {
+  width: 30%;
+}
+.adicionaisChecks2Linha2{
+  width: 30%;
+}

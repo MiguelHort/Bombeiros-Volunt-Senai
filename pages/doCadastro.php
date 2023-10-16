@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/cadastro.css">
-    
+    <script>
+      <?php 
+        session_start();
+        ?>
+        <?php if(isset($_SESSION['cadastro_existe'])) { ?>
+            alert("Equipe já cadastrada");
+        <?php
+            unset($_SESSION['cadastro_existe']);
+        ?>
+        <?php } ?>
+
+        // Verifica se a variável de sessão cadastro_erro está definida
+        <?php if(isset($_SESSION['senha_erro'])) { ?>
+            // Exibe um alerta com a mensagem de erro
+            alert("Senhas não coincidem");
+        <?php
+            // Após exibir o alerta, limpa a variável de sessão para evitar que o alerta seja exibido novamente
+            unset($_SESSION['senha_erro']);
+        ?>
+        <?php } ?>
+    </script>
 </head>
 <body>
    

@@ -3,7 +3,7 @@ session_start();
 include("conexao.php");
 
 $user_equipe = mysqli_real_escape_string($conexao, trim($_POST['equipe']));
-$user_password = mysqli_real_escape_string($conexao, trim($_POST['password']));
+$user_password = mysqli_real_escape_string($conexao, trim(($_POST['password'])));
 
 $sql = "SELECT * FROM equipe_atendimento WHERE equipe = '$user_equipe' AND senha = '$user_password'";
 $result = mysqli_query($conexao, $sql);

@@ -523,6 +523,54 @@ input[type=checkbox]{
   margin-top: 10%;
 }
 
+/* abertura ocular */
+
+#espontanea{
+  display: flex;
+  gap: 95px;
+}
+#comandoverbal{
+  display: flex;
+  gap: 90px;
+}
+#estimulodoloroso{
+  display: flex;
+  gap: 90px;
+}
+#nenhuma{
+  display: flex;
+  gap: 115px;
+}
+
+/* resposta verbal */
+
+#orientado{
+  display: flex;
+  gap: 170px;
+}
+#confuso{
+  display: flex;
+  gap: 190px;
+}
+#palavrasinapropriadas{
+  display: flex;
+  gap: 30px;
+}
+#palavrasincompreensiveis{
+  display: flex;
+  gap: 80px;
+}
+
+#nenhuma{
+  display: flex;
+  gap: 170px;
+}
+
+
+
+
+
+
 .svTopico{
   display: flex;
   margin-top: 3%;
@@ -536,15 +584,10 @@ input[type=checkbox]{
 .topico1{
 
 display: flex;
-gap: 80px;
+
 
 }
-.topico2{
 
-display: flex;
-gap: 100%;
-
-}
 .topico3{
 
 display: flex;
@@ -558,9 +601,7 @@ gap: 10%;
 
 }
 
-#numeros{
-  margin-top: 15%;
-}
+
 .avaliaCine input{
   width: 100%;
 }

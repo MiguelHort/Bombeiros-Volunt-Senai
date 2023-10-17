@@ -474,6 +474,16 @@ input[type=checkbox]{
 .decisaoLinha {
   display: flex;
 }
+.decisaoLinha label{
+  width: 30vw;
+}
+.decisaoLinha img{
+  width: 80%;
+}
+.decisaoLinha p{
+  height: 12%;
+  text-align: center;
+}
 
 
 .accordion-item{

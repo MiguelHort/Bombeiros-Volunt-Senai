@@ -9,6 +9,12 @@
       <?php 
         session_start();
         ?>
+         <?php if(isset($_SESSION['campos_incompletos'])) { ?>
+            alert("Preencha todos os campos!");
+        <?php
+            unset($_SESSION['cadastro_existe']);
+        ?>
+        <?php } ?>
         <?php if(isset($_SESSION['cadastro_existe'])) { ?>
             alert("Equipe já cadastrada");
         <?php

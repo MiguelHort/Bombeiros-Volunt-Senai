@@ -9,15 +9,19 @@ body{
   line-height: normal;
 }
 
-#hugopai{
-  margin-left: 5%;
+
+
+#imagemTitulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 #logomedico{
-  width: 150px;
-  height: 150px;
-  margin-left: 40%;
-  margin-top: 5%;
+  width: 120px;
+  height: 120px;
 }
 /* Nova */
 #novaocorrencia {

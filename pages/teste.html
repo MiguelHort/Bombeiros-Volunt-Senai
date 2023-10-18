@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+
+.corpo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+        .cabeca {
+            background-color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 100px;
+        }
+
+        .cabeca:hover {
+            transform: scale(1.1);
+            background-color: aquamarine;
+        }
+
+        .tronco {
+            background-color: white;
+            width: 10px;
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        .bracos {
+            display: flex;
+            justify-content: center;
+            width: 200px;
+            height: 100px;
+            position: relative;
+            bottom: 250px;
+        }
+
+        .pernas {
+            display: flex;
+            justify-content: center;
+            width: 200px;
+            height: 100px;
+            position: relative;
+            bottom: 15px;
+        }
+
+        .braco1 {
+            background-color: white;
+            width: 50px;
+            height: 10px;
+            border-radius: 5px;
+            transform: rotate(-45deg);
+        }
+
+        .braco2 {
+            background-color: white;
+            width: 50px;
+            height: 10px;
+            border-radius: 5px;
+            transform: rotate(45deg);
+        }
+
+        .perna1 {
+            background-color: white;
+            width: 50px;
+            height: 10px;
+            border-radius: 5px;
+            transform: rotate(-45deg);
+            position: relative;
+            top: 20px;
+        }
+
+        .perna2 {
+            background-color: white;
+            width: 50px;
+            height: 10px;
+            border-radius: 5px;
+            transform: rotate(45deg);
+            position: relative;
+            top: 20px;
+        }
+
+        .cor:hover {
+            color: brown;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="corpo">
+        <button class="cabeca">cabeça</button>
+        <button class="tronco"></button>
+        <div class="pernas">
+            <button class="perna1"></button>
+            <button class="perna2"></button>
+        </div>
+        <div class="bracos">
+            <button class="braco1"></button>
+            <button class="braco2"></button>
+        </div>
+        
+    </div>
+
+    <img class="cor" src="/img/Frame 20.svg" alt="">
+
+</body>
+
+</html>

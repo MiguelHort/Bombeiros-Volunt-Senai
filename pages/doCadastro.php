@@ -45,18 +45,18 @@
         <form action="../database/cadastro.php" method="post">
             <div class="form-group">
                 <label for="equipe">Equipe - identificação</label>
-                <input type="text" id="equipe" name="equipe">
+                <input type="text" id="equipe" name="equipe" required>
             </div>
             <div class="form-group password">
                 <label for="password">Senha</label> 
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" required>
                 <button id="mostrarSenhaButton" class="mostrarSenha" type="button"> 
                     <img id="icon" src="../img/olho.png" alt="Mostrar Senha" >
                 </button>
             </div>
             <div class="form-group confirmPassword">
                 <label for="confirmPassword">Confirmar senha</label>
-                <input type="password" id="confirmPassword" name="confirmPassword">
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
                 <button id="mostrarSenhaButton2" class="mostrarSenha2" type="button"> 
                     <img id="icon2" src="../img/olho.png" alt="Mostrar Senha">
                 </button>

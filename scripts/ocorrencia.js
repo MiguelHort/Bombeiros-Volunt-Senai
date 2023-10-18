@@ -28,6 +28,22 @@ function mudarCor(botao) {
 
 
 
+// seleção de opção do adulto e criança
+
+function mudarCor(botao) {
+  // Remova a classe "selecionado" de todos os botões
+  var botoes = document.querySelectorAll('.botaoderelação');
+  for (var i = 0; i < botoes.length; i++) {
+    botoes[i].classList.remove('selecionado');
+  }
+
+  // Adicione a classe "selecionado" apenas ao botão clicado
+  botao.classList.add('selecionado');
+}
+
+
+
+
 // Expandir
 
 

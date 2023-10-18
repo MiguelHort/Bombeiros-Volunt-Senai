@@ -449,6 +449,15 @@ input[type=checkbox]{
   display: flex;
 }
 
+.vitimaDiv{
+  display: flex;
+  margin-top: 2%;
+  margin: 2% auto 0 auto;
+}
+.vitimaDiv input[type='checkbox']{
+  height: 3vh;
+}
+
 /*                */
 .radio-image2 {
   display: flex;

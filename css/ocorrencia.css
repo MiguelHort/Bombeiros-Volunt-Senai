@@ -663,7 +663,6 @@ gap: 10%;
   width: 30%;
   display: flex;
   justify-content: center;
-  
 }
 .materiaisHosp input, select{
   border: 1px solid black;
@@ -681,7 +680,39 @@ gap: 10%;
   height: 6vh;
 }
 
+#titulosTopic2{
+  display: flex;
+  justify-content: space-between;
+  width:70%;
+  margin: auto;
+}
+.checkMatInternoDesc{
+  display: flex;
+  width: 55%;
+  border-right: 1px solid black;
+  height: 100%;
+}
+.checkMatInternoDesc input{
+  width: 12%;
+}
+.checkMatInternoDesc p{
+ margin-left: 4%;
+ margin: auto;
+}
+.colMeio2{
+  width: 20%; 
+}
+.colMeio2 select{
+  width: 90%;
+  margin-left: 5%;
+}
 
+
+.qtd2{
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
 .checkMatInterno{
   display: flex;
   width: 40%;

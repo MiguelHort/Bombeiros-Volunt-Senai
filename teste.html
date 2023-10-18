@@ -1,48 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soma de Números</title>
+    <title>Clonagem de Imagem</title>
     <style>
-        .numero {
-            cursor: pointer;
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative; /* Adicionado position relative ao body para posicionar imagens de acordo com ele */
+        }
+
+        .clonavel {
+            position: absolute;
+        }
+
+        .imagemOriginal {
+            position: relative;
+            z-index: 0; /* Garante que a imagem apareça sobre a área proibida */
+            border: 2px solid transparent; /* Adiciona uma borda transparente inicialmente */
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
         }
     </style>
 </head>
-<body>
-    <h1>Soma de Números</h1>
-    <p>Clique nos números para adicioná-los à soma:</p>
-    
-    <div id="numeros">
-        <span class="numero" data-valor="5">5</span>
-        <span class="numero" data-valor="10">10</span>
-        <span class="numero" data-valor="20">20</span>
-        <span class="numero" data-valor="50">50</span>
-    </div>
 
-    <p>Total: <span id="total">0</span></p>
+<body>
+
+    <button id="imagemOriginal1" class="clonavel imagemOriginal" onclick="alternarClonagem(event)">
+        <img src="/img/X - fraturas.svg" alt="Imagem" style="pointer-events:none;">
+    </button>
+    <button id="imagemOriginal2" class="clonavel imagemOriginal" onclick="alternarClonagem(event)">
+        <img src="/img/Hemorragias.svg" alt="Imagem" style="pointer-events:none;">
+    </button>
+    <button id="imagemOriginal3" class="clonavel imagemOriginal" onclick="alternarClonagem(event)">
+        <img src="/img/Z - fraturas.svg" alt="Imagem" style="pointer-events:none;">
+    </button>
+    <button id="imagemOriginal4" class="clonavel imagemOriginal" onclick="alternarClonagem(event)">
+        <img src="/img/X - fraturas.svg" alt="Imagem" style="pointer-events:none;">
+    </button>
+    <button id="imagemOriginal5" class="clonavel imagemOriginal" onclick="alternarClonagem(event)">
+        <img src="/img/Y - fraturas.svg" alt="Imagem" style="pointer-events:none;">
+    </button>
+    <button id="imagemOriginal6" class="clonavel imagemOriginal" onclick="alternarClonagem(event)">
+        <img src="/img/Z - fraturas.svg" alt="Imagem" style="pointer-events:none;">
+    </button>
+    <button id="imagemOriginal7" class="clonavel imagemOriginal" onclick="alternarClonagem(event)">
+        <img src="/img/Y - fraturas.svg" alt="Imagem" style="pointer-events:none;">
+    </button>
+    <button id="imagemOriginal8" class="clonavel imagemOriginal" onclick="alternarClonagem(event)">
+        <img src="/img/Z - fraturas.svg" alt="Imagem" style="pointer-events:none;">
+    </button>
+    
 
     <script>
-        const numeros = document.querySelectorAll('.numero');
-        const totalElement = document.getElementById('total');
-        let total = 0;
+        const imagensOriginais = document.querySelectorAll('.imagemOriginal');
 
-        numeros.forEach(numero => {
-            numero.addEventListener('click', () => {
-                const valor = parseInt(numero.getAttribute('data-valor'));
-                if (numero.classList.contains('selecionado')) {
-                    // Desmarcar número
-                    numero.classList.remove('selecionado');
-                    total -= valor;
-                } else {
-                    // Marcar número
-                    numero.classList.add('selecionado');
-                    total += valor;
+        function alternarClonagem(event) {
+            imagensOriginais.forEach((imagem) => {
+                if (imagem !== event.currentTarget) {
+                    imagem.clicouNaImagem = false;
+                    imagem.style.border = '2px solid transparent';
                 }
-                totalElement.textContent = total;
             });
+
+            const clicouNaImagem = !event.currentTarget.clicouNaImagem;
+            event.currentTarget.clicouNaImagem = clicouNaImagem;
+
+            if (clicouNaImagem) {
+                event.currentTarget.style.border = '2px solid blue'; /* Adiciona uma borda azul quando a clonagem está ativada */
+            } else {
+                event.currentTarget.style.border = '2px solid transparent'; /* Remove a borda quando a clonagem é desativada */
+            }
+            event.stopPropagation(); // Impede a propagação do evento para a área proibida
+        }
+
+        function clicar(event) {
+            imagensOriginais.forEach((imagem) => {
+                if (imagem.clicouNaImagem) {
+                    const rect = imagem.getBoundingClientRect();
+                    const dentroDosLimitesX = event.clientX >= rect.left && event.clientX <= rect.right;
+                    const dentroDosLimitesY = event.clientY >= rect.top && event.clientY <= rect.bottom;
+
+                    if (!dentroDosLimitesX || !dentroDosLimitesY) {
+                        const clone = imagem.cloneNode(true);
+                        const posX = event.clientX - imagem.offsetWidth / 2;
+                        const posY = event.clientY - imagem.offsetHeight / 2;
+                        clone.style.position = 'absolute';
+                        clone.style.left = posX + 'px';
+                        clone.style.top = posY + 'px';
+                        clone.style.border = 'none'; /* Remove a borda da imagem clonada */
+                        clone.addEventListener('click', function () {
+                            document.body.removeChild(clone);
+                        });
+                        document.body.appendChild(clone);
+                    }
+                }
+            });
+        }
+
+        imagensOriginais.forEach((imagemOriginal) => {
+            imagemOriginal.clicouNaImagem = false;
         });
+
+        document.body.addEventListener('click', clicar);
     </script>
 </body>
+
 </html>

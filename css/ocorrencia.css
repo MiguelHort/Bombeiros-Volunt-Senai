@@ -7,6 +7,7 @@ body{
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+
 }
 
 
@@ -453,6 +454,15 @@ input[type=checkbox]{
   display: flex;
 }
 
+.vitimaDiv{
+  display: flex;
+  margin-top: 2%;
+  margin: 2% auto 0 auto;
+}
+.vitimaDiv input[type='checkbox']{
+  height: 3vh;
+}
+
 /*                */
 .radio-image2 {
   display: flex;
@@ -622,10 +632,6 @@ input[type=checkbox]{
 }
 
 
-
-
-
-
 .svTopico{
   display: flex;
   margin-top: 3%;
@@ -634,26 +640,6 @@ input[type=checkbox]{
 .svTopico input{
   width: 12%;
   margin: 0 8px;
-}
-
-.topico1{
-
-display: flex;
-
-
-}
-
-.topico3{
-
-display: flex;
-gap: 80px;
-
-}
-.topico4{
-
-display: flex;
-gap: 10%;
-
 }
 
 

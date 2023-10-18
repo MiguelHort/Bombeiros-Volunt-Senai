@@ -7,6 +7,7 @@ body{
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+
 }
 
 #hugopai{
@@ -618,10 +619,6 @@ input[type=checkbox]{
 }
 
 
-
-
-
-
 .svTopico{
   display: flex;
   margin-top: 3%;
@@ -630,26 +627,6 @@ input[type=checkbox]{
 .svTopico input{
   width: 12%;
   margin: 0 8px;
-}
-
-.topico1{
-
-display: flex;
-
-
-}
-
-.topico3{
-
-display: flex;
-gap: 80px;
-
-}
-.topico4{
-
-display: flex;
-gap: 10%;
-
 }
 
 

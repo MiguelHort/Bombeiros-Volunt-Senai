@@ -140,7 +140,7 @@ checkbox2.addEventListener('change', function () {
       opcoesAdicionais3.style.display = 'none';
       opcoesAdicionais3.style.visibility = 'visible'
     }
-    ;
+    opcoesAdicionais2.style.visibility = 'hidden';
   }
 });
 
@@ -165,7 +165,7 @@ checkbox3.addEventListener('change', function () {
       opcoesAdicionais2.style.display = 'none';
       opcoesAdicionais2.style.visibility = 'visible';
     }
-
+    opcoesAdicionais3.style.visibility = 'hidden';
   }
 });
 

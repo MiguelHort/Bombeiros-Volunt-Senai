@@ -828,4 +828,9 @@ input[type=checkbox]{
 
 .sinaisSintomas{
   display: flex;
+  margin-top: 5%;  
+}
+
+.sinaisSintomas input[type=text]{
+  width: 90%;
 }

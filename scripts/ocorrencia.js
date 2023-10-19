@@ -52,106 +52,120 @@ function toggleExpand() {
   var arrow = document.getElementById("arrow");
 
   expandText.classList.toggle("show");
-  arrow.classList.toggle("rotate");}
+  arrow.classList.toggle("rotate");
+}
 
 function toggleExpand1() {
   var expandText = document.getElementById("expandText1");
   var arrow = document.getElementById("arrow1");
 
   expandText.classList.toggle("show");
-  arrow.classList.toggle("rotate");}
+  arrow.classList.toggle("rotate");
+}
 
-  function toggleExpand2() {
-    var expandText = document.getElementById("expandText2");
-    var arrow = document.getElementById("arrow2");
-  
-    expandText.classList.toggle("show");
-    arrow.classList.toggle("rotate");}
+function toggleExpand2() {
+  var expandText = document.getElementById("expandText2");
+  var arrow = document.getElementById("arrow2");
+
+  expandText.classList.toggle("show");
+  arrow.classList.toggle("rotate");
+}
 
 
 
 
 
-  // soma dos números selecionados
+// soma dos números selecionados
 
-  const numeros = document.querySelectorAll('.numero');
-  const totalElement = document.getElementById('total');
-  let total = 0;
+const numeros = document.querySelectorAll('.numero');
+const totalElement = document.getElementById('total');
+let total = 0;
 
-  numeros.forEach(numero => {
-      numero.addEventListener('click', () => {
-          const valor = parseInt(numero.getAttribute('data-valor'));
-          if (numero.classList.contains('selecionado')) {
-              // Desmarcar número
-              numero.classList.remove('selecionado');
-              total -= valor;
-          } else {
-              // Marcar número
-              numero.classList.add('selecionado');
-              total += valor;
-          }
-          totalElement.textContent = total;
-      });
+numeros.forEach(numero => {
+  numero.addEventListener('click', () => {
+    const valor = parseInt(numero.getAttribute('data-valor'));
+    if (numero.classList.contains('selecionado')) {
+      // Desmarcar número
+      numero.classList.remove('selecionado');
+      total -= valor;
+    } else {
+      // Marcar número
+      numero.classList.add('selecionado');
+      total += valor;
+    }
+    totalElement.textContent = total;
   });
+});
 
 
-    var checkbox = document.querySelector('#opcoesProced input[type="checkbox"]');
-    var opcoesAdicionais = document.getElementById('opcoesAdicionais');
+var checkbox = document.querySelector('#opcoesProced input[type="checkbox"]');
+var opcoesAdicionais = document.getElementById('opcoesAdicionais');
 
-    // Adiciona um ouvinte de evento para o checkbox
-    checkbox.addEventListener('change', function() {
-        // Verifica se o checkbox está marcado
-        if (checkbox.checked) {
-            // Se estiver marcado, mostra as opções adicionais
-            opcoesAdicionais.style.display = 'block';
-        } else {
-            // Se não estiver marcado, oculta as opções adicionais
-            opcoesAdicionais.style.display = 'none';
-        }
-    });
+// Adiciona um ouvinte de evento para o checkbox
+checkbox.addEventListener('change', function () {
+  // Verifica se o checkbox está marcado
+  if (checkbox.checked) {
+    // Se estiver marcado, mostra as opções adicionais
+    opcoesAdicionais.style.display = 'block';
+  } else {
+    // Se não estiver marcado, oculta as opções adicionais
+    opcoesAdicionais.style.display = 'none';
+  }
+});
 
-    var checkbox2 = document.querySelector('#opcoesProced2 input[type="checkbox"]');
-    var opcoesAdicionais2 = document.querySelector('.adicionaisChecks2Linha1');
-    var checkbox3 = document.querySelector('#opcoesProced3 input[type="checkbox"]');
-    var opcoesAdicionais3 = document.querySelector('.adicionaisChecks2Linha2');
+var checkbox2 = document.querySelector('#opcoesProced2 input[type="checkbox"]');
+var opcoesAdicionais2 = document.querySelector('.adicionaisChecks2Linha1');
+var checkbox3 = document.querySelector('#opcoesProced3 input[type="checkbox"]');
+var opcoesAdicionais3 = document.querySelector('.adicionaisChecks2Linha2');
 
-    // Adiciona um ouvinte de evento para o checkbox
-    checkbox2.addEventListener('change', function() {
-      console.log("teste")
-        // Verifica se o checkbox está marcado
-        if (checkbox2.checked) {
-            // Se estiver marcado, mostra as opções adicionais
-            opcoesAdicionais2.style.display = 'block';
-            opcoesAdicionais2.style.visibility = 'visible';
-            if(checkbox3.checked == false){
-              opcoesAdicionais3.style.display = 'block';
-              opcoesAdicionais3.style.visibility = 'hidden';
-            }
-        } else {
-            // Se não estiver marcado, oculta as opções adicionais
-            opcoesAdicionais2.style.display = 'none';
-            opcoesAdicionais3.style.display = 'none';
-            opcoesAdicionais3.style.visibility = 'visible';
-        }
-    });
+// Adiciona um ouvinte de evento para o checkbox
+checkbox2.addEventListener('change', function () {
+  console.log("teste")
+  // Verifica se o checkbox está marcado
+  if (checkbox2.checked) {
+    // Se estiver marcado, mostra as opções adicionais
+    opcoesAdicionais2.style.display = 'block';
+    opcoesAdicionais2.style.visibility = 'visible';
+    if (checkbox3.checked == false) {
+      opcoesAdicionais3.style.display = 'block';
+      opcoesAdicionais3.style.visibility = 'hidden';
+    }
+  } else {
+    if (checkbox3.checked) {
+      opcoesAdicionais2.style.display = 'block';
+      opcoesAdicionais2.style.visibility = 'visible';
+    } else {
+      // Se não estiver marcado, oculta as opções adicionais
+      opcoesAdicionais2.style.display = 'none';
+      opcoesAdicionais3.style.display = 'none';
+      opcoesAdicionais3.style.visibility = 'visible'
+    }
+    ;
+  }
+});
 
-    // Adiciona um ouvinte de evento para o checkbox
-    checkbox3.addEventListener('change', function() {
-        // Verifica se o checkbox está marcado
-        if (checkbox3.checked) {
-            // Se estiver marcado, mostra as opções adicionais
-            opcoesAdicionais3.style.display = 'block';
-            opcoesAdicionais3.style.visibility = 'visible';
-            if(checkbox2.checked == false){
-              opcoesAdicionais2.style.display = 'block';
-              opcoesAdicionais2.style.visibility = 'hidden';
-            }
-        } else {
-            // Se não estiver marcado, oculta as opções adicionais
-            // if(checkbox2.)
-            opcoesAdicionais3.style.display = 'none';
-            opcoesAdicionais2.style.display = 'none';
-            opcoesAdicionais2.style.visibility = 'visible';
-        }
-    });
+// Adiciona um ouvinte de evento para o checkbox
+checkbox3.addEventListener('change', function () {
+  // Verifica se o checkbox está marcado
+  if (checkbox3.checked) {
+    // Se estiver marcado, mostra as opções adicionais
+    opcoesAdicionais3.style.display = 'block';
+    opcoesAdicionais3.style.visibility = 'visible';
+    if (checkbox2.checked == false) {
+      opcoesAdicionais2.style.display = 'block';
+      opcoesAdicionais2.style.visibility = 'hidden';
+    }
+  } else {
+    // Se não estiver marcado, oculta as opções adicionais
+    if (checkbox2.checked) {
+      opcoesAdicionais2.style.display = 'block';
+      opcoesAdicionais2.style.visibility = 'visible';
+    } else {
+      opcoesAdicionais3.style.display = 'none';
+      opcoesAdicionais2.style.display = 'none';
+      opcoesAdicionais2.style.visibility = 'visible';
+    }
+
+  }
+});
 

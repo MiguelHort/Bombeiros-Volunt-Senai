@@ -448,8 +448,6 @@ input[type=checkbox]{
   align-items: center;
   font-size: 15px;
 }
-
-
 .linha01 {
   display: flex;
 }
@@ -792,4 +790,39 @@ input[type=checkbox]{
 }
 .adicionaisChecks2Linha2{
   width: 30%;
+}
+
+
+.conducao{
+  display: flex;
+}
+.formaConducao{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  align-items: center;
+}
+.formaConducao img{
+  width: 70%;
+  height: 80%;
+}
+
+.conducao label.formaConducao {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.conducao label.formaConducao input {
+  display: none;
+}
+
+.conducao label.formaConducao img {
+  border: 4px solid #000000;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+.conducao label.formaConducao input:checked + img {
+  border: 4px solid #3F51B5;
 }

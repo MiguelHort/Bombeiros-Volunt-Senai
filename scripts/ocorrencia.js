@@ -112,31 +112,46 @@ function toggleExpand1() {
 
     var checkbox2 = document.querySelector('#opcoesProced2 input[type="checkbox"]');
     var opcoesAdicionais2 = document.querySelector('.adicionaisChecks2Linha1');
+    var checkbox3 = document.querySelector('#opcoesProced3 input[type="checkbox"]');
+    var opcoesAdicionais3 = document.querySelector('.adicionaisChecks2Linha2');
 
     // Adiciona um ouvinte de evento para o checkbox
     checkbox2.addEventListener('change', function() {
+      console.log("teste")
         // Verifica se o checkbox está marcado
         if (checkbox2.checked) {
             // Se estiver marcado, mostra as opções adicionais
+            opcoesAdicionais2.style.display = 'block';
             opcoesAdicionais2.style.visibility = 'visible';
+            if(checkbox3.checked == false){
+              opcoesAdicionais3.style.display = 'block';
+              opcoesAdicionais3.style.visibility = 'hidden';
+            }
         } else {
             // Se não estiver marcado, oculta as opções adicionais
-            opcoesAdicionais2.style.visibility = 'hidden';
+            opcoesAdicionais2.style.display = 'none';
+            opcoesAdicionais3.style.display = 'none';
+            opcoesAdicionais3.style.visibility = 'visible';
         }
     });
-
-    var checkbox3 = document.querySelector('#opcoesProced3 input[type="checkbox"]');
-    var opcoesAdicionais3 = document.querySelector('.adicionaisChecks2Linha2');
 
     // Adiciona um ouvinte de evento para o checkbox
     checkbox3.addEventListener('change', function() {
         // Verifica se o checkbox está marcado
         if (checkbox3.checked) {
             // Se estiver marcado, mostra as opções adicionais
+            opcoesAdicionais3.style.display = 'block';
             opcoesAdicionais3.style.visibility = 'visible';
+            if(checkbox2.checked == false){
+              opcoesAdicionais2.style.display = 'block';
+              opcoesAdicionais2.style.visibility = 'hidden';
+            }
         } else {
             // Se não estiver marcado, oculta as opções adicionais
-            opcoesAdicionais3.style.visibility = 'hidden';
+            // if(checkbox2.)
+            opcoesAdicionais3.style.display = 'none';
+            opcoesAdicionais2.style.display = 'none';
+            opcoesAdicionais2.style.visibility = 'visible';
         }
     });
 

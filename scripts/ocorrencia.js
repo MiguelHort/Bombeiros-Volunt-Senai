@@ -267,3 +267,38 @@ checkboxSinais5.addEventListener('change', function () {
   }
 });
 
+var checkboxSinais6 = document.querySelector('#respiracao input[type="checkbox"]');
+var checkboxDPOC = document.querySelector('[name="DPOC"]');
+var checkboxInalacao = document.querySelector('[name="inalacao"]');
+var opcoesAdicionaisSinais6 = document.querySelector('.respOpc');
+
+checkboxSinais6.addEventListener('change', function () {
+  if (checkboxSinais6.checked) {
+    // Se estiver marcado, mostra as opções adicionais
+    opcoesAdicionaisSinais6.style.display = 'block';
+  } else {
+    // Se estiver desmarcado, esconde as opções adicionais
+    opcoesAdicionaisSinais6.style.display = 'none';
+    // Desmarca os checkboxes "Localizado" e "Generalizado"
+    checkboxDPOC.checked = false;
+    checkboxInalacao.checked = false;
+  }
+});
+
+var checkboxSinais7 = document.querySelector('#diabetes input[type="checkbox"]');
+var checkboxHiperglicemia = document.querySelector('[name="hiperglicemia"]');
+var checkboxHipoglicemia = document.querySelector('[name="hipoglicemia"]');
+var opcoesAdicionaisSinais7 = document.querySelector('.diabetesOpc');
+
+checkboxSinais7.addEventListener('change', function () {
+  if (checkboxSinais7.checked) {
+    // Se estiver marcado, mostra as opções adicionais
+    opcoesAdicionaisSinais7.style.display = 'block';
+  } else {
+    // Se estiver desmarcado, esconde as opções adicionais
+    opcoesAdicionaisSinais7.style.display = 'none';
+    // Desmarca os checkboxes "Localizado" e "Generalizado"
+    checkboxHiperglicemia.checked = false;
+    checkboxHipoglicemia.checked = false;
+  }
+});

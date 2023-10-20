@@ -169,3 +169,101 @@ checkbox3.addEventListener('change', function () {
   }
 });
 
+var checkboxSinais = document.querySelector('#cianose input[type="checkbox"]');
+var checkboxLabios = document.querySelector('[name="labios"]');
+var checkboxExtremidade = document.querySelector('[name="extremidade"]');
+var opcoesAdicionaisSinais = document.querySelector('.cianoseOpc');
+
+checkboxSinais.addEventListener('change', function () {
+  console.log("teste")
+  if (checkboxSinais.checked) {
+    // Se estiver marcado, mostra as opções adicionais
+    opcoesAdicionaisSinais.style.display = 'block';
+  } else {
+    opcoesAdicionaisSinais.style.display = "none";
+        // Desmarca os checkboxes "Lábios" e "Extremidade"
+        checkboxLabios.checked = false;
+        checkboxExtremidade.checked = false;    
+  }
+})
+
+var checkboxSinais2 = document.querySelector('#edema input[type="checkbox"]');
+var checkboxLocalizado = document.querySelector('[name="localizado"]');
+var checkboxGeneralizado = document.querySelector('[name="generalizado"]');
+var opcoesAdicionaisSinais2 = document.querySelector('.edemaOpc');
+
+checkboxSinais2.addEventListener('change', function () {
+  if (checkboxSinais2.checked) {
+    // Se estiver marcado, mostra as opções adicionais
+    opcoesAdicionaisSinais2.style.display = 'block';
+  } else {
+    // Se estiver desmarcado, esconde as opções adicionais
+    opcoesAdicionaisSinais2.style.display = 'none';
+    // Desmarca os checkboxes "Localizado" e "Generalizado"
+    checkboxLocalizado.checked = false;
+    checkboxGeneralizado.checked = false;
+  }
+});
+
+var checkboxSinais3 = document.querySelector('#hemorragia input[type="checkbox"]');
+var checkboxInterna = document.querySelector('[name="interna"]');
+var checkboxExterna = document.querySelector('[name="externa"]');
+var opcoesAdicionaisSinais3 = document.querySelector('.hemoOpc');
+
+checkboxSinais3.addEventListener('change', function () {
+  if (checkboxSinais3.checked) {
+    // Se estiver marcado, mostra as opções adicionais
+    opcoesAdicionaisSinais3.style.display = 'block';
+  } else {
+    // Se estiver desmarcado, esconde as opções adicionais
+    opcoesAdicionaisSinais3.style.display = 'none';
+    // Desmarca os checkboxes "Localizado" e "Generalizado"
+    checkboxInterna.checked = false;
+    checkboxExterna.checked = false;
+  }
+});
+
+var checkboxSinais4 = document.querySelector('#parada input[type="checkbox"]');
+var checkboxCardiaca = document.querySelector('[name="cardiaca"]');
+var checkboxRespiratoria = document.querySelector('[name="respiratoria"]');
+var opcoesAdicionaisSinais4 = document.querySelector('.paradaOpc');
+
+checkboxSinais4.addEventListener('change', function () {
+  if (checkboxSinais4.checked) {
+    // Se estiver marcado, mostra as opções adicionais
+    opcoesAdicionaisSinais4.style.display = 'block';
+  } else {
+    // Se estiver desmarcado, esconde as opções adicionais
+    opcoesAdicionaisSinais4.style.display = 'none';
+    // Desmarca os checkboxes "Localizado" e "Generalizado"
+    checkboxCardiaca.checked = false;
+    checkboxRespiratoria.checked = false;
+  }
+});
+
+var checkboxSinais5 = document.querySelector('#pupilas input[type="checkbox"]');
+var checkboxAnisocoria = document.querySelector('[name="anisocoria"]');
+var checkboxIsocoria = document.querySelector('[name="isocoria"]');
+var checkboxMioriase = document.querySelector('[name="mioriase"]');
+var checkboxReagente = document.querySelector('[name="reagente"]');
+var checkboxMiose = document.querySelector('[name="miose"]');
+var checkboxNreagente = document.querySelector('[name="nReagente"]');
+var opcoesAdicionaisSinais5 = document.querySelector('.pupilasOpc');
+
+checkboxSinais5.addEventListener('change', function () {
+  if (checkboxSinais5.checked) {
+    // Se estiver marcado, mostra as opções adicionais
+    opcoesAdicionaisSinais5.style.display = 'block';
+  } else {
+    // Se estiver desmarcado, esconde as opções adicionais
+    opcoesAdicionaisSinais5.style.display = 'none';
+    // Desmarca os checkboxes "Localizado" e "Generalizado"
+    checkboxAnisocoria.checked = false;
+    checkboxIsocoria.checked = false;
+    checkboxMioriase.checked = false;
+    checkboxReagente.checked = false;
+    checkboxMiose.checked = false
+    checkboxNreagente.checked = false
+  }
+});
+

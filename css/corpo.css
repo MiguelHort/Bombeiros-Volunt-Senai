@@ -3,7 +3,21 @@ body {
     justify-content: center;
 }
 
-.corpo {}
+#corpoCompleto {
+    display: flex;
+    gap: 200px;
+    width: 1000px;
+    justify-content: center;
+    align-items: center;
+}
+
+#corpoFrente {
+    width: 1000px;
+}
+
+#corpoVerso {
+    width: 1000px;
+}
 
 button {
     background: none;
@@ -124,6 +138,125 @@ figure {
     left: 32px;
 }
 
+.imagem19 {
+    position: relative;
+    top: 10px;
+}
+
+.imagem20 {
+    position: relative;
+    top: 8px;
+    left: 8px;
+}
+
+.imagem21 {
+    position: relative;
+    top: 8px;
+    right: 25px;
+}
+
+.imagem22 {
+    position: relative;
+    bottom: 65px;
+    right: 55px;
+}
+
+.imagem23 {
+    position: relative;
+    bottom: 65px;
+    right: 64px;
+}
+
+.imagem24 {
+    position: relative;
+    bottom: 67px;
+    right: 66px;
+}
+
+.imagem25 {
+    position: relative;
+    bottom: 290px;
+    left: 93px;
+}
+
+.imagem26 {
+    position: relative;
+    bottom: 290px;
+    left: 90px;
+}
+
+.imagem27 {
+    position: relative;
+    bottom: 292px;
+    left: 104px;
+}
+
+.imagem28 {
+    position: relative;
+    bottom: 455px;
+    right: 16px;
+}
+
+.imagem29 {
+    position: relative;
+    bottom: 453px;
+    right: 19px;
+}
+
+.imagem30 {
+    position: relative;
+    bottom: 450px;
+    right: 20px;
+}
+
+.imagem31 {
+    position: relative;
+    bottom: 450px;
+    right: 8px;
+}
+
+.imagem32 {
+    position: relative;
+    bottom: 458px;
+    right: 10px;
+}
+
+.imagem33 {
+    position: relative;
+    bottom: 458px;
+    right: 8px;
+}
+
+.imagem34 {
+    position: relative;
+    bottom: 712px;
+    left: 32px;
+}
+
+.imagem35 {
+    position: relative;
+    bottom: 712px;
+    left: 31px;
+}
+
+.imagem36 {
+    position: relative;
+    bottom: 720px;
+    left: 30px;
+}
+
+.imagem37 {
+    position: relative;
+    bottom: 720px;
+    left: 32px;
+}
+
+path {
+    fill: #f1cbb2;
+}
+
+/* Frente */
+
 #cabeca path:hover {
     stroke: red;
 }
@@ -196,6 +329,84 @@ figure {
     stroke: red;
 }
 
+/* Verso */
+
+#nuca path:hover {
+    stroke: red;
+}
+
+#pescocov path:hover {
+    stroke: greenyellow;
+}
+
+#costas path:hover {
+    stroke: yellow;
+}
+
+#ombroev path:hover {
+    stroke: blue;
+}
+
+#bracoev path:hover {
+    stroke: blue;
+}
+
+#maoev path:hover {
+    stroke: blue;
+}
+
+#ombrodv path:hover {
+    stroke: blue;
+}
+
+#bracodv path:hover {
+    stroke: blue;
+}
+
+#maodv path:hover {
+    stroke: blue;
+}
+
+#troncov path:hover {
+    stroke: red;
+}
+
+#bunda path:hover {
+    stroke: red;
+}
+
+#coxaev path:hover {
+    stroke: red;
+}
+
+#joelhoev path:hover {
+    stroke: red;
+}
+
+#panturrilhaev path:hover {
+    stroke: red;
+}
+
+#peev path:hover {
+    stroke: red;
+}
+
+#coxadv path:hover {
+    stroke: red;
+}
+
+#joelhodv path:hover {
+    stroke: red;
+}
+
+#panturrilhadv path:hover {
+    stroke: red;
+}
+
+#pedv path:hover {
+    stroke: red;
+}
+
 /* Caixa de opções */
 
 /* Estilo para a janela modal */
@@ -214,6 +425,9 @@ figure {
 
 /* Estilo para o conteúdo da janela modal */
 .modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     position: fixed;
     top: 40%;
     left: 38%;
@@ -228,6 +442,9 @@ figure {
 }
 
 .modal-content button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     border: none;
     border-radius: 5px;
@@ -235,8 +452,24 @@ figure {
 }
 
 .modal-content button:hover {
-    background-color: aqua;
-    color: white;
+    background-color: rgb(255, 255, 0);
     transform: scale(1.05);
     transition: 0.2s ease;
+}
+
+/* Imagem no Botão */
+
+.modal-content button img {
+    width: 25px;
+}
+
+#imagemx {
+    display: none;
+    position: relative;
+    top: 70px;
+    right: 710px;
+}
+
+#imagemx img {
+    width: 40px;
 }

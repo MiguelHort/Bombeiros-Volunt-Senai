@@ -834,3 +834,37 @@ input[type=checkbox]{
 .sinaisSintomas input[type=text]{
   width: 90%;
 }
+.invisivel{
+ 
+}
+.invisivelDivSinais{
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+  margin: auto;
+  margin-top: 4%;
+}
+.invisivelDivSinais2{
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: auto;
+  margin-top: 4%;
+}
+.sinaisOpcoes{
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+}
+.sinaisOpcoes label{
+  width: 100%;
+}
+.sinaisOpcoes input[type="checkbox"]{
+  transform: scale(2.0); /* Aumenta o tamanho do checkbox em 1.5 vezes */
+  margin-right: 10px; /* Espaçamento entre o checkbox e o texto */
+}
+
+.problemasSusp{
+  display: flex;
+  margin-top: 5%;  
+}

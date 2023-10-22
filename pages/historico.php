@@ -81,24 +81,43 @@ INNER JOIN info_finais on ocorrencia.fk_info_finais = info_finais.id_info_finais
                     <div><strong>POSSUI ALGUM PROBLEMA DE SAÚDE:</strong>
                         <p><?php echo $row['problema_de_saude']; ?></p>
                     </div>
+                    <?php 
+                    if($row['problema_de_saude']=="Sim" || $row['problema_de_saude']=="sim"){
+                    ?>
                     <div><strong>QUAIS PROBLEMAS:</strong>
                         <p><?php echo $row['quais_problemas']; ?></p>
                     </div>
+                    <?php
+                    }
+                    ?>
                     <div><strong>FAZ USO DE MEDICAÇÃO:</strong>
                         <p><?php echo $row['usa_medicacao']; ?></p>
                     </div>
+                    <?php
+                    if($row['usa_medicacao'] == "Sim" || $row['usa_medicacao'] == "sim"){
+                    ?>
                     <div><strong>HORÁRIO DA ÚLTIMA MEDICAÇÃO:</strong>
                         <p><?php echo $row['horario_medicacao']; ?></p>
                     </div>
                     <div><strong>QUAIS:</strong>
                         <p><?php echo $row['quais_medicacoes']; ?></p>
                     </div>
+                    <?php
+                    }
+                    ?>
+
                     <div><strong>ALÉRGICO A ALGO:</strong>
                         <p><?php echo $row['alergico']; ?></p>
                     </div>
-                    <div><strong>ALÉRGICO A:</strong>
+                    <?php
+                    if( $row['alergico'] == "Sim" || $row['alergico'] == "sim"){
+                    ?>
+                    <div><strong>ALERGIA A:</strong>
                         <p><?php echo $row['qual_alergia']; ?></p>
                     </div>
+                    <?php
+                    }
+                    ?>
 
                     <div><strong>GESTANTE:</strong>
                         <p><?php if( empty($row['fk_anamnese_gest']))
@@ -108,7 +127,11 @@ INNER JOIN info_finais on ocorrencia.fk_info_finais = info_finais.id_info_finais
                             echo "Sim";
                         }  ?></p>
                     </div>
-                    <div><strong>PRÉ-NATAL:</strong>
+
+                    <?php 
+                    if(!empty($row['pre_natal'])){
+                    ?>
+                        <div><strong>PRÉ-NATAL:</strong>
                         <p><?php echo $row['pre_natal']; ?></p>
                     </div>
                     <div><strong>PERÍODO DA GESTAÇÃO:</strong>
@@ -123,12 +146,21 @@ INNER JOIN info_finais on ocorrencia.fk_info_finais = info_finais.id_info_finais
                     <div><strong>PRIMERO FILHO:</strong>
                         <p><?php echo $row['primeiro_filho']; ?></p>
                     </div>
+                    <?php
+                    if( $row['primeiro_filho']=="Não" ||  $row['primeiro_filho']=="não"){
+                    ?>
                     <div><strong>QUANTOS:</strong>
                         <p><?php echo $row['quantos']; ?></p>
                     </div>
+                    <?php
+                    }
+                    ?>
                     <div><strong>CONTRAÇÕES:</strong>
                         <p><?php echo $row['contracoes']; ?></p>
                     </div>
+                    <?php
+                    if($row['contracoes']=="Sim" ||  $row['contracoes']=="sim"){
+                    ?>
                     <div><strong>QUE HORAS INICIARAM AS CONTRAÇÕES:</strong>
                         <p><?php echo $row['horario_contracoes']; ?></p>
                     </div>
@@ -138,6 +170,9 @@ INNER JOIN info_finais on ocorrencia.fk_info_finais = info_finais.id_info_finais
                     <div><strong>DURAÇÃO DAS CONTRAÇÕES:</strong>
                         <p><?php echo $row['duracao_contracoes']; ?></p>
                     </div>
+                    <?php
+                    }
+                    ?>
                     <div><strong>PRESSÃO NO QUADRIL OU VONTADE DE EVACUAR:</strong>
                         <p><?php echo $row['pressao_ou_evacuar']; ?></p>
                     </div>
@@ -152,7 +187,11 @@ INNER JOIN info_finais on ocorrencia.fk_info_finais = info_finais.id_info_finais
                     </div>
                     <div><strong>SEXO DO BEBÊ:</strong>
                         <p><?php echo $row['sexo_bebe']; ?></p>
-                    </div>
+                    </div> 
+                    <?php
+                    }
+                    ?>
+                
 
                     <div><strong>TIPO DE OCORRÊNCIA:</strong>
                         <p><?php echo $row['tipo_ocorrencia']; ?></p>
@@ -205,10 +244,31 @@ INNER JOIN info_finais on ocorrencia.fk_info_finais = info_finais.id_info_finais
                         <p><?php echo $row['procedimentos']; ?></p>
                     </div>
                     <div><strong>MATERIAIS UTILIZADOS DESCARTÁVEIS:</strong>
-                        <p></p>
+                    <?php 
+                       $sql2 = "SELECT * FROM materiais_descart WHERE fk_ocorrencia = '{$row['id_ocorrencia']}'";
+    $result2 = mysqli_query($conexao, $sql2);
+    if($result2) {
+        while ($row2 = mysqli_fetch_assoc($result2)) {
+            echo "<p>Material: " . $row2['material'] . " / Tamanho: " . $row2['tamanho'] . " / Quantidade: " . $row2['quantidade'] . "</p>";
+        }
+    } else {
+        echo "Erro ao recuperar materiais descartáveis.";
+    }
+                    ?>  
                     </div>
+
                     <div><strong>MATERIAIS UTILIZADOS DEIXADOS NO HOSPITAL:</strong>
-                        <p>?</p>
+                        <?php 
+                       $sql3 = "SELECT * FROM deixados_hospital WHERE fk_ocorrencia = '{$row['id_ocorrencia']}'";
+    $result3 = mysqli_query($conexao, $sql3);
+    if($result3) {
+        while ($row3 = mysqli_fetch_assoc($result3)) {
+            echo "<p>" . $row3['material'] . ", " . $row3['deixado_tamanho'] . ", " . $row3['deixado_quantidade'] . "</p>";
+        }
+    } else {
+        echo "Erro ao recuperar materiais descartáveis.";
+    }
+                    ?> 
                     </div>
 
 

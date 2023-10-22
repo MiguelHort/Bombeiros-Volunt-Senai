@@ -521,7 +521,6 @@ input[type=checkbox]{
   border-radius: 50;
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
-
 }
 
 .aboCol1{

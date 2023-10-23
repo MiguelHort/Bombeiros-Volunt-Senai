@@ -75,27 +75,58 @@ function toggleExpand2() {
 
 
 
-// soma dos números selecionados
+// avaliação glasgow
 
-const numeros = document.querySelectorAll('.numero');
+let activePai = 0; // Indica o botão pai ativo no momento
+
+function togglePai(paiIndex) {
+    if (paiIndex !== activePai) {
+        const currentGroup = document.getElementById(`grupoBotoes${activePai + 1}`);
+        const nextGroup = document.getElementById(`grupoBotoes${paiIndex + 1}`);
+        const botoesPai = document.querySelectorAll('.botaoPai');
+
+        currentGroup.classList.remove('active');
+        nextGroup.classList.add('active');
+        botoesPai[activePai].classList.remove('selected');
+        botoesPai[paiIndex].classList.add('selected');
+        activePai = paiIndex;
+    }
+}
+
+function selectBotao(event) {
+    const botoes = document.querySelectorAll('.botao');
+    botoes.forEach(botao => botao.classList.remove('selected'));
+    event.target.classList.add('selected');
+}
+
+// soma dos números
+const numeros = document.querySelectorAll('.botao');
 const totalElement = document.getElementById('total');
 let total = 0;
 
 numeros.forEach(numero => {
-  numero.addEventListener('click', () => {
-    const valor = parseInt(numero.getAttribute('data-valor'));
-    if (numero.classList.contains('selecionado')) {
-      // Desmarcar número
-      numero.classList.remove('selecionado');
-      total -= valor;
-    } else {
-      // Marcar número
-      numero.classList.add('selecionado');
-      total += valor;
-    }
-    totalElement.textContent = total;
-  });
+ numero.addEventListener('click', () => {
+ const valor = parseInt(numero.getAttribute('data-valor'));
+if (numero.classList.contains('selecionado')) {
+// Desmarcar número
+numero.classList.remove('selecionado');
+total -= valor;
+} else {
+// Marcar número
+numero.classList.add('selecionado');
+total += valor;
+}
+totalElement.textContent = total;
 });
+});
+// fim glas
+
+
+
+
+
+
+
 
 
 var checkbox = document.querySelector('#opcoesProced input[type="checkbox"]');

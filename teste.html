@@ -1,101 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alternância de Botões</title>
+    <!-- ... o resto do seu código ... -->
     <style>
-      
-
-        .parent-button {
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .parent-button:first-child {
-            background-color: lightblue;
-        }
-
-        .parent-button:last-child {
-            background-color: lightgreen;
-        }
-
-        .botao-group {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .botao-group.active {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-            animation: fadeIn 1s;
-        }
-
-        .botao {
-            border: 2px solid transparent;
-            transition: border-color 0.3s;
-            cursor: pointer;
-            padding: 10px 15px;
-}
-
-        .botao.selected {
-            border-color: #02005C;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+        /* ... suas estilizações existentes ... */
     </style>
 </head>
+
 <body>
-    <div class="parent-button-group">
-        <button class="parent-button" onclick="toggleParentButton(0)"> > 5 anos </button>
-        <button class="parent-button" onclick="toggleParentButton(1)"> ≤ 5 anos </button>
-    </div>
+    <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse">
+        <div class="accordion-body ">
 
-    <div class="botao-group active" id="childButtonGroup1">
-        <button class="botao" onclick="selectChildButton(event)">Espontânea <br> 4</button>
-        <button class="botao" onclick="selectChildButton(event)">Comando verbal <br> 3</button>
-        <button class="botao" onclick="selectChildButton(event)">Estímulo doloroso <br> 4</button>
-        <button class="botao" onclick="selectChildButton(event)">Nenhuma <br> 1</button>
-        
-    </div>
+            <div id="imagemglasgow">
+                <img src="../img/ocular.png" alt="">
+            </div>
 
-    <div class="botao-group" id="childButtonGroup2">
-        <button class="botao" onclick="selectChildButton(event)">Espontânea <br> 4</button>
-        <button class="botao" onclick="selectChildButton(event)">Comando verbal <br> 3</button>
-        <button class="botao" onclick="selectChildButton(event)">Estímulo doloroso <br> 4</button>
-        <button class="botao" onclick="selectChildButton(event)">Nenhuma <br> 1</button>
+            <div class="aberturaOcular">
+                <div class="box-glasgow">
+                    <div class="content-aboCol">
+
+                        <div id="botoespai1">
+
+                            <div class="botaoPai1 selected" onclick="togglePai1(0)">> 5 anos</div>
+                            <div class="botaoPai1" onclick="togglePai1(1)"><= 5 anos</div>
+
+                        </div>
+
+                        <div id="botoes1">
+
+                            <div class="grupoBotoes1 active" id="grupoBotoes1_1">
+
+                                <div>
+                                    <div class="botao botao1" onclick="selectBotao1(event)" data-valor="4">Espontânea
+                                        <br> 4</div>
+                                    <br>
+                                    <div class="botao botao2" onclick="selectBotao1(event)" data-valor="3">Comando Verbal
+                                        <br> 3</div>
+                                </div>
+
+                                <div>
+                                    <div class="botao botao3" onclick="selectBotao1(event)" data-valor="2">Estíumulo
+                                        doloroso <br> 2</div>
+                                    <br>
+                                    <div class="botao botao4" onclick="selectBotao1(event)" data-valor="1">Nenhuma <br>
+                                        1</div>
+                                </div>
+
+                            </div>
+
+                            <div class="grupoBotoes1" id="grupoBotoes2_1">
+
+                                <div>
+                                    <div class="botao botao1" onclick="selectBotao1(event)" data-valor="4">Espontânea
+                                        <br> 4</div>
+                                    <br>
+                                    <div class="botao botao2" onclick="selectBotao1(event)" data-valor="3">Comando Verbal
+                                        <br> 3</div>
+                                </div>
+
+                                <div>
+                                    <div class="botao botao3" onclick="selectBotao1(event)" data-valor="2">Estíumulo
+                                        doloroso <br> 2</div>
+                                    <br>
+                                    <div class="botao botao4" onclick="selectBotao1(event)" data-valor="1">Nenhuma <br>
+                                        1</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ... outras partes do seu código ... -->
+
+                <div class="aberturaOcular">
+
+                    <div class="box-glasgow">
+                        <div class="content-aboCol">
+                            <div id="botoespai2">
+
+                                <div class="botaoPai2 selected" onclick="togglePai2(0)">> 5 anos</div>
+                                <div class="botaoPai2" onclick="togglePai2(1)"><= 5 anos</div>
+
+                            </div>
+
+                            <div id="botoes2">
+
+                                <div class="grupoBotoes2 active" id="grupoBotoes1_2">
+
+                                    <div>
+                                        <div class="botao botao1" onclick="selectBotao2(event)" data-valor="4">Confuso
+                                            <br> 4</div>
+                                        <br>
+                                        <div class="botao botao2" onclick="selectBotao2(event)" data-valor="3">Palavras
+                                            Inapropriadas <br> 3</div>
+                                    </div>
+
+                                    <div>
+                                        <div class="botao botao3" onclick="selectBotao2(event)" data-valor="2">Palavras
+                                            incompreensíveis <br> 2</div>
+                                        <br>
+                                        <div class="botao botao4" onclick="selectBotao2(event)" data-valor="1">Nenhuma <br>
+                                            1</div>
+                                    </div>
+
+                                </div>
+
+                                <div class="grupoBotoes2" id="grupoBotoes2_2">
+
+                                    <div>
+                                        <div class="botao botao1" onclick="selectBotao2(event)" data-valor="4">Palavras
+                                            Inapropriadas <br> 4</div>
+                                        <br>
+                                        <div class="botao botao2" onclick="selectBotao2(event)" data-valor="3">Choro
+                                            persistente ou gritos <br> 3</div>
+                                    </div>
+
+                                    <div>
+                                        <div class="botao botao3" onclick="selectBotao2(event)" data-valor="2">Sons
+                                            incompreensíveis <br> 2</div>
+                                        <br>
+                                        <div class="botao botao4" onclick="selectBotao2(event)" data-valor="1">Nenhuma
+                                            resposta verbal <br> 1</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ... outras partes do seu código ... -->
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
-        let activeParentButton = 0; // Indica o botão pai ativo no momento
+        let activePai1 = 0; // Indica o botão pai 1 ativo no momento
+        let activePai2 = 0; // Indica o botão pai 2 ativo no momento
 
-        function toggleParentButton(buttonIndex) {
-            if (buttonIndex !== activeParentButton) {
-                const currentGroup = document.getElementById(`childButtonGroup${activeParentButton + 1}`);
-                const nextGroup = document.getElementById(`childButtonGroup${buttonIndex + 1}`);
+        function togglePai1(paiIndex) {
+            if (paiIndex !== activePai1) {
+                const currentGroup = document.getElementById(`grupoBotoes${activePai1 + 1}_1`);
+                const nextGroup = document.getElementById(`grupoBotoes${paiIndex + 1}_1`);
+                const botoesPai = document.querySelectorAll('.botaoPai1');
 
                 currentGroup.classList.remove('active');
                 nextGroup.classList.add('active');
-                activeParentButton = buttonIndex;
+                botoesPai[activePai1].classList.remove('selected');
+                botoesPai[paiIndex].classList.add('selected');
+                activePai1 = paiIndex;
             }
         }
 
-        function selectChildButton(event) {
-            const childButtons = document.querySelectorAll('.botao');
-            childButtons.forEach(button => button.classList.remove('selected'));
+        function togglePai2(paiIndex) {
+            if (paiIndex !== activePai2) {
+                const currentGroup = document.getElementById(`grupoBotoes${activePai2 + 1}_2`);
+                const nextGroup = document.getElementById(`grupoBotoes${paiIndex + 1}_2`);
+                const botoesPai = document.querySelectorAll('.botaoPai2');
+
+                currentGroup.classList.remove('active');
+                nextGroup.classList.add('active');
+                botoesPai[activePai2].classList.remove('selected');
+                botoesPai[paiIndex].classList.add('selected');
+                activePai2 = paiIndex;
+            }
+        }
+
+        function selectBotao1(event) {
+            const botoes = document.querySelectorAll('.botao');
+            botoes.forEach(botao => botao.classList.remove('selected'));
             event.target.classList.add('selected');
         }
+
+        function selectBotao2(event) {
+            const botoes = document.querySelectorAll('.botao');
+            botoes.forEach(botao => botao.classList.remove('selected'));
+            event.target.classList.add('selected');
+        }
+
+        // ... o restante do seu script ...
     </script>
 </body>
+
 </html>

@@ -530,6 +530,21 @@ input[type=checkbox]{
 .aboCol1 img{
   width: 85%;
 }
+
+
+#imagemglasgow{
+margin-left: 35%;
+}
+#imagemglasgow2{
+margin-top: 40%;
+margin-left: 35%;
+}
+#imagemglasgow3{
+margin-top: 25%;
+margin-left: 35%;
+}
+
+
 .aberturaOcular{
   display: flex;
 }
@@ -547,6 +562,99 @@ input[type=checkbox]{
 .verbalImg{
   width: 80%;
 }
+
+#botoes{
+  margin-top: 15%;
+  width: 300px;
+  height: 20px;
+}
+
+#botoespai{
+ display: flex;
+ margin-left: 15%;
+}
+
+.botaoPai {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 30px;
+  width: 150px;
+  color: white;
+  height: 65px;
+}
+
+.botaoPai:nth-child(1).selected {
+  background-color: #02005C;
+}
+
+.botaoPai:nth-child(2).selected {
+  background-color: #02005C;
+}
+
+.grupoBotoes {
+  display: none;
+}
+#grupoBotoes1 {
+position: relative;
+right: 440px;
+width: 600px;
+
+}
+#grupoBotoes2 {
+position: relative;
+right: 440px;
+width: 600px;
+
+}
+
+
+.grupoBotoes.active {
+  display: flex;
+  gap: 20px;
+  animation: fadeIn 1s;
+}
+
+.botao {
+  padding: 8px 15px;
+  border: 3px solid transparent;
+  transition: border-color 0.3s;
+  cursor: pointer;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+}
+
+.botao.selected {
+  border-color: black;
+}
+
+.botao1{
+  background-color: #03008E;
+  
+}
+.botao2{
+  background-color: #0014C7;
+}
+.botao3{
+  background-color: #00A3C7;
+}
+.botao4{
+  background-color: #00F0FF;
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
 
 .svTopico{
   display: flex;
@@ -579,11 +687,7 @@ input[type=checkbox]{
 .box-glasgow{
   padding: 15px 0;
 }
-.imagemglasgow{
-  width: 30%;
-  margin-left: 35%;
-  margin-top: 10%;
-}
+
 
 /* abertura ocular */
 

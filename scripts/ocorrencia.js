@@ -79,14 +79,39 @@ function toggleExpand2() {
 
 let activePai = 0; // Indica o botão pai ativo no momento
 
+// abertura ocular ***********CORRETO**********
+// function togglePai(paiIndex) {
+//     if (paiIndex !== activePai) {
+//         const currentGroup = document.getElementById(`grupoBotoes${activePai + 1}`);
+//         const nextGroup = document.getElementById(`grupoBotoes${paiIndex + 1}`);
+//         const botoesPai = document.querySelectorAll('.botaoPai');
+
+//         currentGroup.classList.remove('active');
+//         nextGroup.classList.add('active');
+//         botoesPai[activePai].classList.remove('selected');
+//         botoesPai[paiIndex].classList.add('selected');
+//         activePai = paiIndex;
+//     }
+// }
+// resposta verbal
+// ALTERANDO*************
+
 function togglePai(paiIndex) {
     if (paiIndex !== activePai) {
         const currentGroup = document.getElementById(`grupoBotoes${activePai + 1}`);
+        const currentGroup2 = document.getElementById(`grupoBotoes${activePai + 1}${activePai + 1}`);
+        const currentGroup3 = document.getElementById(`grupoBotoes${activePai + 1}${activePai + 1}${activePai + 1}`);
         const nextGroup = document.getElementById(`grupoBotoes${paiIndex + 1}`);
+        const nextGroup2 = document.getElementById(`grupoBotoes${paiIndex + 1}${paiIndex + 1}`);
+        const nextGroup3 = document.getElementById(`grupoBotoes${paiIndex + 1}${paiIndex + 1}${paiIndex + 1}`);
         const botoesPai = document.querySelectorAll('.botaoPai');
 
         currentGroup.classList.remove('active');
+        currentGroup2.classList.remove('active');
+        currentGroup3.classList.remove('active');
         nextGroup.classList.add('active');
+        nextGroup2.classList.add('active');
+        nextGroup3.classList.add('active');
         botoesPai[activePai].classList.remove('selected');
         botoesPai[paiIndex].classList.add('selected');
         activePai = paiIndex;

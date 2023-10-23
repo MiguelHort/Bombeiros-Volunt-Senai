@@ -593,18 +593,37 @@ margin-left: 35%;
   background-color: #02005C;
 }
 
+.botaoPai2 {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 30px;
+  width: 150px;
+  color: white;
+  height: 65px;
+}
+
+.botaoPai2:nth-child(1).selected {
+  background-color: #02005C;
+}
+
+.botaoPai2:nth-child(2).selected {
+  background-color: #02005C;
+}
+
 .grupoBotoes {
   display: none;
 }
 #grupoBotoes1 {
 position: relative;
-right: 440px;
+
 width: 600px;
 
 }
 #grupoBotoes2 {
 position: relative;
-right: 440px;
+
 width: 600px;
 
 }
@@ -627,6 +646,19 @@ width: 600px;
 }
 
 .botao.selected {
+  border-color: black;
+}
+.botaodois {
+  padding: 8px 15px;
+  border: 3px solid transparent;
+  transition: border-color 0.3s;
+  cursor: pointer;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+}
+
+.botaodois.selected {
   border-color: black;
 }
 

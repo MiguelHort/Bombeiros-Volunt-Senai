@@ -64,15 +64,16 @@ section {
 }
 .opcoes input{
     border-radius: 8px;
-    height: 20%;
     margin-top: 10%;
     font-size: 25px;
 }
 #voltar{
-display: flex;
+position: fixed;
 width: 20%;
-height: 5%;
+height: 4%;
 text-decoration: none;
+bottom: 30px;
+left: 20px;
 
 }
 #voltar input{
@@ -83,9 +84,25 @@ border-radius: 8px;
 }
 
 .invisivel{
-    background-color: #EFEFEF;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+   
 }
 .opcoesEquipes{
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+.nomeEquipe{
+    font-size: 25px;
+    margin-left: 5%;
+}
+.equipe{
+    display: flex;
+    align-items: center;
+}
+.equipe img{
+    height: 80%;
 }

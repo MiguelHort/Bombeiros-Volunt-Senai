@@ -5,13 +5,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(mapa-removebg-preview\ \(1\)\ 1.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    height: 100vh;
-    width: 100vw;
 }
 section {
     display: flex;
@@ -49,13 +42,6 @@ section {
     line-height: normal;
     margin: auto;
 }
-@media (max-width: 999px) {
-    .form-group input { 
-        width: 400px;
-        height: 40px;
-    }
-}
-
 .opcoes{
     display: flex;
     flex-direction: column;
@@ -74,7 +60,7 @@ height: 4%;
 text-decoration: none;
 bottom: 30px;
 left: 20px;
-
+cursor: pointer;
 }
 #voltar input{
 width: 100%;
@@ -105,4 +91,18 @@ border-radius: 8px;
 }
 .equipe img{
     height: 80%;
+    cursor: pointer;
+}
+.lixeira{
+    cursor: pointer;
+}
+.lapis{
+    cursor: pointer;
+}
+.botaoAcao{
+    height:10vh;
+}
+.historico{
+    height: 100%;
+    width:100%;
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bombeiros Voluntarios</title>
     <link rel="stylesheet" href="../css/admin.css">
-    <script src="/scripts/admin.js"></script>
+    <script src="../scripts/admin.js"></script>
 </head>
 
 <body>
@@ -39,65 +39,18 @@
             <div class="opcoesEquipes">
                 <div class="equipe">
                     <img src="../img/equipeBomb.png" alt="">
-                    <p class="nomeEquipe">assssssssss</p>
+                    <p class="nomeEquipe"><?php echo $row['equipe']?></p>
+                    <!-- Campo de entrada oculto inicialmente -->
+                    <input type="text" class="campoEdicao" style="display: none;"       value="<?php echo $row['equipe']?>" />
+        <!-- Botão de confirmação oculto inicialmente -->
+        <button class="botaoConfirmar" style="display: none;">Confirmar</button>
                 </div>
                 <div>
-                    <img src="../img/editar.svg" alt="">
-                    <img src="../img/lixeira.svg" alt="">
+                    <img src="../img/editar.svg" alt="" class="lapis">
+                    <img src="../img/lixeira.svg" alt=""class="lixeira" data-equipe-id="<?php echo $row['id_equipe_atendimento']; ?>">
                 </div>
             </div>
 
-            <div class="opcoesEquipes">
-                <div class="equipe">
-                    <img src="../img/equipeBomb.png" alt="">
-                    <p class="nomeEquipe">assssssssss</p>
-                </div>
-                <div>
-                    <img src="../img/editar.svg" alt="">
-                    <img src="../img/lixeira.svg" alt="">
-                </div>
-            </div>
-            <div class="opcoesEquipes">
-                <div class="equipe">
-                    <img src="../img/equipeBomb.png" alt="">
-                    <p class="nomeEquipe">assssssssss</p>
-                </div>
-                <div>
-                    <img src="../img/editar.svg" alt="">
-                    <img src="../img/lixeira.svg" alt="">
-                </div>
-            </div>
-            <div class="opcoesEquipes">
-                <div class="equipe">
-                    <img src="../img/equipeBomb.png" alt="">
-                    <p class="nomeEquipe">assssssssss</p>
-                </div>
-                <div>
-                    <img src="../img/editar.svg" alt="">
-                    <img src="../img/lixeira.svg" alt="">
-                </div>
-            </div>
-            <div class="opcoesEquipes">
-                <div class="equipe">
-                    <img src="../img/equipeBomb.png" alt="">
-                    <p class="nomeEquipe">assssssssss</p>
-                </div>
-                <div>
-                    <img src="../img/editar.svg" alt="">
-                    <img src="../img/lixeira.svg" alt="">
-                </div>
-            </div>
-            <div class="opcoesEquipes">
-                <div class="equipe">
-                    <img src="../img/equipeBomb.png" alt="">
-                    <p class="nomeEquipe">assssssssss</p>
-                </div>
-                <div>
-                    <img src="../img/editar.svg" alt="">
-                    <img src="../img/lixeira.svg" alt="">
-                </div>
-            </div>
-        
 <?php
         }
     } else {
@@ -109,7 +62,7 @@
     ?>
 
         </div>
-        <input type="button" value="Histórico de ocorrências" class="botaoAcao">
+        <a href="../pages/historico.php" ><input type="button" value="Histórico de ocorrências" class="botaoAcao historico"></a>
         
     </div>
     <a href="../index.html" id="voltar"><input type="button" value="Voltar"></a>

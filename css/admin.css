@@ -12,6 +12,9 @@ section {
     justify-content: center;
     align-items: center;
 }
+#inicio{
+    margin-top: 12vh;
+}
 #inicio img {
     width: 230px;
 }

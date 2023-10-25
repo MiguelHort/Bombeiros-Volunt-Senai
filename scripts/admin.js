@@ -55,6 +55,43 @@ botaoConfirmar.addEventListener("click", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Tá aqui")
+// Selecione o botão pelo ID
+var botaoGerenciarEquipes = document.getElementById('botaoGerenciarEquipes');
+
+// Selecione o conteúdo que você deseja mostrar/ocultar
+var conteudoEquipes = document.querySelector('.invisivel');
+
+// Adicione um manipulador de eventos para o clique no botão
+botaoGerenciarEquipes.addEventListener('click', function() {
+    // Verifique o estado atual do conteúdo
+    if (conteudoEquipes.style.display === 'none' || conteudoEquipes.style.display === '') {
+        // Se estiver oculto, torne-o visível
+        conteudoEquipes.style.display = 'block';
+    } else {
+        // Se estiver visível, torne-o oculto
+        conteudoEquipes.style.display = 'none';
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Selecionar todas as lixeiras
     var lixeiras = document.querySelectorAll(".lixeira");
 
@@ -81,3 +118,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+

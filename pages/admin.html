@@ -22,7 +22,7 @@
         <input type="button" value="Gerenciar Equipes" class="botaoAcao" id="botaoGerenciarEquipes">
         <!-- procurar no bootstrap -->
         <div class="invisivel" style="display: none;">
-      <?php
+      <!-- <?php
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
         include('../database/conexao.php'); // Inclua o arquivo de conexão
@@ -35,7 +35,7 @@
         if ($result) {
             // Iterar sobre os resultados da consulta
             while ($row = mysqli_fetch_assoc($result)) {
-        ?> 
+        ?>  -->
             <div class="opcoesEquipes">
                 <div class="equipe">
                     <img src="../img/equipeBomb.png" alt="">
@@ -57,7 +57,7 @@
 
 //Feche a conexão com o banco de dados
     mysqli_close($conexao);
-    ?>
+    ?> -->
     <div class="opcoesEquipe">
         <div class="equipe">
         <a href="doCadastro.php" id="cadastrar"> 

@@ -17,8 +17,8 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 80%;
+  align-items: left;
+  width: 69%;
 }
 
 
@@ -32,8 +32,8 @@ body{
 }
 
 #logomedico{
-  width: 140px;
-  height: 140px;
+  width: 571px;
+  height: 175px;
 }
 /* Nova */
 #novaocorrencia {

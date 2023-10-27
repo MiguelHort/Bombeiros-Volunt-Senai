@@ -19,10 +19,10 @@
         </div>
     </section>
     <div class="opcoes">
-        <input type="button" value="Gerenciar Equipes" class="botaoAcao">
+        <input type="button" value="Gerenciar Equipes" class="botaoAcao" id="botaoGerenciarEquipes">
         <!-- procurar no bootstrap -->
-        <div class="invisivel">
-     <?php
+        <div class="invisivel" style="display: none;">
+      <!-- <?php
         error_reporting(E_ALL);
         ini_set('display_errors', 1);
         include('../database/conexao.php'); // Inclua o arquivo de conexão
@@ -35,22 +35,20 @@
         if ($result) {
             // Iterar sobre os resultados da consulta
             while ($row = mysqli_fetch_assoc($result)) {
-        ?> 
+        ?>  -->
             <div class="opcoesEquipes">
                 <div class="equipe">
                     <img src="../img/equipeBomb.png" alt="">
-                    <p class="nomeEquipe"><?php echo $row['equipe']?></p>
-                    <!-- Campo de entrada oculto inicialmente -->
-                    <input type="text" class="campoEdicao" style="display: none;"       value="<?php echo $row['equipe']?>" />
-        <!-- Botão de confirmação oculto inicialmente -->
-        <button class="botaoConfirmar" style="display: none;">Confirmar</button>
+                    <form method="post" action="../database/atualizarEquipe.php">
+            <input type="text" name="novo_nome" value="<?php echo $row['equipe'] ?>" />
+            <input type="hidden" name="equipe_id" value="<?php echo $row['id_equipe_atendimento']; ?>" />
+            <button type="submit">Salvar</button>
+        </form>
                 </div>
                 <div>
-                    <img src="../img/editar.svg" alt="" class="lapis">
                     <img src="../img/lixeira.svg" alt=""class="lixeira" data-equipe-id="<?php echo $row['id_equipe_atendimento']; ?>">
                 </div>
             </div>
-
 <?php
         }
     } else {
@@ -59,13 +57,25 @@
 
 //Feche a conexão com o banco de dados
     mysqli_close($conexao);
-    ?>
-
+    ?> -->
+    <div class="opcoesEquipe">
+        <div class="equipe">
+        <a href="doCadastro.php" id="cadastrar"> 
+       
+            <img src="../img/adicionar.png" alt="">
+            <p>Adicionar equipe</p>
+            </img src="../img/equipeBomb.png" alt="">
+            
+        </a>    
         </div>
-        <a href="../pages/historico.php" ><input type="button" value="Histórico de ocorrências" class="botaoAcao historico"></a>
+    </div>
+        </div>
+        <div class="botaoAcao"><a href="../pages/historico.php" ><input type="button" value="Histórico de ocorrências" class="botaoAcao historico"></a></div>
         
     </div>
     <a href="../index.html" id="voltar"><input type="button" value="Voltar"></a>
+ 
+
 </body>
 
 </html>

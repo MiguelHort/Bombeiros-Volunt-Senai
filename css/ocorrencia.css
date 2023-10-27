@@ -216,16 +216,17 @@ margin-left: 1%;
 
 .botaoderelação{
   border-radius: 15px;
-  background-color: #ccc; /* Cor de fundo padrão */
+  background-color: white; /* Cor de fundo padrão */
+  border: solid black 2px;
   cursor: pointer;
-  color: white;
+  color: black;
   width: 30%;
   
 }
 
 
 .botaoderelação.selecionado {
-  background-color: #02005C; /* Cor de fundo quando selecionado */
+  background-color: #136cfb; /* Cor de fundo quando selecionado */
 }
 
 

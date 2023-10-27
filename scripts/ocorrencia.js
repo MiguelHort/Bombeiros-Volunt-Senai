@@ -96,6 +96,8 @@ let activePai = 0; // Indica o botão pai ativo no momento
 // resposta verbal
 // ALTERANDO*************
 
+
+
 function togglePai(paiIndex) {
     if (paiIndex !== activePai) {
         const currentGroup = document.getElementById(`grupoBotoes${activePai + 1}`);
@@ -115,6 +117,9 @@ function togglePai(paiIndex) {
         botoesPai[activePai].classList.remove('selected');
         botoesPai[paiIndex].classList.add('selected');
         activePai = paiIndex;
+
+        document.getElementById('grupoBotoes111').style.display = 'none';
+        document.getElementById('grupoBotoes111').style.display = 'flex';
     }
 }
 

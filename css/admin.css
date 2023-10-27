@@ -12,6 +12,9 @@ section {
     justify-content: center;
     align-items: center;
 }
+#inicio{
+    margin-top: 12vh;
+}
 #inicio img {
     width: 230px;
 }
@@ -106,3 +109,8 @@ border-radius: 8px;
     height: 100%;
     width:100%;
 }
+#cadastrar{
+    display: flex;
+    text-decoration: none;
+}
+

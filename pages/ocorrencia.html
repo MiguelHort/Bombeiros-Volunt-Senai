@@ -381,41 +381,6 @@
                   <img src="/img/Animal.png" alt="Feminino">
                   <p>Causado por animais</p>
                 </label>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <label for="C">
                   <input type="radio" name="sexo" id="C" value="C">
                   <img src="/img/Afogamento.png" alt="Feminino">
@@ -516,7 +481,7 @@
       <!-- abertura ocular -->
 
       <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse">
-        <div class="accordion-body ">
+        <div class="accordion-body1">
 
 
 
@@ -534,7 +499,7 @@
 
           <div class="aberturaOcular">
             <div class="box-glasgow">
-              <div class="content-aboCol">
+           
 
                 <div id="botoes">
 
@@ -572,14 +537,9 @@
 
                   </div>
                 </div>
-                </div>
+              
               </div>
-            </div>
-
-            <div class="box-glasgow">
-
-            </div>
-          </div>
+            </div>       
 
           <!-- resposta verbal -->
 
@@ -593,7 +553,7 @@
 
             <div class="box-glasgow">
 
-              <div class="content-aboCol">          
+             
               
                 <div id="botoes">
 
@@ -634,7 +594,7 @@
                   </div>
                 </div>
 
-                </div>
+             
               </div>
             </div>
        
@@ -650,16 +610,23 @@
           </div>
 
           <div class="aberturaOcular">
-            <div class="aboCol1">
-
+           
+                   
+              
 
             </div>
             <div class="box-glasgow">
-              <div class="content-aboCol">
                 <div id="botoes">
 
                   <div class="grupoBotoes active maior" id="grupoBotoes111">
-
+                    
+                    <div>
+                      <div class="botao botao6" onclick="selectBotao(event)" data-valor="4">Espontânea <br> 6
+                      </div>
+                      <br>
+                      <div class="botao botao5" onclick="selectBotao(event)" data-valor="3">Choro persistente ou <br> 5
+                      </div>
+                    </div>
                     <div>
                       <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Confuso <br> 4</div>
                       <br>
@@ -679,33 +646,36 @@
                   <div class="grupoBotoes menor" id="grupoBotoes222">
 
                     <div>
-                      <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Espontânea <br> 4</div>
+                      <div class="botao botao6" onclick="selectBotao(event)" data-valor="4">Espontânea <br> 6
+                      </div>
                       <br>
-                      <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Choro persistente ou <br> 3
+                      <div class="botao botao5" onclick="selectBotao(event)" data-valor="3">Choro persistente ou <br> 5
                       </div>
                     </div>
 
+                    <div>
+                      <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Espontânea <br> 4
+                      </div>
+                      <br>
+                      <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">>Choro persistente ou <br> 3
+                      </div>                    
                     <div>
                       <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Sons incompreensíveis <br> 2
                       </div>
                       <br>
                       <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">Nenhuma resposta verbal <br> 1
                       </div>                    
-                    </div>                     
-                  </div>
-                </div>                    
-               </div> 
-               <h1>Soma de Números</h1>
-        <p>Clique nos números para adicioná-los à soma:</p>
-
-
-        <p>Total: <span id="total">0</span></p>   
-             </div>         
-                   
+                   </div>
+                  </div>  
+                 </div>           
+                 <div id="somatotal">        
+                 <p>Total: <span id="total">0</span></p>
+                </div> 
+              </div>         
+             </div>
             </div>
-          </div>
-        </div>
-     
+           </div>
+        
 
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -747,7 +717,6 @@
             <input type="number" name="" id="">
             <h2>°C</h2>
           </div>
-
         </div>
       </div>
     </div>

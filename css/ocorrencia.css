@@ -106,6 +106,16 @@ margin-left: 1%;
   border-bottom: solid black 3px;
   width: 400px;
 }
+#inputtelefone{
+  border: none;
+  border-bottom: solid black 3px;
+  width: 320px;
+}
+#inputidade{
+  border: none;
+  border-bottom: solid black 3px;
+  width: 380px;
+}
 
 /* data */
 

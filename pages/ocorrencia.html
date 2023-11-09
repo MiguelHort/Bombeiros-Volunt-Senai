@@ -15,17 +15,16 @@
   <div id="imagemTitulo">
     <img id="logomedico" src="/logo_medicina 1.png" alt="">
   </div>
-
   <div id="hugopai">
     <div class="date-input">
       <img class="icones" src="../img/calendario.svg" alt="">
       <p class="topicosiniciais">Data:</p>
       <div id="datainput">
-        <input type="number" id="day" maxlength="2" placeholder="Dia">
+        <input type="number" name="dia" id="day" maxlength="2" placeholder="Dia">
         <span>/</span>
-        <input type="number" id="month" maxlength="2" placeholder="Mês">
+        <input type="number" name="mes" id="month" maxlength="2" placeholder="Mês">
         <span>/</span>
-        <input type="number" id="year" maxlength="4" placeholder="Ano">
+        <input type="number" name="ano" id="year" maxlength="4" placeholder="Ano">
       </div>
     </div>
 
@@ -35,7 +34,7 @@
       <div id="topico_nome">
         <img class="iconepessoa" src="../img/pessoa.svg" alt="">
         <label for="inputs" class="topicosiniciais">Nome:</label>
-        <input id="inputs" type="text">
+        <input id="inputs" name="nomePaciente" type="text">
       </div>
     </div>
 
@@ -51,7 +50,7 @@
       <div id="topico_cpf">
         <img class="iconecpf" src="../img/telefone 1.svg" alt="">
         <label for="inputs" class="topicosiniciais">Telefone:</label>
-        <input name="telefone" id="inputtelefone" type="number">
+        <input name="telefone" id="inputcpf" type="text">
       </div>
     </div>
 
@@ -59,7 +58,7 @@
       <div id="topico_cpf">
         <img class="iconecpf" src="../img/idade.svg" alt="">
         <label for="inputs" class="topicosiniciais">Idade:</label>
-        <input name="idade" id="inputidade" type="number">
+        <input name="idade" id="inputcpf" type="text">
       </div>
     </div>
 
@@ -67,17 +66,16 @@
     <p id="topico-sexo">Sexo:</p>
     <div class="sexo">
       <div id="masculino">
-        <input type="radio" name="sexo" id="bolinhas">
+        <input type="radio" name="sexoPaciente" value="Masculino" id="bolinhas">
         <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/masculino.svg" alt="" width="16%">
           Masculino</label>
       </div>
 
       <div id="feminino">
-        <input type="radio" name="sexopaciente" id="bolinhas">
+        <input type="radio" name="sexoPaciente" value="Feminino" id="bolinhas">
         <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/feminino.svg" alt="" width="16%">
           Feminino</label>
       </div>
-
     </div>
 
   </div>

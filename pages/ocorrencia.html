@@ -125,8 +125,8 @@
         <div class="accordion-body">
 
           <div id="topico_nome">
-            <label for="inputs" class="topico_nome_acompanhante">Nome:</label>
-            <input id="inputs" type="text">
+            <label for="inputs"  class="topico_nome_acompanhante">Nome:</label>
+            <input id="inputs" name="nomeAcompanhante" type="text">
           </div>
 
           <br>
@@ -135,17 +135,19 @@
 
           <div id="botoesrelacao1">
 
-            <button class="botaoderelação" onclick="mudarCor(this)">Pai</button>
-            <button class="botaoderelação" onclick="mudarCor(this)">Mãe</button>
-            <button class="botaoderelação" onclick="mudarCor(this)">Irmão</button>
+            <button type="button" name="pai" value="Pai" class="botaoderelação" onclick="mudarCor(this, 'pai')">Pai</button>
+            <button type="button" name="mae" value="Mãe" class="botaoderelação" onclick="mudarCor(this, 'mae')">Mãe</button>
+            <button type="button" name="irmao" value="Irmão" class="botaoderelação" onclick="mudarCor(this, 'irmao')">Irmão</button>
 
           </div>
 
           <br>
 
-          <button class="botaoderelação" onclick="mudarCor(this)">Cônjuge</button>
-          <button class="botaoderelação" onclick="mudarCor(this)">Amigo</button>
-          <button class="botaoderelação" onclick="mudarCor(this)">Outro</button>
+          <button type="button" name="conjuge" value="Cônjuge" class="botaoderelação" onclick="mudarCor(this, 'conjuge')">Cônjuge</button>
+          <button type="button" name="amigo" value="Amigo" class="botaoderelação" onclick="mudarCor(this, 'amigo')">Amigo</button>
+          <button type="button" name="outro" value="Outro" class="botaoderelação" onclick="mudarCor(this, 'outro')">Outro</button>
+
+  <input type="hidden" name="relacaoEscolhida" id="relacaoEscolhida" value="">
 
         </div>
       </div>
@@ -163,66 +165,66 @@
         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
           <div class="accordion-body">
             <h2>O que aconteceu (sinais e sintomas)</h2>
-            <textarea class="caixa_de_texto_anamnese" name="" id="" cols="60" rows="5"></textarea>
+            <textarea class="caixa_de_texto_anamnese" name="anamnese" id="" cols="60" rows="5"></textarea>
             <div class="">
               <h2>Aconteceu outras vezes?</h2>
-              <input type="radio" name="simNaoEmerg">
+              <input type="radio" name="anamVezes" value="Sim">
               <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNaoEmerg">
+              <input type="radio" name="anamVezes" value="Não">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
             <div>
               <h2>A quanto tempo aconteceu?</h2>
               <label for="hora"><img src="/img/hora.png" alt=""></label>
-              <input type="time" name="hora" id="">
+              <input type="time" name="horaAconteceu" id="">
             </div>
             <div>
               <h2>Possui algum problema de saúde?</h2>
-              <input type="radio" name="simNaoEmerg2">
+              <input type="radio" name="problemaSaude" value="Sim">
               <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNaoEmerg2">
+              <input type="radio" name="problemaSaude" value="Não">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
             <div>
               <h2>Quais?</h2>
-              <textarea class="caixa_de_texto_anamnese" name="" id="" cols="70" rows="5"></textarea>
+              <textarea class="caixa_de_texto_anamnese" name="quaisProblemas" id="" cols="70" rows="5"></textarea>
             </div>
             <div>
               <h2>Faz uso de medicação?</h2>
-              <input type="radio" name="simNaoEmerg3">
+              <input type="radio" name="usaMedicacao" value="Sim">
               <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNaoEmerg3">
+              <input type="radio" name="usaMedicacao" value="Não">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
             <div>
               <h2>Horário da última medicação?</h2>
               <label for="hora"><img src="/img/hora.png" alt=""></label>
-              <input type="time" name="hora" id="">
+              <input type="time" name="horaMedicacao" id="">
             </div>
             <div>
               <h2>Quais?</h2>
-              <textarea class="caixa_de_texto_anamnese" name="" id="" cols="70" rows="5"></textarea>
+              <textarea class="caixa_de_texto_anamnese" name="quaisMedicacoes" id="" cols="70" rows="5"></textarea>
             </div>
             <div>
               <h2>Alérgico a alguma coisa?</h2>
-              <input type="radio" name="simNaoEmerg4">
+              <input type="radio" name="alergico" value="Sim">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNaoEmerg4">
+              <input type="radio" name="alergico" value="Não">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
               <h2>Especifique:</h2>
-              <textarea class="caixa_de_texto_anamnese" name="" id="" cols="70" rows="4"></textarea>
+              <textarea class="caixa_de_texto_anamnese" name="qualAlergia" id="" cols="70" rows="4"></textarea>
             </div>
             <div>
               <h2>Ingeriu alimento ou líquido ≥ 6 horas</h2>
-              <input type="radio" name="simNaoEmerg5">
+              <input type="radio" name="ingeriuAlgo" value="Sim">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNaoEmerg5">
+              <input type="radio" name="ingeriuAlgo" value="Não">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
             <div>
               <h2>Que horas?</h2>
               <label class="SimNao" for="hora"><img src="/img/hora.png" alt=""></label>
-              <input type="time" name="hora" id="">
+              <input type="time" name="horaIngeriu" id="">
             </div>
           </div>
         </div>
@@ -246,39 +248,39 @@
           <div class="accordion-body">
             <div>
               <h2>Pré-natal</h2>
-              <input type="radio" name="simNao0" id="bolinhas">
+              <input type="radio" name="preNatal" value="Sim" id="bolinhas">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNao0" id="bolinhas">
+              <input type="radio" name="preNatal" value="Não" id="bolinhas">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
 
             <div>
               <h2>Período da gestação</h2>
-              <input class="caixa_de_texto_gestacional" type="text" name="" id="">
+              <input class="caixa_de_texto_gestacional" type="text" name="periodoGestacao" id="">
             </div>
 
             <br>
 
             <div>
               <h2>Nome do médico:</h2>
-              <input class="caixa_de_texto_gestacional" type="text" name="" id="">
+              <input class="caixa_de_texto_gestacional" type="text" name="nomeMedico" id="">
             </div>
 
             <br>
 
             <div>
               <h2>Possíveis complicações</h2>
-              <input type="radio" name="simNao" id="bolinhas">
+              <input type="radio" name="complicacao" value="Sim" id="bolinhas">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNao" id="bolinhas">
+              <input type="radio" name="complicacao" value="Não" id="bolinhas">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
 
             <div>
               <h2>Primeiro filho?</h2>
-              <input type="radio" name="simNao2" id="bolinhas">
+              <input type="radio" name="primeiroFilho" value="Sim" id="bolinhas">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNao2" id="bolinhas">
+              <input type="radio" name="primeiroFilho" value="Não" id="bolinhas">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
 
               <h2>Quantos?</h2>
@@ -291,13 +293,13 @@
 
             <div>
               <h2>Contrações</h2>
-              <input type="radio" name="simNao3" id="bolinhas">
+              <input type="radio" name="contracao" value="Sim" id="bolinhas">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNao3" id="bolinhas">
+              <input type="radio" name="contracao" value="Não" id="bolinhas">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
 
               <h2>Que horas iniciaram as contrações?</h2>
-              <input class="horario" type="time" name="" id="">
+              <input class="horario" type="time" name="horaContracao" id="">
 
               <br>
               <br>
@@ -316,7 +318,7 @@
 
 
               <label class="SimNao" for="duracao">Duração</label>
-              <input class="caixa_de_texto_gestacional" type="text">
+              <input class="caixa_de_texto_gestacional" type="text" name="duracaoContracao">
             </div>
 
             <br>
@@ -324,9 +326,9 @@
 
             <div>
               <h2>Pressão no quadril ou vontade de evacuar?</h2>
-              <input type="radio" name="simNao4" id="bolinhas">
+              <input type="radio" name="pressao" id="bolinhas" value="Sim">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNao4" id="bolinhas">
+              <input type="radio" name="pressao" id="bolinhas" value="Não">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
 
@@ -334,9 +336,9 @@
 
             <div>
               <h2>Já houve ruptura na bolsa?</h2>
-              <input type="radio" name="simNao5" id="bolinhas">
+              <input type="radio" name="ruptura" id="bolinhas" value="Sim">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNao5" id="bolinhas">
+              <input type="radio" name="ruptura" id="bolinhas" value="Não">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
 
@@ -344,9 +346,9 @@
 
             <div>
               <h2>Foi feita inspeção visual?</h2>
-              <input type="radio" name="simNao6" id="bolinhas">
+              <input type="radio" name="inspecao" id="bolinhas" value="Sim">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNao6" id="bolinhas">
+              <input type="radio" name="inspecao" id="bolinhas" value="Não">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
 
@@ -354,9 +356,9 @@
 
             <div>
               <h2>Parto realizado?</h2>
-              <input type="radio" name="simNao7" id="bolinhas">
+              <input type="radio" name="parto" id="bolinhas" value="Sim">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="simNao7" id="bolinhas">
+              <input type="radio" name="parto" id="bolinhas" value="Não">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
 
@@ -364,9 +366,9 @@
 
             <div>
               <h2>Sexo do bebê</h2>
-              <input type="radio" name="sexo" id="bolinhas">
+              <input type="radio" name="sexoBebe" id="bolinhas" value="masculino">
               <label class="SimNao" id="generos" for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>
-              <input type="radio" name="sexo" id="bolinhas">
+              <input type="radio" name="sexoBebe" id="bolinhas" value="feminino">
               <label class="SimNao" id="generos" for="sexo"><img src="/img/feminino.svg" alt=""> Feminino</label>
             </div>
           </div>
@@ -392,85 +394,85 @@
             <fieldset class="radio-image">
               <div class="linha01">
                 <label for="A">
-                  <input type="radio" name="sexo" id="A" value="A">
+                  <input type="radio" name="domestico" id="A" value="A">
                   <img src="/img/Domiciliar.png" alt="Masculino">
                   <p>Doméstico</p>
                 </label>
                 <label for="B">
-                  <input type="radio" name="sexo" id="B" value="B">
+                  <input type="radio" name="animais" id="B" value="B">
                   <img src="/img/Animal.png" alt="Feminino">
                   <p>Causado por animais</p>
                 </label>
                 <label for="C">
-                  <input type="radio" name="sexo" id="C" value="C">
+                  <input type="radio" name="afogamento" id="C" value="C">
                   <img src="/img/Afogamento.png" alt="Feminino">
                   <p>Afogamento</p>
                 </label>
               </div>
               <div class="linha01">
                 <label for="D">
-                  <input type="radio" name="sexo" id="D" value="D">
+                  <input type="radio" name="enchente" id="D" value="D">
                   <img src="/img/Enchente.png" alt="Masculino">
                   <p>Enchente</p>
                 </label>
                 <label for="E">
-                  <input type="radio" name="sexo" id="E" value="E">
+                  <input type="radio" name="desmoronamento" id="E" value="E">
                   <img src="/img/Desmoronamento.png" alt="Feminino">
                   <p>Desmoronamento</p>
                 </label>
                 <label for="F">
-                  <input type="radio" name="sexo" id="F" value="F">
+                  <input type="radio" name="ventos" id="F" value="F">
                   <img src="/img/Ventosfortes.png" alt="Feminino">
                   <p>Ventos fortes</p>
                 </label>
               </div>
               <div class="linha01">
                 <label for="G">
-                  <input type="radio" name="sexo" id="G" value="G">
+                  <input type="radio" name="incendio" id="G" value="G">
                   <img src="/img/Incendio.png" alt="Masculino">
                   <p>Incêndio</p>
                 </label>
                 <label for="H">
-                  <input type="radio" name="sexo" id="H" value="H">
+                  <input type="radio" name="intoxicacao" id="H" value="H">
                   <img src="/img/Intoxicacao.png" alt="Feminino">
                   <p>Intoxicação</p>
                 </label>
                 <label for="I">
-                  <input type="radio" name="sexo" id="I" value="I">
+                  <input type="radio" name="acidenteCarro" id="I" value="I">
                   <img src="/img/Acidentedecarro.png" alt="Feminino">
                   <p>Acidente de carro</p>
                 </label>
               </div>
               <div class="linha01">
                 <label for="J">
-                  <input type="radio" name="sexo" id="J" value="J">
+                  <input type="radio" name="choque" id="J" value="J">
                   <img src="/img/Choque.png" alt="Masculino">
                   <p>Choque</p>
                 </label>
                 <label for="K">
-                  <input type="radio" name="sexo" id="K" value="K">
+                  <input type="radio" name="agressao" id="K" value="K">
                   <img src="/img/Agressao.png" alt="Feminino">
                   <p>Agressão</p>
                 </label>
                 <label for="L">
-                  <input type="radio" name="sexo" id="L" value="L">
+                  <input type="radio" name="queda" id="L" value="L">
                   <img src="/img/Queda.png" alt="Feminino">
                   <p>Queda</p>
                 </label>
               </div>
               <div class="linha01">
                 <label for="M">
-                  <input type="radio" name="sexo" id="M" value="M">
+                  <input type="radio" name="acidenteBicicleta" id="M" value="M">
                   <img src="/img/Acidentedebicicleta.png" alt="Masculino">
                   <p>Acidente de bicicleta</p>
                 </label>
                 <label for="N">
-                  <input type="radio" name="sexo" id="N" value="N">
+                  <input type="radio" name="suicidio" id="N" value="N">
                   <img src="/img/Suicidio.png" alt="Feminino">
                   <p>Suicídio</p>
                 </label>
                 <label for="O">
-                  <input type="radio" name="sexo" id="O" value="O">
+                  <input type="radio" name="outro" id="O" value="O">
                   <img src="/img/Outro.png" alt="Feminino">
                   <p>Outro</p>
                 </label>
@@ -485,6 +487,7 @@
         </div>
       </div>
     </div>
+
   </div>
   </div>
 
@@ -675,22 +678,23 @@
               </div>
             </div>
 
-            <div class="dentroBotoes4">
-              <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Sons incompreensíveis <br> 2
-              </div>
-              <br>
-              <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">Nenhuma resposta verbal <br> 1
+                  <div class="dentroBotoes4">
+                    <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Sons incompreensíveis <br> 2
+                    </div>
+                    <br>
+                    <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">Nenhuma resposta verbal <br> 1
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+            <div id="somatotal">
+              <p>Total: <span id="total">0</span></p>
+            </div>  
+            <input type="hidden" name="totalGlasgow" id="totalGlasgow" value="0">
         </div>
       </div>
-      <div id="somatotal">
-        <p>Total: <span id="total">0</span></p>
-      </div>
     </div>
-  </div>
-  </div>
 
   <div class="accordion" id="accordionPanelsStayOpenExample">
     <div class="accordion-item">
@@ -752,29 +756,30 @@
     </div>
   </div>
 
-  <div class="accordion" id="accordionPanelsStayOpenExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#panelsStayOpen-collapsesix" aria-expanded="false" aria-controls="panelsStayOpen-collapsesix">
-          <p class="titulomenususpenso">PROBLEMAS ENCONTRADOS SUSPEITOS</p>
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapsesix" class="accordion-collapse collapse">
-        <div class="accordion-body">
-          <div class="problemasSusp"><input type="checkbox" name="" id=""><label for="">Psiquiátrico</label></div>
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapsesix" aria-expanded="false"
+            aria-controls="panelsStayOpen-collapsesix">
+            <p class="titulomenususpenso">PROBLEMAS ENCONTRADOS SUSPEITOS</p>
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapsesix" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <div class="problemasSusp"><input type="checkbox" name="psiquiatrico" id=""><label for="">Psiquiátrico</label></div>
 
-          <div class="problemasSusp" id="respiracao"><input type="checkbox" name=""><label for="">Respiratório
-              +</label></div>
-          <div class="invisivel respOpc" style="display: none;">
-            <div class="invisivelDivSinais">
-              <div class="sinaisOpcoes"><input type="checkbox" name="DPOC"><label for="DPOC">DPOC</label>
-              </div>
-              <div class="sinaisOpcoes"><input type="checkbox" name="inalacao"><label for="inalacao">Inalação
-                  fumaça</label>
+            <div class="problemasSusp" id="respiracao"><input type="checkbox" name="respiratorio"><label for="">Respiratório
+                +</label></div>
+            <div class="invisivel respOpc" style="display: none;">
+              <div class="invisivelDivSinais">
+                <div class="sinaisOpcoes"><input type="checkbox" name="DPOC"><label for="DPOC">DPOC</label>
+                </div>
+                <div class="sinaisOpcoes"><input type="checkbox" name="inalacao"><label for="inalacao">Inalação
+                    fumaça</label>
+                </div>
               </div>
             </div>
-          </div>
 
 
           <div class="problemasSusp" id="diabetes"><input type="checkbox" name=""><label for="">Diabetes +</label>
@@ -790,12 +795,12 @@
             </div>
           </div>
 
-          <div class="problemasSusp"><input type="checkbox" name="" id=""><label for="">Outros:</label><input
-              type="text"></div>
+            <div class="problemasSusp"><input type="checkbox" name="outrosProblemasSuspeitos" id=""><label for="">Outros:</label><input
+                type="text"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
   <div class="accordion" id="accordionPanelsStayOpenExample">

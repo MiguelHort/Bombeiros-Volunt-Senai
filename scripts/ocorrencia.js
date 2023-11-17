@@ -12,33 +12,21 @@ function formatInput() {
 }
 
 
-// seleção de opção do acompanhante 
-
-function mudarCor(botao) {
-  // Remova a classe "selecionado" de todos os botões
-  var botoes = document.querySelectorAll('.botaoderelação');
-  for (var i = 0; i < botoes.length; i++) {
-    botoes[i].classList.remove('selecionado');
-  }
-
-  // Adicione a classe "selecionado" apenas ao botão clicado
-  botao.classList.add('selecionado');
+function mudarCor(botao, relacao) {
+  console.log("Função chamada")
+// Remova a classe "selecionado" de todos os botões
+var botoes = document.querySelectorAll('.botaoderelação');
+for (var i = 0; i < botoes.length; i++) {
+  botoes[i].classList.remove('selecionado');
 }
 
+// Adicione a classe "selecionado" apenas ao botão clicado
+botao.classList.add('selecionado');
+    // Atualiza o valor do campo oculto com a relação escolhida
+  document.getElementById('relacaoEscolhida').value = relacao;
 
+  console.log(relacao)
 
-
-// seleção de opção do adulto e criança
-
-function mudarCor(botao) {
-  // Remova a classe "selecionado" de todos os botões
-  var botoes = document.querySelectorAll('.botaoderelação');
-  for (var i = 0; i < botoes.length; i++) {
-    botoes[i].classList.remove('selecionado');
-  }
-
-  // Adicione a classe "selecionado" apenas ao botão clicado
-  botao.classList.add('selecionado');
 }
 
 
@@ -132,6 +120,7 @@ function selectBotao(event) {
 // soma dos números
 const numeros = document.querySelectorAll('.botao');
 const totalElement = document.getElementById('total');
+const totalGlasgowInput = document.getElementById('totalGlasgow');
 let total = 0;
 
 numeros.forEach(numero => {
@@ -147,6 +136,7 @@ numero.classList.add('selecionado');
 total += valor;
 }
 totalElement.textContent = total;
+totalGlasgowInput.value = total;
 });
 });
 // fim glas

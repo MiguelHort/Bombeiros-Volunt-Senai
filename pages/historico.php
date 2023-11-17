@@ -48,6 +48,7 @@ INNER JOIN info_finais on ocorrencia.fk_info_finais = info_finais.id_info_finais
                             aria-controls="panelsStayOpen-collapse-<?php echo $row['id_ocorrencia']; ?>">
                             <p class="titulomenususpenso"><?php echo $row['data_e_hora']; ?> Nº<?php echo $row['id_ocorrencia']; ?><BR></BR><?php echo $row['nome']; ?><br><?php echo $row['idade']; ?> ANOS</p>
                         </button>
+                        
                     </h2>
                     <div id="panelsStayOpen-collapse-<?php echo $row['id_ocorrencia']; ?>"
                         class="accordion-collapse collapse">

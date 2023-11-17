@@ -584,7 +584,7 @@ margin-top: 50%;
 margin-left: 35%;
 }
 #imagemglasgow3{
-margin-top: 50%;
+margin-top: 70%;
 margin-left: 35%;
 }
 
@@ -623,6 +623,7 @@ margin-left: 35%;
 #botoespai{
  display: flex;
  margin-left: 15%;
+ margin-top: 10%;
 }
 
 .botaoPai {
@@ -632,16 +633,16 @@ margin-left: 35%;
   transition: background-color 0.3s;
   border-radius: 30px;
   width: 150px;
-  color: white;
+  color: rgb(0, 0, 0);
   height: 65px;
 }
 
 .botaoPai:nth-child(1).selected {
-  background-color: #02005C;
+  background-color: #00b7ff;
 }
 
 .botaoPai:nth-child(2).selected {
-  background-color: #02005C;
+  background-color: #00b7ff;
 }
 
 .botaoPai2 {
@@ -763,7 +764,7 @@ width: 600px;
 }
 
 .botao1{
-  background-color: #03008E;
+  background-color: #0400ff;
   
 }
 .botao2{

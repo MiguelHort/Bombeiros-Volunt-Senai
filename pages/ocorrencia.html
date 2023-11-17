@@ -20,11 +20,17 @@
       <img class="icones" src="../img/calendario.svg" alt="">
       <p class="topicosiniciais">Data:</p>
       <div id="datainput">
-        <input type="number" name="dia" id="day" maxlength="2" placeholder="Dia">
+        <input type="number" name="dia" id="day" maxlength="2" placeholder="Dia" 
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        maxlength = "2">
         <span>/</span>
-        <input type="number" name="mes" id="month" maxlength="2" placeholder="Mês">
+        <input type="number" name="mes" id="month" maxlength="2" placeholder="Mês"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          maxlength="2">
         <span>/</span>
-        <input type="number" name="ano" id="year" maxlength="4" placeholder="Ano">
+        <input type="number" name="ano" id="year" placeholder="Ano"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          maxlength="4">
       </div>
     </div>
 
@@ -42,7 +48,9 @@
       <div id="topico_cpf">
         <img class="iconecpf" src="../img/identidade.svg" alt="">
         <label for="inputs" class="topicosiniciais">CPF:</label>
-        <input name="cpf" id="inputcpf" type="number">
+        <input name="cpf" id="inputcpf" placeholder="xxx.xxx.xxx-xx" type="number" 
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        maxlength = "11">
       </div>
     </div>
 
@@ -50,7 +58,9 @@
       <div id="topico_cpf">
         <img class="iconecpf" src="../img/telefone 1.svg" alt="">
         <label for="inputs" class="topicosiniciais">Telefone:</label>
-        <input name="telefone" id="inputcpf" type="text">
+        <input name="telefone" id="inputtelefone" type="number" placeholder="(xx) xxxxx-xxxx" 
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        maxlength = "11">
       </div>
     </div>
 
@@ -58,7 +68,9 @@
       <div id="topico_cpf">
         <img class="iconecpf" src="../img/idade.svg" alt="">
         <label for="inputs" class="topicosiniciais">Idade:</label>
-        <input name="idade" id="inputcpf" type="text">
+        <input name="idade" id="inputidade" type="number" 
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        maxlength = "3">
       </div>
     </div>
 
@@ -272,7 +284,9 @@
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
 
               <h2>Quantos?</h2>
-              <input class="caixa_de_texto_gestacional" type="number" name="quantosFilhos" id="">
+              <input class="caixa_de_texto_gestacional" name="" id="" type="number" 
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+              maxlength = "4">
             </div>
 
             <br>
@@ -477,193 +491,203 @@
   </div>
   </div>
 
-  
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#panelsStayOpen-collapsefive" aria-expanded="false"
-          aria-controls="panelsStayOpen-collapsefive">
-          <p class="titulomenususpenso">AVALIAÇÃO DO PACIENTE (GLASGOW)</p>
-        </button>
-      </h2>
 
-      <!-- abertura ocular -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapsefive" aria-expanded="false" aria-controls="panelsStayOpen-collapsefive">
+        <p class="titulomenususpenso">AVALIAÇÃO DO PACIENTE (GLASGOW)</p>
+      </button>
+    </h2>
 
-      <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse">
-        <div class="accordion-body1">
+    <!-- abertura ocular -->
 
-
-
-          <div id="botoespai">
-
-            <div class="botaoPai selected" onclick="togglePai(0)">> 5 anos</div>
-            <div class="botaoPai" onclick="togglePai(1)">≤ 5 anos</div>
-
-
-          </div>
-          <div id="imagemglasgow">
-            <img src="../img/ocular.png" alt="">
-          </div>
-
-
-          <div class="aberturaOcular">
-            <div class="box-glasgow">
-
-
-              <div id="botoes">
-
-                <div class="grupoBotoes active maior" id="grupoBotoes1">
-
-                  <div>
-                    <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Espontânea <br> 4</div>
-                    <br>
-                    <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Comando Verbal <br> 3</div>
-                  </div>
-
-                  <div>
-                    <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Estíumulo doloroso <br> 2
-                    </div>
-                    <br>
-                    <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">Nenhuma <br> 1</div>
-                  </div>
-
-                </div>
-
-                <div class="grupoBotoes menor" id="grupoBotoes2">
-
-                  <div>
-                    <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Espontânea <br> 4</div>
-                    <br>
-                    <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Comando Verbal <br> 3</div>
-                  </div>
-
-                  <div>
-                    <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Estíumulo doloroso <br> 2
-                    </div>
-                    <br>
-                    <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">Nenhuma <br> 1</div>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- resposta verbal -->
-
-          <div id="imagemglasgow2">
-
-            <img src="../img/verbal.png" alt="">
-
-          </div>
-
-          <div class="aberturaOcular">
-
-            <div class="box-glasgow">
+    <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse">
+      <div class="accordion-body1">
 
 
 
-              <div id="botoes">
+        <div id="botoespai">
 
-                <div class="grupoBotoes active maior" id="grupoBotoes11">
-
-                  <div>
-                    <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Confuso <br> 4</div>
-                    <br>
-                    <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Palavras Inapropriadas <br>
-                      3</div>
-                  </div>
-
-                  <div>
-                    <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Palavras incompreensíveis
-                      <br> 2
-                    </div>
-                    <br>
-                    <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">Nenhuma <br> 1</div>
-                  </div>
-
-                </div>
-
-                <div class="grupoBotoes menor" id="grupoBotoes22">
-
-                  <div>
-                    <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Espontânea <br> 4</div>
-                    <br>
-                    <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Choro persistente ou <br> 3
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Sons incompreensíveis <br> 2
-                    </div>
-                    <br>
-                    <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">Nenhuma resposta verbal <br> 1
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div name="" class="botaoPai selected" onclick="togglePai(0)">> 5 anos</div>
+          <div class="botaoPai" onclick="togglePai(1)">≤ 5 anos</div>
 
 
-            </div>
-          </div>
+        </div>
+        <div id="imagemglasgow">
+          <img src="../img/ocular.png" alt="">
+        </div>
 
 
+        <div class="aberturaOcular">
+          <div class="box-glasgow">
 
 
-          <!-- resposta motora -->
-
-          <div id="imagemglasgow3">
-
-            <img src="../img/motora.png" alt="">
-
-          </div>
             <div id="botoes">
 
-              <div class="grupoBotoes active maior" id="grupoBotoes111">
+              <div class="grupoBotoes active maior" id="grupoBotoes1">
 
-
-                <div class="dentroBotoes">
-                  <div class="botao botao6" onclick="selectBotao(event)" data-valor="6">Espontânea <br> 6
-                  </div>
+                <div>
+                  <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Espontânea <br> 4</div>
                   <br>
-                  <div class="botao botao5" onclick="selectBotao(event)" data-valor="5">Choro persistente ou <br> 5
-                  </div>
-                </div>
-                <div class="dentroBotoes">
-                  <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Confuso <br> 4</div>
-                  <br>
-                  <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Palavras Inapropriadas <br> 3
-                  </div>
+                  <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Comando Verbal <br> 3</div>
                 </div>
 
-                <div class="dentroBotoes">
-                  <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Palavras incompreensíveis 2
+                <div>
+                  <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Estíumulo doloroso <br> 2
                   </div>
-                  <br>
                   <br>
                   <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">Nenhuma <br> 1</div>
                 </div>
 
               </div>
 
-              <div class="grupoBotoes menor" id="grupoBotoes222">
+              <div class="grupoBotoes menor" id="grupoBotoes2">
 
-                <div class="dentroBotoes2">
-                  <div class="botao botao6" onclick="selectBotao(event)" data-valor="6">Espontânea <br> 6
+                <div>
+                  <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Espontânea <br> 4</div>
+                  <br>
+                  <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Comando Verbal <br> 3</div>
+                </div>
+
+                <div>
+                  <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Estíumulo doloroso <br> 2
                   </div>
                   <br>
-                  <div class="botao botao5" onclick="selectBotao(event)" data-valor="5">Choro persistente ou <br> 5
+                  <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">Nenhuma <br> 1</div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- resposta verbal -->
+
+        <div id="imagemglasgow2">
+
+          <img src="../img/verbal.png" alt="">
+
+        </div>
+
+        <div class="aberturaOcular">
+
+          <div class="box-glasgow">
+
+
+
+            <div id="botoes">
+
+              <div class="grupoBotoes active maior" id="grupoBotoes11">
+
+                <div>
+
+                  <div class="botao botao5" onclick="selectBotao(event)" data-valor="5">Orientado <br> 5</div>
+
+                    <br>
+              
+                  <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Confuso <br> 4</div>
+                  <br>
+                  <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Palavras Inapropriadas <br>
+                    3</div>
+                </div>
+
+                <div>
+                  <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Palavras incompreensíveis
+                    <br> 2
+                  </div>
+                  <br>
+                  <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">Nenhuma <br> 1</div>
+                </div>
+
+              </div>
+
+              <div class="grupoBotoes menor" id="grupoBotoes22">
+
+                
+                <div>
+
+                  <div class="botao botao5" onclick="selectBotao(event)" data-valor="5">Orientado <br> 5</div>
+
+               <br>
+
+                  <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Espontânea <br> 4</div>
+                  <br>
+                  <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Choro persistente ou <br> 3
                   </div>
                 </div>
 
-                <div class="dentroBotoes3">
-                  <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Espontânea <br> 4
+                <div>
+                  <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Sons incompreensíveis <br> 2
                   </div>
                   <br>
-                  <div class="botao botao4" onclick="selectBotao(event)" data-valor="3">>Choro persistente ou <br> 3
+                  <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">Nenhuma resposta verbal <br> 1
                   </div>
                 </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+
+
+
+        <!-- resposta motora -->
+
+        <div id="imagemglasgow3">
+
+          <img src="../img/motora.png" alt="">
+
+        </div>
+        <div id="botoes">
+
+          <div class="grupoBotoes active maior" id="grupoBotoes111">
+
+
+            <div class="dentroBotoes">
+              <div class="botao botao6" onclick="selectBotao(event)" data-valor="6">Espontânea <br> 6
+              </div>
+              <br>
+              <div class="botao botao5" onclick="selectBotao(event)" data-valor="5">Choro persistente ou <br> 5
+              </div>
+            </div>
+            <div class="dentroBotoes">
+              <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Confuso <br> 4</div>
+              <br>
+              <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Palavras Inapropriadas <br> 3
+              </div>
+            </div>
+
+            <div class="dentroBotoes">
+              <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Palavras incompreensíveis 2
+              </div>
+              <br>
+              <br>
+              <div class="botao botao4" onclick="selectBotao(event)" data-valor="1">Nenhuma <br> 1</div>
+            </div>
+
+          </div>
+
+          <div class="grupoBotoes menor" id="grupoBotoes222">
+
+            <div class="dentroBotoes2">
+              <div class="botao botao6" onclick="selectBotao(event)" data-valor="6">Espontânea <br> 6
+              </div>
+              <br>
+              <div class="botao botao5" onclick="selectBotao(event)" data-valor="5">Choro persistente ou <br> 5
+              </div>
+            </div>
+
+            <div class="dentroBotoes3">
+              <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Espontânea <br> 4
+              </div>
+              <br>
+              <div class="botao botao4" onclick="selectBotao(event)" data-valor="3">>Choro persistente ou <br> 3
+              </div>
+            </div>
 
                   <div class="dentroBotoes4">
                     <div class="botao botao3" onclick="selectBotao(event)" data-valor="2">Sons incompreensíveis <br> 2
@@ -683,52 +707,65 @@
       </div>
     </div>
 
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
-            <p class="titulomenususpenso">SINAIS VITAIS</p>
-          </button>
-        </h2>
-        <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
-          <div class="accordion-body">
-            <div class="pressao svTopico">
-              <h2>Pressão arterial: </h2>
-              <input type="number" name="pressaoArterial" id="">
-              x
-              <input type="number" name="pressaoArterial2" id="">
-              <h2> mmHg</h2>
-            </div>
-            <div class="pulso svTopico">
-              <h2>Pulso:</h2>
-              <input type="number" name="pulso" id="">
-              <h2>B.C.P.M.</h2>
-            </div>
-            <div class="respiracao svTopico">
-              <h2>Respiração:</h2>
-              <input type="number" name="respiracao" id="">
-              <h2>M.R.M.</h2>
-            </div>
-            <div class="saturacao svTopico">
-              <h2>Saturação: </h2>
-              <input type="number" name="saturacao" id="">
-              <h2>%</h2>
-            </div>
-            <div class="hgt svTopico">
-              <h2>HGT:</h2>
-              <input type="number" name="hgt" id="">
-            </div>
-            <div class="temperatura svTopico">
-              <h2>Temperatura:</h2>
-              <input type="number" name="temperatura" id="">
-              <h2>°C</h2>
-            </div>
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+          <p class="titulomenususpenso">SINAIS VITAIS</p>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <div class="pressao svTopico">
+            <h2>Pressão arterial: </h2>
+            <input name="pressaoArterialPor" id="" type="number" 
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength = "2">
+            <p>x</p>
+            <input name="pressaoArterial" id="" type="number" 
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength = "2">
+            <h2> mmHg</h2>
+          </div>
+          <div class="pulso svTopico">
+            <h2>Pulso:</h2>
+            <input name="pulso" id="" type="number" 
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength = "3">
+            <h2>B.C.P.M.</h2>
+          </div>
+          <div class="respiracao svTopico">
+            <h2>Respiração:</h2>
+            <input name="respiracaoSinaisVitais" id="" type="number" 
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength = "3">
+            <h2>M.R.M.</h2>
+          </div>
+          <div class="saturacao svTopico">
+            <h2>Saturação: </h2>
+            <input name="saturacaoSinaisVitais" id="" type="number" 
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength = "3">
+            <h2>%</h2>
+          </div>
+          <div class="hgt svTopico">
+            <h2>HGT:</h2>
+            <input name="HGT" id="" type="number" 
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength = "3">
+          </div>
+          <div class="temperatura svTopico">
+            <h2>Temperatura:</h2>
+            <input name="temperaturaSinaisVitais" id="" type="number" 
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength = "3">
+            <h2>°C</h2>
           </div>
         </div>
       </div>
     </div>
-
+  </div>
 
     <div class="accordion" id="accordionPanelsStayOpenExample">
       <div class="accordion-item">
@@ -756,18 +793,18 @@
             </div>
 
 
-            <div class="problemasSusp" id="diabetes"><input type="checkbox" name=""><label for="">Diabetes +</label>
-            </div>
-            <div class="invisivel diabetesOpc" style="display: none;">
-              <div class="invisivelDivSinais">
-                <div class="sinaisOpcoes"><input type="checkbox" name="hiperglicemia"><label
-                    for="hiperglicemia">Hiperglicemia</label>
-                </div>
-                <div class="sinaisOpcoes"><input type="checkbox" name="hipoglicemia"><label
-                    for="hipoglicemia">Hipoglicemia</label>
-                </div>
+          <div class="problemasSusp" id="diabetes"><input type="checkbox" name=""><label for="">Diabetes +</label>
+          </div>
+          <div class="invisivel diabetesOpc" style="display: none;">
+            <div class="invisivelDivSinais">
+              <div class="sinaisOpcoes"><input type="checkbox" name="hiperglicemia"><label
+                  for="hiperglicemia">Hiperglicemia</label>
+              </div>
+              <div class="sinaisOpcoes"><input type="checkbox" name="hipoglicemia"><label
+                  for="hipoglicemia">Hipoglicemia</label>
               </div>
             </div>
+          </div>
 
             <div class="problemasSusp"><input type="checkbox" name="outrosProblemasSuspeitos" id=""><label for="">Outros:</label><input
                 type="text"></div>
@@ -777,26 +814,26 @@
     </div>
 
 
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#panelsStayOpen-collapseseven" aria-expanded="false"
-            aria-controls="panelsStayOpen-collapseseven">
-            <p class="titulomenususpenso">LOCALIZAÇÃO DOS TRAUMAS</p>
-          </button>
-        </h2>
-        <div id="panelsStayOpen-collapseseven" class="accordion-collapse collapse">
-          <div class="accordion-body">
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseseven" aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseseven">
+          <p class="titulomenususpenso">LOCALIZAÇÃO DOS TRAUMAS</p>
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseseven" class="accordion-collapse collapse">
+        <div class="accordion-body">
 
-            <button class="botaoderelação" onclick="mudarCor(this)">Adulto</button>
-            <button class="botaoderelação" onclick="mudarCor(this)">Criança</button>
+          <button class="botaoderelação" onclick="mudarCor(this)">Adulto</button>
+          <button class="botaoderelação" onclick="mudarCor(this)">Criança</button>
 
-          </div>
         </div>
       </div>
+    </div>
 
-   <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion" id="accordionPanelsStayOpenExample">
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
@@ -883,23 +920,29 @@
                     for="externa">Respiratória</label></div>
               </div>
             </div>
-            <div class="sinaisSintomas"><input type="checkbox" name="checkPriaprismo" id=""><label for="">Priaprismo</label></div>
-            <div class="sinaisSintomas"><input type="checkbox" name="checkPruridoDePele" id=""><label for="">Prurido na pele</label>
+            <div class="sinaisSintomas"><input type="checkbox" name="checkPriaprismo" id=""><label
+                for="">Priaprismo</label></div>
+            <div class="sinaisSintomas"><input type="checkbox" name="checkPruridoDePele" id=""><label for="">Prurido na
+                pele</label>
             </div>
-            <div class="sinaisSintomas" id="pupilas"><input type="checkbox" name="checkPupilas" id=""><label for="">Pupílas
+            <div class="sinaisSintomas" id="pupilas"><input type="checkbox" name="checkPupilas" id=""><label
+                for="">Pupílas
                 +</label></div>
             <div class="invisivel pupilasOpc" style="display: none;">
               <div class="invisivelDivSinais">
                 <div class="sinaisOpcoes"><input type="checkbox" name="checkAnisocoria"><label
                     for="anisocoria">Anisocoria</label>
                 </div>
-                <div class="sinaisOpcoes"><input type="checkbox" name="checkIsocoria"><label for="isocoria">Isocoria</label>
+                <div class="sinaisOpcoes"><input type="checkbox" name="checkIsocoria"><label
+                    for="isocoria">Isocoria</label>
                 </div>
               </div>
               <div class="invisivelDivSinais">
-                <div class="sinaisOpcoes"><input type="checkbox" name="checkMioriase"><label for="mioriase">Mioríase</label>
+                <div class="sinaisOpcoes"><input type="checkbox" name="checkMioriase"><label
+                    for="mioriase">Mioríase</label>
                 </div>
-                <div class="sinaisOpcoes"><input type="checkbox" name="checkReagente"><label for="reagente">Reagente</label>
+                <div class="sinaisOpcoes"><input type="checkbox" name="checkReagente"><label
+                    for="reagente">Reagente</label>
                 </div>
               </div>
               <div class="invisivelDivSinais">
@@ -911,15 +954,20 @@
 
             </div>
             <div class="sinaisSintomas"><input type="checkbox" name="checkSede" id=""><label for="">Sede</label></div>
-            <div class="sinaisSintomas"><input type="checkbox" name="checkSinalDeBattle" id=""><label for="">Sinal de Battle</label>
+            <div class="sinaisSintomas"><input type="checkbox" name="checkSinalDeBattle" id=""><label for="">Sinal de
+                Battle</label>
             </div>
-            <div class="sinaisSintomas"><input type="checkbox" name="checkSinalDeGuaxinim" id=""><label for="">Sinal de guaxinim</label>
+            <div class="sinaisSintomas"><input type="checkbox" name="checkSinalDeGuaxinim" id=""><label for="">Sinal de
+                guaxinim</label>
             </div>
-            <div class="sinaisSintomas"><input type="checkbox" name="checkSudorese" id=""><label for="">Sudorese</label></div>
-            <div class="sinaisSintomas"><input type="checkbox" name="checkTaquipneia" id=""><label for="">Taquipneia</label></div>
-            <div class="sinaisSintomas"><input type="checkbox" name="checkTontura" id=""><label for="">Tontura</label></div>
-            <div class="sinaisSintomas"><input type="checkbox" name="checkOutroSinais" id=""><label for=""><input type="text" name="textoOutroSinais"
-                  id="" placeholder="outro"></label></div>
+            <div class="sinaisSintomas"><input type="checkbox" name="checkSudorese" id=""><label for="">Sudorese</label>
+            </div>
+            <div class="sinaisSintomas"><input type="checkbox" name="checkTaquipneia" id=""><label
+                for="">Taquipneia</label></div>
+            <div class="sinaisSintomas"><input type="checkbox" name="checkTontura" id=""><label for="">Tontura</label>
+            </div>
+            <div class="sinaisSintomas"><input type="checkbox" name="checkOutroSinais" id=""><label for=""><input
+                  type="text" name="textoOutroSinais" id="" placeholder="outro"></label></div>
 
           </div>
         </div>
@@ -1016,7 +1064,8 @@
                   <p>Instável</p>
                 </label>
                 <label for="potencialmente">
-                  <input type="radio" name="estadoTransportePotencialmenteInstavel" id="potencialmente" value="potencialmente">
+                  <input type="radio" name="estadoTransportePotencialmenteInstavel" id="potencialmente"
+                    value="potencialmente">
                   <img src="/img/potencialmente.png" alt="emoji apático">
                   <p>Potencialmente instável</p>
                 </label>
@@ -1044,7 +1093,7 @@
             <div class="linhaProced"><input name="checkAvaliacaoInicial" type="checkbox">
               <p>Avaliação inicial</p>
             </div>
-            <div class="linhaProced"><input  name="checkAvaliacaoDirigida" type="checkbox">
+            <div class="linhaProced"><input name="checkAvaliacaoDirigida" type="checkbox">
               <p>Avaliação dirigida</p>
             </div>
             <div class="linhaProced"><input name="checkAvaliacaoContinuada" type="checkbox">
@@ -1260,7 +1309,9 @@
                   </select>
                 </div>
                 <div class="teste2"></div>
-                <div class="qtd2"> <input type="number" name="quantidadeAtaduras" id=""></div>
+                <div class="qtd2"> <input name="quantidadeAtaduras" id="" type="number" 
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength = "4"></div>
               </div>
 
               <div class="checMat">
@@ -1270,7 +1321,9 @@
                 </div>
                 <div class="colMeio2"></div>
                 <div class="teste2"></div>
-                <div class="qtd2"> <input type="number" name="quantidadeCateter" id=""></div>
+                <div class="qtd2"> <input name="quantidadeCateter" id="" type="number" 
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength = "3"></div>
               </div>
 
               <div class="checMat">
@@ -1280,7 +1333,9 @@
                 </div>
                 <div class="colMeio2"></div>
                 <div class="teste2"></div>
-                <div class="qtd2"> <input type="number" name="quantidadeCompressa" id=""></div>
+                <div class="qtd2"> <input name="quantidadeCompressa" id="" type="number" 
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength = "3"></div>
               </div>
 
               <div class="checMat">
@@ -1296,7 +1351,9 @@
                   </select>
                 </div>
                 <div class="teste2"></div>
-                <div class="qtd2"> <input type="number" name="quantidadeKit's" id=""></div>
+                <div class="qtd2"> <input name="quantidadeKit's" id="" type="number" 
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength = "3"></div>
               </div>
 
               <div class="checMat">
@@ -1306,7 +1363,9 @@
                 </div>
                 <div class="colMeio2"></div>
                 <div class="teste2"></div>
-                <div class="qtd2"> <input type="number" name="quantidadeLuvas" id=""></div>
+                <div class="qtd2"> <input name="quantidadeLuvas" id="" type="number" 
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength = "3"></div>
               </div>
 
               <div class="checMat">
@@ -1316,7 +1375,9 @@
                 </div>
                 <div class="colMeio2"></div>
                 <div class="teste2"></div>
-                <div class="qtd2"> <input type="number" name="quantidadeMascara" id=""></div>
+                <div class="qtd2"> <input name="quantidadeMascara" id="" type="number" 
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength = "3"></div>
 
               </div>
 
@@ -1327,7 +1388,9 @@
                 </div>
                 <div class="colMeio2"></div>
                 <div class="teste2"></div>
-                <div class="qtd2"> <input type="number" name="quantidadeManta" id=""></div>
+                <div class="qtd2"> <input name="quantidadeManta" id="" type="number" 
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength = "3"></div>
               </div>
 
               <div class="checMat">
@@ -1337,7 +1400,9 @@
                 </div>
                 <div class="colMeio2"></div>
                 <div class="teste2"></div>
-                <div class="qtd2"> <input type="number" name="quantidadePas" id=""></div>
+                <div class="qtd2"> <input name="quantidadePas" id="" type="number" 
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength = "3"></div>
               </div>
 
               <div class="checMat">
@@ -1347,7 +1412,9 @@
                 </div>
                 <div class="colMeio2"></div>
                 <div class="teste2"></div>
-                <div class="qtd2"> <input type="number" name="quantidadeSonda" id=""></div>
+                <div class="qtd2"> <input name="quantidadeSonda" id="" type="number" 
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength = "3"></div>
               </div>
 
               <div class="checMat">
@@ -1357,7 +1424,9 @@
                 </div>
                 <div class="colMeio2"></div>
                 <div class="teste2"></div>
-                <div class="qtd2"> <input type="number" name="quantidadeSoro" id=""></div>
+                <div class="qtd2"> <input name="quantidadeSoro" id="" type="number" 
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength = "3"></div>
               </div>
 
               <div class="checMat">
@@ -1372,7 +1441,9 @@
                   </select>
                 </div>
                 <div class="teste2"></div>
-                <div class="qtd2"> <input type="number" name="quantidadeTalas" id=""></div>
+                <div class="qtd2"> <input name="quantidadeTalas" id="" type="number" 
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength = "3"></div>
               </div>
 
               <div class="checMat">
@@ -1380,14 +1451,16 @@
                   <input type="checkbox" name="checkOutroDescartaveis" id="">
                   <input type="textarea" name="textoOutroDescartaveis" placeholder="outro" id="inputMat">
                 </div>
-                <div class="colMeio2">  
+                <div class="colMeio2">
                   <select name="maioridadeOutroDescartaveis" id="">
                     <option name="adultoOutroDescartaveis" value="ADULTO">Adulto</option>
                     <option name="infantilOutroDescartaveis" value="INFANTIL">Infantil</option>
                   </select>
                 </div>
                 <div class="teste2"></div>
-                <div class="qtd2"> <input type="number" name="quantidadeOutro" id=""></div>
+                <div class="qtd2"> <input name="quantidadeOutro" id="" type="number" 
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength = "3"></div>
               </div>
             </section>
 
@@ -1413,13 +1486,15 @@
                   <h2 class="matTopic">Qtd.</h2>
                 </div>
                 <div class="checMat">
-                  <div class="checkMatInterno extensop">  
+                  <div class="checkMatInterno extensop">
                     <input type="checkbox" name="checkBaseEstabiliza" id="">
                     <p>Base do estabiliza.</p>
                   </div>
                   <div class="colMeio"></div>
                   <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="quantidadeBaseDoEstabiliza" id=""></div>
+                  <div class="qtd"> <input name="quantidadeBaseDoEstabiliza" id="" type="number" 
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength = "3"></div>
                 </div>
 
                 <div class="checMat">
@@ -1430,12 +1505,14 @@
                   <div class="colMeio">
                     <select name="tamanhoColar" id="">
                       <option name="colarN" value="N">N</option>
-                      <option name="colarPP"value="PP">PP</option>
+                      <option name="colarPP" value="PP">PP</option>
                       <option name="colarP" value="P">P</option>
                     </select>
                   </div>
                   <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="quantidadeColar" id=""></div>
+                  <div class="qtd"> <input name="quantidadeColar" id="" type="number" 
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength = "3"></div>
                 </div>
 
                 <div class="checMat">
@@ -1451,7 +1528,9 @@
                     </select>
                   </div>
                   <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="quantidadeColar2" id=""></div>
+                  <div class="qtd"> <input name="quantidadeColar2" id="" type="number" 
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength = "3"></div>
                 </div>
 
                 <div class="checMat">
@@ -1461,7 +1540,9 @@
                   </div>
                   <div class="colMeio"></div>
                   <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="quantidadeCoxins" id=""></div>
+                  <div class="qtd"> <input name="quantidadeCoxins" id="" type="number" 
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength = "3"></div>
                 </div>
 
                 <div class="checMat">
@@ -1476,7 +1557,9 @@
                     </select>
                   </div>
                   <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="quantidadeKed" id=""></div>
+                  <div class="qtd"> <input name="quantidadeKed" id="" type="number" 
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength = "3"></div>
                 </div>
 
                 <div class="checMat">
@@ -1486,7 +1569,9 @@
                   </div>
                   <div class="colMeio"></div>
                   <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="quantidaDeMaca" id=""></div>
+                  <div class="qtd"> <input name="quantidaDeMaca" id="" type="number" 
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength = "3"></div>
 
                 </div>
 
@@ -1497,7 +1582,9 @@
                   </div>
                   <div class="colMeio"></div>
                   <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="quantidadeTiranteAranha" id=""></div>
+                  <div class="qtd"> <input name="quantidadeTiranteAranha" id="" type="number" 
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength = "3"></div>
                 </div>
 
                 <div class="checMat">
@@ -1507,7 +1594,9 @@
                   </div>
                   <div class="colMeio"></div>
                   <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="quantidadeTiranteCabeca" id=""></div>
+                  <div class="qtd"> <input name="quantidadeTiranteCabeca" id="" type="number" 
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength = "3"></div>
                 </div>
 
                 <div class="checMat">
@@ -1517,7 +1606,9 @@
                   </div>
                   <div class="colMeio"></div>
                   <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="quantidaDeCanula" id=""></div>
+                  <div class="qtd"> <input name="quantidaDeCanula" id="" type="number" 
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength = "3"></div>
                 </div>
 
                 <div class="checMat">
@@ -1533,7 +1624,9 @@
                     </select>
                   </div>
                   <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="quantidadeOutro" id=""></div>
+                  <div class="qtd"> <input name="quantidadeOutro" id="" type="number" 
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength = "3"></div>
                 </div>
               </section>
 

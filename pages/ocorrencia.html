@@ -58,7 +58,7 @@
       <div id="topico_cpf">
         <img class="iconecpf" src="../img/telefone 1.svg" alt="">
         <label for="inputs" class="topicosiniciais">Telefone:</label>
-        <input name="telefone" id="inputcpf" type="number" placeholder="(xx) xxxxx-xxxx" 
+        <input name="telefone" id="inputtelefone" type="number" placeholder="(xx) xxxxx-xxxx" 
         oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
         maxlength = "11">
       </div>
@@ -68,7 +68,7 @@
       <div id="topico_cpf">
         <img class="iconecpf" src="../img/idade.svg" alt="">
         <label for="inputs" class="topicosiniciais">Idade:</label>
-        <input name="idade" id="inputcpf" type="number" 
+        <input name="idade" id="inputidade" type="number" 
         oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
         maxlength = "3">
       </div>
@@ -509,7 +509,7 @@
 
         <div id="botoespai">
 
-          <div class="botaoPai selected" onclick="togglePai(0)">> 5 anos</div>
+          <div name="" class="botaoPai selected" onclick="togglePai(0)">> 5 anos</div>
           <div class="botaoPai" onclick="togglePai(1)">≤ 5 anos</div>
 
 
@@ -582,6 +582,11 @@
               <div class="grupoBotoes active maior" id="grupoBotoes11">
 
                 <div>
+
+                  <div class="botao botao5" onclick="selectBotao(event)" data-valor="5">Orientado <br> 5</div>
+
+                    <br>
+              
                   <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Confuso <br> 4</div>
                   <br>
                   <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Palavras Inapropriadas <br>
@@ -600,7 +605,13 @@
 
               <div class="grupoBotoes menor" id="grupoBotoes22">
 
+                
                 <div>
+
+                  <div class="botao botao5" onclick="selectBotao(event)" data-valor="5">Orientado <br> 5</div>
+
+               <br>
+
                   <div class="botao botao1" onclick="selectBotao(event)" data-valor="4">Espontânea <br> 4</div>
                   <br>
                   <div class="botao botao2" onclick="selectBotao(event)" data-valor="3">Choro persistente ou <br> 3

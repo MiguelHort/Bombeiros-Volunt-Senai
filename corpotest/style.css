@@ -1,6 +1,9 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
 }
 
 #corpoCompleto {
@@ -409,6 +412,7 @@ path {
 
 /* Caixa de opções */
 
+
 /* Estilo para a janela modal */
 .modal {
     display: none;
@@ -456,10 +460,3 @@ path {
     transform: scale(1.05);
     transition: 0.2s ease;
 }
-
-/* Imagem no Botão */
-
-.modal-content button img {
-    width: 25px;
-}
-

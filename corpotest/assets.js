@@ -1,5 +1,5 @@
-var parte1;   
-var tipo1;
+var parte1 = '';
+var tipo1 = '';
 
 function mostrarModal(parte) {
     document.getElementById('modal').style.display = 'flex';
@@ -12,3 +12,18 @@ function selectTrauma(tipo) {
     var soma = tipo1 + " " + parte1;
     document.getElementById("tipo").innerHTML = soma;
 }
+
+function enviarTrauma() {
+    $.ajax({
+        url: 'server.php',
+        type: 'post',
+        data: { 
+            tipo1: tipo1,
+            parte1: parte1 
+        },
+        success: function (response) {
+            alert('Valor inserido com sucesso no banco de dados');
+        }
+    });
+}
+

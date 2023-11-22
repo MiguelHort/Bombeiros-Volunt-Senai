@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data e Hora</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      padding: 8px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form id="dateTimeForm">
+    <label for="date">Data:</label>
+    <input type="date" id="date" disabled>
+    <br>
+
+    <label for="time">Hora:</label>
+    <input type="time" id="time" disabled>
+    <br>
+
+    <button type="button" onclick="enableInputs()">Editar</button>
+    <button type="button" onclick="saveChanges()" style="display:none">Salvar</button>
+  </form>
+
+  <script>
+    function enableInputs() {
+      document.getElementById('date').disabled = false;
+      document.getElementById('time').disabled = false;
+      document.querySelector('button[onclick="enableInputs()"]').style.display = 'none';
+      document.querySelector('button[onclick="saveChanges()"]').style.display = 'inline-block';
+    }
+
+    function saveChanges() {
+      const dateInput = document.getElementById('date');
+      const timeInput = document.getElementById('time');
+      
+      // Aqui você pode processar os valores como desejar
+      const newDate = dateInput.value;
+      const newTime = timeInput.value;
+
+      // Exemplo de exibição na console
+      console.log('Nova Data:', newDate);
+      console.log('Nova Hora:', newTime);
+
+      // Desabilita os inputs novamente
+      dateInput.disabled = true;
+      timeInput.disabled = true;
+
+      // Altera a visibilidade dos botões
+      document.querySelector('button[onclick="enableInputs()"]').style.display = 'inline-block';
+      document.querySelector('button[onclick="saveChanges()"]').style.display = 'none';
+    }
+
+    // Preenche os campos com a data e hora atuais
+    function fillDateTime() {
+      const currentDate = new Date();
+      const dateString = currentDate.toISOString().split('T')[0];
+      const timeString = currentDate.toTimeString().split(' ')[0];
+
+      document.getElementById('date').value = dateString;
+      document.getElementById('time').value = timeString;
+    }
+
+    // Chama a função ao carregar a página
+    window.onload = fillDateTime;
+  </script>
+</body>
+</html>

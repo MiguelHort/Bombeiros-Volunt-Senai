@@ -19,18 +19,19 @@
     <div class="date-input">
       <img class="icones" src="../img/calendario.svg" alt="">
       <p class="topicosiniciais">Data:</p>
-      <div id="datainput">
-        <input type="number" name="dia" id="day" maxlength="2" placeholder="Dia"
-          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-          maxlength="2">
-        <span>/</span>
-        <input type="number" name="mes" id="month" maxlength="2" placeholder="Mês"
-          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-          maxlength="2">
-        <span>/</span>
-        <input type="number" name="ano" id="year" placeholder="Ano"
-          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-          maxlength="4">
+
+      <div>
+      <label class="inputdata" for="date"></label>
+      <input class="inputdata" type="date" id="date" disabled>
+      <br>
+  
+      <label id="inputhora" for="time">Hora:</label>
+      <input type="time" id="time" disabled>
+      <br>
+  
+      <button class="botaodata" type="button" onclick="enableInputs()">Editar</button>
+      <button class="botaodata" type="button" onclick="saveChanges()" style="display:none">Salvar</button>
+
       </div>
     </div>
 
@@ -158,6 +159,7 @@
         </div>
       </div>
     </div>
+  </div>
 
     <div class="accordion" id="accordionPanelsStayOpenExample">
       <div class="accordion-item">
@@ -497,7 +499,7 @@
   </div>
   </div>
 
-
+  <div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"

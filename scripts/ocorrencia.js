@@ -42,6 +42,49 @@ window.onload = fillDateTime;
 
 // fim data
 
+// formatação do cpf
+
+function formatarCPF(campo) {
+  // Remove caracteres não numéricos
+  var cpfAtualizado = campo.value.replace(/[^\d]/g, '');
+
+  // Adiciona os pontos e o traço
+  if (cpfAtualizado.length > 3) {
+      cpfAtualizado = cpfAtualizado.substring(0, 3) + '.' + cpfAtualizado.substring(3);
+  }
+  if (cpfAtualizado.length > 7) {
+      cpfAtualizado = cpfAtualizado.substring(0, 7) + '.' + cpfAtualizado.substring(7);
+  }
+  if (cpfAtualizado.length > 11) {
+      cpfAtualizado = cpfAtualizado.substring(0, 11) + '-' + cpfAtualizado.substring(11);
+  }
+
+  // Atualiza o valor do campo
+  campo.value = cpfAtualizado;
+}
+  // fim formatação do cpf
+
+  // formatação telefone
+  
+  function formatarNumeroCelular(campo) {
+    // Remove caracteres não numéricos
+    var numeroAtualizado = campo.value.replace(/[^\d]/g, '');
+
+    // Adiciona os parênteses, espaço e o traço
+    if (numeroAtualizado.length > 2) {
+        numeroAtualizado = '(' + numeroAtualizado.substring(0, 2) + ') ' + numeroAtualizado.substring(2);
+    }
+    if (numeroAtualizado.length > 10) {
+        numeroAtualizado = numeroAtualizado.substring(0, 10) + '-' + numeroAtualizado.substring(10, 14);
+    }
+
+    // Atualiza o valor do campo
+    campo.value = numeroAtualizado;
+}
+
+  // fim da formatação telefone 
+
+
 function mudarCor(botao, relacao) {
   console.log("Função chamada")
 // Remova a classe "selecionado" de todos os botões

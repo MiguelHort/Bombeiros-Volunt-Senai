@@ -48,20 +48,17 @@
     <div class="RG-input">
       <div id="topico_cpf">
         <img class="iconecpf" src="../img/identidade.svg" alt="">
-        <label for="inputs" class="topicosiniciais">CPF:</label>
-        <input name="cpf" id="inputcpf" placeholder="xxx.xxx.xxx-xx" type="number"
-          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-          maxlength="11">
+          <label class="topicosiniciais" for="inputs">CPF:</label>
+          <input id="inputcpf" name="cpf" type="text" maxlength="14" oninput="formatarCPF(this)">
       </div>
     </div>
 
     <div class="RG-input">
       <div id="topico_cpf">
-        <img class="iconecpf" src="../img/telefone 1.svg" alt="">
-        <label for="inputs" class="topicosiniciais">Telefone:</label>
-        <input name="telefone" id="inputtelefone" type="number" placeholder="(xx) xxxxx-xxxx"
-          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-          maxlength="11">
+        <img class="iconecpf" src="../img/telefone 1.svg" alt="">      
+          <label for="inputs" class="topicosiniciais">Telefone:</label>
+          <input type="telefone" id="inputtelefone" maxlength="15" oninput="formatarNumeroCelular(this)">
+
       </div>
     </div>
 

@@ -43,7 +43,7 @@
 
     <a id="irlogin" href="/index.html">
         
-        <p > Já tem uma conta? <u>Faça login aqui</u>  </p>
+        <p id="facaLogin"> Já tem uma conta? <u>Faça login aqui</u>  </p>
     
     </a>
 

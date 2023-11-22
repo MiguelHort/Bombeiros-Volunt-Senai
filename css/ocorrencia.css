@@ -53,6 +53,23 @@ body{
   font-family: 'Goldman', cursive;
 }
 
+/* data */
+
+.botaodata{
+
+border-radius: 30px;
+width: 100px;
+background-color: #136cfb;
+margin-top: 5%;
+color: white;
+
+}
+
+#inputhora{
+
+margin-left: 3%;
+
+}
 /* tópicos iniciais */
 .topicosiniciais {
 
@@ -139,14 +156,6 @@ margin-left: 1%;
   align-items: center;
   margin-top: 5%;
  
-}
-.date-input input {
-  width: 70px;
-  font-size: 30px;
-  border: none;
-  border-bottom: solid black 2px;
-  position: relative;
-  top: 5px;
 }
 
 .date-input span {

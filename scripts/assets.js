@@ -1,5 +1,5 @@
-var parte1 = '';
-var tipo1 = '';
+var parte1;
+var tipo1;
 
 function mostrarModal(parte) {
     document.getElementById('modal').style.display = 'flex';
@@ -15,7 +15,7 @@ function selectTrauma(tipo) {
 
 function enviarTrauma() {
     $.ajax({
-        url: 'server.php',
+        url: '../database/server.php',
         type: 'post',
         data: { 
             tipo1: tipo1,

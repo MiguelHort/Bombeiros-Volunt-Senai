@@ -74,10 +74,11 @@ left: 20px;
 cursor: pointer;
 }
 #voltar input{
-width: 100%;
+width: 70%;
 height: 100%;
 font-size: 20px;
-border-radius: 8px;
+border-radius: 15px;
+cursor: pointer;
 }
 
 .invisivel{
@@ -170,3 +171,4 @@ background-color: white;
 cursor: pointer;
 
 }
+

@@ -56,6 +56,14 @@ section {
     margin-top: 10%;
     font-size: 25px;
 }
+
+#iconeBombeiro{
+
+margin-right: 5%;
+margin-top: 2%;
+
+}
+
 #voltar{
 position: fixed;
 width: 20%;
@@ -75,7 +83,15 @@ border-radius: 8px;
 .invisivel{
     background-color: #f2f2f2;
     border-radius: 8px;
+    margin-top: 3%;
+    background-color: #ED1D25;
    
+}
+#nomeSalvar{
+
+display: flex;
+gap: 10px;
+
 }
 .opcoesEquipes{
     display: flex;
@@ -98,12 +114,14 @@ border-radius: 8px;
 }
 .lixeira{
     cursor: pointer;
+    margin-top: 31%;
 }
 .lapis{
     cursor: pointer;
 }
 .botaoAcao{
     height:10vh;
+
 }
 .historico{
     height: 100%;
@@ -112,5 +130,43 @@ border-radius: 8px;
 #cadastrar{
     display: flex;
     text-decoration: none;
+    width: 170px;
 }
 
+#botaoGerenciarEquipes{
+
+  border-radius: 30px;
+  cursor: pointer;
+
+}
+.botaoAcao.historico{
+
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#adicionarEquipe{
+
+color: rgb(0, 0, 0);
+margin-left: 10%;
+background-color: #ffffff;
+width: 150px;
+height: 25px;
+border-radius: 20px;
+cursor: pointer;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: 500;
+}
+
+#salvar{
+
+margin-top: 3%;
+width: 60px;
+height: 30px;
+margin-top: 10%;
+border-radius: 10px;
+border:none;
+background-color: white;
+cursor: pointer;
+
+}

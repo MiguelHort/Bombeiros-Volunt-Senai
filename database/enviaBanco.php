@@ -1,8 +1,8 @@
 <?php
 session_start();
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 include('../database/conexao.php');
 $conexao->set_charset("utf8mb4");
 
@@ -71,7 +71,7 @@ $hgt = $_POST['hgt'];
 $temperatura = $_POST['temperatura'];
 
 $problemas = isset($_POST['problemas']) ? implode(", ", $_POST['problemas']) : '';
-$sinaisSintomas = isset($_POST['sinaisSintomas']) ? implode(", ", $_POST['sinaisSintomas']) : '';
+$sinaisSintomas = isset($_POST['sinais_Sintomas']) ? implode(", ", $_POST['sinais_Sintomas']) : '';
 $procedimento = isset($_POST['procedimento']) ? implode(", ", $_POST['procedimento']) : '';
 
 $procedimento_outros = isset($_POST['procedimento_outros']) ? $_POST['procedimento_outros'] : '';
@@ -103,8 +103,8 @@ $s2 = $_POST['s2'];
 $s3 = $_POST['s3'];
 $demandante = $_POST['demandante'];
 
-$localizacao_aprox = $_POST['parte1'];
-$tipo_trauma = $_POST['tipo1'];
+$localizacao_aprox = $_POST['parte'];
+$tipo_trauma = $_POST['tipo'];
 $adulto_crianca = $_POST['adulto_crianca'];
 
 $sql1 = "INSERT INTO paciente (nome, rg_cpf, sexo, idade, fone, forma_conducao, vitima_era, decisao_transp, objetos_recolhidos) VALUES ('$nomePaciente', '$cpfPaciente', '$sexoPaciente', '$idadePaciente', '$fone', '$formaConducao', '$vitimaEra', '$estadoTransporte', '$objetosRecolhidos');";
@@ -118,7 +118,7 @@ $sql8 ="INSERT INTO sinais_sintomas (sintomas) VALUES ('$sinaisSintomas')";
 $sql9 ="INSERT INTO proced_efetuados (procedimentos) VALUES ('$procedimento')";
 $sql10 ="INSERT INTO cinematica (avaliacao_cinematica) VALUES ('$cinematica')";
 $sql11 ="INSERT INTO info_finais (usb, ir, ps, desp, h_ch, sia_sus, km_final, n_ocorr) VALUES ('$usb', '$ir', '$ps', '$desp', '$h_ch', '$sia_sus', '$km_final', '$ocorr');";
-$sql14 = "INSERT INTO localizacao_trauma (adulto_ou_crianca, tipo_trauma, localizacao_aprox) VALUES ('$adulto_crianca', '$tipo_trauma', '$localizacao_aprox');";
+$sql14 = "INSERT INTO localizacao_trauma (tipo_trauma, localizacao_aprox) VALUES ('$tipo_trauma', '$localizacao_aprox');";
 
 $queries = array($sql1, $sql2, $sql3, $sql4, $sql5,$sql6, $sql7, $sql8, $sql9, $sql10, $sql11, $sql14);
 
@@ -134,15 +134,17 @@ $Qid_sinais_sintomas = "SELECT id_sinais_sintomas FROM sinais_sintomas WHERE sin
 $Qid_proced_efetuados = "SELECT id_proced_efetuados FROM proced_efetuados WHERE procedimentos = '$procedimento';";
 $Qid_cinematica = "SELECT id_cinematica FROM cinematica WHERE avaliacao_cinematica = '$cinematica';";
 $Qid_acompanhante = "SELECT id_acompa FROM acompanhante WHERE nome_acompa = '$nomeAcompanhante' AND relacao = '$relacaoAcompanhante';";
+$Qid_localizacao_trauma = "SELECT id_localizacao_trauma FROM localizacao_trauma WHERE tipo_trauma = '$tipo_trauma' AND localizacao_aprox = '$localizacao_aprox';";
 
 
-$selects = array($Qid_paciente, $Qid_info_finais, $Qid_anamnese_emerg, $Qid_anamnese_gest, $Qid_avaliacao, $Qid_sinais_vitais, $Qid_problem_suspeito, $Qid_sinais_sintomas, $Qid_proced_efetuados, $Qid_cinematica, $Qid_acompanhante);
+$selects = array($Qid_paciente, $Qid_info_finais, $Qid_anamnese_emerg, $Qid_anamnese_gest, $Qid_avaliacao, $Qid_sinais_vitais, $Qid_problem_suspeito, $Qid_sinais_sintomas, $Qid_proced_efetuados, $Qid_cinematica, $Qid_acompanhante, $Qid_localizacao_trauma);
 
 foreach ($queries as $query) {
     if ($conexao->query($query) === TRUE) {      
-        echo "usb=".$usb." km_final =".$km_final." n_ocorr= ".$ocorr;
-        echo $datetime;
-        // . $dataOcorrencia . $horaOcorrencia;
+        // echo "usb=".$usb." km_final =".$km_final." n_ocorr= ".$ocorr;
+        // echo $datetime;
+        // echo $dataOcorrencia . $horaOcorrencia;
+        //  echo $localizacao_aprox . $tipo_trauma;
     } else {
         echo "Erro ao inserir dados: " . $conexao->error;
         // Se ocorrer um erro, você pode decidir como lidar com ele, interromper o loop ou registrar o erro.
@@ -158,57 +160,62 @@ foreach ($selects as $select) {
 
         if (isset($row['id_paciente'])) {
             $id_paciente = $row['id_paciente'];
-            echo "ID do Paciente: " . $id_paciente;
+            // echo "ID do Paciente: " . $id_paciente;
         }
 
         if (isset($row['id_info_finais'])) {
             $id_info_finais = $row['id_info_finais'];
-            echo "ID info_finais: " . $id_info_finais;
+            // echo "ID info_finais: " . $id_info_finais;
         }
 
          if (isset($row['id_anamnese_emerg'])) {
             $id_anamnese_emerg = $row['id_anamnese_emerg'];
-            echo "ID id_anamnese_emerg: " . $id_anamnese_emerg;
+            // echo "ID id_anamnese_emerg: " . $id_anamnese_emerg;
         }
 
         if (isset($row['id_anamnese_gest'])) {
             $id_anamnese_gest = $row['id_anamnese_gest'];
-            echo "ID id_anamnese_gest: " . $id_anamnese_gest;
+            // echo "ID id_anamnese_gest: " . $id_anamnese_gest;
         }
 
         if (isset($row['id_avaliacao'])) {
             $id_avaliacao = $row['id_avaliacao'];
-            echo "ID id_avaliacao: " . $id_avaliacao;
+            // echo "ID id_avaliacao: " . $id_avaliacao;
         }
 
          if (isset($row['id_sinais_vitais'])) {
             $id_sinais_vitais = $row['id_sinais_vitais'];
-            echo "ID id_sinais_vitais: " . $id_sinais_vitais;
+            // echo "ID id_sinais_vitais: " . $id_sinais_vitais;
         }
 
          if (isset($row['id_problem_suspeito'])) {
             $id_problem_suspeito = $row['id_problem_suspeito'];
-            echo "ID id_problem_suspeito: " . $id_problem_suspeito;
+            // echo "ID id_problem_suspeito: " . $id_problem_suspeito;
         }
 
         if (isset($row['id_sinais_sintomas'])) {
             $id_sinais_sintomas = $row['id_sinais_sintomas'];
-            echo "ID id_sinais_sintomas: " . $id_sinais_sintomas;
+            // echo "ID id_sinais_sintomas: " . $id_sinais_sintomas;
         }
 
         if (isset($row['id_proced_efetuados'])) {
             $id_proced_efetuados = $row['id_proced_efetuados'];
-            echo "ID id_proced_efetuados: " . $id_proced_efetuados;
+            // echo "ID id_proced_efetuados: " . $id_proced_efetuados;
         }
 
         if (isset($row['id_cinematica'])) {
             $id_cinematica = $row['id_cinematica'];
-            echo "ID id_cinematica: " . $id_cinematica;
+            // echo "ID id_cinematica: " . $id_cinematica;
         }
 
         if (isset($row['id_acompa'])) {
             $id_acompanhante = $row['id_acompa'];
-            echo "ID id_acompanhante: " . $id_acompanhante;
+            // echo "ID id_acompanhante: " . $id_acompanhante;
+        }
+
+        if (isset($row['id_localizacao_trauma'])) {
+            $id_localizacao_trauma = $row['id_localizacao_trauma'];
+            // echo "ID id_acompanhante: " . $id_acompanhante;
         }
 
     } else {
@@ -229,12 +236,12 @@ if ($resultadoVerificacao === FALSE || $resultadoVerificacao->num_rows === 0) {
 } else {
     // Continue com a execução da consulta $sql12
     $sql12 = "INSERT INTO ocorrencia (data_e_hora, fk_paciente, tipo_ocorrencia, obs_importantes, fk_equipe_atendimento, fk_info_finais, m, s1, s2, demandante, s3) VALUES ('$datetime', '$id_paciente', '$tipoOcorrencia', '$observacoes', '$usuario_id', '$id_info_finais', '$m', '$s1', '$s2', '$demandante', '$s3');";
-    $sql13 =  "UPDATE paciente SET fk_anamnese_emerg = '$id_anamnese_emerg', fk_anamnese_gest = '$id_anamnese_gest', fk_avaliacao = '$id_avaliacao',  fk_sinais_vitais = '$id_sinais_vitais', fk_problem_suspeito = '$id_problem_suspeito', fk_sinais_sintomas = '$id_sinais_sintomas', fk_proced_efetuados = '$id_proced_efetuados', fk_cinematica = '$id_cinematica', fk_acompanhante = '$id_acompanhante';";
+    $sql13 =  "UPDATE paciente SET fk_anamnese_emerg = '$id_anamnese_emerg', fk_anamnese_gest = '$id_anamnese_gest', fk_avaliacao = '$id_avaliacao',  fk_sinais_vitais = '$id_sinais_vitais', fk_problem_suspeito = '$id_problem_suspeito', fk_sinais_sintomas = '$id_sinais_sintomas', fk_proced_efetuados = '$id_proced_efetuados', fk_cinematica = '$id_cinematica', fk_acompanhante = '$id_acompanhante', fk_localizacao_trauma = '$id_localizacao_trauma';";
 $ligacoes = array($sql12, $sql13);
 foreach ($ligacoes as $ligacao) {
     if ($conexao->query($ligacao) === TRUE) {  
         $id_ocorrencia = $conexao->insert_id;
-        echo "id_ocorrencia=".$id_ocorrencia;
+        // echo "id_ocorrencia=".$id_ocorrencia;
 
         $materials = array(
     "baseEstabilizador" => array("Base do estabilizador", "", $_POST['qtdBase']),
@@ -267,6 +274,13 @@ foreach ($materials as $key => $material) {
     }
 }
 
+
+
+
+
+
+
+
 $materiaisDescartaveis = array(
             "ataduras" => array("Ataduras", $_POST['tamAtaduras'], $_POST['qtdAtaduras']),
             "cateter" => array("Cateter Tp. Óculos", "", $_POST['qtdCateter']),
@@ -295,24 +309,27 @@ $materiaisDescartaveis = array(
                 if ($conexao->query($insereMaterialDescartavel) === TRUE) {
                     // Inserção de material bem-sucedida
                 } else {
-                    echo "Erro ao inserir dados do material descartável: " . $conexao->error;
+                    // echo "Erro ao inserir dados do material descartável: " . $conexao->error;
                     break; // Interrompe o loop se ocorrer um erro
                 }
             }
         }
         // A inserção foi bem-sucedida2
     } else {
-        echo "Erro ao inserir dados: " . $conexao->error;
+        // echo "Erro ao inserir dados: " . $conexao->error;
         // Se ocorrer um erro, você pode decidir como lidar com ele, interromper o loop ou registrar o erro.
         break; // Isso interrompe o loop se houver um erro em uma das consultas.
     }
 }
-echo "Dados inseridos com sucesso!";
-echo "ID do Paciente: " . $id_paciente;
-echo "ID id_acompanhante: " . $id_acompanhante;
- echo "ID id_sinais_sintomas: " . $id_sinais_sintomas;
- echo "id_ocorrencia:".$id_ocorrencia;
+//  echo "Dados inseridos com sucesso!";
+//  echo $localizacao_aprox . $tipo_trauma;
+// echo "ID do Paciente: " . $id_paciente;
+// echo "ID id_acompanhante: " . $id_acompanhante;
+//  echo "ID id_sinais_sintomas: " . $id_sinais_sintomas;
+//  echo "id_ocorrencia:".$id_ocorrencia;
     // ... o resto do código
     $conexao->close();
+    header('Location:../pages/concluido.html');
 }
+
 ?>

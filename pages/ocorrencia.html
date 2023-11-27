@@ -22,11 +22,11 @@
 
       <div>
       <label class="inputdata" for="date"></label>
-      <input class="inputdata" type="date" id="date" disabled>
+      <input class="inputdata" type="date" id="date" name="dataOcorrencia" required>
       <br>
   
       <label id="inputhora" for="time">Hora:</label>
-      <input type="time" id="time" disabled>
+      <input type="time" name="horaOcorrencia" required>
       <br>
   
       <button class="botaodata" type="button" onclick="enableInputs()">Editar</button>
@@ -2202,38 +2202,38 @@
                     </tr>
                     <tr>
                       <td>Distúrbio de comportamento</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Distúrbio de comportamento"></td>
-                      <td><input type="checkbox" name="disturbiodecomportamentoNao" id=""></td>
+                      <td><input type="radio" name="disturbiodecomportamento" id="" value="Sim"></td>
+                      <td><input type="radio" name="disturbiodecomportamento" id="" value="Não"></td>
                     </tr>
                     <tr>
                       <td>Encontrado de capacete</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Encontrado de capacete"></td>
-                      <td><input type="checkbox" name="encontradodecapaceteNao" id=""></td>
+                      <td><input type="radio" name="encontradodecapacete" id="" value="Sim"></td>
+                      <td><input type="radio" name="encontradodecapacete" id="" value="Não"></td>
                     </tr>
                     <tr>
                       <td>Encontrado de cinto</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Encontrado de cinto"></td>
-                      <td><input type="checkbox" name="encontradodecintoNao" id=""></td>
+                      <td><input type="radio" name="encontradodecinto" id="" value="Sim" id="bolinhas"></td>
+                      <td><input type="radio" name="encontradodecinto" id="" value="Não" id="bolinhas"></td>
                     </tr>
                     <tr>
                       <td>Para-brisas avariado</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Para-brisas avariado"></td>
-                      <td><input type="checkbox" name="parabrisasavariadoNao" id=""></td>
+                      <td><input type="radio" name="parabrisasavariado" id="" value="Sim" id="bolinhas"></td>
+                      <td><input type="radio" name="parabrisasavariado" id="" value="Não" id="bolinhas" ></td>
                     </tr>
                     <tr>
                       <td>Caminhando na cena</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Caminhando na cena"></td>
-                      <td><input type="checkbox" name="caminhandonacenaNao" id=""></td>
+                      <td><input type="radio" name="caminhandonacena" id="" value="Sim" id="bolinhas"></td>
+                      <td><input type="radio" name="caminhandonacena" id="" value="Não" id="bolinhas"></td>
                     </tr>
                     <tr>
                       <td>Painel avariado</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Painel avariado"></td>
-                      <td><input type="checkbox" name="painelavariadoNao" id=""></td>
+                      <td><input type="radio" name="painelavariado" id="" value="Sim" id="bolinhas"></td>
+                      <td><input type="radio" name="painelavariado" id="" value="Não" id="bolinhas"></td>
                     </tr>
                     <tr>
                       <td>Volante torcido</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Volante torcido"></td>
-                      <td><input type="checkbox" name="volantetorcidoNao" id=""></td>
+                      <td><input type="radio" name="volantetorcido" id="" value="Sim" id="bolinhas"></td>
+                      <td><input type="radio" name="volantetorcido" id="" value="Não" id="bolinhas"></td>
                     </tr>
                   </table>
 

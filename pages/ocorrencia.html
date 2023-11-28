@@ -8,11 +8,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/ocorrencia.css">
-  <script src="../jquery-1.8.2.min.js"></script>
 </head>
 
 <body>
-
+ <script src="../scripts/ocorrencia.js"></script>
   <div id="imagemTitulo">
     <img id="logomedico" src="/logo_medicina 1.png" alt="">
   </div>
@@ -30,6 +29,7 @@
       <label id="inputhora" for="time">Hora:</label>
       <input type="time" name="horaOcorrencia" required>
       <br>
+  
       </div>
     </div>
 
@@ -48,14 +48,13 @@
         <img class="iconecpf" src="../img/identidade.svg" alt="">
         <label for="inputs" class="topicosiniciais">CPF:</label>
           <input id="inputcpf" name="cpf" type="text" maxlength="14" oninput="formatarCPF(this)">
-
       </div>
     </div>
 
     <div class="RG-input">
       <div id="topico_cpf">
-        <img class="iconecpf" src="../img/telefone 1.svg" alt="">
-        <label for="inputs" class="topicosiniciais">Telefone:</label>
+        <img class="iconecpf" src="../img/telefone 1.svg" alt="">      
+          <label for="inputs" class="topicosiniciais">Telefone:</label>
           <input type="telefone" id="inputtelefone" maxlength="15" oninput="formatarNumeroCelular(this)" name="fone">
 
       </div>
@@ -75,29 +74,19 @@
     <p id="topico-sexo">Sexo:</p>
     <div class="sexo">
       <div id="masculino">
-        <input type="radio" name="sexoPaciente" value="Masculino" id="bolinhas">
+        <input type="radio" name="sexoPaciente" value="Masculino" id="bolinhas" onclick="verificaSexo()">
         <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/masculino.svg" alt="" width="16%">
           Masculino</label>
       </div>
 
       <div id="feminino">
-        <input type="radio" name="sexoPaciente" value="Feminino" id="bolinhas">
+        <input type="radio" name="sexoPaciente" value="Feminino" id="bolinhas" onclick="verificaSexo()">
         <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/feminino.svg" alt="" width="16%">
           Feminino</label>
       </div>
     </div>
 
   </div>
-
-
-
-
-
-
-
-
-
-
 
 
   <!-- hort -->
@@ -184,48 +173,50 @@
             </div>
             <div>
               <h2>Possui algum problema de saúde?</h2>
-              <input type="radio" name="problemaSaude" value="Sim">
+              <input type="radio" name="problemaSaude" value="Sim" onclick="possuiProblema()">
               <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="problemaSaude" value="Não">
+              <input type="radio" name="problemaSaude" value="Não" onclick="possuiProblema()">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
-            <div>
+            <div id="quaisProblemas">
               <h2>Quais?</h2>
-              <textarea class="caixa_de_texto_anamnese" name="quaisProblemas" id="" cols="70" rows="5"></textarea>
+              <textarea class="caixa_de_texto_anamnese" name="quaisProblemas" cols="70" rows="5"></textarea>
             </div>
             <div>
               <h2>Faz uso de medicação?</h2>
-              <input type="radio" name="usaMedicacao" value="Sim">
+              <input type="radio" name="usaMedicacao" value="Sim" onclick="usaMedicamento()">
               <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="usaMedicacao" value="Não">
+              <input type="radio" name="usaMedicacao" value="Não" onclick="usaMedicamento()">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
-            <div>
+            <div id="horaMedicacao">
               <h2>Horário da última medicação?</h2>
               <label for="hora"><img src="/img/hora.png" alt=""></label>
               <input type="time" name="horaMedicacao" id="">
             </div>
-            <div>
+            <div id="qualMedicacao">
               <h2>Quais?</h2>
               <textarea class="caixa_de_texto_anamnese" name="quaisMedicacoes" id="" cols="70" rows="5"></textarea>
             </div>
             <div>
               <h2>Alérgico a alguma coisa?</h2>
-              <input type="radio" name="alergico" value="Sim">
+              <input type="radio" name="alergico" value="Sim" onclick="temAlergia()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="alergico" value="Não">
+              <input type="radio" name="alergico" value="Não" onclick="temAlergia()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+              <div id="especifique">
               <h2>Especifique:</h2>
               <textarea class="caixa_de_texto_anamnese" name="qualAlergia" id="" cols="70" rows="4"></textarea>
+              </div>
             </div>
             <div>
               <h2>Ingeriu alimento ou líquido ≥ 6 horas</h2>
-              <input type="radio" name="ingeriuAlgo" value="Sim">
+              <input type="radio" name="ingeriuAlgo" value="Sim" onclick="ingeriuAlimento()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="ingeriuAlgo" value="Não">
+              <input type="radio" name="ingeriuAlgo" value="Não" onclick="ingeriuAlimento()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
-            <div>
+            <div id="horaIngeriu">
               <h2>Que horas?</h2>
               <label class="SimNao" for="hora"><img src="/img/hora.png" alt=""></label>
               <input type="time" name="horaIngeriu" id="">
@@ -239,8 +230,8 @@
 
 
 
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-      <div class="accordion-item">
+    <div class="anamneseGestacional" class="accordion" id="accordionPanelsStayOpenExample" >
+      <div  class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
@@ -282,26 +273,28 @@
 
             <div>
               <h2>Primeiro filho?</h2>
-              <input type="radio" name="primeiroFilho" value="Sim" id="bolinhas">
+              <input type="radio" name="primeiroFilho" value="Sim" id="bolinhas" onclick="temFilho()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="primeiroFilho" value="Não" id="bolinhas">
+              <input type="radio" name="primeiroFilho" value="Não" id="bolinhas" onclick="temFilho()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
 
+              <div id="quantos"> 
               <h2>Quantos?</h2>
               <input class="caixa_de_texto_gestacional" name="quantosFilhos" id="" type="number"
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                 maxlength="4">
+               </div> 
             </div>
 
             <br>
 
             <div>
               <h2>Contrações</h2>
-              <input type="radio" name="contracao" value="Sim" id="bolinhas">
+              <input type="radio" name="contracao" value="Sim" id="bolinhas" onclick="temContracoes()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="contracao" value="Não" id="bolinhas">
+              <input type="radio" name="contracao" value="Não" id="bolinhas" onclick="temContracoes()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
-
+            <div id="contracoes">
               <h2>Que horas iniciaram as contrações?</h2>
               <input class="horario" type="time" name="horaContracao" id="">
 
@@ -323,6 +316,8 @@
 
               <label class="SimNao" for="duracao">Duração</label>
               <input class="caixa_de_texto_gestacional" type="text" name="duracaoContracao">
+            
+            </div>
             </div>
 
             <br>
@@ -360,25 +355,25 @@
 
             <div>
               <h2>Parto realizado?</h2>
-              <input type="radio" name="parto" id="bolinhas" value="Sim">
+              <input type="radio" name="parto" id="bolinhas" value="Sim" onclick="partoRealizado()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="parto" id="bolinhas" value="Não">
+              <input type="radio" name="parto" id="bolinhas" value="Não"onclick="partoRealizado()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
 
             <br>
 
-            <div>
+            <div id="sexoBebe">
               <h2>Sexo do bebê</h2>
               <input type="radio" name="sexoBebe" id="bolinhas" value="Masculino">
               <label class="SimNao" id="generos" for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>
               <input type="radio" name="sexoBebe" id="bolinhas" value="Feminino">
               <label class="SimNao" id="generos" for="sexo"><img src="/img/feminino.svg" alt=""> Feminino</label>
             </div>
-          </div>
         </div>
       </div>
     </div>
+  </div>
 
 
 
@@ -433,12 +428,12 @@
               <div class="linha01">
                 <label for="G">
                   <input type="radio" name="tipoOcorrencia" id="G" value="Incêndio">
-                  <img src="/img/incendio.png" alt="Masculino">
+                  <img src="/img/Incendio.png" alt="Masculino">
                   <p>Incêndio</p>
                 </label>
                 <label for="H">
                   <input type="radio" name="tipoOcorrencia" id="H" value="Intoxicação">
-                  <img src="/img/intoxicacao.png" alt="Feminino">
+                  <img src="/img/Intoxicacao.png" alt="Feminino">
                   <p>Intoxicação</p>
                 </label>
                 <label for="I">
@@ -460,7 +455,7 @@
                 </label>
                 <label for="L">
                   <input type="radio" name="tipoOcorrencia" id="L" value="Queda">
-                  <img src="/img/queda.png" alt="Feminino">
+                  <img src="/img/Queda.png" alt="Feminino">
                   <p>Queda</p>
                 </label>
               </div>
@@ -472,7 +467,7 @@
                 </label>
                 <label for="N">
                   <input type="radio" name="tipoOcorrencia" id="N" value="Suícidio">
-                  <img src="/img/suicidio.png" alt="Feminino">
+                  <img src="/img/Suicidio.png" alt="Feminino">
                   <p>Suicídio</p>
                 </label>
                 <label for="O">
@@ -495,7 +490,7 @@
   </div>
   </div>
 
-  <div class="accordion" id="accordionPanelsStayOpenExample">
+<div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
@@ -725,7 +720,7 @@
             <h2>Pressão arterial: </h2>
             <input name="pressaoArterial" id="" type="number"
               oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-              maxlength="2" >
+              maxlength="2">
             <p>x</p>
             <input name="pressaoArterial2" id="" type="number"
               oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
@@ -807,8 +802,8 @@
             </div>
           </div>
 
-          <div class="problemasSusp"><input type="checkbox" id="outros"><label
-              for="outrosProblemasSuspeitos">Outros:</label><input type="text" name="problemas[]"></div>
+          <div class="problemasSusp"><input type="checkbox" name="problemas[]" id="outros"><label
+            for="outrosProblemasSuspeitos">Outros:</label><input type="text" name="problemas[]"></div>
 
         </div>
       </div>
@@ -827,16 +822,17 @@
       </h2>
       <div id="panelsStayOpen-collapseseven" class="accordion-collapse collapse">
         <div class="accordion-body">
-             <div id="corpoCompleto">
+
+          <div id="corpoCompleto">
 
             <div class="corpoFrente">
     
                 <!-- Cabeça -->
-   
+    
                 <figure class="imagem1">
                     <button id="cabeca" onclick="mostrarModal('cabeca')">
                         <!-- Adicione este elemento de imagem ao seu corpo HTML com um ID específico -->
-                         <img id="" src="" alt="">
+                        <img id="" src="" alt="">
     
                         <svg xmlns="http://www.w3.org/2000/svg" width="59" height="72" viewBox="0 0 59 72" fill="none">
                             <path
@@ -847,10 +843,10 @@
                 </figure>
     
                 <!-- Pescoço -->
-     
+    
                 <figure class="imagem2">
     
-                    <button type="button" id="pescoco" onclick="mostrarModal('pescoco')">
+                  <button type="button" id="pescoco" onclick="mostrarModal('pescoco')">
     
                         <img id="" src="" alt="">
     
@@ -863,9 +859,9 @@
                 </figure>
     
                 <!-- Peito -->
-     
+    
                 <figure class="imagem3">
-                    <button type="button" id="peito" onclick="mostrarModal('peito')">
+                  <button type="button" id="peito" onclick="mostrarModal('peito')">
                         <img id="peito" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="112" height="71" viewBox="0 0 112 71" fill="none">
                             <path d="M111 19.5L96 11L77 1.5H35L14.5 11L1 19.5V52L17 67L48.5 60L62 61.5L94 69.5L111 50V19.5Z"
@@ -873,11 +869,11 @@
                         </svg>
                     </button>
                 </figure>
-     
+    
                 <!-- Braço Esquerdo -->
-
+    
                 <figure class="imagem4">
-                    <button type="button"  id="ombro" onclick="mostrarModal('ombroEsquerdo')">
+                  <button type="button"  id="ombro" onclick="mostrarModal('ombroEsquerdo')">
                         <svg xmlns="http://www.w3.org/2000/svg" width="31" height="46" viewBox="0 0 31 46" fill="none">
                             <path d="M9.5 8L22 2L29.5 43L5 44.5L1.5 31.5L9.5 8Z" fill="white" stroke="black"
                                 stroke-width="2" />
@@ -886,7 +882,7 @@
                 </figure>
     
                 <figure class="imagem5">
-                    <button type="button"  id="bracoe" onclick="mostrarModal('braçoEsquerdo')">
+                  <button type="button"  id="bracoe" onclick="mostrarModal('braçoEsquerdo')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="39" height="122" viewBox="0 0 39 122" fill="none">
                             <path
@@ -895,9 +891,9 @@
                         </svg>
                     </button>
                 </figure>
-     
+    
                 <figure class="imagem6">
-                    <button type="button"  onclick="mostrarModal('mãoEsquerda')">
+                  <button type="button"  onclick="mostrarModal('mãoEsquerda')">
                         <img id="maoe" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="50" viewBox="0 0 29 50" fill="none">
                             <path
@@ -908,9 +904,9 @@
                 </figure>
     
                 <!-- Braço Direito -->
-  
+    
                 <figure class="imagem7">
-                    <button type="button"  onclick="mostrarModal('ombroDireito')">
+                  <button type="button"  onclick="mostrarModal('ombroDireito')">
                         <img id="ombrod" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="46" viewBox="0 0 32 46" fill="none">
                             <path d="M22 8L9.5 2L2 43L26.5 44.5L30 31.5L22 8Z" fill="white" stroke="black"
@@ -920,7 +916,7 @@
                 </figure>
     
                 <figure class="imagem8">
-                    <button type="button"  onclick="mostrarModal('braçoDireito')">
+                  <button type="button"  onclick="mostrarModal('braçoDireito')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="39" height="122" viewBox="0 0 39 122" fill="none"
                             id="bracod">
@@ -932,7 +928,7 @@
                 </figure>
     
                 <figure class="imagem9">
-                    <button type="button"  onclick="mostrarModal('mãoDireita')">
+                  <button type="button"  onclick="mostrarModal('mãoDireita')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="50" viewBox="0 0 30 50" fill="none"
                             id="maod">
@@ -944,9 +940,9 @@
                 </figure>
     
                 <!-- Tronco -->
-   
+    
                 <figure class="imagem10">
-                    <button type="button"  onclick="mostrarModal('tronco')">
+                  <button type="button"  onclick="mostrarModal('tronco')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="120" viewBox="0 0 100 120" fill="none"
                             id="tronco">
@@ -958,9 +954,9 @@
                 </figure>
     
                 <!-- Perna Esquerda -->
-   
+    
                 <figure class="imagem11">
-                    <button type="button"  onclick="mostrarModal('coxaEsquerda')">
+                  <button type="button"  onclick="mostrarModal('coxaEsquerda')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="51" height="104" viewBox="0 0 51 104" fill="none"
                             id="coxae">
@@ -972,7 +968,7 @@
                 </figure>
     
                 <figure class="imagem12">
-                    <button type="button"  onclick="mostrarModal('joelhoEsquerdo')">
+                  <button type="button"  onclick="mostrarModal('joelhoEsquerdo')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="78" viewBox="0 0 38 78" fill="none"
                             id="joelhoe">
@@ -983,7 +979,7 @@
                 </figure>
     
                 <figure class="imagem13">
-                    <button type="button"  onclick="mostrarModal('panturrilhaEsquerda')">
+                  <button type="button"  onclick="mostrarModal('panturrilhaEsquerda')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="39" height="81" viewBox="0 0 39 81" fill="none"
                             id="panturrilhae">
@@ -995,7 +991,7 @@
                 </figure>
     
                 <figure class="imagem14">
-                    <button type="button"  onclick="mostrarModal('péEsquerdo')">
+                  <button type="button"  onclick="mostrarModal('péEsquerdo')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="39" height="34" viewBox="0 0 39 34" fill="none"
                             id="pee">
@@ -1009,7 +1005,7 @@
                 <!-- Perna Direita -->
     
                 <figure class="imagem15">
-                    <button type="button"  onclick="mostrarModal('coxaDireita')">
+                  <button type="button"  onclick="mostrarModal('coxaDireita')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="104" viewBox="0 0 50 104" fill="none"
                             id="coxad">
@@ -1021,7 +1017,7 @@
                 </figure>
     
                 <figure class="imagem16">
-                    <button type="button"  onclick="mostrarModal('joelhoDireito')">
+                  <button type="button"  onclick="mostrarModal('joelhoDireito')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="39" height="78" viewBox="0 0 39 78" fill="none"
                             id="joelhod">
@@ -1033,7 +1029,7 @@
                 </figure>
     
                 <figure class="imagem17">
-                    <button type="button"  onclick="mostrarModal('panturrilhaDireita')">
+                  <button type="button"  onclick="mostrarModal('panturrilhaDireita')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="39" height="81" viewBox="0 0 39 81" fill="none"
                             id="panturrilhad">
@@ -1045,7 +1041,7 @@
                 </figure>
     
                 <figure class="imagem18">
-                    <button type="button" onclick="mostrarModal('péDireito')">
+                  <button type="button" onclick="mostrarModal('péDireito')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="39" height="34" viewBox="0 0 39 34" fill="none"
                             id="ped">
@@ -1060,9 +1056,9 @@
             <div class="corpoVerso">
     
                 <!-- Nuca -->
-   
+    
                 <figure class="imagem19">
-                    <button type="button"  id="cabeca" onclick="mostrarModal('nuca')">
+                  <button type="button"  id="cabeca" onclick="mostrarModal('nuca')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="56" height="71" viewBox="0 0 56 71" fill="none"
                             id="nuca">
@@ -1072,11 +1068,11 @@
                         </svg>
                     </button>
                 </figure>
-     
+    
                 <!-- Pescoço -->
-
+    
                 <figure class="imagem20">
-                    <button type="button"  onclick="mostrarModal('pescoçoVerso')">
+                  <button type="button"  onclick="mostrarModal('pescoçoVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="20" viewBox="0 0 42 20" fill="none"
                             id="pescocov">
@@ -1085,12 +1081,12 @@
                                 fill="white" stroke="black" stroke-width="2" />
                         </svg>
                     </button onclick="mostrarModal()">
-              </figure>
+                </figure>
     
                 <!-- Costas -->
-  
+    
                 <figure class="imagem21">
-                    <button type="button"  onclick="mostrarModal('costas')">
+                  <button type="button"  onclick="mostrarModal('costas')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="112" height="88" viewBox="0 0 112 88" fill="none"
                             id="costas">
@@ -1101,9 +1097,9 @@
                 </figure>
     
                 <!-- Braço Esquerdo -->
-   
+    
                 <figure class="imagem22">
-                    <button type="button" onclick="mostrarModal('ombroEsquerdoVerso')">
+                  <button type="button" onclick="mostrarModal('ombroEsquerdoVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="43" viewBox="0 0 25 43" fill="none"
                             id="ombroev">
@@ -1114,7 +1110,7 @@
                 </figure>
     
                 <figure class="imagem23">
-                    <button type="button"  onclick="mostrarModal('braçoEsquerdoVerso')">
+                  <button type="button"  onclick="mostrarModal('braçoEsquerdoVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="122" viewBox="0 0 38 122" fill="none"
                             id="bracoev">
@@ -1126,7 +1122,7 @@
                 </figure>
     
                 <figure class="imagem24">
-                    <button type="button" onclick="mostrarModal('mãoEsquerdaVerso')">
+                  <button type="button" onclick="mostrarModal('mãoEsquerdaVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="45" viewBox="0 0 26 45" fill="none"
                             id="maoev">
@@ -1136,11 +1132,11 @@
                         </svg>
                     </button>
                 </figure>
-     
+    
                 <!-- Braço Direito -->
     
                 <figure class="imagem25">
-                    <button type="button" onclick="mostrarModal('ombroDireitoVerso')">
+                  <button type="button" onclick="mostrarModal('ombroDireitoVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="43" viewBox="0 0 25 43" fill="none"
                             id="ombrodv">
@@ -1152,7 +1148,7 @@
                 </figure>
     
                 <figure class="imagem26">
-                    <button type="button" onclick="mostrarModal('braçoDireitoVerso')">
+                  <button type="button" onclick="mostrarModal('braçoDireitoVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="39" height="122" viewBox="0 0 39 122" fill="none"
                             id="ombrodv">
@@ -1164,7 +1160,7 @@
                 </figure>
     
                 <figure class="imagem27">
-                    <button type="button" onclick="mostrarModal('mãoDireitaVerso')">
+                  <button type="button" onclick="mostrarModal('mãoDireitaVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="45" viewBox="0 0 27 45" fill="none"
                             id="maodv">
@@ -1178,7 +1174,7 @@
                 <!-- Tronco -->
     
                 <figure class="imagem28">
-                    <button type="button" onclick="mostrarModal('troncoVerso')">
+                  <button type="button" onclick="mostrarModal('troncoVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="96" height="94" viewBox="0 0 96 94" fill="none"
                             id="troncov">
@@ -1192,7 +1188,7 @@
                 <!-- Bunda -->
     
                 <figure class="imagem29">
-                    <button type="button" onclick="mostrarModal('bunda')">
+                  <button type="button" onclick="mostrarModal('bunda')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="99" height="47" viewBox="0 0 99 47" fill="none"
                             id="bunda">
@@ -1209,7 +1205,7 @@
                 <!-- Perna Esquerda -->
     
                 <figure class="imagem30">
-                    <button type="button" onclick="mostrarModal('coxaEsquerdaVerso')">
+                  <button type="button" onclick="mostrarModal('coxaEsquerdaVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="88" viewBox="0 0 50 88" fill="none"
                             id="coxaev">
@@ -1221,7 +1217,7 @@
                 </figure>
     
                 <figure class="imagem31">
-                    <button type="button" onclick="mostrarModal('joelhoEsquerdoVerso')">
+                  <button type="button" onclick="mostrarModal('joelhoEsquerdoVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="39" height="41" viewBox="0 0 39 41" fill="none"
                             id="joelhoev">
@@ -1233,7 +1229,7 @@
                 </figure>
     
                 <figure class="imagem32">
-                    <button type="button" onclick="mostrarModal('panturrilhaEsquerdaVerso')">
+                  <button type="button" onclick="mostrarModal('panturrilhaEsquerdaVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="41" height="88" viewBox="0 0 41 88" fill="none"
                             id="panturrilhaev">
@@ -1245,7 +1241,7 @@
                 </figure>
     
                 <figure class="imagem33">
-                    <button type="button" onclick="mostrarModal('péEsquerdoVerso')">
+                  <button type="button" onclick="mostrarModal('péEsquerdoVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="25" viewBox="0 0 38 25" fill="none"
                             id="peev">
@@ -1259,7 +1255,7 @@
                 <!-- Perna Direita -->
     
                 <figure class="imagem34">
-                    <button type="button" onclick="mostrarModal('coxaDireitaVerso')">
+                  <button type="button" onclick="mostrarModal('coxaDireitaVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="88" viewBox="0 0 50 88" fill="none"
                             id="coxadv">
@@ -1271,7 +1267,7 @@
                 </figure>
     
                 <figure class="imagem35">
-                    <button type="button" onclick="mostrarModal('joelhoDireitoVerso')">
+                  <button type="button" onclick="mostrarModal('joelhoDireitoVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="39" height="41" viewBox="0 0 39 41" fill="none"
                             id="joelhodv">
@@ -1283,7 +1279,7 @@
                 </figure>
     
                 <figure class="imagem36">
-                    <button type="button" onclick="mostrarModal('panturrilhaDireitaVerso')">
+                  <button type="button" onclick="mostrarModal('panturrilhaDireitaVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="41" height="88" viewBox="0 0 41 88" fill="none"
                             id="panturrilhadv">
@@ -1296,7 +1292,7 @@
     
                 <figure class="imagem37">
     
-                    <button type="button" onclick="mostrarModal('péDireitoVerso')">
+                  <button type="button" onclick="mostrarModal('péDireitoVerso')">
                         <img id="" src="" alt="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="25" viewBox="0 0 38 25" fill="none"
                             id="pedv">
@@ -1318,34 +1314,38 @@
             <div class="modal-content">
                 <p>Escolha a categoria:</p>
                 <button type="button" id="fraturas" onclick="selectTrauma(' Fraturas-Luxações-Entorses')"> <img src="../img/Frame 22.png"
-                        alt=""> Fraturas /
-                    Luxações /
-                    Entorses</button>
-                <button type="button" onclick="selectTrauma(' Ferimentos-Diversos')"> <img src="../img/Frame 23.png" alt=""> Ferimentos
+                        alt=""> Fraturas Luxações /  Entorses
+                  </button>
+                <button onclick="selectTrauma('Ferimentos-Diversos')"> <img src="../img/Frame 23.png" alt=""> Ferimentos
                     Diversos</button>
-                <button type="button" onclick="selectTrauma(' Hemorragias')"> <img src="../img/Frame 24.png" alt="">Hemorragias</button>
-                <button type="button" onclick="selectTrauma(' Evisceração')"> <img src="../img/Frame 25.png" alt="">Evisceração</button>
-                <button type="button" onclick="selectTrauma(' F.A.B./F.A.F.')"> <img src="../img/Frame 26.png" alt="">F.A.B./F.A.F.</button>
-                <button type="button" onclick="selectTrauma(' Amputação')"> <img src="../img/Frame 27.png" alt="">Amputação</button>
-                <button type="button" onclick="selectTrauma(' Queimadura 1°Grau')"> <img src="../img/Frame 28.png" alt="">Queimadura
+                <button onclick="selectTrauma('Hemorragias')"> <img src="../img/Frame 24.png" alt="">Hemorragias</button>
+                <button onclick="selectTrauma('Evisceração')"> <img src="../img/Frame 25.png" alt="">Evisceração</button>
+                <button onclick="selectTrauma('F.A.B./F.A.F.')"> <img src="../img/Frame 26.png" alt="">F.A.B./F.A.F.</button>
+                <button onclick="selectTrauma('Amputação')"> <img src="../img/Frame 27.png" alt="">Amputação</button>
+                <button onclick="selectTrauma('Queimadura 1°Grau')"> <img src="../img/Frame 28.png" alt="">Queimadura
                     1°Grau</button>
-                <button type="button" onclick="selectTrauma(' Queimadura 2°Grau')"> <img src="../img/Frame 29.png" alt="">Queimadura
+                <button onclick="selectTrauma('Queimadura 2°Grau')"> <img src="../img/Frame 29.png" alt="">Queimadura
                     2°Grau</button>
-                <button type="button" onclick="selectTrauma(' Queimadura 3°Grau')"> <img src="../img/Frame 30.png" alt="">Queimadura 
+                <button onclick="selectTrauma('Queimadura 3°Grau')"> <img src="../img/Frame 30.png" alt="">Queimadura
                     3°Grau</button>
             </div>
         </div>
-        
+    
+        <div>
+            <button onclick="enviarTrauma()">Enviar pro banco</button>
+        </div>
+    
         <div>
             <p>Tipo de ferimento:</p>
             <p id="tipo"></p>
         </div>
         <script src="../scripts/assets.js"></script>
-          <input type="hidden" id="parte1" name="parte">
-          <input type="hidden" id="tipo1" name="tipo">
+
+        <input type="hidden" id="parte1" name="parte">
+        <input type="hidden" id="tipo1" name="tipo">
+
         </div>
       </div>
-        
     </div>
   </div>
 
@@ -1446,7 +1446,8 @@
                 for="">Otorragia</label></div>
             <div class="sinaisSintomas"><input type="checkbox" name="sinais_Sintomas[]" id="" value="D.V.A.G.E."><label
                 for="">D.V.A.G.E.</label></div>
-            <div class="sinaisSintomas" id="parada"><input type="checkbox" name="sinais_Sintomas[]" id="" value="Parada"><label for="">Parada +</label></div>
+            <div class="sinaisSintomas" id="parada"><input type="checkbox" name="sinais_Sintomas[]" id=""
+                value="Parada"><label for="">Parada +</label></div>
             <div class="invisivel paradaOpc" style="display: none;">
               <div class="invisivelDivSinais">
                 <div class="sinaisOpcoes"><input type="checkbox" name="sinais_Sintomas[]" value="Cardiaca"><label
@@ -1459,7 +1460,8 @@
                 for="">Priaprismo</label></div>
             <div class="sinaisSintomas"><input type="checkbox" name="sinais_Sintomas[]" id=""
                 value="Prurido na pele"><label for="">Prurido na pele</label></div>
-            <div class="sinaisSintomas" id="pupilas"><input type="checkbox" name="sinais_Sintomas[]" id="" value="Pupílas"><label for="">Pupílas +</label></div>
+            <div class="sinaisSintomas" id="pupilas"><input type="checkbox" name="sinais_Sintomas[]" id=""
+                value="Pupílas"><label for="">Pupílas +</label></div>
             <div class="invisivel pupilasOpc" style="display: none;">
               <div class="invisivelDivSinais">
                 <div class="sinaisOpcoes"><input type="checkbox" name="sinais_Sintomas[]" value="Anisocoria"><label
@@ -1493,7 +1495,7 @@
             <div class="sinaisSintomas"><input type="checkbox" name="sinais_Sintomas[]" id="" value="Tontura"><label
                 for="">Tontura</label></div>
             <div class="sinaisSintomas"><input type="checkbox" name="sinais_Sintomas[]" id="" value="Outro"><label
-                for=""><input type="text" name="sinais_Sintomas[]" id="" placeholder="outro"></label></div>
+                for=""><input type="text" name="" id="" placeholder="outro"></label></div>
           </div>
         </div>
       </div>
@@ -1512,19 +1514,19 @@
             <div class="accordion-body">
               <div class="conducao">
                 <label class="formaConducao" for="sentado">
-                  <input type="radio" name="formaConducao" id="sentado" value="Sentado">
+                  <input type="radio" name="formaConducao" id="Sentado" value="Sentado">
                   <img src="/img/sentado.png" alt="" name="sentado">
                   <span>Sentado</span>
                 </label>
 
                 <label class="formaConducao" for="semi">
-                  <input type="radio" name="formaConducao" id="semi" value="Semi-sentado">
+                  <input type="radio" name="formaConducao" id="Semi-sentado" value="Semi-sentado">
                   <img src="/img/semi.png" alt="" name="semi">
                   <span>Semi-sentado</span>
                 </label>
 
                 <label class="formaConducao" for="deitado">
-                  <input type="radio" name="formaConducao" id="deitado" value="Deitado">
+                  <input type="radio" name="formaConducao" id="Deitado" value="Deitado">
                   <img src="/img/deitado.png" alt="" name="deitado">
                   <span>Deitado</span>
                 </label>
@@ -1575,12 +1577,12 @@
               <fieldset class="radio-image2">
                 <div class="decisaoLinha">
                   <label for="estavel">
-                    <input type="radio" name="estadoTransporte" id="estavel" value="Estável">
+                    <input type="radio" name="estadoTransporte" id="estavel" value="estavel">
                     <img src="/img/estavel.png" alt="emoji feliz">
                     <p>Estável</p>
                   </label>
                   <label for="critico">
-                    <input type="radio" name="estadoTransporte" id="critico" value="Críticotico">
+                    <input type="radio" name="estadoTransporte" id="critico" value="critico">
                     <img src="/img/critico.png" alt="emoji triste">
                     <p>Crítico</p>
                   </label>
@@ -1588,13 +1590,13 @@
 
                 <div class="decisaoLinha">
                   <label for="instavel">
-                    <input type="radio" name="estadoTransporte" id="instavel" value="Instavel">
+                    <input type="radio" name="estadoTransporte" id="instavel" value="instavel">
                     <img src="/img/instavel.png" alt="emoji de quase choro">
                     <p>Instável</p>
                   </label>
                   <label for="potencialmente">
                     <input type="radio" name="estadoTransporte" id="potencialmente"
-                      value="Potencialmente instavel">
+                      value="potencialmente">
                     <img src="/img/potencialmente.png" alt="emoji apático">
                     <p>Potencialmente instável</p>
                   </label>
@@ -1616,178 +1618,234 @@
             </button>
           </h2>
           <div id="panelsStayOpen-collapsetwelve" class="accordion-collapse collapse">
-             <div class="accordion-body">
-            <div class="linhaProced"><input type="checkbox" name="procedimento[]" value="Aspiração">
-              <p>Aspiração</p>
-            </div>
-           <div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Aspiração">
-  <p>Aspiração</p>
-</div>
+            <div class="accordion-body">
+              <div class="linhaProced"><input type="checkbox" name="procedimento[]" value="Aspiração">
+                <p>Aspiração</p>
+              </div>
+             <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Aspiração">
+    <p>Aspiração</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Avaliação inicial">
+    <p>Avaliação inicial</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Avaliação dirigida">
+    <p>Avaliação dirigida</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Avaliação continuada">
+    <p>Avaliação continuada</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Chave de Rautek">
+    <p>Chave de Rautek</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Cânula de Guedel">
+    <p>Cânula de Guedel</p>
+  </div>
+  
+  <!-- Continuar para os demais campos -->
+  
+             <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Desobstrução de V.A.">
+    <p>Desobstrução de V.A.</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Emprego do D.E.A.">
+    <p>Emprego do D.E.A.</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Gerenciamento de riscos">
+    <p>Gerenciamento de riscos</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Limpeza de ferimentos">
+    <p>Limpeza de ferimentos</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Curativos">
+    <p>Curativos</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Compressivo">
+    <p>Compressivo</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Encravamento">
+    <p>Encravamento</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Ocular">
+    <p>Ocular</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Queimadura">
+    <p>Queimadura</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Simples">
+    <p>Simples</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="3 pontas">
+    <p>3 pontas</p>
+  </div>
+  
+  <div class="linhaProced">
+    <input type="checkbox" name="procedimento[]" value="Imobilizações">
+    <p>Imobilizações</p>
+  </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Membro inf. dir.</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Membro inf. esq.</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Membro sup. dir.</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Membro sup. esq.</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Quadril</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Cervical</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Maca sobre rodas</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Maca rígida</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Ponte</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Retirado Capacete</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>R.C.P.</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Rolamento 90°</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Rolamento 180°</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Tomada decisão</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Uso de cânula</p>
+              </div>
+              <div class="linhaProced longoProced" id="procedColar"><input name="procedimento[]" type="checkbox">
+                <p>Uso colar Tam:<input name="textoColarTamanho" type="text"></p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Uso Ked</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Uso TTF</p>
+              </div>
+              <div class="linhaProced"><input name="procedimento[]" type="checkbox">
+                <p>Ventilação suporte</p>
+              </div>
+              <div class="linhaProced longoProced"><input name="procedimento[]" type="checkbox">
+                <p>Oxigenoterapia <input name="textoLPM" type="text">Lpm</p>
+              </div>
+              <div class="linhaProced" id="opcoesProced"><input name="procedimento[]" type="checkbox">
+                <p>Meios auxiliares +</p>
+              </div>
 
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Avaliação inicial">
-  <p>Avaliação inicial</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Avaliação dirigida">
-  <p>Avaliação dirigida</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Avaliação continuada">
-  <p>Avaliação continuada</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Chave de Rautek">
-  <p>Chave de Rautek</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Cânula de Guedel">
-  <p>Cânula de Guedel</p>
-</div>
-
-<!-- Continuar para os demais campos -->
-
-           <div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Desobstrução de V.A.">
-  <p>Desobstrução de V.A.</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Emprego do D.E.A.">
-  <p>Emprego do D.E.A.</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Gerenciamento de riscos">
-  <p>Gerenciamento de riscos</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Limpeza de ferimentos">
-  <p>Limpeza de ferimentos</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Curativos">
-  <p>Curativos</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Compressivo">
-  <p>Compressivo</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Encravamento">
-  <p>Encravamento</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Ocular">
-  <p>Ocular</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Queimadura">
-  <p>Queimadura</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Simples">
-  <p>Simples</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="3 pontas">
-  <p>3 pontas</p>
-</div>
-
-<div class="linhaProced">
-  <input type="checkbox" name="procedimento[]" value="Imobilizações">
-  <p>Imobilizações</p>
-</div>
-           
-
-<div class="linhaProced" id="opcoesProced">
-  <input type="checkbox" name="procedimento[]" value="checkMeiosAuxiliares">
-  <p>Meios auxiliares +</p>
-</div>
-
-            <div id="opcoesAdicionais" style="display: none;">
-              <div class="opcoesAdcionaisChecks">
-                <div class="opcoesAdicionaisDiv">
-                  <input type="checkbox" name="procedimento[]" id="" value="Celesc">
-                  <label for="celesc">Celesc</label>
+              <div id="opcoesAdicionais" style="display: none;">
+                <div class="opcoesAdcionaisChecks">
+                  <div class="opcoesAdicionaisDiv">
+                    <input type="checkbox" name="procedimento[]" id="" value="Celesc">
+                    <label for="celesc">Celesc</label>
+                  </div>
+                  <div class="opcoesAdicionaisDiv">
+                    <input type="checkbox" name="procedimento[]" id="" value="CIT">
+                    <label for="cit">CIT</label>
+                  </div>
                 </div>
-                <div class="opcoesAdicionaisDiv">
-                  <input type="checkbox" name="procedimento[]" id="" value="CIT">
-                  <label for="cit">CIT</label>
+                <div class="opcoesAdcionaisChecks">
+                  <div class="opcoesAdicionaisDiv">
+                    <input type="checkbox" name="procedimento[]" id="" value="Def. civíl">
+                    <label for="def_civil">Def. civil</label>
+                  </div>
+                  <div class="opcoesAdicionaisDiv">
+                    <input type="checkbox" name="procedimento[]" id="" value="IGP/PC">
+                    <label for="igp_pc">IGP/PC</label>
+                  </div>
+                </div>
+                <div class="opcoesAdcionaisChecks">
+                  <div class="opcoesAdicionaisDiv" id="opcoesProced2">
+                    <input type="checkbox" name="procedimento[]" value="Polícia">
+                    <label for="policia">Polícia +</label>
+                  </div>
+                  <div class="opcoesAdicionaisDiv" id="opcoesProced3">
+                    <input type="checkbox" name="procedimento[]" value="Samu">
+                    <label for="samu">SAMU +</label>
+                  </div>
+                </div>
+  
+                <div class="opcoesAdcionaisChecks2">
+                  <div class="adicionaisChecks2Linha1" style="display: none;">
+                    <div class="opcoesAdicionaisDiv2">
+                      <input type="checkbox" name="procedimento[]" id="" value="Polícia Civil">
+                      <label for="civil">Civil</label>
+                    </div>
+                    <div class="opcoesAdicionaisDiv2">
+                      <input type="checkbox" name="procedimento[]" id="" value="PRE">
+                      <label for="pre">PRE</label>
+                    </div>
+                    <div class="opcoesAdicionaisDiv2">
+                      <input type="checkbox" name="procedimento[]" id="" value="Militar">
+                      <label for="militar">Militar</label>
+                    </div>
+                    <div class="opcoesAdicionaisDiv2">
+                      <input type="checkbox" name="procedimento[]" id="" value="PRF">
+                      <label for="prf">PRF</label>
+                    </div>
+                  </div>
+  
+                  <div class="adicionaisChecks2Linha2" style="display: none;">
+                    <div class="opcoesAdicionaisDiv2">
+                      <input type="checkbox" name="procedimento[]" id="" value="USA">
+                      <label for="civil">USA</label>
+                    </div>
+                    <div class="opcoesAdicionaisDiv2">
+                      <input type="checkbox" name="procedimento[]" id="" value="USB">
+                      <label for="pre">USB</label>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="opcoesAdcionaisChecks">
-                <div class="opcoesAdicionaisDiv">
-                  <input type="checkbox" name="procedimento[]" id="" value="Def. civíl">
-                  <label for="def_civil">Def. civil</label>
-                </div>
-                <div class="opcoesAdicionaisDiv">
-                  <input type="checkbox" name="procedimento[]" id="" value="IGP/PC">
-                  <label for="igp_pc">IGP/PC</label>
-                </div>
-              </div>
-              <div class="opcoesAdcionaisChecks">
-                <div class="opcoesAdicionaisDiv" id="opcoesProced2">
-                  <input type="checkbox" name="procedimento[]" value="Polícia">
-                  <label for="policia">Polícia +</label>
-                </div>
-                <div class="opcoesAdicionaisDiv" id="opcoesProced3">
-                  <input type="checkbox" name="procedimento[]" value="Samu">
-                  <label for="samu">SAMU +</label>
-                </div>
-              </div>
+              <div class="linhaProced" id="opcoesProced"><input type="checkbox" style="width:3.2vh;margin-left: 2vw;">
+                <p style="margin-left: 2vw; margin-right: 2vw;">Outros</p>
+                <textarea name="procedimento[]" id="" cols="30" rows="1"></textarea>
 
-              <div class="opcoesAdcionaisChecks2">
-                <div class="adicionaisChecks2Linha1" style="display: none;">
-                  <div class="opcoesAdicionaisDiv2">
-                    <input type="checkbox" name="procedimento[]" id="" value="Polícia Civil">
-                    <label for="civil">Civil</label>
-                  </div>
-                  <div class="opcoesAdicionaisDiv2">
-                    <input type="checkbox" name="procedimento[]" id="" value="PRE">
-                    <label for="pre">PRE</label>
-                  </div>
-                  <div class="opcoesAdicionaisDiv2">
-                    <input type="checkbox" name="procedimento[]" id="" value="Militar">
-                    <label for="militar">Militar</label>
-                  </div>
-                  <div class="opcoesAdicionaisDiv2">
-                    <input type="checkbox" name="procedimento[]" id="" value="PRF">
-                    <label for="prf">PRF</label>
-                  </div>
-                </div>
-
-                <div class="adicionaisChecks2Linha2" style="display: none;">
-                  <div class="opcoesAdicionaisDiv2">
-                    <input type="checkbox" name="procedimento[]" id="" value="USA">
-                    <label for="civil">USA</label>
-                  </div>
-                  <div class="opcoesAdicionaisDiv2">
-                    <input type="checkbox" name="procedimento[]" id="" value="USB">
-                    <label for="pre">USB</label>
-                  </div>
-                </div>
               </div>
-            </div>
-            
-            <div class="linhaProced" id="opcoesProced"><input type="checkbox" style="width:3.2vh;margin-left: 2vw;">
-              <p style="margin-left: 2vw; margin-right: 2vw;">Outros</p>
-              <textarea name="procedimento[]" id="" cols="30" rows="1"></textarea>
-
-            </div>
             </div>
           </div>
         </div>
@@ -1813,7 +1871,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkAtaduras" id="">
+                    <input type="checkbox" name="ataduras" id="">
                     <p>Ataduras</p>
                   </div>
                   <div class="colMeio2">
@@ -1831,7 +1889,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkCateter" id="">
+                    <input type="checkbox" name="cateter" id="">
                     <p>Cateter Tp. Óculos</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1843,7 +1901,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkCompressa" id="">
+                    <input type="checkbox" name="compressa" id="">
                     <p>Compressa comum</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1855,14 +1913,14 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkKit's" id="">
+                    <input type="checkbox" name="kits" id="">
                     <p>Kit's</p>
                   </div>
                   <div class="colMeio2">
                     <select name="tamKits" id="">
-                      <option name="tamanhoKit'sM" value="M">M</option>
-                      <option name="tamanhoKit'sG" value="G">G</option>
-                      <option name="tamanhoKit'sOutro" value="outro">outro</option>
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="outro">outro</option>
                     </select>
                   </div>
                   <div class="teste2"></div>
@@ -1873,7 +1931,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkLuvas" id="">
+                    <input type="checkbox" name="luvas" id="">
                     <p>Luvas desc. (pares)</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1885,7 +1943,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkMascara" id="">
+                    <input type="checkbox" name="mascara" id="">
                     <p>Máscara desc.</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1898,7 +1956,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkManta" id="">
+                    <input type="checkbox" name="manta" id="">
                     <p>Manta aluminizada</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1910,7 +1968,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkPas" id="">
+                    <input type="checkbox" name="pas" id="">
                     <p>Pás do DEA</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1922,7 +1980,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkSonda" id="">
+                    <input type="checkbox" name="sonda" id="">
                     <p>Sonda de aspiração</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1934,7 +1992,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkSoro" id="">
+                    <input type="checkbox" name="soro" id="">
                     <p>Soro fisiológico</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1946,7 +2004,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkTalas" id="">
+                    <input type="checkbox" name="talas" id="">
                     <p>Talas pap.</p>
                   </div>
                   <div class="colMeio2">
@@ -1961,22 +2019,6 @@
                       maxlength="3"></div>
                 </div>
 
-                <div class="checMat">
-                  <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkOutroDescartaveis" id="">
-                    <input type="textarea" name="outro" placeholder="outro" id="inputMat">
-                  </div>
-                  <div class="colMeio2">
-                    <select name="tamOutro" id="">
-                      <option name="adultoOutroDescartaveis" value="ADULTO">Adulto</option>
-                      <option name="infantilOutroDescartaveis" value="INFANTIL">Infantil</option>
-                    </select>
-                  </div>
-                  <div class="teste2"></div>
-                  <div class="qtd2"> <input name="qtdOutro" id="" type="number"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                      maxlength="3"></div>
-                </div>
               </section>
 
             </div>
@@ -1994,95 +2036,95 @@
               </button>
             </h2>
             <div id="panelsStayOpen-collapsefourteen" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              <section class="materiaisHosp">
-                <div id="titulosTopic">
-                  <h2 class="matTopic">Material</h2>
-                  <h2 class="matTopic">Tam.</h2>
-                  <h2 class="matTopic">Qtd.</h2>
-                </div>
-                <div class="checMat">
-                  <div class="checkMatInterno extensop">
-                    <input type="checkbox" name="baseEstabilizador" id="" value="Base do estabilizador">
-                    <p>Base do estabiliza.</p>
+              <div class="accordion-body">
+                <section class="materiaisHosp">
+                  <div id="titulosTopic">
+                    <h2 class="matTopic">Material</h2>
+                    <h2 class="matTopic">Tam.</h2>
+                    <h2 class="matTopic">Qtd.</h2>
                   </div>
-                  <div class="colMeio"></div>
-                  <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="qtdBase" id=""></div>
-                </div>
-
-                <div class="checMat">
-                  <div class="checkMatInterno">
-                    <input type="checkbox" name="colar" id="" value="Colar">
-                    <p>Colar</p>
+                  <div class="checMat">
+                    <div class="checkMatInterno extensop">
+                      <input type="checkbox" name="baseEstabilizador" id="" value="Base do estabilizador">
+                      <p>Base do estabiliza.</p>
+                    </div>
+                    <div class="colMeio"></div>
+                    <div class="teste2"></div>
+                    <div class="qtd"> <input type="number" name="qtdBase" id=""></div>
                   </div>
-                  <div class="colMeio">
-                    <select name="tamColar" id="">
-                      <option value="N">N</option>
-                      <option value="PP">PP</option>
-                      <option value="P">P</option>
-                    </select>
+  
+                  <div class="checMat">
+                    <div class="checkMatInterno">
+                      <input type="checkbox" name="colar" id="" value="Colar">
+                      <p>Colar</p>
+                    </div>
+                    <div class="colMeio">
+                      <select name="tamColar" id="">
+                        <option value="N">N</option>
+                        <option value="PP">PP</option>
+                        <option value="P">P</option>
+                      </select>
+                    </div>
+                    <div class="teste2"></div>
+                    <div class="qtd"><input type="number" name="qtdColar" id=""></div>
                   </div>
-                  <div class="teste2"></div>
-                  <div class="qtd"><input type="number" name="qtdColar" id=""></div>
-                </div>
-
-
-                <div class="checMat">
-                  <div class="checkMatInterno extensop">
-                    <input type="checkbox" name="Coxins estabiliza." id="">
-                    <p>Coxins estabiliza.</p>
+  
+  
+                  <div class="checMat">
+                    <div class="checkMatInterno extensop">
+                      <input type="checkbox" name="Coxins estabiliza." id="">
+                      <p>Coxins estabiliza.</p>
+                    </div>
+                    <div class="colMeio"></div>
+                    <div class="teste2"></div>
+                    <div class="qtd"> <input type="number" name="qtdCoxins" id=""></div>
                   </div>
-                  <div class="colMeio"></div>
-                  <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="qtdCoxins" id=""></div>
-                </div>
-
-                <div class="checMat">
-                  <div class="checkMatInterno">
-                    <input type="checkbox" name="ked" id="">
-                    <p>KED</p>
+  
+                  <div class="checMat">
+                    <div class="checkMatInterno">
+                      <input type="checkbox" name="ked" id="">
+                      <p>KED</p>
+                    </div>
+                    <div class="colMeio">
+                      <select name="tamKed" id="">
+                        <option value="ADULTO">adulto</option>
+                        <option value="INFANTIL">INFANTIL</option>
+                      </select>
+                    </div>
+                    <div class="teste2"></div>
+                    <div class="qtd"> <input type="number" name="qtdKed" id=""></div>
                   </div>
-                  <div class="colMeio">
-                    <select name="tamKed" id="">
-                      <option value="ADULTO">adulto</option>
-                      <option value="INFANTIL">INFANTIL</option>
-                    </select>
+  
+                  <div class="checMat">
+                    <div class="checkMatInterno">
+                      <input type="checkbox" name="macaRigida" id="">
+                      <p>Maca rígida</p>
+                    </div>
+                    <div class="colMeio"></div>
+                    <div class="teste2"></div>
+                    <div class="qtd"> <input type="number" name="qtdMaca" id=""></div>
+  
                   </div>
-                  <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="qtdKed" id=""></div>
-                </div>
-
-                <div class="checMat">
-                  <div class="checkMatInterno">
-                    <input type="checkbox" name="macaRigida" id="">
-                    <p>Maca rígida</p>
+  
+                  <div class="checMat">
+                    <div class="checkMatInterno">
+                      <input type="checkbox" name="tiranteAranha" id="">
+                      <p>Tirante aranha</p>
+                    </div>
+                    <div class="colMeio"></div>
+                    <div class="teste2"></div>
+                    <div class="qtd"> <input type="number" name="qtdAranha" id=""></div>
                   </div>
-                  <div class="colMeio"></div>
-                  <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="qtdMaca" id=""></div>
-
-                </div>
-
-                <div class="checMat">
-                  <div class="checkMatInterno">
-                    <input type="checkbox" name="tiranteAranha" id="">
-                    <p>Tirante aranha</p>
+  
+                  <div class="checMat">
+                    <div class="checkMatInterno extensop">
+                      <input type="checkbox" name="tiranteCabeca" id="">
+                      <p>Tirante de cabeça</p>
+                    </div>
+                    <div class="colMeio"></div>
+                    <div class="teste2"></div>
+                    <div class="qtd"> <input type="number" name="qtdCabeca" id=""></div>
                   </div>
-                  <div class="colMeio"></div>
-                  <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="qtdAranha" id=""></div>
-                </div>
-
-                <div class="checMat">
-                  <div class="checkMatInterno extensop">
-                    <input type="checkbox" name="tiranteCabeca" id="">
-                    <p>Tirante de cabeça</p>
-                  </div>
-                  <div class="colMeio"></div>
-                  <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="qtdCabeca" id=""></div>
-                </div>
 
                 <div class="checMat">
                   <div class="checkMatInterno">
@@ -2091,7 +2133,8 @@
                   </div>
                   <div class="colMeio"></div>
                   <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="qtdCanula" id=""></div>
+                  <div class="qtd"> <input type="number" name="qtdCanula" id="" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength="3"></div>
                 </div>
 
                 <div class="checMat">
@@ -2228,7 +2271,7 @@
 
                 <div class="teamNames gapCamp">
                   <label for="demandante"><img src="../img/demandante.svg" alt=""> DEMANDANTE:</label>
-                  <input type="text" name="demandante" id="dem-equi" required>
+                  <input type="text" name="demandante" id="dem-equi">
                 </div>
 
                 <div class="teamNames gapCamp">
@@ -2245,16 +2288,16 @@
                   </div>
                   <div class="check">
                     <label for="ir">CÓD. IR:</label>
-                    <input type="checkbox" name="ir" id="" required>
+                    <input type="text" name="ir" id="" required>
                   </div>
                 </div>
 
                 <div class="espacolinha">
                   <div><label for="ocorr">Nº OCORR.:</label>
-                    <input type="text" name="ocorr" id="" >
+                    <input type="text" name="ocorr" id="">
                   </div>
                   <div class="check"> <label for="ps">CÓD. PS:</label>
-                    <input type="checkbox" name="ps" id="" required>
+                    <input type="text" name="ps" id="" required>
                   </div>
                 </div>
 
@@ -2263,7 +2306,8 @@
                     <input type="text" name="desp">
                   </div>
                   <div><label for="kmfinal">KM FINAL:</label>
-                    <input type="text" name="kmfinal" required>
+                    <input name="kmfinal" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength="5">
                   </div>
 
                 </div>
@@ -2274,13 +2318,105 @@
                   </div>
                   <div style="display:flex; align-items: baseline;">
                     <label for="sia/sus">SIA/SUS.:</label>
-                    <input id="sia_sus" type="text" name="sia_sus">
+                    <input id="sia_sus" type="text" name="sia/sus">
                   </div>
                 </div>
                 <button type="submit" id="salvarOcorrencia">Salvar ocorrencia</button>
               </div>
             </form>
-            
+            <script>
+                function verificaSexo() {
+        console.log("verificaSexo");
+        var sexoSelecionado = document.querySelector('input[name="sexoPaciente"]:checked').value;
+        var anamneseGestacional = document.getElementsByClassName('anamneseGestacional')[0];
+
+        if (sexoSelecionado === 'Masculino') {
+            anamneseGestacional.style.display = 'none';
+        } else {
+            anamneseGestacional.style.display = 'block';
+        }
+    }
+        function possuiProblema(){
+            var problema = document.querySelector('input[name="problemaSaude"]:checked').value;
+            var quaisProblemas = document.querySelector('#quaisProblemas')
+
+            if (problema == "Não"){
+                quaisProblemas.style.display = 'none';
+            } else {
+                quaisProblemas.style.display = 'block';
+            }
+        }
+        function usaMedicamento(){
+            console.log("usa medicacao")
+            var medicacao = document.querySelector('input[name="usaMedicacao"]:checked').value;
+            var horarioMedicacao = document.querySelector('#horaMedicacao');
+            var qualMedicacao = document.querySelector('#qualMedicacao')
+            if (medicacao == "Não"){
+                console.log("Não")
+                horarioMedicacao.style.display = 'none';
+                qualMedicacao.style.display = 'none'
+            } else {
+                 console.log("Sim")
+                horarioMedicacao.style.display = 'block';
+                qualMedicacao.style.display = 'block'
+            }
+        }
+        function temAlergia(){
+             console.log("alergico")
+            var alergico = document.querySelector('input[name="alergico"]:checked').value;
+            var especifique = document.querySelector('#especifique');
+            if(alergico == "Não"){
+                especifique.style.display = 'none'
+            } else {
+                especifique.style.display = 'block'
+            }
+        }
+        function ingeriuAlimento(){
+            var alimento = document.querySelector('input[name="ingeriuAlgo"]:checked').value;
+            var horaIngeriu = document.querySelector('#horaIngeriu');
+            if(alimento == "Não"){
+                horaIngeriu.style.display = 'none'
+            } else {
+                horaIngeriu.style.display = 'block'
+            }
+        }
+        function temFilho(){
+            console.log("temFilho()")
+            var primeiroFilho = document.querySelector('input[name="primeiroFilho"]:checked').value;
+            var quantos = document.querySelector('#quantos');
+            if(primeiroFilho == "Sim"){
+                console.log("SIM")
+                quantos.style.display = 'none'
+            } else {
+                console.log("Não")
+                quantos.style.display = 'block'
+            }
+        }
+        function temContracoes(){
+            console.log("temContrações")
+            var contracoes = document.querySelector('input[name="contracao"]:checked').value;
+            var infoContracoes = document.querySelector('#contracoes');
+             if(contracoes == "Não"){
+                
+                infoContracoes.style.display = 'none'
+            } else {
+                console.log("Sim")
+                infoContracoes.style.display = 'block'
+            }
+        }
+         function partoRealizado(){
+            console.log("temParto")
+            var parto = document.querySelector('input[name="parto"]:checked').value;
+            var sexoBebe = document.querySelector('#sexoBebe');
+             if(parto == "Não"){
+                
+                sexoBebe.style.display = 'none'
+            } else {
+                console.log("Sim")
+                sexoBebe.style.display = 'block'
+            }
+        }
+            </script>
        
               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

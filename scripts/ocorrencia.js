@@ -1,49 +1,3 @@
-// DATA
-function enableInputs() {
-  document.getElementById('date').disabled = false;
-  document.getElementById('time').disabled = false;
-  document.querySelector('button[onclick="enableInputs()"]').style.display = 'none';
-  document.querySelector('button[onclick="saveChanges()"]').style.display = 'inline-block';
-}
-
-function saveChanges() {
-  const dateInput = document.getElementById('date');
-  const timeInput = document.getElementById('time');
-  
-  // Aqui você pode processar os valores como desejar
-  const newDate = dateInput.value;
-  const newTime = timeInput.value;
-
-  // Exemplo de exibição na console
-  console.log('Nova Data:', newDate);
-  console.log('Nova Hora:', newTime);
-
-  // Desabilita os inputs novamente
-  dateInput.disabled = true;
-  timeInput.disabled = true;
-
-  // Altera a visibilidade dos botões
-  document.querySelector('button[onclick="enableInputs()"]').style.display = 'inline-block';
-  document.querySelector('button[onclick="saveChanges()"]').style.display = 'none';
-}
-
-// Preenche os campos com a data e hora atuais
-function fillDateTime() {
-  const currentDate = new Date();
-  const dateString = currentDate.toISOString().split('T')[0];
-  const timeString = currentDate.toTimeString().split(' ')[0];
-
-  document.getElementById('date').value = dateString;
-  document.getElementById('time').value = timeString;
-}
-
-// Chama a função ao carregar a página
-window.onload = fillDateTime;
-
-// fim data
-
-// formatação do cpf
-
 function formatarCPF(campo) {
   // Remove caracteres não numéricos
   var cpfAtualizado = campo.value.replace(/[^\d]/g, '');
@@ -426,3 +380,8 @@ checkboxSinais7.addEventListener('change', function () {
     checkboxHipoglicemia.checked = false;
   }
 });
+function adultoCrianca(tipo){
+let faixaEtaria = document.querySelector('input[name="adulto_crianca"]');
+faixaEtaria.value = tipo;
+console.log(faixaEtaria);
+}

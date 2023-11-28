@@ -82,7 +82,6 @@ cursor: pointer;
 }
 
 .invisivel{
-    background-color: #f2f2f2;
     border-radius: 8px;
     margin-top: 3%;
     background-color: #ED1D25;
@@ -91,7 +90,7 @@ cursor: pointer;
 #nomeSalvar{
 
 display: flex;
-gap: 10px;
+
 
 }
 .opcoesEquipes{
@@ -167,6 +166,5 @@ border-radius: 10px;
 border:none;
 background-color: white;
 cursor: pointer;
-
 }
 

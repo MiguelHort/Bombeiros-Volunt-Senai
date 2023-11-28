@@ -44,8 +44,10 @@
             
             <input type="text" name="novo_nome" value="<?php echo $row['equipe'] ?>" />
             <input type="hidden" name="equipe_id" value="<?php echo $row['id_equipe_atendimento']; ?>" />
-            <button id="salvar" type="submit">Salvar</button>
+           
         
+            <input type="password" name="nova_senha" value="<?php echo $row['senha'] ?>" />
+            <button id="salvar" type="submit">Salvar</button>
         </div>
         </form>
                 </div>

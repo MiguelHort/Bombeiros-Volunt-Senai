@@ -19,16 +19,18 @@
       <img class="icones" src="../img/calendario.svg" alt="">
       <p class="topicosiniciais">Data:</p>
       <div>
-      <label class="inputdata" for="date"></label>
-      <input class="inputdata" type="date" id="date" name="dataOcorrencia" required>
+      <input class="inputdata" type="date" name="dataOcorrencia" required>
       <br>
-  
-      <label id="inputhora" for="time">Hora:</label>
-      <input type="time" name="horaOcorrencia" required>
-      <br>
+  </div>
+ </div>
 
-      </div>
-    </div>
+ <div class="nome-input">
+  <div id="topico_nome">
+      <img class="icones" src="../img/relogio.png" alt="">
+      <p class="topicosiniciais">Hora:</p>
+     </div> 
+    <input type="time" id="Horas" name="horaOcorrencia" required>
+  </div>
 
     <h1 style="text-align: center; margin-top: 4%; ;">INFORMAÇÕES DO PACIENTE</h1>
     <div class="nome-input">
@@ -1190,10 +1192,6 @@
         </div>
 
         <div>
-            <button onclick="enviarTrauma()">Enviar pro banco</button>
-        </div>
-
-        <div>
             <p>Tipo de ferimento:</p>
             <p id="tipo"></p>
         </div>
@@ -1201,13 +1199,9 @@
         <form action="../database/server.php" method="post" id="meuForm">
           <input type="hidden" id="parte1" name="parte1">
           <input type="hidden" id="tipo1" name="tipo1">
-          <input type="submit" value="Enviar">
         </form>
         <script src="../jquery-1.8.2.min.js"></script>
         <script src="../scripts/assets.js"></script>
-
-          <button class="botaoderelação" onclick="mudarCor(this)">Adulto</button>
-          <button class="botaoderelação" onclick="mudarCor(this)">Criança</button>
 
         </div>
       </div>
@@ -2165,6 +2159,7 @@
                     "maxlength="5">
 
                 </div>
+              </div>
                 <div class="h-s espacolinha">
                   <div style="display:flex; align-items: baseline;">
                     <label for="h.ch">H.CH.:</label>
@@ -2177,6 +2172,8 @@
                 </div>
                 <button type="submit" id="salvarOcorrencia">Salvar ocorrencia</button>
               </div>
+             
+
                           </form>
 
 

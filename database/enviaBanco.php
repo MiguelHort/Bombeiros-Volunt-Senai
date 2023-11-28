@@ -73,6 +73,7 @@ $temperatura = $_POST['temperatura'];
 $problemas = isset($_POST['problemas']) ? implode(", ", $_POST['problemas']) : '';
 $sinaisSintomas = isset($_POST['sinais_Sintomas']) ? implode(", ", $_POST['sinais_Sintomas']) : '';
 $procedimento = isset($_POST['procedimento']) ? implode(", ", $_POST['procedimento']) : '';
+$procedimento = isset($_POST['procedimento']) ? implode(", ", $_POST['procedimento']) : '';
 
 $procedimento_outros = isset($_POST['procedimento_outros']) ? $_POST['procedimento_outros'] : '';
 
@@ -145,6 +146,7 @@ foreach ($queries as $query) {
         // echo $datetime;
         // echo $dataOcorrencia . $horaOcorrencia;
         //  echo $localizacao_aprox . $tipo_trauma;
+        // echo $pressaoArterial . $pressaoArterial2 .$mmHg . $bcpm . $mrm . $saturacao . $hgt . $temperatura;
     } else {
         echo "Erro ao inserir dados: " . $conexao->error;
         // Se ocorrer um erro, você pode decidir como lidar com ele, interromper o loop ou registrar o erro.
@@ -185,7 +187,7 @@ foreach ($selects as $select) {
 
          if (isset($row['id_sinais_vitais'])) {
             $id_sinais_vitais = $row['id_sinais_vitais'];
-            // echo "ID id_sinais_vitais: " . $id_sinais_vitais;
+            echo "ID id_sinais_vitais: " . $id_sinais_vitais;
         }
 
          if (isset($row['id_problem_suspeito'])) {
@@ -243,6 +245,39 @@ foreach ($ligacoes as $ligacao) {
         $id_ocorrencia = $conexao->insert_id;
         // echo "id_ocorrencia=".$id_ocorrencia;
 
+$materiaisDescartaveis = array(
+            "ataduras" => array("Ataduras", $_POST['tamAtaduras'], $_POST['qtdAtaduras']),
+            "cateter" => array("Cateter Tp. Óculos", "", $_POST['qtdCateter']),
+            "compressa" => array("Compressa comum", "", $_POST['qtdCompressa']),
+            "kits" => array("Kits", $_POST['tamKits'], $_POST['qtdKits']),
+            "luvas" => array("Luvas desc. (pares)", "", $_POST['qtdLuvas']),
+            "mascara" => array("Máscara desc.", "", $_POST['qtdMascara']),
+            "manta" => array("Manta aluminizada", "", $_POST['qtdManta']),
+            "pas" => array("Pás do DEA", "", $_POST['qtdPas']),
+            "sonda" => array("Sonda de aspiração", "", $_POST['qtdSonda']),
+            "soro" => array("Soro fisiológico", "", $_POST['qtdSoro']),
+            "talas" => array("Talas pap.", $_POST['tamTalas'], $_POST['qtdTalas'])
+        );
+
+        // Itera pelos materiais descartáveis e insere na tabela "materiais_descartaveis"
+        foreach ($materiaisDescartaveis as $key => $material) {
+            $materialNome = $material[0];
+            $materialTamanho = $material[1];
+            $materialQuantidade = $material[2];
+             echo "nome do material:".$materialNome . "tamanho do material:". $materialTamanho . "quantidade:". $materialQuantidade . $id_ocorrencia;   
+            // Verifica se a caixa de seleção está marcada
+            if (isset($_POST[$key])) {
+                $insereMaterialDescartavel = "INSERT INTO materiais_descart (material, tamanho, quantidade, fk_ocorrencia) VALUES ('$materialNome', '$materialTamanho', '$materialQuantidade', '$id_ocorrencia');";  
+                if ($conexao->query($insereMaterialDescartavel) === TRUE) {
+ 
+                    // Inserção de material bem-sucedida
+                } else {
+                    echo "Erro ao inserir dados do material descartável: " . $conexao->error;
+                    break; // Interrompe o loop se ocorrer um erro
+                }
+            }
+        }
+
         $materials = array(
     "baseEstabilizador" => array("Base do estabilizador", "", $_POST['qtdBase']),
     "colar" => array("Colar", $_POST['tamColar'], $_POST['qtdColar']),
@@ -251,8 +286,7 @@ foreach ($ligacoes as $ligacao) {
     "macaRigida" => array("Maca rígida", "", $_POST['qtdMaca']),
     "tiranteAranha" => array("Tirante aranha", "", $_POST['qtdAranha']),
     "tiranteCabeca" => array("Tirante de cabeça", "", $_POST['qtdCabeca']),
-    "canula" => array("Cânula", "", $_POST['qtdCanula']),
-    "outroDeixado" => array($_POST['outroDeixado'], $_POST['tamOutroDeixado'], $_POST['qtdOutroDeixado'])
+    "canula" => array("Cânula", "", $_POST['qtdCanula'])
 );
 
 // Iterate through materials and insert into the "deixados_hospital" table
@@ -268,60 +302,22 @@ foreach ($materials as $key => $material) {
         if ($conexao->query($insertMaterialQuery) === TRUE) {
             // Material insertion successful
         } else {
-            echo "Erro ao inserir dados do material: " . $conexao->error;
+            //echo "Erro ao inserir dados do material: " . $conexao->error;
             break; // Stop the loop if an error occurs
         }
     }
 }
 
-
-
-
-
-
-
-
-$materiaisDescartaveis = array(
-            "ataduras" => array("Ataduras", $_POST['tamAtaduras'], $_POST['qtdAtaduras']),
-            "cateter" => array("Cateter Tp. Óculos", "", $_POST['qtdCateter']),
-            "compressa" => array("Compressa comum", "", $_POST['qtdCompressa']),
-            "kits" => array("Kits", $_POST['tamKits'], $_POST['qtdKits']),
-            "luvas" => array("Luvas desc. (pares)", "", $_POST['qtdLuvas']),
-            "mascara" => array("Máscara desc.", "", $_POST['qtdMascara']),
-            "manta" => array("Manta aluminizada", "", $_POST['qtdManta']),
-            "pas" => array("Pás do DEA", "", $_POST['qtdPas']),
-            "sonda" => array("Sonda de aspiração", "", $_POST['qtdSonda']),
-            "soro" => array("Soro fisiológico", "", $_POST['qtdSoro']),
-            "talas" => array("Talas pap.", $_POST['tamTalas'], $_POST['qtdTalas']),
-            "outro" => array($_POST['outro'], $_POST['tamOutro'], $_POST['qtdOutro'])
-        );
-
-        // Itera pelos materiais descartáveis e insere na tabela "materiais_descartaveis"
-        foreach ($materiaisDescartaveis as $key => $material) {
-            $materialNome = $material[0];
-            $materialTamanho = $material[1];
-            $materialQuantidade = $material[2];
-
-            // Verifica se a caixa de seleção está marcada
-            if (isset($_POST[$key])) {
-                $insereMaterialDescartavel = "INSERT INTO materiais_descart (material, tamanho, quantidade, fk_ocorrencia) VALUES ('$materialNome', '$materialTamanho', '$materialQuantidade', '$id_ocorrencia');";
-
-                if ($conexao->query($insereMaterialDescartavel) === TRUE) {
-                    // Inserção de material bem-sucedida
-                } else {
-                    // echo "Erro ao inserir dados do material descartável: " . $conexao->error;
-                    break; // Interrompe o loop se ocorrer um erro
-                }
-            }
-        }
         // A inserção foi bem-sucedida2
     } else {
         // echo "Erro ao inserir dados: " . $conexao->error;
         // Se ocorrer um erro, você pode decidir como lidar com ele, interromper o loop ou registrar o erro.
         break; // Isso interrompe o loop se houver um erro em uma das consultas.
     }
+
+    
 }
-//  echo "Dados inseridos com sucesso!";
+// echo "Dados inseridos com sucesso!";
 //  echo $localizacao_aprox . $tipo_trauma;
 // echo "ID do Paciente: " . $id_paciente;
 // echo "ID id_acompanhante: " . $id_acompanhante;

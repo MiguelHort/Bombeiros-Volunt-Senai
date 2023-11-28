@@ -8,11 +8,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/ocorrencia.css">
-  <script src="../jquery-1.8.2.min.js"></script>
 </head>
 
 <body>
-
+ <script src="../scripts/ocorrencia.js"></script>
   <div id="imagemTitulo">
     <img id="logomedico" src="/logo_medicina 1.png" alt="">
   </div>
@@ -75,29 +74,19 @@
     <p id="topico-sexo">Sexo:</p>
     <div class="sexo">
       <div id="masculino">
-        <input type="radio" name="sexoPaciente" value="Masculino" id="bolinhas">
+        <input type="radio" name="sexoPaciente" value="Masculino" id="bolinhas" onclick="verificaSexo()">
         <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/masculino.svg" alt="" width="16%">
           Masculino</label>
       </div>
 
       <div id="feminino">
-        <input type="radio" name="sexoPaciente" value="Feminino" id="bolinhas">
+        <input type="radio" name="sexoPaciente" value="Feminino" id="bolinhas" onclick="verificaSexo()">
         <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/feminino.svg" alt="" width="16%">
           Feminino</label>
       </div>
     </div>
 
   </div>
-
-
-
-
-
-
-
-
-
-
 
 
   <!-- hort -->
@@ -184,39 +173,41 @@
             </div>
             <div>
               <h2>Possui algum problema de saúde?</h2>
-              <input type="radio" name="problemaSaude" value="Sim">
+              <input type="radio" name="problemaSaude" value="Sim" onclick="possuiProblema()">
               <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="problemaSaude" value="Não">
+              <input type="radio" name="problemaSaude" value="Não" onclick="possuiProblema()">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
-            <div>
+            <div id="quaisProblemas">
               <h2>Quais?</h2>
-              <textarea class="caixa_de_texto_anamnese" name="quaisProblemas" id="" cols="70" rows="5"></textarea>
+              <textarea class="caixa_de_texto_anamnese" name="quaisProblemas" cols="70" rows="5"></textarea>
             </div>
             <div>
               <h2>Faz uso de medicação?</h2>
-              <input type="radio" name="usaMedicacao" value="Sim">
+              <input type="radio" name="usaMedicacao" value="Sim" onclick="usaMedicacao()">
               <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="usaMedicacao" value="Não">
+              <input type="radio" name="usaMedicacao" value="Não" onclick="usaMedicacao()">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
-            <div>
+            <div id="horaMedicacao">
               <h2>Horário da última medicação?</h2>
               <label for="hora"><img src="/img/hora.png" alt=""></label>
               <input type="time" name="horaMedicacao" id="">
             </div>
-            <div>
+            <div id="qualMedicacao">
               <h2>Quais?</h2>
               <textarea class="caixa_de_texto_anamnese" name="quaisMedicacoes" id="" cols="70" rows="5"></textarea>
             </div>
             <div>
               <h2>Alérgico a alguma coisa?</h2>
-              <input type="radio" name="alergico" value="Sim">
+              <input type="radio" name="alergico" value="Sim" onclick="alergico()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="alergico" value="Não">
+              <input type="radio" name="alergico" value="Não" onclick="alergico()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+              <div id="especifique">
               <h2>Especifique:</h2>
               <textarea class="caixa_de_texto_anamnese" name="qualAlergia" id="" cols="70" rows="4"></textarea>
+              </div>
             </div>
             <div>
               <h2>Ingeriu alimento ou líquido ≥ 6 horas</h2>
@@ -239,8 +230,8 @@
 
 
 
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-      <div class="accordion-item">
+    <div class="anamneseGestacional" class="accordion" id="accordionPanelsStayOpenExample" >
+      <div  class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
@@ -495,7 +486,7 @@
   </div>
   </div>
 
-  <div class="accordion" id="accordionPanelsStayOpenExample">
+<div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
@@ -1813,7 +1804,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkAtaduras" id="">
+                    <input type="checkbox" name="ataduras" id="">
                     <p>Ataduras</p>
                   </div>
                   <div class="colMeio2">
@@ -1831,7 +1822,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkCateter" id="">
+                    <input type="checkbox" name="cateter" id="">
                     <p>Cateter Tp. Óculos</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1843,7 +1834,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkCompressa" id="">
+                    <input type="checkbox" name="compressa" id="">
                     <p>Compressa comum</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1855,14 +1846,14 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkKit's" id="">
+                    <input type="checkbox" name="kits" id="">
                     <p>Kit's</p>
                   </div>
                   <div class="colMeio2">
                     <select name="tamKits" id="">
-                      <option name="tamanhoKit'sM" value="M">M</option>
-                      <option name="tamanhoKit'sG" value="G">G</option>
-                      <option name="tamanhoKit'sOutro" value="outro">outro</option>
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="outro">outro</option>
                     </select>
                   </div>
                   <div class="teste2"></div>
@@ -1873,7 +1864,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkLuvas" id="">
+                    <input type="checkbox" name="luvas" id="">
                     <p>Luvas desc. (pares)</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1885,7 +1876,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkMascara" id="">
+                    <input type="checkbox" name="mascara" id="">
                     <p>Máscara desc.</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1898,7 +1889,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkManta" id="">
+                    <input type="checkbox" name="manta" id="">
                     <p>Manta aluminizada</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1910,7 +1901,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkPas" id="">
+                    <input type="checkbox" name="pas" id="">
                     <p>Pás do DEA</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1922,7 +1913,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkSonda" id="">
+                    <input type="checkbox" name="sonda" id="">
                     <p>Sonda de aspiração</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1934,7 +1925,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkSoro" id="">
+                    <input type="checkbox" name="soro" id="">
                     <p>Soro fisiológico</p>
                   </div>
                   <div class="colMeio2"></div>
@@ -1946,7 +1937,7 @@
 
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkTalas" id="">
+                    <input type="checkbox" name="talas" id="">
                     <p>Talas pap.</p>
                   </div>
                   <div class="colMeio2">
@@ -1961,22 +1952,6 @@
                       maxlength="3"></div>
                 </div>
 
-                <div class="checMat">
-                  <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkOutroDescartaveis" id="">
-                    <input type="textarea" name="outro" placeholder="outro" id="inputMat">
-                  </div>
-                  <div class="colMeio2">
-                    <select name="tamOutro" id="">
-                      <option name="adultoOutroDescartaveis" value="ADULTO">Adulto</option>
-                      <option name="infantilOutroDescartaveis" value="INFANTIL">Infantil</option>
-                    </select>
-                  </div>
-                  <div class="teste2"></div>
-                  <div class="qtd2"> <input name="qtdOutro" id="" type="number"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                      maxlength="3"></div>
-                </div>
               </section>
 
             </div>
@@ -2092,21 +2067,6 @@
                   <div class="colMeio"></div>
                   <div class="teste2"></div>
                   <div class="qtd"> <input type="number" name="qtdCanula" id=""></div>
-                </div>
-
-                <div class="checMat">
-                  <div class="checkMatInterno">
-                    <input type="checkbox" name="checkOutro" id="">
-                    <input type="textarea" placeholder="outro" id="inputMat" name="outroDeixado">
-                  </div>
-                  <div class="colMeio">
-                    <select name="tamOutroDeixado" id="">
-                      <option value="ADULTO">adulto</option>
-                      <option value="INFANTIL">INFANTIL</option>
-                    </select>
-                  </div>
-                  <div class="teste2"></div>
-                  <div class="qtd"> <input type="number" name="qtdOutroDeixado" id=""></div>
                 </div>
               </section>
 
@@ -2245,7 +2205,7 @@
                   </div>
                   <div class="check">
                     <label for="ir">CÓD. IR:</label>
-                    <input type="checkbox" name="ir" id="" required>
+                    <input type="text" name="ir" id="" required>
                   </div>
                 </div>
 
@@ -2254,7 +2214,7 @@
                     <input type="text" name="ocorr" id="" >
                   </div>
                   <div class="check"> <label for="ps">CÓD. PS:</label>
-                    <input type="checkbox" name="ps" id="" required>
+                    <input type="text" name="ps" id="" required>
                   </div>
                 </div>
 
@@ -2263,7 +2223,8 @@
                     <input type="text" name="desp">
                   </div>
                   <div><label for="kmfinal">KM FINAL:</label>
-                    <input type="text" name="kmfinal" required>
+                    <input name="kmfinal" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength="5">
                   </div>
 
                 </div>
@@ -2280,12 +2241,55 @@
                 <button type="submit" id="salvarOcorrencia">Salvar ocorrencia</button>
               </div>
             </form>
-            
+            <script>
+                 function verificaSexo() {
+        console.log("verificaSexo");
+        var sexoSelecionado = document.querySelector('input[name="sexoPaciente"]:checked').value;
+        var anamneseGestacional = document.getElementsByClassName('anamneseGestacional')[0];
+
+        if (sexoSelecionado === 'Masculino') {
+            anamneseGestacional.style.display = 'none';
+        } else {
+            anamneseGestacional.style.display = 'block';
+        }
+    }
+        function possuiProblema(){
+            var problema = document.querySelector('input[name="problemaSaude"]:checked').value;
+            var quaisProblemas = document.querySelector('#quaisProblemas')
+
+            if (problema === "Não"){
+                quaisProblemas.style.display = 'none';
+            } else {
+                quaisProblemas.style.display = 'block';
+            }
+        }
+        function usaMedicacao(){
+            var medicacao = document.querySelector('input[name="usaMedicacao"]:checked').value;
+            var horarioMedicacao = document.querySelector('#horaMedicacao');
+            var qualMedicacao = document.querySelector('#qualMedicacao')
+            if (medicacao === "Não"){
+                medicacao.style.display = 'none';
+                qualMedicacao.style.display = 'none'
+            } else {
+                medicacao.style.display = 'block';
+                qualMedicacao.style.display = 'block'
+            }
+        }
+        function alergico(){
+            var alergico = document.querySelector('input[name="alergico"]:checked').value;
+            var especifique = document.querySelector('#especifique');
+            if(alergico === "Não"){
+                especifique.style.display = 'none'
+            } else {
+                especifique.style.display = 'block'
+            }
+        }
+            </script>
        
               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
                 crossorigin="anonymous"></script> 
-                <script src="../scripts/ocorrencia.js"></script>   
+                  
 
 </body>
 

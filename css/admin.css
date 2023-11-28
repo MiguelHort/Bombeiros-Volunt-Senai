@@ -48,12 +48,12 @@ section {
 .opcoes{
     display: flex;
     flex-direction: column;
+    gap: 10px;
     width: 50%;
     height: 35%;
 }
 .opcoes input{
     border-radius: 8px;
-    margin-top: 10%;
     font-size: 25px;
 }
 
@@ -73,6 +73,7 @@ bottom: 30px;
 left: 20px;
 cursor: pointer;
 }
+
 #voltar input{
 width: 70%;
 height: 100%;
@@ -87,12 +88,17 @@ cursor: pointer;
     background-color: #ED1D25;
    
 }
+
 #nomeSalvar{
-
 display: flex;
-
-
+margin-top: 10px;
 }
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+}
+
 .opcoesEquipes{
     display: flex;
     align-items: center;
@@ -168,3 +174,21 @@ background-color: white;
 cursor: pointer;
 }
 
+@media (max-width: 900px) {
+ 
+    #botaoGerenciarEquipes {
+        width: 100%;
+
+    }
+
+    .botaoAcao.historico {
+        width: 100%;
+    }
+
+    .opcoes input{
+        width: 200px;
+    }
+
+
+
+}

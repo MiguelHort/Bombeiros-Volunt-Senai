@@ -22,65 +22,66 @@
         <input type="button" value="Gerenciar Equipes" class="botaoAcao" id="botaoGerenciarEquipes"></input>
         <!-- procurar no bootstrap -->
         <div class="invisivel" style="display: none;">
-    <?php
-        error_reporting(E_ALL);
-        ini_set('display_errors', 1);
-        include('../database/conexao.php'); // Inclua o arquivo de conexão
-        mysqli_set_charset($conexao, "utf8");
+            <?php
+            error_reporting(E_ALL);
+            ini_set('display_errors', 1);
+            include('../database/conexao.php'); // Inclua o arquivo de conexão
+            mysqli_set_charset($conexao, "utf8");
 
-        // Consulta SQL para obter os dados da ocorrência com id=1
-        $sql = "SELECT * FROM equipe_atendimento";
-        $result = mysqli_query($conexao, $sql);
+            // Consulta SQL para obter os dados da ocorrência com id=1
+            $sql = "SELECT * FROM equipe_atendimento";
+            $result = mysqli_query($conexao, $sql);
 
-        if ($result) {
-            // Iterar sobre os resultados da consulta
-            while ($row = mysqli_fetch_assoc($result)) {
-        ?> 
-            <div class="opcoesEquipes">
-                <div class="equipe">
-                    <img id="iconeBombeiro" src="../img/equipeBomb.png" alt="">
-                    <form method="post" action="../database/atualizarEquipe.php">
-                    <div id="nomeSalvar">
-            
-                    <input type="text" name="novo_nome" value="<?php echo $row['equipe'] ?>" />
-                    <input type="hidden" name="equipe_id" value="<?php echo $row['id_equipe_atendimento']; ?>" />
-           
-        
-                    <input type="password" name="nova_senha" value="<?php echo $row['senha'] ?>" />
-                    <button id="salvar" type="submit">Salvar</button>
+            if ($result) {
+                // Iterar sobre os resultados da consulta
+                while ($row = mysqli_fetch_assoc($result)) {
+            ?>
+                    <div class="opcoesEquipes">
+                        <div class="equipe">
+                            <img id="iconeBombeiro" src="../img/equipeBomb.png" alt="">
+                            <form method="post" action="../database/atualizarEquipe.php">
+                                <div id="nomeSalvar">
+
+                                    <div id="inputs">
+                                        <input type="text" name="novo_nome" value="<?php echo $row['equipe'] ?>" />
+                                        <input type="hidden" name="equipe_id" value="<?php echo $row['id_equipe_atendimento']; ?>" />
+                                        <input type="password" name="nova_senha" value="<?php echo $row['senha'] ?>" />
+                                    </div>
+                                    <button id="salvar" type="submit">Salvar</button>
+
+                                </div>
+                            </form>
+                        </div>
+                        <div>
+                            <img src="../img/lixeira.svg" alt="" class="lixeira" data-equipe-id="<?php echo $row['id_equipe_atendimento']; ?>">
+                        </div>
                     </div>
-        </form>
-                </div>
-                <div>
-                    <img src="../img/lixeira.svg" alt=""class="lixeira" data-equipe-id="<?php echo $row['id_equipe_atendimento']; ?>">
+            <?php
+                }
+            } else {
+                echo "Erro ao recuperar os dados da ocorrência.";
+            }
+
+            //Feche a conexão com o banco de dados
+            mysqli_close($conexao);
+            ?>
+            <div class="opcoesEquipe">
+                <div class="equipe">
+                    <a href="doCadastro.php" id="cadastrar">
+
+                        <img src="../img/adicionar.png" alt="">
+                        <p id="adicionarEquipe">+ Adicionar equipe</p>
+                        </img src="../img/equipeBomb.png" alt="">
+
+                    </a>
                 </div>
             </div>
-<?php
-        }
-    } else {
-        echo "Erro ao recuperar os dados da ocorrência.";
-    }
+        </div>
+        <div class="botaoAcao"><a href="../pages/historico.php"><input type="button" value="Histórico de ocorrências" class="botaoAcao historico"></a></div>
 
-//Feche a conexão com o banco de dados
-    mysqli_close($conexao);
-    ?> 
-    <div class="opcoesEquipe">
-        <div class="equipe">
-        <a href="doCadastro.php" id="cadastrar"> 
-       
-            <img src="../img/adicionar.png" alt="">
-            <p id="adicionarEquipe">+ Adicionar equipe</p>
-            </img src="../img/equipeBomb.png" alt="">
-            
-        </a>    
-        </div>
-    </div>
-        </div>
-        <div class="botaoAcao"><a href="../pages/historico.php" ><input type="button" value="Histórico de ocorrências" class="botaoAcao historico"></a></div>
-        
     </div>
     <a href="../index.html" id="voltar"><input type="button" value="Voltar"></a>
- 
+
 
 </body>
 

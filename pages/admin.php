@@ -40,15 +40,15 @@
                 <div class="equipe">
                     <img id="iconeBombeiro" src="../img/equipeBomb.png" alt="">
                     <form method="post" action="../database/atualizarEquipe.php">
-           <div id="nomeSalvar">
+                    <div id="nomeSalvar">
             
-            <input type="text" name="novo_nome" value="<?php echo $row['equipe'] ?>" />
-            <input type="hidden" name="equipe_id" value="<?php echo $row['id_equipe_atendimento']; ?>" />
+                    <input type="text" name="novo_nome" value="<?php echo $row['equipe'] ?>" />
+                    <input type="hidden" name="equipe_id" value="<?php echo $row['id_equipe_atendimento']; ?>" />
            
         
-            <input type="password" name="nova_senha" value="<?php echo $row['senha'] ?>" />
-            <button id="salvar" type="submit">Salvar</button>
-        </div>
+                    <input type="password" name="nova_senha" value="<?php echo $row['senha'] ?>" />
+                    <button id="salvar" type="submit">Salvar</button>
+                    </div>
         </form>
                 </div>
                 <div>

@@ -1323,44 +1323,47 @@
             </div>
             <div class="sinaisSintomas"><input type="checkbox" name="sinaisSintomas[]" id="" value="Priaprismo"><label
                 for="">Priaprismo</label></div>
-            <div class="sinaisSintomas"><input type="checkbox" name="sinaisSintomas[]" id=""
+                <div class="sinaisSintomas"><input type="checkbox" name="sinais_Sintomas[]" id=""
                 value="Prurido na pele"><label for="">Prurido na pele</label></div>
-            <div class="sinaisSintomas" id="pupilas"><input type="checkbox" name="sinaisSintomas[]" id=""
-                value="Pupílas"><label for="">Pupílas +</label></div>
+                <div class="sinaisSintomas" id="pupilas"><input type="checkbox" name="sinais_Sintomas[]" id="" 
+                  value="Pupílas"><label for="">Pupílas +</label></div>
             <div class="invisivel pupilasOpc" style="display: none;">
               <div class="invisivelDivSinais">
-                <div class="sinaisOpcoes"><input type="checkbox" name="sinaisSintomas[]" value="Anisocoria"><label
+
+                <div class="sinaisOpcoes"><input type="checkbox" name="sinais_Sintomas[]" value="Anisocoria"><label
                     for="anisocoria">Anisocoria</label></div>
-                <div class="sinaisOpcoes"><input type="checkbox" name="sinaisSintomas[]" value="Isocoria"><label
+
+                    <div class="sinaisOpcoes"><input type="checkbox" name="sinais_Sintomas[]" value="Isocoria"><label
                     for="isocoria">Isocoria</label></div>
               </div>
+              
               <div class="invisivelDivSinais">
                 <div class="sinaisOpcoes"><input type="checkbox" name="sinaisSintomas[]" value="Mioríase"><label
                     for="mioriase">Mioríase</label></div>
-                <div class="sinaisOpcoes"><input type="checkbox" name="sinaisSintomas[]" value="Reagente"><label
+                    <div class="sinaisOpcoes"><input type="checkbox" name="sinais_Sintomas[]" value="Reagente"><label
                     for="reagente">Reagente</label></div>
               </div>
               <div class="invisivelDivSinais">
-                <div class="sinaisOpcoes"><input type="checkbox" name="sinaisSintomas[]" value="Miose"><label
+                <div class="sinaisOpcoes"><input type="checkbox" name="sinais_Sintomas[]" value="Miose"><label
                     for="miose">Miose</label></div>
-                <div class="sinaisOpcoes"><input type="checkbox" name="sinaisSintomas[]" value="Não reagente"><label
+                    <div class="sinaisOpcoes"><input type="checkbox" name="sinais_Sintomas[]" value="Não reagente"><label
                     for="nReagente">Não reagente</label></div>
               </div>
             </div>
-            <div class="sinaisSintomas"><input type="checkbox" name="sinaisSintomas[]" id="" value="Sede"><label
+            <div class="sinaisSintomas"><input type="checkbox" name="sinais_Sintomas[]" id="" value="Sede"><label
                 for="">Sede</label></div>
-            <div class="sinaisSintomas"><input type="checkbox" name="sinaisSintomas[]" id=""
+                <div class="sinaisSintomas"><input type="checkbox" name="sinais_Sintomas[]" id=""
                 value="Sinal de Battle"><label for="">Sinal de Battle</label></div>
-            <div class="sinaisSintomas"><input type="checkbox" name="sinaisSintomas[]" id=""
+                <div class="sinaisSintomas"><input type="checkbox" name="sinais_Sintomas[]" id="" 
                 value="Sinal de guaxinim"><label for="">Sinal de guaxinim</label></div>
-            <div class="sinaisSintomas"><input type="checkbox" name="sinaisSintomas[]" id="" value="Sudorese"><label
+                <div class="sinaisSintomas"><input type="checkbox" name="sinais_Sintomas[]" id="" value="Sudorese"><label
                 for="">Sudorese</label></div>
-            <div class="sinaisSintomas"><input type="checkbox" name="sinaisSintomas[]" id="" value="Taquipneia"><label
+                <div class="sinaisSintomas"><input type="checkbox" name="sinais_Sintomas[]" id="" value="Taquipneia"><label
                 for="">Taquipneia</label></div>
-            <div class="sinaisSintomas"><input type="checkbox" name="sinaisSintomas[]" id="" value="Tontura"><label
+                <div class="sinaisSintomas"><input type="checkbox" name="sinais_Sintomas[]" id="" value="Tontura"><label
                 for="">Tontura</label></div>
-            <div class="sinaisSintomas"><input type="checkbox" name="sinaisSintomas[]" id="" value="Outro"><label
-                for=""><input type="text" name="" id="" placeholder="outro"></label></div>
+                <div class="sinaisSintomas"><input type="checkbox" name="sinais_Sintomas[]" id="" value="Outro"><label
+                  for=""><input type="text" name="sinais_Sintomas[]" id="" placeholder="outro"></label></div>
           </div>
         </div>
       </div>
@@ -1378,19 +1381,19 @@
             <div class="accordion-body">
               <div class="conducao">
                 <label class="formaConducao" for="sentado">
-                  <input type="radio" name="formaConducaoSentado" id="sentado">
+                  <input type="radio" name="formaConducao" id="sentado" value="Sentado">
                   <img src="/img/sentado.png" alt="" name="sentado">
                   <span>Sentado</span>
                 </label>
 
                 <label class="formaConducao" for="semi">
-                  <input type="radio" name="formaConducaoSemiDeitado" id="semi">
+                  <input type="radio" name="formaConducao" id="semi" value="Semi-sentado">
                   <img src="/img/semi.png" alt="" name="semi">
                   <span>Semi-sentado</span>
                 </label>
 
                 <label class="formaConducao" for="deitado">
-                  <input type="radio" name="formaConducaoDeitado" id="deitado">
+                  <input type="radio" name="formaConducao" id="deitado" value="Deitado">
                   <img src="/img/deitado.png" alt="" name="deitado">
                   <span>Deitado</span>
                 </label>
@@ -1410,16 +1413,16 @@
           </h2>
           <div id="panelsStayOpen-collapseten" class="accordion-collapse collapse">
             <div class="accordion-body">
-              <div class="vitimaDiv"><input type="checkbox" name="checkCiclista" id="">Ciclista</div>
-              <div class="vitimaDiv"><input type="checkbox" name="checkCondutorMoto" id="">Condutor moto</div>
-              <div class="vitimaDiv"><input type="checkbox" name="checkGestante" id="">Gestante</div>
-              <div class="vitimaDiv"><input type="checkbox" name="checkPassageiroMoto" id="">Passageiro moto</div>
-              <div class="vitimaDiv"><input type="checkbox" name="checkCondutorCarros" id="">Condutor carro</div>
-              <div class="vitimaDiv"><input type="checkbox" name="checkClinico" id="">Clínico</div>
-              <div class="vitimaDiv"><input type="checkbox" name="checkTrauma" id="">Trauma</div>
-              <div class="vitimaDiv"><input type="checkbox" name="checkPasssageiroBancoDeTras" id="">Pas. Bco. trás
+              <div class="vitimaDiv"><input type="checkbox" name="vitimaEra[]" id="" value="Ciclista">Ciclista</div>
+              <div class="vitimaDiv"><input type="checkbox" name="vitimaEra[]" id="" value="Condutor moto">Condutor moto</div>
+              <div class="vitimaDiv"><input type="checkbox" name="vitimaEra[]" id="" value="Gestante">Gestante</div>
+              <div class="vitimaDiv"><input type="checkbox" name="vitimaEra[]" id="" value="Passageiro moto">Passageiro moto</div>
+              <div class="vitimaDiv"><input type="checkbox" name="vitimaEra[]" id="" value="Condutor carro">Condutor carro</div>
+              <div class="vitimaDiv"><input type="checkbox" name="vitimaEra[]" id="" value="Clínico">Clínico</div>
+              <div class="vitimaDiv"><input type="checkbox" name="vitimaEra[]" id="" value="Trauma">Trauma</div>
+              <div class="vitimaDiv"><input type="checkbox" name="vitimaEra[]" id="" value="Pas. Bco. trás">Pas. Bco. trás
               </div>
-              <div class="vitimaDiv"><input type="checkbox" name="checkPedestre" id="">Pedestre</div>
+              <div class="vitimaDiv"><input type="checkbox" name="vitimaEra[]" id="" value="Pedestre">Pedestre</div>
             </div>
           </div>
         </div>
@@ -1438,12 +1441,12 @@
               <fieldset class="radio-image2">
                 <div class="decisaoLinha">
                   <label for="estavel">
-                    <input type="radio" name="estadoTransporteEstavel" id="estavel" value="estavel">
+                    <input type="radio" name="estadoTransporte" id="estavel" value="Estável">
                     <img src="/img/estavel.png" alt="emoji feliz">
                     <p>Estável</p>
                   </label>
                   <label for="critico">
-                    <input type="radio" name="estadoTransporteCritico" id="critico" value="critico">
+                    <input type="radio" name="estadoTransporte" id="critico" value="Crítico">
                     <img src="/img/critico.png" alt="emoji triste">
                     <p>Crítico</p>
                   </label>
@@ -1451,13 +1454,13 @@
 
                 <div class="decisaoLinha">
                   <label for="instavel">
-                    <input type="radio" name="estadoTransporteInstavel" id="instavel" value="instavel">
+                    <input type="radio" name="estadoTransporte" id="instavel" value="Instável">
                     <img src="/img/instavel.png" alt="emoji de quase choro">
-                    <p>Instável</p>
+                    <p>Instável</p> 
                   </label>
                   <label for="potencialmente">
-                    <input type="radio" name="estadoTransportePotencialmenteInstavel" id="potencialmente"
-                      value="potencialmente">
+                    <input type="radio" name="estadoTransporte" id="potencialmente"
+                    value="Potencialmente instavel">
                     <img src="/img/potencialmente.png" alt="emoji apático">
                     <p>Potencialmente instável</p>
                   </label>
@@ -1478,123 +1481,163 @@
           </h2>
           <div id="panelsStayOpen-collapsetwelve" class="accordion-collapse collapse">
             <div class="accordion-body">
-              <div class="linhaProced"><input name="checkAspiracao" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Aspiração">
                 <p>Aspiração</p>
               </div>
-              <div class="linhaProced"><input name="checkAvaliacaoInicial" type="checkbox">
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Avaliação inicial">
                 <p>Avaliação inicial</p>
               </div>
-              <div class="linhaProced"><input name="checkAvaliacaoDirigida" type="checkbox">
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Avaliação dirigida">
                 <p>Avaliação dirigida</p>
               </div>
-              <div class="linhaProced"><input name="checkAvaliacaoContinuada" type="checkbox">
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Avaliação continuada">
                 <p>Avaliação continuada</p>
               </div>
-              <div class="linhaProced"><input name="checkChaveDeRautek" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Chave de Rautek">
                 <p>Chave de Rautek</p>
               </div>
-              <div class="linhaProced"><input name="checkCanulaDeGuedel" type="checkbox">
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Cânula de Guedel">
                 <p>Cânula de Guedel</p>
               </div>
-              <div class="linhaProced"><input name="checkDesobstrucaoDeVA" type="checkbox">
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Desobstrução de V.A.">
                 <p>Desobstrução de V.A.</p>
               </div>
-              <div class="linhaProced"><input name="checkEmpregoDoDEA" type="checkbox">
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Emprego do D.E.A.">
                 <p>Emprego do D.E.A.</p>
               </div>
-              <div class="linhaProced"><input name="checkGerenciamentoDeRiscos" type="checkbox">
-                <p>Gerenciamento de riscos</p>
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Gerenciamento de riscos">
+              <p>Gerenciamento de riscos</p>
               </div>
-              <div class="linhaProced"><input name="checkLimpezaDeFerimentos" type="checkbox">
-                <p>Limpeza de ferimentos</p>
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Limpeza de ferimentos">
+              <p>Limpeza de ferimentos</p>
               </div>
-              <div class="linhaProced"><input name="checkCurativos" type="checkbox">
-                <p>Curativos</p>
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Curativos">
+              <p>Curativos</p>
               </div>
-              <div class="linhaProced"><input name="checkCompressivo" type="checkbox">
-                <p>Compressivo</p>
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Compressivo">
+              <p>Compressivo</p>
               </div>
-              <div class="linhaProced"><input name="checkEncravamento" type="checkbox">
-                <p>Encravamento</p>
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Encravamento">
+              <p>Encravamento</p>
               </div>
-              <div class="linhaProced"><input name="checkOcular" type="checkbox">
-                <p>Ocular</p>
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Ocular">
+              <p>Ocular</p>
               </div>
-              <div class="linhaProced"><input name="checkQueimadura" type="checkbox">
-                <p>Queimadura</p>
+              <div class="linhaProced">
+              <input type="checkbox" name="procedimento[]" value="Queimadura">
+              <p>Queimadura</p>
               </div>
-              <div class="linhaProced"><input name="checkSimples" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Simples">
                 <p>Simples</p>
               </div>
-              <div class="linhaProced"><input name="check3Pontas" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="3 pontas">
                 <p>3 pontas</p>
               </div>
-              <div class="linhaProced"><input name="checkImbolizacoes" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Imobilizações">
                 <p>Imobilizações</p>
               </div>
-              <div class="linhaProced"><input name="checkMembroInfDir" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Membro Inferior Direito">
                 <p>Membro inf. dir.</p>
               </div>
-              <div class="linhaProced"><input name="checkMembroInfEsq" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Membro inferior Esquerdo">
                 <p>Membro inf. esq.</p>
               </div>
-              <div class="linhaProced"><input name="checkMembroSupDir" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Membro Superior Direito">
                 <p>Membro sup. dir.</p>
               </div>
-              <div class="linhaProced"><input name="checkMembroSupEsq" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Membro Superior Esquerdo">
                 <p>Membro sup. esq.</p>
               </div>
-              <div class="linhaProced"><input name="checkQuadril" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Quadril">
                 <p>Quadril</p>
               </div>
-              <div class="linhaProced"><input name="checkCervical" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Cervical">
                 <p>Cervical</p>
               </div>
-              <div class="linhaProced"><input name="checkMacaSobreRodas" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Maca sobre rodas">
                 <p>Maca sobre rodas</p>
               </div>
-              <div class="linhaProced"><input name="checkMacaRigida" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Maca rígida">
                 <p>Maca rígida</p>
               </div>
-              <div class="linhaProced"><input name="checkPonte" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Ponte">
                 <p>Ponte</p>
               </div>
-              <div class="linhaProced"><input name="checkRetiradoCapacete" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Retirado Capacete">
                 <p>Retirado Capacete</p>
               </div>
-              <div class="linhaProced"><input name="checkRCP" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="R.C.P">
                 <p>R.C.P.</p>
               </div>
-              <div class="linhaProced"><input name="checkRolamento90" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Rolamento 90°">
                 <p>Rolamento 90°</p>
               </div>
-              <div class="linhaProced"><input name="checkRolamento180" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Rolamento 180°">
                 <p>Rolamento 180°</p>
               </div>
-              <div class="linhaProced"><input name="checkTomadaDecisao" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Tomada decisão">
                 <p>Tomada decisão</p>
               </div>
-              <div class="linhaProced"><input name="checkUsoDeCanula" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Uso cânula">
                 <p>Uso de cânula</p>
               </div>
-              <div class="linhaProced longoProced" id="procedColar"><input name="checkUsoColarTam" type="checkbox">
+              <div class="linhaProced longoProced" id="procedColar">
+                <input type="checkbox" name="procedimento[]" value="Uso Colar Tamanho">
                 <p>Uso colar Tam:<input name="textoColarTamanho" type="text"></p>
               </div>
-              <div class="linhaProced"><input name="checkUsoKed" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Uso Ked">
                 <p>Uso Ked</p>
               </div>
-              <div class="linhaProced"><input name="checkUsoTTF" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Uso TTF">
                 <p>Uso TTF</p>
               </div>
-              <div class="linhaProced"><input name="checkVentilacaoSuporte" type="checkbox">
+              <div class="linhaProced">
+                <input type="checkbox" name="procedimento[]" value="Ventilação suporte">
                 <p>Ventilação suporte</p>
               </div>
-              <div class="linhaProced longoProced"><input name="checkOxigenoterapia" type="checkbox">
+              <div class="linhaProced longoProced">
+                <input type="checkbox" name="procedimento[]" value="LPM Oxigenoterapia">
                 <p>Oxigenoterapia <input name="textoLPM" type="text">Lpm</p>
               </div>
-              <div class="linhaProced" id="opcoesProced"><input name="checkMeiosAuxiliares" type="checkbox">
+              <div class="linhaProced" id="opcoesProced">
+                <input type="checkbox" name="procedimento[]" value="Meios auxiliares">
                 <p>Meios auxiliares +</p>
               </div>
+              <div class="linhaProced">
 
               <div id="opcoesAdicionais" style="display: none;">
                 <div class="opcoesAdcionaisChecks">

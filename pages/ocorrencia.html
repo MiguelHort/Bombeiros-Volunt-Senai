@@ -1642,31 +1642,31 @@
               <div id="opcoesAdicionais" style="display: none;">
                 <div class="opcoesAdcionaisChecks">
                   <div class="opcoesAdicionaisDiv">
-                    <input type="checkbox" name="checkCelesc" id="">
+                    <input type="checkbox" name="procedimento[]" id="" value="Celesc">
                     <label for="celesc">Celesc</label>
                   </div>
                   <div class="opcoesAdicionaisDiv">
-                    <input name="checkCIT" type="checkbox" id="">
+                    <input type="checkbox" name="procedimento[]" id="" value="CIT">
                     <label for="cit">CIT</label>
                   </div>
                 </div>
                 <div class="opcoesAdcionaisChecks">
                   <div class="opcoesAdicionaisDiv">
-                    <input type="checkbox" name="checkDefCivil" id="">
+                    <input type="checkbox" name="procedimento[]" id="" value="Defesa civíl">
                     <label for="DefCivil">Def. civil</label>
                   </div>
                   <div class="opcoesAdicionaisDiv">
-                    <input type="checkbox" name="checkIgpPc" id="">
+                    <input type="checkbox" name="procedimento[]" id="" value="IGP/PC">
                     <label for="IgpPc">IGP/PC</label>
                   </div>
                 </div>
                 <div class="opcoesAdcionaisChecks">
                   <div class="opcoesAdicionaisDiv" id="opcoesProced2">
-                    <input type="checkbox" name="checkPolicia">
+                    <input type="checkbox" name="procedimento[]" value="Polícia">
                     <label for="policia">Polícia +</label>
                   </div>
                   <div class="opcoesAdicionaisDiv" id="opcoesProced3">
-                    <input type="checkbox" name="checkSAMU">
+                    <input type="checkbox" name="procedimento[]" value="Samu">
                     <label for="samu">SAMU +</label>
                   </div>
                 </div>
@@ -1674,44 +1674,47 @@
                 <div class="opcoesAdcionaisChecks2">
                   <div class="adicionaisChecks2Linha1" style="display: none;">
                     <div class="opcoesAdicionaisDiv2">
-                      <input type="checkbox" name="checkCivil" id="">
+                      <input type="checkbox" name="procedimento[]" id="" value="Civil">
                       <label for="civil">Civil</label>
                     </div>
                     <div class="opcoesAdicionaisDiv2">
-                      <input type="checkbox" name="checkPre" id="">
+                      <input type="checkbox" name="procedimento[]" id="" value="PRE">
                       <label for="pre">PRE</label>
                     </div>
                     <div class="opcoesAdicionaisDiv2">
-                      <input type="checkbox" name="checkMilitar" id="">
+                      <input type="checkbox" name="procedimento[]" id="" value="Militar">
                       <label for="militar">Militar</label>
                     </div>
                     <div class="opcoesAdicionaisDiv2">
-                      <input type="checkbox" name="checkPRF" id="">
+                      <input type="checkbox" name="procedimento[]" id="" value="PRF">
                       <label for="prf">PRF</label>
                     </div>
                   </div>
 
                   <div class="adicionaisChecks2Linha2" style="display: none;">
                     <div class="opcoesAdicionaisDiv2">
-                      <input type="checkbox" name="checkUSA" id="">
+                      <input type="checkbox" name="procedimento[]" id="" value="USA">
                       <label for="civil">USA</label>
                     </div>
                     <div class="opcoesAdicionaisDiv2">
-                      <input name="checkUSB" type="checkbox" id="">
+                      <input type="checkbox" name="procedimento[]" id="" value="USB">
                       <label for="pre">USB</label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="linhaProced" id="opcoesProced"><input type="checkbox" style="width:3.2vh;margin-left: 2vw;">
-                <p style="margin-left: 2vw; margin-right: 2vw;">Outros</p>
-                <textarea name="outrosProcedimentos" id="" cols="30" rows="1"></textarea>
+              <div class="linhaProced" id="opcoesProced">
+
+               <input type="checkbox" style="width:3.2vh;margin-left: 2vw;">
+               <p style="margin-left: 2vw; margin-right: 2vw;">Outros</p>
+               <textarea name="procedimento[]" id="" cols="30" rows="1"></textarea>
 
               </div>
             </div>
           </div>
         </div>
         </div>
+      </div>
         <div class="accordion" id="accordionPanelsStayOpenExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
@@ -1731,141 +1734,141 @@
                 </div>
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkAtaduras" id="">
-                    <p>Ataduras</p>
+                    <input type="checkbox" name="ataduras" id="">                   
+                     <p>Ataduras</p>
                   </div>
                   <div class="colMeio2">
-                    <select name="tamanhoAtaduras" id="">
+                    <select name="tamAtaduras" id="">
                       <option name="tamanhoAtadurasN" value="N">N</option>
                       <option name="tamanhoAtadurasPP" value="PP">PP</option>
                       <option name="tamanhoAtadurasP" value="P">P</option>
                     </select>
                   </div>
                   <div class="teste2"></div>
-                  <div class="qtd2"> <input name="quantidadeAtaduras" id="" type="number"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  <div class="qtd2"> <input name="qtdAtaduras" id="" type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                       maxlength="4"></div>
                 </div>
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkCateter" id="">
+                    <input type="checkbox" name="cateter" id="">
                     <p>Cateter Tp. Óculos</p>
                   </div>
                   <div class="colMeio2"></div>
                   <div class="teste2"></div>
-                  <div class="qtd2"> <input name="quantidadeCateter" id="" type="number"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  <div class="qtd2"> <input name="qtdCateter" id="" type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                       maxlength="3"></div>
                 </div>
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkCompressa" id="">
+                    <input type="checkbox" name="compressa" id="">
                     <p>Compressa comum</p>
                   </div>
                   <div class="colMeio2"></div>
                   <div class="teste2"></div>
-                  <div class="qtd2"> <input name="quantidadeCompressa" id="" type="number"
+                  <div class="qtd2"> <input name="qtdCompressa" id="" type="number"
                       oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                       maxlength="3"></div>
                 </div>
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkKit's" id="">
+                    <input type="checkbox" name="kits" id="">
                     <p>Kit's</p>
                   </div>
                   <div class="colMeio2">
-                    <select name="tamanhoKit's" id="">
-                      <option name="tamanhoKit'sM" value="M">M</option>
-                      <option name="tamanhoKit'sG" value="G">G</option>
-                      <option name="tamanhoKit'sOutro" value="outro">outro</option>
+                    <select name="tamKits" id="">
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="outro">outro</option>
                     </select>
                   </div>
                   <div class="teste2"></div>
-                  <div class="qtd2"> <input name="quantidadeKit's" id="" type="number"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  <div class="qtd2"> <input name="qtdKits" id="" type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                       maxlength="3"></div>
                 </div>
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkLuvas" id="">
+                    <input type="checkbox" name="luvas" id="">
                     <p>Luvas desc. (pares)</p>
                   </div>
                   <div class="colMeio2"></div>
                   <div class="teste2"></div>
-                  <div class="qtd2"> <input name="quantidadeLuvas" id="" type="number"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  <div class="qtd2"> <input name="qtdLuvas" id="" type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                       maxlength="3"></div>
                 </div>
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkMascara" id="">
+                    <input type="checkbox" name="mascara" id="">
                     <p>Máscara desc.</p>
                   </div>
                   <div class="colMeio2"></div>
                   <div class="teste2"></div>
-                  <div class="qtd2"> <input name="quantidadeMascara" id="" type="number"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  <div class="qtd2"> <input name="qtdMascara" id="" type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                       maxlength="3"></div>
 
                 </div>
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkManta" id="">
+                    <input type="checkbox" name="manta" id="">
                     <p>Manta aluminizada</p>
                   </div>
                   <div class="colMeio2"></div>
                   <div class="teste2"></div>
-                  <div class="qtd2"> <input name="quantidadeManta" id="" type="number"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  <div class="qtd2"> <input name="qtdManta" id="" type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                       maxlength="3"></div>
                 </div>
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkPas" id="">
+                    <input type="checkbox" name="pas" id="">
                     <p>Pás do DEA</p>
                   </div>
                   <div class="colMeio2"></div>
                   <div class="teste2"></div>
-                  <div class="qtd2"> <input name="quantidadePas" id="" type="number"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  <div class="qtd2"> <input name="qtdPas" id="" type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                       maxlength="3"></div>
                 </div>
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkSonda" id="">
+                    <input type="checkbox" name="sonda" id="">
                     <p>Sonda de aspiração</p>
                   </div>
                   <div class="colMeio2"></div>
                   <div class="teste2"></div>
-                  <div class="qtd2"> <input name="quantidadeSonda" id="" type="number"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  <div class="qtd2"> <input name="qtdSonda" id="" type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                       maxlength="3"></div>
                 </div>
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkSoro" id="">
+                    <input type="checkbox" name="soro" id="">
                     <p>Soro fisiológico</p>
                   </div>
                   <div class="colMeio2"></div>
                   <div class="teste2"></div>
-                  <div class="qtd2"> <input name="quantidadeSoro" id="" type="number"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  <div class="qtd2"> <input name="qtdSoro" id="" type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                       maxlength="3"></div>
                 </div>
                 <div class="checMat">
                   <div class="checkMatInternoDesc">
-                    <input type="checkbox" name="checkTalas" id="">
+                    <input type="checkbox" name="talas" id="">
                     <p>Talas pap.</p>
                   </div>
                   <div class="colMeio2">
-                    <select name="maioridadeTalas" id="">
+                    <select name="tamTalas" id="">
                       <option name="adultoTalas" value="ADULTO">Adulto</option>
                       <option name="infantilTalas" value="INFANTIL">Infantil</option>
                     </select>
                   </div>
                   <div class="teste2"></div>
-                  <div class="qtd2"> <input name="quantidadeTalas" id="" type="number"
-                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  <div class="qtd2"> <input name="qtdTalas" id="" type="number"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                       maxlength="3"></div>
                 </div>
 
@@ -1909,12 +1912,12 @@
                   </div>
                   <div class="checMat">
                     <div class="checkMatInterno extensop">
-                      <input type="checkbox" name="checkBaseEstabiliza" id="">
+                      <input type="checkbox" name="baseEstabilizador" id="" value="Base do estabilizador">
                       <p>Base do estabiliza.</p>
                     </div>
                     <div class="colMeio"></div>
                     <div class="teste2"></div>
-                    <div class="qtd"> <input name="quantidadeBaseDoEstabiliza" id="" type="number"
+                    <div class="qtd"> <input type="number" name="qtdBase" id=""
                         oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                         maxlength="3"></div>
                   </div>
@@ -1925,131 +1928,96 @@
                       <p>Colar</p>
                     </div>
                     <div class="colMeio">
-                      <select name="tamanhoColar" id="">
+                      <select name="tamColar" id="">
                         <option name="colarN" value="N">N</option>
                         <option name="colarPP" value="PP">PP</option>
                         <option name="colarP" value="P">P</option>
                       </select>
                     </div>
                     <div class="teste2"></div>
-                    <div class="qtd"> <input name="quantidadeColar" id="" type="number"
-                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                        maxlength="3"></div>
-                  </div>
-
-                  <div class="checMat">
-                    <div class="checkMatInterno">
-                      <input type="checkbox" name="checkcolar2" id="">
-                      <p>Colar</p>
-                    </div>
-                    <div class="colMeio">
-                      <select name="tamanhoColar2" id="">
-                        <option name="colarM2" value="M">M</option>
-                        <option name="colarG2" value="G">G</option>
-                        <option name="colarOutro2" value="outro">outro</option>
-                      </select>
-                    </div>
-                    <div class="teste2"></div>
-                    <div class="qtd"> <input name="quantidadeColar2" id="" type="number"
-                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    <div class="qtd"><input type="number" name="qtdColar" id=""
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                         maxlength="3"></div>
                   </div>
 
                   <div class="checMat">
                     <div class="checkMatInterno extensop">
-                      <input type="checkbox" name="checkColar2" id="">
+                      <input type="checkbox" name="Coxins estabiliza." id="">
                       <p>Coxins estabiliza.</p>
                     </div>
                     <div class="colMeio"></div>
                     <div class="teste2"></div>
-                    <div class="qtd"> <input name="quantidadeCoxins" id="" type="number"
-                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    <div class="qtd"> <input type="number" name="qtdCoxins" id=""
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                         maxlength="3"></div>
                   </div>
 
                   <div class="checMat">
                     <div class="checkMatInterno">
-                      <input type="checkbox" name="checkcoxins" id="">
+                      <input type="checkbox" name="ked" id="">
                       <p>KED</p>
                     </div>
                     <div class="colMeio">
-                      <select name="maioridadeKed" id="">
-                        <option name="adultoKed" value="ADULTO">Adulto</option>
-                        <option name="infantilKed" value="INFANTIL">Infantil</option>
+                      <select name="tamKed" id="">
+                        <option value="ADULTO">Adulto</option>
+                        <option value="INFANTIL">Infantil</option>
                       </select>
                     </div>
                     <div class="teste2"></div>
-                    <div class="qtd"> <input name="quantidadeKed" id="" type="number"
-                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    <div class="qtd"> <input type="number" name="qtdKed" id=""
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                         maxlength="3"></div>
                   </div>
 
                   <div class="checMat">
                     <div class="checkMatInterno">
-                      <input type="checkbox" name="checkMaca" id="">
+                      <input type="checkbox" name="macaRigida" id="">
                       <p>Maca rígida</p>
                     </div>
                     <div class="colMeio"></div>
                     <div class="teste2"></div>
-                    <div class="qtd"> <input name="quantidaDeMaca" id="" type="number"
-                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    <div class="qtd"> <input type="number" name="qtdMaca" id=""
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                         maxlength="3"></div>
 
                   </div>
 
                   <div class="checMat">
                     <div class="checkMatInterno">
-                      <input type="checkbox" name="checkTiranteAranha" id="">
+                      <input type="checkbox" name="tiranteAranha" id="">
                       <p>Tirante aranha</p>
                     </div>
                     <div class="colMeio"></div>
                     <div class="teste2"></div>
-                    <div class="qtd"> <input name="quantidadeTiranteAranha" id="" type="number"
-                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    <div class="qtd"> <input type="number" name="qtdAranha" id=""
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                         maxlength="3"></div>
                   </div>
 
                   <div class="checMat">
                     <div class="checkMatInterno extensop">
-                      <input type="checkbox" name="checkTiranteCabeca" id="">
+                      <input type="checkbox" name="tiranteCabeca" id="">
                       <p>Tirante de cabeça</p>
                     </div>
                     <div class="colMeio"></div>
                     <div class="teste2"></div>
-                    <div class="qtd"> <input name="quantidadeTiranteCabeca" id="" type="number"
-                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    <div class="qtd"> <input type="number" name="qtdCabeca" id=""
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                         maxlength="3"></div>
                   </div>
 
                   <div class="checMat">
                     <div class="checkMatInterno">
-                      <input type="checkbox" name="checkTiranteCabeca" id="">
-                      <p>Cânula</p>
+                      <input type="checkbox" name="canula" id="">                     
+                       <p>Cânula</p>
                     </div>
                     <div class="colMeio"></div>
                     <div class="teste2"></div>
-                    <div class="qtd"> <input name="quantidaDeCanula" id="" type="number"
-                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    <div class="qtd"> <input type="number" name="qtdCanula" id=""
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                         maxlength="3"></div>
                   </div>
 
-                  <div class="checMat">
-                    <div class="checkMatInterno">
-                      <input type="checkbox" name="checkCanula" id="">
-                      <input type="textarea" name="outroMaterial" placeholder="outro" id="inputMat">
-                    </div>
-
-                    <div class="colMeio">
-                      <select name="maioridadeOutro" id="">
-                        <option value="adultoOutro">Adulto</option>
-                        <option value="InfantilOutro">Infantil</option>
-                      </select>
-                    </div>
-                    <div class="teste2"></div>
-                    <div class="qtd"> <input name="quantidadeOutro" id="" type="number"
-                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                        maxlength="3"></div>
-                  </div>
                 </section>
 
               </div>
@@ -2075,38 +2043,38 @@
                     </tr>
                     <tr>
                       <td>Distúrbio de comportamento</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Distúrbio de comportamento"></td>
-                      <td><input type="checkbox" name="disturbiodecomportamentoNao" id=""></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Distúrbio de comportamento"></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Sem Distúrbio de comportamento"></td>
                     </tr>
                     <tr>
                       <td>Encontrado de capacete</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Encontrado de capacete"></td>
-                      <td><input type="checkbox" name="encontradodecapaceteNao" id=""></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Encontrado de capacete"></td>
+                      <td><input type="radio" name="cinematica[]" id="" value=" Não encontrado de capacete"></td>
                     </tr>
                     <tr>
                       <td>Encontrado de cinto</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Encontrado de cinto"></td>
-                      <td><input type="checkbox" name="encontradodecintoNao" id=""></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Encontrado de cinto "></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Não encontrado de cinto"></td>
                     </tr>
                     <tr>
                       <td>Para-brisas avariado</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Para-brisas avariado"></td>
-                      <td><input type="checkbox" name="parabrisasavariadoNao" id=""></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Para brisas avariado"></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Sem para brisas avariado"></td>
                     </tr>
                     <tr>
                       <td>Caminhando na cena</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Caminhando na cena"></td>
-                      <td><input type="checkbox" name="caminhandonacenaNao" id=""></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Caminhando na cena"></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Sem caminhar na cena"></td>
                     </tr>
                     <tr>
                       <td>Painel avariado</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Painel avariado"></td>
-                      <td><input type="checkbox" name="painelavariadoNao" id=""></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Painel avariado"></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Painel não avariado"></td>
                     </tr>
                     <tr>
                       <td>Volante torcido</td>
-                      <td><input type="checkbox" name="cinematica" id="" value="Volante torcido"></td>
-                      <td><input type="checkbox" name="volantetorcidoNao" id=""></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Volante torcido"></td>
+                      <td><input type="radio" name="cinematica[]" id="" value="Sem volante torcido"></td>
                     </tr>
                   </table>
                 </div>
@@ -2140,12 +2108,12 @@
 
                 <div class="squadCamp gapCamp">
                   <label for="m">M:</label>
-                  <input type="text" name="m" id="">
+                  <input type="text" name="m" id="" required>
                 </div>
 
                 <div class="squadCamp gapCamp">
                   <label for="s1">S1:</label>
-                  <input type="text" name="s1" id="">
+                  <input type="text" name="s1" id="" required>
                 </div>
 
                 <div class="squadCamp gapCamp">
@@ -2159,7 +2127,7 @@
 
                 <div class="teamNames gapCamp">
                   <label for="demandante"><img src="../img/demandante.svg" alt=""> DEMANDANTE:</label>
-                  <input type="text" name="demandante" id="dem-equi">
+                  <input type="text" name="demandante" id="dem-equi" required>
                 </div>
 
                 <div class="teamNames gapCamp">
@@ -2171,20 +2139,20 @@
                 <div class="espacolinha">
                   <div>
                     <label for="usb">Nº USB:</label>
-                    <input type="text" name="usb" id="">
+                    <input type="text" name="usb" id="" required>
                   </div>
                   <div class="check">
                     <label for="ir">CÓD. IR:</label>
-                    <input type="checkbox" name="ir" id="">
+                    <input type="text" name="ir" id="" required>
                   </div>
                 </div>
 
                 <div class="espacolinha">
                   <div><label for="ocorr">Nº OCORR.:</label>
-                    <input type="text" name="ocorr" id="">
+                    <input type="text" name="ocorr" id="" >
                   </div>
                   <div class="check"> <label for="ps">CÓD. PS:</label>
-                    <input type="checkbox" name="ps" id="">
+                    <input type="text" name="ps" id="" required>
                   </div>
                 </div>
 
@@ -2193,22 +2161,24 @@
                     <input type="text" name="desp">
                   </div>
                   <div><label for="kmfinal">KM FINAL:</label>
-                    <input type="text" name="kmfinal">
-                  </div>
+                    <input name="kmfinal" required oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);
+                    "maxlength="5">
 
                 </div>
                 <div class="h-s espacolinha">
                   <div style="display:flex; align-items: baseline;">
                     <label for="h.ch">H.CH.:</label>
-                    <input type="text" name="h.ch">
+                    <input type="text" name="h_ch">
                   </div>
                   <div style="display:flex; align-items: baseline;">
                     <label for="sia/sus">SIA/SUS.:</label>
-                    <input id="sia_sus" type="text" name="sia/sus">
+                    <input id="sia_sus" type="text" name="sia_sus">
                   </div>
                 </div>
                 <button type="submit" id="salvarOcorrencia">Salvar ocorrencia</button>
               </div>
+                          </form>
+
 
 
               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

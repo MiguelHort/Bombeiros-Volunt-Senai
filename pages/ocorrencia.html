@@ -2175,7 +2175,97 @@
              
 
                           </form>
-
+                          <script>
+                            function verificaSexo() {
+                    console.log("verificaSexo");
+                    var sexoSelecionado = document.querySelector('input[name="sexoPaciente"]:checked').value;
+                    var anamneseGestacional = document.getElementsByClassName('anamneseGestacional')[0];
+                    if (sexoSelecionado === 'Masculino') {
+                        anamneseGestacional.style.display = 'none';
+                    } else {
+                        anamneseGestacional.style.display = 'block';
+                    }
+                }
+                    function possuiProblema(){
+                        var problema = document.querySelector('input[name="problemaSaude"]:checked').value;
+                        var quaisProblemas = document.querySelector('#quaisProblemas')
+                        if (problema == "Não"){
+                            quaisProblemas.style.display = 'none';
+                        } else {
+                            quaisProblemas.style.display = 'block';
+                        }
+                    }
+                    function usaMedicamento(){
+                        console.log("usa medicacao")
+                        var medicacao = document.querySelector('input[name="usaMedicacao"]:checked').value;
+                        var horarioMedicacao = document.querySelector('#horaMedicacao');
+                        var qualMedicacao = document.querySelector('#qualMedicacao')
+                        if (medicacao == "Não"){
+                            console.log("Não")
+                            horarioMedicacao.style.display = 'none';
+                            qualMedicacao.style.display = 'none'
+                        } else {
+                             console.log("Sim")
+                            horarioMedicacao.style.display = 'block';
+                            qualMedicacao.style.display = 'block'
+                        }
+                    }
+                    function temAlergia(){
+                         console.log("alergico")
+                        var alergico = document.querySelector('input[name="alergico"]:checked').value;
+                        var especifique = document.querySelector('#especifique');
+                        if(alergico == "Não"){
+                            especifique.style.display = 'none'
+                        } else {
+                            especifique.style.display = 'block'
+                        }
+                    }
+                    function ingeriuAlimento(){
+                        var alimento = document.querySelector('input[name="ingeriuAlgo"]:checked').value;
+                        var horaIngeriu = document.querySelector('#horaIngeriu');
+                        if(alimento == "Não"){
+                            horaIngeriu.style.display = 'none'
+                        } else {
+                            horaIngeriu.style.display = 'block'
+                        }
+                    }
+                    function temFilho(){
+                        console.log("temFilho()")
+                        var primeiroFilho = document.querySelector('input[name="primeiroFilho"]:checked').value;
+                        var quantos = document.querySelector('#quantos');
+                        if(primeiroFilho == "Sim"){
+                            console.log("SIM")
+                            quantos.style.display = 'none'
+                        } else {
+                            console.log("Não")
+                            quantos.style.display = 'block'
+                        }
+                    }
+                    function temContracoes(){
+                        console.log("temContrações")
+                        var contracoes = document.querySelector('input[name="contracao"]:checked').value;
+                        var infoContracoes = document.querySelector('#contracoes');
+                         if(contracoes == "Não"){
+                            
+                            infoContracoes.style.display = 'none'
+                        } else {
+                            console.log("Sim")
+                            infoContracoes.style.display = 'block'
+                        }
+                    }
+                     function partoRealizado(){
+                        console.log("temParto")
+                        var parto = document.querySelector('input[name="parto"]:checked').value;
+                        var sexoBebe = document.querySelector('#sexoBebe');
+                         if(parto == "Não"){
+                            
+                            sexoBebe.style.display = 'none'
+                        } else {
+                            console.log("Sim")
+                            sexoBebe.style.display = 'block'
+                        }
+                    }
+                        </script>
 
 
               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

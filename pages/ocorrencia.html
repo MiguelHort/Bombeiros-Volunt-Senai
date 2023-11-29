@@ -68,12 +68,12 @@
     <p id="topico-sexo">Sexo:</p>
     <div class="sexo">
       <div id="masculino">
-        <input type="radio" name="sexoPaciente" value="Masculino" id="bolinhas">
+        <input type="radio" name="sexoPaciente" value="Masculino" id="bolinhas" onclick="verificaSexo()">
         <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/masculino.svg" alt="" width="16%">
           Masculino</label>
       </div>
       <div id="feminino">
-        <input type="radio" name="sexoPaciente" value="Feminino" id="bolinhas">
+        <input type="radio" name="sexoPaciente" value="Feminino" id="bolinhas" onclick="verificaSexo()">
         <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/feminino.svg" alt="" width="16%">
           Feminino</label>
       </div>
@@ -145,9 +145,9 @@
             </div>
             <div>
               <h2>Possui algum problema de saúde?</h2>
-              <input type="radio" name="problemaSaude" value="Sim">
+              <input type="radio" name="problemaSaude" value="Sim" onclick="possuiProblema()">
               <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="problemaSaude" value="Não">
+              <input type="radio" name="problemaSaude" value="Não" onclick="possuiProblema()">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
             <div>
@@ -156,9 +156,9 @@
             </div>
             <div>
               <h2>Faz uso de medicação?</h2>
-              <input type="radio" name="usaMedicacao" value="Sim">
+              <input type="radio" name="usaMedicacao" value="Sim" onclick="usaMedicamento()">
               <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="usaMedicacao" value="Não">
+              <input type="radio" name="usaMedicacao" value="Não" onclick="usaMedicamento()">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
             <div>
@@ -172,18 +172,18 @@
             </div>
             <div>
               <h2>Alérgico a alguma coisa?</h2>
-              <input type="radio" name="alergico" value="Sim">
+              <input type="radio" name="alergico" value="Sim" onclick="temAlergia()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="alergico" value="Não">
+              <input type="radio" name="alergico" value="Não" onclick="temAlergia()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
               <h2>Especifique:</h2>
               <textarea class="caixa_de_texto_anamnese" name="qualAlergia" id="" cols="70" rows="4"></textarea>
             </div>
             <div>
               <h2>Ingeriu alimento ou líquido <br> ≥ 6 horas</h2>
-              <input type="radio" name="ingeriuAlgo" value="Sim">
+              <input type="radio" name="ingeriuAlgo" value="Sim" onclick="ingeriuAlimento()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="ingeriuAlgo" value="Não">
+              <input type="radio" name="ingeriuAlgo" value="Não" onclick="ingeriuAlimento()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
             <div>
@@ -232,9 +232,9 @@
             </div>
             <div>
               <h2>Primeiro filho?</h2>
-              <input type="radio" name="primeiroFilho" value="Sim" id="bolinhas">
+              <input type="radio" name="primeiroFilho" value="Sim" id="bolinhas" onclick="temFilho()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="primeiroFilho" value="Não" id="bolinhas">
+              <input type="radio" name="primeiroFilho" value="Não" id="bolinhas" onclick="temFilho()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
               <h2>Quantos?</h2>
               <input class="caixa_de_texto_gestacional" name="quantosFilhos" id="" type="number"
@@ -244,9 +244,9 @@
             <br>
             <div>
               <h2>Contrações</h2>
-              <input type="radio" name="contracao" value="Sim" id="bolinhas">
+              <input type="radio" name="contracao" value="Sim" id="bolinhas" onclick="temContracoes()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="contracao" value="Não" id="bolinhas">
+              <input type="radio" name="contracao" value="Não" id="bolinhas" onclick="temContracoes()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
               <h2>Que horas iniciaram as contrações?</h2>
               <input class="horario" type="time" name="horaContracao" id="">
@@ -289,9 +289,9 @@
             <br>
             <div>
               <h2>Parto realizado?</h2>
-              <input type="radio" name="parto" id="bolinhas" value="Sim">
+              <input type="radio" name="parto" id="bolinhas" value="Sim" onclick="partoRealizado()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="parto" id="bolinhas" value="Não">
+              <input type="radio" name="parto" id="bolinhas" value="Não" onclick="partoRealizado()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
             <br>

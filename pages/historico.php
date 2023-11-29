@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="/css/historico.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
 </head>
 
 <body>
 <p id="historico">HISTÓRICO</p>
+ <a href="../pages/admin.php"id="voltar">Voltar</a>  
      <div class="accordion" id="accordionPanelsStayOpenExample">
         <?php
         error_reporting(E_ALL);
@@ -21,25 +24,32 @@
 
         // Consulta SQL para obter os dados da ocorrência com id=1
         $sql = "SELECT * FROM ocorrencia 
-INNER JOIN paciente on ocorrencia.fk_paciente = paciente.id_paciente
-INNER JOIN acompanhante on paciente.fk_acompanhante = acompanhante.id_acompa
-INNER JOIN anamnese_emerg on paciente.fk_anamnese_emerg = anamnese_emerg.id_anamnese_emerg
+LEFT JOIN paciente on ocorrencia.fk_paciente = paciente.id_paciente
+LEFT JOIN acompanhante on paciente.fk_acompanhante = acompanhante.id_acompa
+LEFT JOIN anamnese_emerg on paciente.fk_anamnese_emerg = anamnese_emerg.id_anamnese_emerg
 LEFT JOIN anamnese_gest on paciente.fk_anamnese_gest = anamnese_gest.id_anamnese_gest
-INNER JOIN avaliacao on paciente.fk_avaliacao = avaliacao.id_avaliacao
-INNER JOIN sinais_vitais on paciente.fk_sinais_vitais = sinais_vitais.id_sinais_vitais
-INNER JOIN problem_suspeito on paciente.fk_problem_suspeito = problem_suspeito.id_problem_suspeito
-INNER JOIN localizacao_trauma on paciente.fk_localizacao_trauma = localizacao_trauma.id_localizacao_trauma
-INNER JOIN sinais_sintomas on paciente.fk_sinais_sintomas = sinais_sintomas.id_sinais_sintomas
-INNER JOIN proced_efetuados on paciente.fk_proced_efetuados = proced_efetuados.id_proced_efetuados
-INNER JOIN cinematica on paciente.fk_cinematica = cinematica.id_cinematica
-INNER JOIN equipe_atendimento on ocorrencia.fk_equipe_atendimento = equipe_atendimento.id_equipe_atendimento
-INNER JOIN info_finais on ocorrencia.fk_info_finais = info_finais.id_info_finais;";
+LEFT JOIN avaliacao on paciente.fk_avaliacao = avaliacao.id_avaliacao
+LEFT JOIN sinais_vitais on paciente.fk_sinais_vitais = sinais_vitais.id_sinais_vitais
+LEFT JOIN problem_suspeito on paciente.fk_problem_suspeito = problem_suspeito.id_problem_suspeito
+LEFT JOIN localizacao_trauma on paciente.fk_localizacao_trauma = localizacao_trauma.id_localizacao_trauma
+LEFT JOIN sinais_sintomas on paciente.fk_sinais_sintomas = sinais_sintomas.id_sinais_sintomas
+LEFT JOIN proced_efetuados on paciente.fk_proced_efetuados = proced_efetuados.id_proced_efetuados
+LEFT JOIN cinematica on paciente.fk_cinematica = cinematica.id_cinematica
+LEFT JOIN equipe_atendimento on ocorrencia.fk_equipe_atendimento = equipe_atendimento.id_equipe_atendimento
+LEFT JOIN info_finais on ocorrencia.fk_info_finais = info_finais.id_info_finais;";
         $result = mysqli_query($conexao, $sql);
 
         if ($result) {
             // Iterar sobre os resultados da consulta
             while ($row = mysqli_fetch_assoc($result)) {
+//             echo '<script>';
+// echo 'var nomeOcorrencia_' . $row['id_ocorrencia'] . ' = "' . $row['nome'] . '";';
+// echo 'var cpfOcorrencia_' . $row['id_ocorrencia'] . ' = "' . $row['rg_cpf'] . '";';
+// echo 'var sexoOcorrencia_' . $row['id_ocorrencia'] . ' = "' . $row['sexo'] . '";';
+// // Adicione outras variáveis conforme necessário
+// echo '</script>';
         ?>
+       
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -48,7 +58,6 @@ INNER JOIN info_finais on ocorrencia.fk_info_finais = info_finais.id_info_finais
                             aria-controls="panelsStayOpen-collapse-<?php echo $row['id_ocorrencia']; ?>">
                             <p class="titulomenususpenso"><?php echo $row['data_e_hora']; ?> Nº<?php echo $row['id_ocorrencia']; ?><BR></BR><?php echo $row['nome']; ?><br><?php echo $row['idade']; ?> ANOS</p>
                         </button>
-                        
                     </h2>
                     <div id="panelsStayOpen-collapse-<?php echo $row['id_ocorrencia']; ?>"
                         class="accordion-collapse collapse">
@@ -326,9 +335,11 @@ INNER JOIN info_finais on ocorrencia.fk_info_finais = info_finais.id_info_finais
                     <div><strong>SIA/SUS:</strong>
                         <p><?php echo $row['sia_sus']; ?></p>
                     </div>
+                   <!-- <button class="btn btn-primary" onclick="downloadPDF(<?php echo $row['id_ocorrencia']; ?>)">Baixar PDF</button> -->
                         </div>
                     </div>
                 </div>
+                
         <?php
             }
         } else {
@@ -339,9 +350,27 @@ INNER JOIN info_finais on ocorrencia.fk_info_finais = info_finais.id_info_finais
         mysqli_close($conexao);
         ?>
     </div>
+//     <script>
+//     function downloadPDF(ocorrenciaId) {
+//         // Crie uma instância do objeto jsPDF
+//         var doc = new jsPDF();
+
+//         doc.text("Informações da Ocorrência", 10, 10);
+//     // Adicione as informações específicas da ocorrência usando as variáveis JavaScript
+//     doc.text("Nome da Vítima: " + nomeOcorrencia_ + ocorrenciaId, 10, 20);
+//     doc.text("CPF: " + cpfOcorrencia_ + ocorrenciaId, 10, 30);
+//     doc.text("Sexo: " + sexoOcorrencia_ + ocorrenciaId, 10, 40);
+//     // Adicione outras linhas conforme necessário
+
+//     // Salve o PDF com um nome exclusivo (usando o ID da ocorrência neste exemplo)
+//     doc.save('ocorrencia_' + ocorrenciaId + '.pdf');
+//     }
+// </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+                         
+
 </body>
 
 </html>

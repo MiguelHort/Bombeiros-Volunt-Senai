@@ -68,12 +68,12 @@
     <p id="topico-sexo">Sexo:</p>
     <div class="sexo">
       <div id="masculino">
-        <input type="radio" name="sexoPaciente" value="Masculino" id="bolinhas">
+        <input type="radio" name="sexoPaciente" value="Masculino" id="bolinhas" onclick="verificaSexo()">
         <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/masculino.svg" alt="" width="16%">
           Masculino</label>
       </div>
       <div id="feminino">
-        <input type="radio" name="sexoPaciente" value="Feminino" id="bolinhas">
+        <input type="radio" name="sexoPaciente" value="Feminino" id="bolinhas" onclick="verificaSexo()">
         <label id="generos" for="sexo"><img class="masculinofeminino" src="/img/feminino.svg" alt="" width="16%">
           Feminino</label>
       </div>
@@ -145,48 +145,50 @@
             </div>
             <div>
               <h2>Possui algum problema de saúde?</h2>
-              <input type="radio" name="problemaSaude" value="Sim">
+              <input type="radio" name="problemaSaude" value="Sim" onclick="possuiProblema()">
               <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="problemaSaude" value="Não">
+              <input type="radio" name="problemaSaude" value="Não" onclick="possuiProblema()">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
-            <div>
+            <div id="quaisProblemas">
               <h2>Quais?</h2>
               <textarea class="caixa_de_texto_anamnese" name="quaisProblemas" id="" cols="70" rows="5"></textarea>
             </div>
             <div>
               <h2>Faz uso de medicação?</h2>
-              <input type="radio" name="usaMedicacao" value="Sim">
+              <input type="radio" name="usaMedicacao" value="Sim" onclick="usaMedicamento()">
               <label for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="usaMedicacao" value="Não">
+              <input type="radio" name="usaMedicacao" value="Não" onclick="usaMedicamento()">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
-            <div>
+            <div id="horaMedicacao">
               <h2>Horário da última medicação?</h2>
               <label for="hora"><img src="/img/hora.png" alt=""></label>
               <input type="time" name="horaMedicacao" id="">
             </div>
-            <div>
+            <div id="qualMedicacao">
               <h2>Quais?</h2>
               <textarea class="caixa_de_texto_anamnese" name="quaisMedicacoes" id="" cols="70" rows="5"></textarea>
             </div>
             <div>
               <h2>Alérgico a alguma coisa?</h2>
-              <input type="radio" name="alergico" value="Sim">
+              <input type="radio" name="alergico" value="Sim" onclick="temAlergia()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="alergico" value="Não">
+              <input type="radio" name="alergico" value="Não" onclick="temAlergia()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+              <div id="especifique">
               <h2>Especifique:</h2>
               <textarea class="caixa_de_texto_anamnese" name="qualAlergia" id="" cols="70" rows="4"></textarea>
             </div>
-            <div>
-              <h2>Ingeriu alimento ou líquido <br> ≥ 6 horas</h2>
-              <input type="radio" name="ingeriuAlgo" value="Sim">
-              <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="ingeriuAlgo" value="Não">
-              <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
             <div>
+              <h2>Ingeriu alimento ou líquido <br> ≥ 6 horas</h2>
+              <input type="radio" name="ingeriuAlgo" value="Sim" onclick="ingeriuAlimento()">
+              <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
+              <input type="radio" name="ingeriuAlgo" value="Não" onclick="ingeriuAlimento()">
+              <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+            </div>
+            <div id="horaIngeriu">
               <h2>Que horas?</h2>
               <label class="SimNao" for="hora"><img src="/img/hora.png" alt=""></label>
               <input type="time" name="horaIngeriu" id="">
@@ -195,8 +197,8 @@
         </div>
       </div>
     </div>
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-      <div class="accordion-item">
+    <div  class="accordion anamneseGestacional" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item" >
         <h2 class="accordion-header">
           <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
@@ -232,22 +234,25 @@
             </div>
             <div>
               <h2>Primeiro filho?</h2>
-              <input type="radio" name="primeiroFilho" value="Sim" id="bolinhas">
+              <input type="radio" name="primeiroFilho" value="Sim" id="bolinhas" onclick="temFilho()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="primeiroFilho" value="Não" id="bolinhas">
+              <input type="radio" name="primeiroFilho" value="Não" id="bolinhas" onclick="temFilho()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+              <div id="quantos">
               <h2>Quantos?</h2>
               <input class="caixa_de_texto_gestacional" name="quantosFilhos" id="" type="number"
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                 maxlength="4">
-            </div>
+              </div>
+              </div>
             <br>
             <div>
               <h2>Contrações</h2>
-              <input type="radio" name="contracao" value="Sim" id="bolinhas">
+              <input type="radio" name="contracao" value="Sim" id="bolinhas" onclick="temContracoes()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="contracao" value="Não" id="bolinhas">
+              <input type="radio" name="contracao" value="Não" id="bolinhas" onclick="temContracoes()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+              <div id="contracoes">
               <h2>Que horas iniciaram as contrações?</h2>
               <input class="horario" type="time" name="horaContracao" id="">
               <br>
@@ -260,6 +265,7 @@
               <br>
               <label class="SimNao" for="duracao">Duração</label>
               <input class="caixa_de_texto_gestacional" type="text" name="duracaoContracao">
+              </div>
             </div>
             <br>
             <br>
@@ -289,13 +295,13 @@
             <br>
             <div>
               <h2>Parto realizado?</h2>
-              <input type="radio" name="parto" id="bolinhas" value="Sim">
+              <input type="radio" name="parto" id="bolinhas" value="Sim" onclick="partoRealizado()">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
-              <input type="radio" name="parto" id="bolinhas" value="Não">
+              <input type="radio" name="parto" id="bolinhas" value="Não" onclick="partoRealizado()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
             <br>
-            <div>
+            <div id="sexoBebe">
               <h2>Sexo do bebê</h2>
               <input type="radio" name="sexoBebe" id="bolinhas" value="Masculino">
               <label class="SimNao" id="generos" for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>
@@ -2175,7 +2181,97 @@
              
 
                           </form>
-
+                          <script>
+                            function verificaSexo() {
+                    console.log("verificaSexo");
+                    var sexoSelecionado = document.querySelector('input[name="sexoPaciente"]:checked').value;
+                    var anamneseGestacional = document.getElementsByClassName('anamneseGestacional')[0];
+                    if (sexoSelecionado === 'Masculino') {
+                        anamneseGestacional.style.display = 'none';
+                    } else {
+                        anamneseGestacional.style.display = 'block';
+                    }
+                }
+                    function possuiProblema(){
+                        var problema = document.querySelector('input[name="problemaSaude"]:checked').value;
+                        var quaisProblemas = document.querySelector('#quaisProblemas')
+                        if (problema == "Não"){
+                            quaisProblemas.style.display = 'none';
+                        } else {
+                            quaisProblemas.style.display = 'block';
+                        }
+                    }
+                    function usaMedicamento(){
+                        console.log("usa medicacao")
+                        var medicacao = document.querySelector('input[name="usaMedicacao"]:checked').value;
+                        var horarioMedicacao = document.querySelector('#horaMedicacao');
+                        var qualMedicacao = document.querySelector('#qualMedicacao')
+                        if (medicacao == "Não"){
+                            console.log("Não")
+                            horarioMedicacao.style.display = 'none';
+                            qualMedicacao.style.display = 'none'
+                        } else {
+                             console.log("Sim")
+                            horarioMedicacao.style.display = 'block';
+                            qualMedicacao.style.display = 'block'
+                        }
+                    }
+                    function temAlergia(){
+                         console.log("alergico")
+                        var alergico = document.querySelector('input[name="alergico"]:checked').value;
+                        var especifique = document.querySelector('#especifique');
+                        if(alergico == "Não"){
+                            especifique.style.display = 'none'
+                        } else {
+                            especifique.style.display = 'block'
+                        }
+                    }
+                    function ingeriuAlimento(){
+                        var alimento = document.querySelector('input[name="ingeriuAlgo"]:checked').value;
+                        var horaIngeriu = document.querySelector('#horaIngeriu');
+                        if(alimento == "Não"){
+                            horaIngeriu.style.display = 'none'
+                        } else {
+                            horaIngeriu.style.display = 'block'
+                        }
+                    }
+                    function temFilho(){
+                        console.log("temFilho()")
+                        var primeiroFilho = document.querySelector('input[name="primeiroFilho"]:checked').value;
+                        var quantos = document.querySelector('#quantos');
+                        if(primeiroFilho == "Sim"){
+                            console.log("SIM")
+                            quantos.style.display = 'none'
+                        } else {
+                            console.log("Não")
+                            quantos.style.display = 'block'
+                        }
+                    }
+                    function temContracoes(){
+                        console.log("temContrações")
+                        var contracoes = document.querySelector('input[name="contracao"]:checked').value;
+                        var infoContracoes = document.querySelector('#contracoes');
+                         if(contracoes == "Não"){
+                            
+                            infoContracoes.style.display = 'none'
+                        } else {
+                            console.log("Sim")
+                            infoContracoes.style.display = 'block'
+                        }
+                    }
+                     function partoRealizado(){
+                        console.log("temParto")
+                        var parto = document.querySelector('input[name="parto"]:checked').value;
+                        var sexoBebe = document.querySelector('#sexoBebe');
+                         if(parto == "Não"){
+                            
+                            sexoBebe.style.display = 'none'
+                        } else {
+                            console.log("Sim")
+                            sexoBebe.style.display = 'block'
+                        }
+                    }
+                        </script>
 
 
               <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

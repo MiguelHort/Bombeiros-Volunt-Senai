@@ -1124,14 +1124,18 @@ width: 600px;
   width: 500px;
   justify-content: center;
   align-items: center;
+  height: 25px;
+  margin-top: 130%;
 }
 
 #corpoFrente {
   width: 1000px;
+
 }
 
 #corpoVerso {
   width: 1000px;
+  
 }
 
 #corpoCompleto button {

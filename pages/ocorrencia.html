@@ -129,7 +129,7 @@
         </h2>
         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
           <div class="accordion-body">
-            <h2>O que aconteceu (sinais e sintomas)</h2>
+            <h2>O que aconteceu <br> (sinais e sintomas)</h2>
             <textarea class="caixa_de_texto_anamnese" name="anamnese" id="" cols="60" rows="5"></textarea>
             <div class="">
               <h2>Aconteceu outras vezes?</h2>
@@ -180,7 +180,7 @@
               <textarea class="caixa_de_texto_anamnese" name="qualAlergia" id="" cols="70" rows="4"></textarea>
             </div>
             <div>
-              <h2>Ingeriu alimento ou líquido ≥ 6 horas</h2>
+              <h2>Ingeriu alimento ou líquido <br> ≥ 6 horas</h2>
               <input type="radio" name="ingeriuAlgo" value="Sim">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
               <input type="radio" name="ingeriuAlgo" value="Não">
@@ -264,7 +264,7 @@
             <br>
             <br>
             <div>
-              <h2>Pressão no quadril ou vontade de evacuar?</h2>
+              <h2>Pressão no quadril ou vontade <br> de evacuar?</h2>
               <input type="radio" name="pressao" id="bolinhas" value="Sim">
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
               <input type="radio" name="pressao" id="bolinhas" value="Não">
@@ -1196,9 +1196,9 @@
             <p id="tipo"></p>
         </div>
 
-        <form action="../database/server.php" method="post" id="meuForm">
-          <input type="hidden" id="parte1" name="parte1">
-          <input type="hidden" id="tipo1" name="tipo1">
+        <form>
+          <input type="hidden" id="parte" name="parte">
+          <input type="hidden" id="tipo" name="tipo">
         </form>
         <script src="../jquery-1.8.2.min.js"></script>
         <script src="../scripts/assets.js"></script>

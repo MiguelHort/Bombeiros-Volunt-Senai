@@ -150,7 +150,7 @@
               <input type="radio" name="problemaSaude" value="Não" onclick="possuiProblema()">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
-            <div>
+            <div id="quaisProblemas">
               <h2>Quais?</h2>
               <textarea class="caixa_de_texto_anamnese" name="quaisProblemas" id="" cols="70" rows="5"></textarea>
             </div>
@@ -161,12 +161,12 @@
               <input type="radio" name="usaMedicacao" value="Não" onclick="usaMedicamento()">
               <label for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
-            <div>
+            <div id="horaMedicacao">
               <h2>Horário da última medicação?</h2>
               <label for="hora"><img src="/img/hora.png" alt=""></label>
               <input type="time" name="horaMedicacao" id="">
             </div>
-            <div>
+            <div id="qualMedicacao">
               <h2>Quais?</h2>
               <textarea class="caixa_de_texto_anamnese" name="quaisMedicacoes" id="" cols="70" rows="5"></textarea>
             </div>
@@ -176,8 +176,10 @@
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
               <input type="radio" name="alergico" value="Não" onclick="temAlergia()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+              <div id="especifique">
               <h2>Especifique:</h2>
               <textarea class="caixa_de_texto_anamnese" name="qualAlergia" id="" cols="70" rows="4"></textarea>
+            </div>
             </div>
             <div>
               <h2>Ingeriu alimento ou líquido <br> ≥ 6 horas</h2>
@@ -186,7 +188,7 @@
               <input type="radio" name="ingeriuAlgo" value="Não" onclick="ingeriuAlimento()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
-            <div>
+            <div id="horaIngeriu">
               <h2>Que horas?</h2>
               <label class="SimNao" for="hora"><img src="/img/hora.png" alt=""></label>
               <input type="time" name="horaIngeriu" id="">
@@ -195,8 +197,8 @@
         </div>
       </div>
     </div>
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-      <div class="accordion-item">
+    <div  class="accordion anamneseGestacional" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item" >
         <h2 class="accordion-header">
           <button class="accordion-button1 collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
@@ -236,11 +238,13 @@
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
               <input type="radio" name="primeiroFilho" value="Não" id="bolinhas" onclick="temFilho()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+              <div id="quantos">
               <h2>Quantos?</h2>
               <input class="caixa_de_texto_gestacional" name="quantosFilhos" id="" type="number"
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                 maxlength="4">
-            </div>
+              </div>
+              </div>
             <br>
             <div>
               <h2>Contrações</h2>
@@ -248,6 +252,7 @@
               <label class="SimNao" for="simNao">SIM <img src="/img/sim.png" alt=""></label>
               <input type="radio" name="contracao" value="Não" id="bolinhas" onclick="temContracoes()">
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
+              <div id="contracoes">
               <h2>Que horas iniciaram as contrações?</h2>
               <input class="horario" type="time" name="horaContracao" id="">
               <br>
@@ -260,6 +265,7 @@
               <br>
               <label class="SimNao" for="duracao">Duração</label>
               <input class="caixa_de_texto_gestacional" type="text" name="duracaoContracao">
+              </div>
             </div>
             <br>
             <br>
@@ -295,7 +301,7 @@
               <label class="SimNao" for="simNao">NÃO <img src="/img/nao.png" alt=""></label>
             </div>
             <br>
-            <div>
+            <div id="sexoBebe">
               <h2>Sexo do bebê</h2>
               <input type="radio" name="sexoBebe" id="bolinhas" value="Masculino">
               <label class="SimNao" id="generos" for="sexo"><img src="/img/masculino.svg" alt=""> Masculino</label>

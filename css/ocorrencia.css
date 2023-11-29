@@ -18,10 +18,12 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  width: 69%;
+  width: 100%;
 }
 
-
+form{
+  width: 60%;
+}
 
 #imagemTitulo {
   display: flex;
@@ -99,6 +101,7 @@ margin-left: 5%;
 #topico_nome{
 display: flex;
 margin-top: 3%;
+
 }
 
 #topico_cpf{
@@ -206,7 +209,7 @@ margin-left: 1%;
   border: solid #136cfb 10px;
   border-radius: 8px;
   background-color: #136cfb;
-  width: 550px;
+  
 }
 
 .accordion-button1 {
@@ -356,11 +359,8 @@ margin-top: 2%;
 .serviceTeam{
   display: flex;
   flex-direction: column;
-  width: 70vw;
-  text-align: center;
-  margin-top: 2%;
-  margin: auto;
-
+ margin: auto;
+width: 100%;
   font-family: 'Inter', sans-serif;
   font-weight: bold;
 }
@@ -374,7 +374,7 @@ margin-top: 2%;
   margin-top: 0;
 }
 .serviceTeam h4 img{
-  margin-right: -7%;
+  margin-right: -5%;
   margin-left: -7%;
 }
 .serviceTeam label{
@@ -413,7 +413,7 @@ margin-top: 2%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 71%;
+  width: 100%;
   margin: auto;
   margin-top: 5%;
   font-size: 22px;
@@ -601,15 +601,15 @@ input[type=checkbox]{
 
 
 #imagemglasgow{
-margin-left: 35%;
+  margin-left: 40%;
 }
 #imagemglasgow2{
-margin-top: 50%;
-margin-left: 35%;
+margin-top: 30%;
+margin-left: 41%;
 }
 #imagemglasgow3{
-margin-top: 70%;
-margin-left: 35%;
+margin-top: 45%;
+margin-left: 40%;
 }
 
 .accordion-body {
@@ -622,7 +622,7 @@ margin-left: 35%;
 }
 .content-aboCol{
   display: flex;
-  padding: 0px 10px  ;
+ 
 }
 .idadeGlasgow{
   text-align: center;
@@ -630,6 +630,7 @@ margin-left: 35%;
 }
 .box-glasgow{
   padding: 15px 0;
+  margin-left: 32%;
 }
 .verbalImg{
   width: 80%;
@@ -638,7 +639,7 @@ margin-left: 35%;
 #botoes{
   display: flex;
   justify-content: center;
-  margin-left: 100px;
+margin: auto;
   margin-top: 15%;
   width: 300px;
   height: 20px;
@@ -826,6 +827,7 @@ width: 600px;
 }
 .box-glasgow{
   padding: 15px 0;
+  
 }
 
 
@@ -1125,7 +1127,9 @@ width: 600px;
   justify-content: center;
   align-items: center;
   height: 25px;
-  margin-top: 130%;
+ 
+  margin: auto;
+   margin-top: 50vw;
 }
 
 #corpoFrente {
@@ -1587,4 +1591,8 @@ border-radius: 20px;
 background-color: #136cfb;
 color: white;
 margin-top: 5%;
+}
+#sexoFlex{
+  display: flex;
+  align-items: baseline;
 }
